@@ -13,5 +13,9 @@ export const hatch = style({
 
   ":hover": {
     backgroundColor: "rgb(255 255 255 / .75)"
+  },
+
+  ":focus": {
+    backgroundColor: "rgb(255 255 255 / .75)"
   }
 });

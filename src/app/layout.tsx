@@ -19,6 +19,9 @@ export default async function WelcomeLayout({ children }: Props) {
           rel="stylesheet"
           href="https://use.typekit.net/tmc3dha.css"
         ></link>
+
+        <meta charSet="utf-8" />
+        <meta name="viewport" content="width=device-width" />
       </head>
       <body>
         <Header />

@@ -11,7 +11,13 @@ export const header = style({
   fontFamily: "p22-yule-heavy-snow, sans-serif",
   fontWeight: 400,
   fontStyle: "normal",
-  fontSize: "4rem",
+  fontSize: "2rem",
   textAlign: "center",
-  marginBlockEnd: theme.spacing.m
+  marginBlockEnd: theme.spacing.m,
+
+  "@media": {
+    "screen and (min-width: 800px)": {
+      fontSize: "4rem"
+    }
+  }
 });
