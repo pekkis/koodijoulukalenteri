@@ -5,7 +5,7 @@ import Hatch from "./Hatch";
 const Hatch1: FC = () => {
   return (
     <Hatch number={1} className={styles.hatch1}>
-      1
+      Pieru
     </Hatch>
   );
 };

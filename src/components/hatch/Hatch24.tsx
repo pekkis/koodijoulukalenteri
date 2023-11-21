@@ -5,7 +5,7 @@ import Hatch from "./Hatch";
 const Hatch24: FC = () => {
   return (
     <Hatch number={24} className={styles.hatch24}>
-      24
+      Paras sisältö
     </Hatch>
   );
 };
