@@ -1,0 +1,9 @@
+.root {
+  marginblock: 1em;
+  padding: 1em;
+  display: block;
+}
+
+.error {
+  color: rgb(255 0 0);
+}
