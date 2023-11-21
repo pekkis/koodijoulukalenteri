@@ -4,6 +4,7 @@ import { FC, ReactNode, useState } from "react";
 import * as styles from "./Hatch.css";
 import cx from "clsx";
 import clsx from "clsx";
+import { useRouter } from "next/navigation";
 
 type Props = {
   number: number;
@@ -13,6 +14,8 @@ type Props = {
 
 const Hatch: FC<Props> = ({ className, children, number }) => {
   const [isOpen, setIsOpen] = useState(false);
+
+  const router = useRouter();
 
   const classes = cx(styles.hatch, className);
 
@@ -27,11 +30,13 @@ const Hatch: FC<Props> = ({ className, children, number }) => {
         console.log("clixu?");
         setIsOpen((p) => (p ? false : true));
         console.log("ACTICADO");
+
+        router.push("/", {});
       }}
       className={classes}
       onKeyDown={(e) => {
-        e.preventDefault();
         if (e.key === "Enter") {
+          e.preventDefault();
           setIsOpen((p) => (p ? false : true));
         }
       }}

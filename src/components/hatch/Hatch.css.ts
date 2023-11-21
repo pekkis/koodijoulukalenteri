@@ -36,6 +36,7 @@ export const label = style({
 });
 
 export const door = style({
+  borderRadius: theme.borderRadius.sharp,
   border: "1px dashed rgb(0 0 0)",
   transformStyle: "preserve-3d",
   transition: "all 300ms",
@@ -46,6 +47,7 @@ export const door = style({
 
 export const openDoor = style({
   transform: "rotateY(-100deg)",
+  borderRadius: theme.borderRadius.sharp,
   border: "1px solid rgb(0 0 0)"
 });
 
@@ -69,6 +71,7 @@ export const back = style({
 export const title = style({});
 
 export const inside = style({
+  borderRadius: theme.borderRadius.sharp,
   border: "1px dashed rgb(0 0 0)",
   backgroundColor: theme.colors.white,
   opacity: 0,
