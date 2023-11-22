@@ -37,7 +37,10 @@ export const label = style({
 
 export const door = style({
   borderRadius: theme.borderRadius.sharp,
-  border: "1px dashed rgb(0 0 0)",
+  borderWidth: "1px",
+  borderStyle: "dashed",
+  borderColor: theme.colors.hatchBorder,
+
   transformStyle: "preserve-3d",
   transition: "all 300ms",
   transformOrigin: "0% 50%",
@@ -48,7 +51,9 @@ export const door = style({
 export const openDoor = style({
   transform: "rotateY(-100deg)",
   borderRadius: theme.borderRadius.sharp,
-  border: "1px solid rgb(0 0 0)"
+  borderWidth: "1px",
+  borderStyle: "dashed",
+  borderColor: theme.colors.hatchBorder
 });
 
 export const content = style({
@@ -72,7 +77,9 @@ export const title = style({});
 
 export const inside = style({
   borderRadius: theme.borderRadius.sharp,
-  border: "1px dashed rgb(0 0 0)",
+  borderWidth: "1px",
+  borderStyle: "dashed",
+  borderColor: theme.colors.hatchBorder,
   backgroundColor: theme.colors.white,
   opacity: 0,
   position: "absolute",
@@ -85,6 +92,8 @@ export const inside = style({
 
 export const insideOpen = style({
   backgroundColor: theme.colors.white,
-  border: "1px dashed rgb(0 0 0)",
+  borderWidth: "1px",
+  borderStyle: "dashed",
+  borderColor: theme.colors.hatchBorder,
   opacity: 1
 });

@@ -4,7 +4,6 @@ import theme from "@/theme.css";
 import bg from "../assets/christmasy-programmers.png";
 
 export const container = style({
-  backgroundColor: theme.colors.femtiary,
   backgroundImage: `url(${bg.src})`,
   backgroundSize: "contain",
   containerType: "inline-size"

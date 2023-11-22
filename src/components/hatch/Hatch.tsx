@@ -4,18 +4,24 @@ import { FC, ReactNode, useState } from "react";
 import * as styles from "./Hatch.css";
 import cx from "clsx";
 import clsx from "clsx";
-import { useRouter } from "next/navigation";
+import CalendarWall from "./CalendarWall";
+
+export type HatchPosition = {
+  top: number;
+  left: number;
+  width: number;
+  height: number;
+};
 
 type Props = {
-  number: number;
-  className: string;
+  day: number;
+  position: HatchPosition;
+  className?: string;
   children: ReactNode;
 };
 
-const Hatch: FC<Props> = ({ className, children, number }) => {
+const Hatch: FC<Props> = ({ className, children, day, position }) => {
   const [isOpen, setIsOpen] = useState(false);
-
-  const router = useRouter();
 
   const classes = cx(styles.hatch, className);
 
@@ -24,16 +30,17 @@ const Hatch: FC<Props> = ({ className, children, number }) => {
   return (
     <div
       role="button"
-      tabIndex={number}
+      tabIndex={day}
       onClick={(e) => {
         e.preventDefault();
-        console.log("clixu?");
         setIsOpen((p) => (p ? false : true));
-        console.log("ACTICADO");
-
-        router.push("/", {});
       }}
       className={classes}
+      style={{
+        gridArea: `${position.top} / ${position.left} / ${
+          position.top + position.height
+        } / ${position.left + position.width}`
+      }}
       onKeyDown={(e) => {
         if (e.key === "Enter") {
           e.preventDefault();
@@ -44,7 +51,7 @@ const Hatch: FC<Props> = ({ className, children, number }) => {
       <label className={styles.label}>
         <input className={styles.checkbox} type="checkbox" />
         <div className={clsx(styles.door, { [styles.openDoor]: isOpen })}>
-          <div className={styles.content}>{number}</div>
+          <div className={styles.content}>{day}</div>
           <div className={clsx(styles.content, styles.back)}></div>
         </div>
         <div
@@ -52,7 +59,7 @@ const Hatch: FC<Props> = ({ className, children, number }) => {
             [styles.insideOpen]: isOpen
           })}
         >
-          {children}
+          <CalendarWall day={day}>{children}</CalendarWall>
         </div>
       </label>
     </div>

@@ -27,7 +27,9 @@ const theme = createGlobalTheme(":root", {
     quartiary: "#ffdb4d",
     femtiary: "#ffdb4d",
     black: "rgb(0, 0, 0)",
-    white: "rgb(255, 255, 255)"
+    white: "rgb(255, 255, 255)",
+
+    hatchBorder: "rgb(100, 100, 100)"
   },
 
   spacing: {
