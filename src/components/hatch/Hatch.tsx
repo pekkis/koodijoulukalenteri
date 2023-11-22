@@ -6,6 +6,8 @@ import cx from "clsx";
 import clsx from "clsx";
 import CalendarWall from "./CalendarWall";
 
+/* eslint-disable jsx-a11y/label-has-associated-control */
+
 export type HatchPosition = {
   top: number;
   left: number;
@@ -48,8 +50,13 @@ const Hatch: FC<Props> = ({ className, children, day, position }) => {
         }
       }}
     >
-      <label className={styles.label}>
-        <input className={styles.checkbox} type="checkbox" />
+      <label className={styles.label} htmlFor={`checkbox-${day}`}>
+        <input
+          name={`checkbox-${day}`}
+          className={styles.checkbox}
+          type="checkbox"
+          checked={isOpen}
+        />
         <div className={clsx(styles.door, { [styles.openDoor]: isOpen })}>
           <div className={styles.content}>{day}</div>
           <div className={clsx(styles.content, styles.back)}></div>

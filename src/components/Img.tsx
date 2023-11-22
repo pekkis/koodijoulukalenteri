@@ -1,5 +1,5 @@
 import { FC } from "react";
-import NextImage, { StaticImageData } from "next/image";
+import { StaticImageData } from "next/image";
 import * as styles from "./Img.css";
 
 type Props = {

@@ -12,8 +12,6 @@ const CalendarWall: FC<Props> = ({ day, children }) => {
     zone: "Europe/Helsinki"
   });
 
-  console.log("I AM OPENABLE AT", openableAt.toISO());
-
   const now = DateTime.utc();
 
   if (now < openableAt) {
