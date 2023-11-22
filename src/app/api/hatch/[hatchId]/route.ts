@@ -1,3 +1,5 @@
+import { getHatchData } from "@/services/hatch";
+
 export const dynamic = "force-dynamic"; // defaults to force-static
 
 type Props = {
@@ -7,7 +9,7 @@ type Props = {
 };
 
 export async function GET(request: Request, { params }: Props) {
-  return Response.json({
-    data: params.hatchId
-  });
+  const data = await getHatchData(parseInt(params.hatchId));
+
+  return Response.json(data);
 }

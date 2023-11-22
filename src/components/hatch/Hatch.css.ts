@@ -45,7 +45,8 @@ export const door = style({
   transition: "all 300ms",
   transformOrigin: "0% 50%",
   position: "absolute",
-  inset: 0
+  inset: 0,
+  zIndex: 6666666
 });
 
 export const openDoor = style({

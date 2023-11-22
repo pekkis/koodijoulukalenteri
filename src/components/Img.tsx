@@ -6,7 +6,7 @@ type Props = {
   src: StaticImageData;
 };
 
-const Image: FC<Props> = ({ src }) => {
+const Img: FC<Props> = ({ src }) => {
   return (
     <img
       alt="Joulupukki antaa tuhmille lapsille risuja"
@@ -16,4 +16,4 @@ const Image: FC<Props> = ({ src }) => {
   );
 };
 
-export default Image;
+export default Img;

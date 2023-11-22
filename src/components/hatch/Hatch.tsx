@@ -1,10 +1,15 @@
 "use client";
 
-import { FC, ReactNode, useState } from "react";
+import { FC, ReactNode, Suspense } from "react";
 import * as styles from "./Hatch.css";
 import cx from "clsx";
 import clsx from "clsx";
-import CalendarWall from "./CalendarWall";
+import {
+  useQueryState,
+  parseAsArrayOf,
+  parseAsInteger
+} from "next-usequerystate";
+import Spinner from "../debug/Spinner";
 
 /* eslint-disable jsx-a11y/label-has-associated-control */
 
@@ -23,41 +28,56 @@ type Props = {
 };
 
 const Hatch: FC<Props> = ({ className, children, day, position }) => {
-  const [isOpen, setIsOpen] = useState(false);
+  // const [isOpen, setIsOpen] = useState(false);
+
+  const [openHatches, setOpenHatches] = useQueryState(
+    "hatches",
+    parseAsArrayOf(parseAsInteger).withDefault([])
+  );
+
+  const isOpen = openHatches.includes(day);
+
+  const toggleHatch = (day: number) => {
+    if (isOpen) {
+      setOpenHatches(openHatches.filter((oh) => oh !== day));
+    } else {
+      setOpenHatches([...openHatches, day]);
+    }
+  };
 
   const classes = cx(styles.hatch, className);
 
-  console.log(isOpen, "is open");
-
   return (
     <div
-      role="button"
-      tabIndex={day}
-      onClick={(e) => {
-        e.preventDefault();
-        setIsOpen((p) => (p ? false : true));
-      }}
       className={classes}
       style={{
         gridArea: `${position.top} / ${position.left} / ${
           position.top + position.height
         } / ${position.left + position.width}`
       }}
-      onKeyDown={(e) => {
-        if (e.key === "Enter") {
-          e.preventDefault();
-          setIsOpen((p) => (p ? false : true));
-        }
-      }}
     >
       <label className={styles.label} htmlFor={`checkbox-${day}`}>
         <input
           name={`checkbox-${day}`}
+          readOnly
           className={styles.checkbox}
           type="checkbox"
           checked={isOpen}
         />
-        <div className={clsx(styles.door, { [styles.openDoor]: isOpen })}>
+        <div
+          role="button"
+          tabIndex={day}
+          onClick={() => {
+            toggleHatch(day);
+          }}
+          className={clsx(styles.door, { [styles.openDoor]: isOpen })}
+          onKeyDown={(e) => {
+            if (e.key === "Enter") {
+              e.preventDefault();
+              toggleHatch(day);
+            }
+          }}
+        >
           <div className={styles.content}>{day}</div>
           <div className={clsx(styles.content, styles.back)}></div>
         </div>
@@ -66,7 +86,7 @@ const Hatch: FC<Props> = ({ className, children, day, position }) => {
             [styles.insideOpen]: isOpen
           })}
         >
-          <CalendarWall day={day}>{children}</CalendarWall>
+          <Suspense fallback={<Spinner />}>{children}</Suspense>
         </div>
       </label>
     </div>

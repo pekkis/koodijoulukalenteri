@@ -1,24 +1,16 @@
 import { FC, ReactNode } from "react";
-import { DateTime } from "luxon";
-import Risuja from "../hatches/Risuja";
+import { getHatchData } from "@/services/hatch";
+import HatchPeek from "../hatch-renderer/HatchPeek";
 
 type Props = {
   day: number;
   children?: ReactNode;
 };
 
-const CalendarWall: FC<Props> = ({ day, children }) => {
-  const openableAt = DateTime.local(2023, 11, day, 5, {
-    zone: "Europe/Helsinki"
-  });
+const CalendarWall: FC<Props> = async ({ day }) => {
+  const data = await getHatchData(day);
 
-  const now = DateTime.utc();
-
-  if (now < openableAt) {
-    return <Risuja />;
-  }
-
-  return <>{children}</>;
+  return <HatchPeek day={day} data={data} />;
 };
 
 export default CalendarWall;
