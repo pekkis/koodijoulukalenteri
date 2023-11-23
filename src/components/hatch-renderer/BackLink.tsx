@@ -1,7 +1,7 @@
 "use client";
 
+import useOpenHatches from "@/hooks/useOpenHatches";
 import Link from "next/link";
-import { useSearchParams } from "next/navigation";
 import { FC, ReactNode } from "react";
 
 type Props = {
@@ -9,8 +9,8 @@ type Props = {
 };
 
 const BackLink: FC<Props> = ({ children }) => {
-  const sp = useSearchParams();
-  const url = `/?${sp.toString()}`;
+  const { searchParams } = useOpenHatches();
+  const url = `/?${searchParams.toString()}`;
 
   return <Link href={url}>{children}</Link>;
 };

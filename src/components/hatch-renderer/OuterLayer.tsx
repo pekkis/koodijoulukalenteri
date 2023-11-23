@@ -1,7 +1,7 @@
 "use client";
 
+import useOpenHatches from "@/hooks/useOpenHatches";
 import Link from "next/link";
-import { useSearchParams } from "next/navigation";
 import { FC, ReactNode } from "react";
 
 type Props = {
@@ -10,11 +10,15 @@ type Props = {
 };
 
 const OuterLayer: FC<Props> = ({ day, children }) => {
-  const sp = useSearchParams();
+  const { searchParams } = useOpenHatches();
 
-  const url = `/hatch/${day}?${sp.toString()}`;
+  const url = `/hatch/${day}?${searchParams.toString()}`;
 
-  return <Link href={url}>{children}</Link>;
+  return (
+    <Link tabIndex={day * 100 + 10} href={url}>
+      {children}
+    </Link>
+  );
 };
 
 export default OuterLayer;

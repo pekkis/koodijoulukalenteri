@@ -4,13 +4,12 @@ import Img from "../Img";
 import OuterLayer from "./OuterLayer";
 
 type Props = {
-  day: number;
   data: HatchData;
 };
 
-const HatchPeek: FC<Props> = ({ day, data }) => {
+const HatchPeek: FC<Props> = ({ data }) => {
   return (
-    <OuterLayer day={day}>
+    <OuterLayer day={data.day}>
       <Img src={data.image} />
     </OuterLayer>
   );

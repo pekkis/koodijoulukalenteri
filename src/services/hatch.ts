@@ -25,6 +25,7 @@ export type ContentBlockType =
   | ImageBlockType;
 
 export type HatchData = {
+  day: number;
   image: StaticImageData;
   title: string;
   content: ContentBlockType[];
@@ -32,13 +33,13 @@ export type HatchData = {
 
 // type HatchesData = Record<number, HatchData>;
 
-const risujaData: HatchData = {
+const risujaData: Omit<HatchData, "day"> = {
   title: "Tuhmat saavat risuja",
   image: risuja,
   content: [
     {
       type: "markdown",
-      text: "Tuhmille luukkujen aikaisille aukaisijoille pukki antaa **risuja** ja **kiviä**"
+      text: "Luukkujen varhaisille aukaisijoille pukki antaa **risuja** ja **kiviä** ja Bacon.js:n."
     }
   ]
 };
@@ -46,5 +47,5 @@ const risujaData: HatchData = {
 /* eslint-disable @typescript-eslint/no-unused-vars */
 
 export const getHatchData = async (day: number): Promise<HatchData> => {
-  return risujaData;
+  return { ...risujaData, day };
 };

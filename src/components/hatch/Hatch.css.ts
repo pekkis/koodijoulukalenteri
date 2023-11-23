@@ -46,7 +46,12 @@ export const door = style({
   transformOrigin: "0% 50%",
   position: "absolute",
   inset: 0,
-  zIndex: 6666666
+  zIndex: 6666666,
+  cursor: "not-allowed"
+});
+
+export const openableDoor = style({
+  cursor: "w-resize"
 });
 
 export const openDoor = style({
@@ -54,7 +59,8 @@ export const openDoor = style({
   borderRadius: theme.borderRadius.sharp,
   borderWidth: "1px",
   borderStyle: "dashed",
-  borderColor: theme.colors.hatchBorder
+  borderColor: theme.colors.hatchBorder,
+  cursor: "e-resize"
 });
 
 export const content = style({

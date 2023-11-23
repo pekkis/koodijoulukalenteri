@@ -4,12 +4,8 @@ import { FC, ReactNode, Suspense } from "react";
 import * as styles from "./Hatch.css";
 import cx from "clsx";
 import clsx from "clsx";
-import {
-  useQueryState,
-  parseAsArrayOf,
-  parseAsInteger
-} from "next-usequerystate";
 import Spinner from "../debug/Spinner";
+import useOpenHatches from "@/hooks/useOpenHatches";
 
 /* eslint-disable jsx-a11y/label-has-associated-control */
 
@@ -21,29 +17,23 @@ export type HatchPosition = {
 };
 
 type Props = {
+  isOpenable: boolean;
   day: number;
   position: HatchPosition;
   className?: string;
   children: ReactNode;
 };
 
-const Hatch: FC<Props> = ({ className, children, day, position }) => {
-  // const [isOpen, setIsOpen] = useState(false);
-
-  const [openHatches, setOpenHatches] = useQueryState(
-    "hatches",
-    parseAsArrayOf(parseAsInteger).withDefault([])
-  );
+const Hatch: FC<Props> = ({
+  className,
+  children,
+  day,
+  position,
+  isOpenable
+}) => {
+  const { openHatches, toggleHatch } = useOpenHatches();
 
   const isOpen = openHatches.includes(day);
-
-  const toggleHatch = (day: number) => {
-    if (isOpen) {
-      setOpenHatches(openHatches.filter((oh) => oh !== day));
-    } else {
-      setOpenHatches([...openHatches, day]);
-    }
-  };
 
   const classes = cx(styles.hatch, className);
 
@@ -66,11 +56,14 @@ const Hatch: FC<Props> = ({ className, children, day, position }) => {
         />
         <div
           role="button"
-          tabIndex={day}
+          tabIndex={day * 100}
           onClick={() => {
             toggleHatch(day);
           }}
-          className={clsx(styles.door, { [styles.openDoor]: isOpen })}
+          className={clsx(styles.door, {
+            [styles.openableDoor]: isOpenable,
+            [styles.openDoor]: isOpen
+          })}
           onKeyDown={(e) => {
             if (e.key === "Enter") {
               e.preventDefault();
