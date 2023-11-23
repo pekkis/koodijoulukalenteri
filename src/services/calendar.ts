@@ -5,7 +5,7 @@ export const isHatchOpenable = (day: number): boolean => {
     return true;
   }
 
-  const openableAt = DateTime.local(2023, 11, day, 5, {
+  const openableAt = DateTime.local(2023, 12, day, 5, {
     zone: "Europe/Helsinki"
   });
 
