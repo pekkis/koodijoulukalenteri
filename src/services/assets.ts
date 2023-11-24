@@ -1,3 +1,3 @@
-import christmasyProgrammers from "@/assets/christmasy-programmers.png";
+import christmasyProgrammers from "@/assets/programmers.png";
 
 export { christmasyProgrammers };
