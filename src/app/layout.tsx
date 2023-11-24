@@ -6,7 +6,7 @@ import Header from "./Header";
 import Main from "./Main";
 import Footer from "./Footer";
 
-import * as assets from "@/services/assets";
+import "@/services/assets";
 
 type Props = {
   children: ReactNode;
