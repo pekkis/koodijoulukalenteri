@@ -1,10 +1,10 @@
 import { style } from "@vanilla-extract/css";
 
-import bg from "@/assets/christmasy-programmers.png";
+import { christmasyProgrammers } from "@/services/assets";
 
 export const container = style({
   containerType: "inline-size",
-  backgroundImage: `url(${bg.src})`,
+  backgroundImage: `url(${christmasyProgrammers.src})`,
   backgroundSize: "contain"
 });
 

@@ -15,7 +15,7 @@ const OuterLayer: FC<Props> = ({ day, children }) => {
   const url = `/hatch/${day}?${searchParams.toString()}`;
 
   return (
-    <Link tabIndex={day * 100 + 10} href={url}>
+    <Link tabIndex={day * 100 + 10} href={url} scroll={false}>
       {children}
     </Link>
   );

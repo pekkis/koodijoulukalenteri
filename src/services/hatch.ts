@@ -1,6 +1,7 @@
 import { StaticImageData } from "next/image";
 
 import risuja from "@/assets/risuja.png";
+import { HatchPosition } from "@/components/hatch/Hatch";
 
 export type MarkdownBlockType = {
   type: "markdown";
@@ -48,4 +49,21 @@ const risujaData: Omit<HatchData, "day"> = {
 
 export const getHatchData = async (day: number): Promise<HatchData> => {
   return { ...risujaData, day };
+};
+
+export const getPosition = (
+  x: number,
+  y: number,
+  width: number,
+  height: number
+): HatchPosition => {
+  const calcX = x > 0 ? x : 52 + x - width;
+  const calcY = y > 0 ? y : 52 + y - height;
+
+  return {
+    top: calcY,
+    left: calcX,
+    width,
+    height
+  };
 };

@@ -20,11 +20,11 @@ const Dialog: FC<Props> = ({ children }) => {
 
   useOnClickOutside(ref, () => {
     console.log("hmm");
-    router.push(`/?${searchParams.toString()}`);
+    router.push(`/?${searchParams.toString()}`, { scroll: false });
   });
 
   useKeyPress("Escape", () => {
-    router.push(`/?${searchParams.toString()}`);
+    router.push(`/?${searchParams.toString()}`, { scroll: false });
   });
 
   useEffect(() => {
