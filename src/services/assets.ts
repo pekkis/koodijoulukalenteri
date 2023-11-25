@@ -1,4 +1,4 @@
-import christmasyProgrammers from "@/assets/programmers.png";
-import naughtyProgrammers from "@/assets/naughty-programmers.png";
+import christmasyProgrammers from "@/assets/programmers.webp";
+import naughtyProgrammers from "@/assets/naughty-programmers.webp";
 
 export { christmasyProgrammers, naughtyProgrammers };
