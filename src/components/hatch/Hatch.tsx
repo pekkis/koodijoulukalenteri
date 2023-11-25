@@ -1,10 +1,9 @@
 "use client";
 
-import { FC, ReactNode, Suspense } from "react";
+import { FC, ReactNode } from "react";
 import * as styles from "./Hatch.css";
 import cx from "clsx";
 import clsx from "clsx";
-import Spinner from "../debug/Spinner";
 import useOpenHatches from "@/hooks/useOpenHatches";
 
 /* eslint-disable jsx-a11y/label-has-associated-control */
@@ -79,7 +78,7 @@ const Hatch: FC<Props> = ({
             [styles.insideOpen]: isOpen
           })}
         >
-          <Suspense fallback={<Spinner />}>{children}</Suspense>
+          {children}
         </div>
       </label>
     </div>

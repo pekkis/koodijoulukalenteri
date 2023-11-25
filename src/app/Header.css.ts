@@ -8,16 +8,29 @@ font-style: normal;
 */
 
 export const header = style({
+  marginBlockEnd: theme.spacing.m,
+  textAlign: "center"
+});
+
+export const heading = style({
   fontFamily: "p22-yule-heavy-snow, sans-serif",
   fontWeight: 400,
   fontStyle: "normal",
-  fontSize: "2rem",
-  textAlign: "center",
-  marginBlockEnd: theme.spacing.m,
+  fontSize: "3rem",
 
   "@media": {
     "screen and (min-width: 800px)": {
       fontSize: "4rem"
     }
   }
+});
+
+export const jingleBells = style({
+  marginBlock: theme.spacing.m
+});
+
+export const instructions = style({
+  marginBlock: theme.spacing.m,
+  marginInline: "auto",
+  maxWidth: theme.size.container
 });

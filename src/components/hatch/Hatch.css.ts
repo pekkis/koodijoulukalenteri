@@ -51,7 +51,7 @@ export const door = style({
 });
 
 export const openableDoor = style({
-  cursor: "w-resize"
+  cursor: "pointer"
 });
 
 export const openDoor = style({
@@ -60,7 +60,7 @@ export const openDoor = style({
   borderWidth: "1px",
   borderStyle: "dashed",
   borderColor: theme.colors.hatchBorder,
-  cursor: "e-resize"
+  cursor: "pointer"
 });
 
 export const content = style({
@@ -94,7 +94,8 @@ export const inside = style({
   transition: "all 300ms",
   display: "flex",
   alignItems: "center",
-  justifyContent: "center"
+  justifyContent: "center",
+  containerType: "size"
 });
 
 export const insideOpen = style({

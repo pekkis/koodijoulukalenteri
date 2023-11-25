@@ -1,6 +1,6 @@
 import { StaticImageData } from "next/image";
 
-import risuja from "@/assets/risuja.png";
+import risuja from "@/assets/risuja-2.png";
 import { HatchPosition } from "@/components/hatch/Hatch";
 
 export type MarkdownBlockType = {
@@ -35,7 +35,7 @@ export type HatchData = {
 // type HatchesData = Record<number, HatchData>;
 
 const risujaData: Omit<HatchData, "day"> = {
-  title: "Tuhmat saavat risuja",
+  title: "Tuhmat saavat kiviä ja risuja",
   image: risuja,
   content: [
     {

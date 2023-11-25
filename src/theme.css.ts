@@ -12,7 +12,8 @@ const theme = createGlobalTheme(":root", {
   borderRadius: {
     sharp: "3px",
     soft: "6px",
-    plump: "9px"
+    plump: "9px",
+    megaPlump: "100px"
   },
 
   borderWidth: {
@@ -21,11 +22,11 @@ const theme = createGlobalTheme(":root", {
   },
 
   colors: {
-    primary: "#ffff4d",
-    secondary: "#b3b336",
-    tertiary: "#b8ff4d",
-    quartiary: "#ffdb4d",
-    femtiary: "#ffdb4d",
+    primary: "#ff0000",
+    secondary: "#b30000",
+    tertiary: "#ffbfbf",
+    quaternary: "#00ff00",
+    quinary: "#00b300",
     black: "rgb(0, 0, 0)",
     white: "rgb(255, 255, 255)",
 
@@ -39,6 +40,10 @@ const theme = createGlobalTheme(":root", {
     m: "2rem",
     l: "4rem",
     xl: "8rem"
+  },
+
+  size: {
+    container: "800px"
   }
 });
 
