@@ -12,8 +12,6 @@ const JingleBells: FC = () => {
 
   const { naughtiness } = useNaughtiness();
 
-  console.log("NAUGHTINESSSS", naughtiness);
-
   const ref = useRef<HTMLAudioElement>(null);
 
   const Icon = isPlaying ? FaPause : FaPlay;
@@ -21,7 +19,7 @@ const JingleBells: FC = () => {
     ? "Kilistele kulkusia"
     : "Lopeta kulkusten kilistely";
 
-  const track = naughtiness >= 2 ? "/horror-bells.mp3" : "/jingle-bells.ogg";
+  const track = naughtiness >= 2 ? "/horror-bells.mp3" : "/jingle-bells.mp3";
 
   useEffect(() => {
     if (!ref.current) {
@@ -32,9 +30,7 @@ const JingleBells: FC = () => {
     if (isPlaying) {
       ref?.current.play();
     }
-
-    // ref.current.play();
-  }, [track]);
+  }, [track, isPlaying]);
 
   return (
     <>

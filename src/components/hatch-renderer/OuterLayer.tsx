@@ -26,7 +26,9 @@ const OuterLayer: FC<Props> = ({ day, children }) => {
           return;
         }
 
-        window.plausible?.("Open", {
+        console.log("Tracking hatch open");
+
+        window.plausible?.("Open Hatch", {
           props: { day: day }
         });
       }}
