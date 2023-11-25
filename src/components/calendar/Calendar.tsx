@@ -147,9 +147,9 @@ const Calendar: FC = () => {
         </p>
 
         <p>
-          <FaSkull /> Varoitus: tontut huomaavat välittömästi, jos luukkuihin
-          kurkitaan etukäteen. Joulun taika lataa sivun uusiksi joka aamu kello{" "}
-          <strong>05:00</strong>, kun uusi luukku on avattavissa!
+          <FaSkull /> Varoitus: tontut huomaavat, jos kurkit luukkuihin
+          etukäteen. Joulun taika lataa sivun uusiksi joka aamu kello{" "}
+          <strong>05:00</strong>, kun päivän luukun saa avata!
         </p>
       </div>
       <NaughtyOrNice>
