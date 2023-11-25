@@ -1,6 +1,6 @@
 "use client";
 
-import { FC, ReactNode, useEffect, useRef } from "react";
+import { FC, ReactNode, useRef } from "react";
 import Backdrop from "./Backdrop";
 import * as styles from "./Dialog.css";
 import { useOnClickOutside } from "usehooks-ts";
@@ -19,7 +19,6 @@ const Dialog: FC<Props> = ({ children }) => {
   const router = useRouter();
 
   useOnClickOutside(ref, () => {
-    console.log("hmm");
     router.push(`/?${searchParams.toString()}`, { scroll: false });
   });
 
@@ -27,22 +26,9 @@ const Dialog: FC<Props> = ({ children }) => {
     router.push(`/?${searchParams.toString()}`, { scroll: false });
   });
 
-  useEffect(() => {
-    return () => {
-      console.log("MIT VIT?");
-    };
-  }, []);
-
   return (
     <Backdrop>
-      <dialog
-        ref={ref}
-        open
-        className={styles.dialog}
-        onKeyDown={(e) => {
-          console.log("E", e);
-        }}
-      >
+      <dialog ref={ref} open className={styles.dialog}>
         {children}
       </dialog>
     </Backdrop>

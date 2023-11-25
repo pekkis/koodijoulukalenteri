@@ -28,9 +28,3 @@ export const heading = style({
 export const jingleBells = style({
   marginBlock: theme.spacing.m
 });
-
-export const instructions = style({
-  marginBlock: theme.spacing.m,
-  marginInline: "auto",
-  maxWidth: theme.size.container
-});

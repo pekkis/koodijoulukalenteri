@@ -5,6 +5,8 @@ import * as styles from "./Calendar.css";
 import { isHatchOpenable } from "@/services/calendar";
 import { getPosition } from "@/services/hatch";
 import { sortBy } from "ramda";
+import { FaSkull } from "react-icons/fa";
+import NaughtyOrNice from "./NaughtyOrNice";
 
 type HatchConfig = {
   day: number;
@@ -138,24 +140,39 @@ const Calendar: FC = () => {
   console.log("NUMBER OF HATCHES", sortedHatches.length);
 
   return (
-    <div className={styles.container}>
-      <div className={styles.grid}>
-        {sortedHatches.map((config) => {
-          const { day, position } = config;
+    <>
+      <div className={styles.instructions}>
+        <p>
+          Hou, hou, ja vielä kerran hou, tervetuloa koodijoulukalenteriin.
+          Huomaathan, että avattuasi luukun pääset klikkaamalla syvemmälle
+          luukun syövereihin.
+        </p>
 
-          return (
-            <Hatch
-              key={config.day}
-              isOpenable={isHatchOpenable(day)}
-              day={day}
-              position={position}
-            >
-              <CalendarWall day={day} />
-            </Hatch>
-          );
-        })}
+        <p>
+          <FaSkull /> Varoitus: tontut huomaavat välittömästi, jos luukkuihin
+          kurkitaan etukäteen. Joulun taika lataa sivun uusiksi joka aamu kello{" "}
+          <strong>05:00</strong>, kun uusi luukku on avattavissa!
+        </p>
       </div>
-    </div>
+      <NaughtyOrNice>
+        <div className={styles.grid}>
+          {sortedHatches.map((config) => {
+            const { day, position } = config;
+
+            return (
+              <Hatch
+                key={config.day}
+                isOpenable={isHatchOpenable(day)}
+                day={day}
+                position={position}
+              >
+                <CalendarWall day={day} />
+              </Hatch>
+            );
+          })}
+        </div>
+      </NaughtyOrNice>
+    </>
   );
 };
 

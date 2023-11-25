@@ -5,6 +5,7 @@ import * as styles from "./Hatch.css";
 import cx from "clsx";
 import clsx from "clsx";
 import useOpenHatches from "@/hooks/useOpenHatches";
+import useNaughtiness from "@/hooks/useNaughtiness";
 
 /* eslint-disable jsx-a11y/label-has-associated-control */
 
@@ -31,6 +32,7 @@ const Hatch: FC<Props> = ({
   isOpenable
 }) => {
   const { openHatches, toggleHatch } = useOpenHatches();
+  const { addNaughtiness } = useNaughtiness();
 
   const isOpen = openHatches.includes(day);
 
@@ -57,6 +59,9 @@ const Hatch: FC<Props> = ({
           role="button"
           tabIndex={day * 100}
           onClick={() => {
+            if (!isOpenable && !isOpen) {
+              addNaughtiness(1);
+            }
             toggleHatch(day);
           }}
           className={clsx(styles.door, {
@@ -66,6 +71,9 @@ const Hatch: FC<Props> = ({
           onKeyDown={(e) => {
             if (e.key === "Enter") {
               e.preventDefault();
+              if (!isOpenable && !isOpen) {
+                addNaughtiness(1);
+              }
               toggleHatch(day);
             }
           }}

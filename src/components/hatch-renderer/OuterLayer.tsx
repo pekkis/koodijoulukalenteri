@@ -21,6 +21,15 @@ const OuterLayer: FC<Props> = ({ day, children }) => {
       href={url}
       scroll={false}
       className={styles.outerLayer}
+      onClick={() => {
+        if (typeof window === "undefined") {
+          return;
+        }
+
+        window.plausible?.("Open", {
+          props: { day: day }
+        });
+      }}
     >
       {children}
     </Link>
