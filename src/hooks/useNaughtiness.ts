@@ -24,7 +24,7 @@ const useNaughtiness = () => {
   useEffect(() => {
     const t = setTimeout(() => {
       setNaughtiness(getNaughtiness());
-    }, 5000);
+    }, 30000);
 
     return () => {
       clearTimeout(t);
