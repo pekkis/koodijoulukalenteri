@@ -2,12 +2,17 @@
 
 "use client";
 
-import { FC, useRef, useState } from "react";
+import { FC, useEffect, useRef, useState } from "react";
 import { FaPause, FaPlay } from "react-icons/fa";
 import Button from "@/components/ui/Button";
+import useNaughtiness from "@/hooks/useNaughtiness";
 
 const JingleBells: FC = () => {
   const [isPlaying, setIsPlaying] = useState(false);
+
+  const { naughtiness } = useNaughtiness();
+
+  console.log("NAUGHTINESSSS", naughtiness);
 
   const ref = useRef<HTMLAudioElement>(null);
 
@@ -15,6 +20,21 @@ const JingleBells: FC = () => {
   const title = !isPlaying
     ? "Kilistele kulkusia"
     : "Lopeta kulkusten kilistely";
+
+  const track = naughtiness >= 2 ? "/horror-bells.mp3" : "/jingle-bells.ogg";
+
+  useEffect(() => {
+    if (!ref.current) {
+      return;
+    }
+
+    ref.current.load();
+    if (isPlaying) {
+      ref?.current.play();
+    }
+
+    // ref.current.play();
+  }, [track]);
 
   return (
     <>
@@ -32,7 +52,7 @@ const JingleBells: FC = () => {
       <audio
         loop={true}
         ref={ref}
-        src="/jingle-bells.ogg"
+        src={track}
         onPause={() => {
           setIsPlaying(false);
         }}
