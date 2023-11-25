@@ -18,6 +18,9 @@ const useOpenHatches = () => {
       if (isOpen) {
         setOpenHatches(openHatches.filter((oh) => oh !== day));
       } else {
+        window.plausible?.("Open Hatch", {
+          props: { day: day }
+        });
         setOpenHatches([...openHatches, day]);
       }
     },
