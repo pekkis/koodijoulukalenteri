@@ -24,6 +24,12 @@ export default async function WelcomeLayout({ children }: Props) {
 
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width" />
+
+        <script
+          defer
+          data-domain="koodijoulukalenteri.pekkis.eu"
+          src="https://plausible.io/js/script.js"
+        ></script>
       </head>
       <body>
         <Header />
