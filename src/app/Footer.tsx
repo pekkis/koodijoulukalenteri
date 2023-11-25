@@ -6,7 +6,7 @@ const Footer: FC = () => {
   return (
     <footer className={styles.footer}>
       Copyright &copy; 2023 Mikko &quot;Pekkis&quot; Forsström |{" "}
-      <Link href="/about">Lisätiedot</Link>
+      <Link href="/">Kalenteri</Link> | <Link href="/about">Lisätiedot</Link>
     </footer>
   );
 };

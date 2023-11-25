@@ -10,6 +10,7 @@ export const hatch = style({
   cursor: "pointer",
   borderRadius: theme.borderRadius.sharp,
   position: "relative",
+  containerType: "size",
 
   ":hover": {
     backgroundColor: "rgb(255 255 255 / .33)"
@@ -71,7 +72,7 @@ export const content = style({
   display: "flex",
   alignItems: "center",
   justifyContent: "center",
-  fontSize: "2rem"
+  fontSize: "min(20cqi, 20cqb)"
 });
 
 export const back = style({
@@ -94,8 +95,7 @@ export const inside = style({
   transition: "all 300ms",
   display: "flex",
   alignItems: "center",
-  justifyContent: "center",
-  containerType: "size"
+  justifyContent: "center"
 });
 
 export const insideOpen = style({

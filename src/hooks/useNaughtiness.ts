@@ -31,8 +31,6 @@ const useNaughtiness = () => {
     };
   }, [setNaughtiness]);
 
-  console.log("NAUGHTINESSSSSS", naughtiness);
-
   return {
     naughtiness,
     addNaughtiness

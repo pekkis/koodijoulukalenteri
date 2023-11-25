@@ -5,6 +5,7 @@ globalStyle("html", {
   fontSize: "16px",
   fontFamily: '"logical-variable", sans-serif',
   fontVariationSettings: '"wght" 400',
+  lineHeight: 1.4,
 
   "@media": {
     "screen and (min-width: 800px)": {

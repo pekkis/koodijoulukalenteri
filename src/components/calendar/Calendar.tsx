@@ -137,8 +137,6 @@ const Calendar: FC = () => {
     return hatch.position.left;
   }, hatches);
 
-  console.log("NUMBER OF HATCHES", sortedHatches.length);
-
   return (
     <>
       <div className={styles.instructions}>
