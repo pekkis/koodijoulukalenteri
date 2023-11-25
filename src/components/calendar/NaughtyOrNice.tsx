@@ -11,7 +11,7 @@ type Props = {
 
 const NaughtyOrNice: FC<Props> = ({ children }) => {
   const { naughtiness } = useNaughtiness();
-  const isNaughty = naughtiness >= 5;
+  const isNaughty = naughtiness >= 2;
   const classes = cx(styles.container, { [styles.naughty]: isNaughty });
 
   return <div className={classes}>{children}</div>;
