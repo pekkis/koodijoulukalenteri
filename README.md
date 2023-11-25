@@ -1,3 +1,9 @@
-# Koodijoulukalenteri
+# Pekkis' Christmas Code Calendar
 
-Code advent calendar of 2023!
+An advent calendar platform made with Next.js.
+
+## develop
+
+- `pnpm i`
+- `pnpm dev`
+- `DEBUG=true pnpm dev` to resolve all hatches openable.

@@ -9,4 +9,4 @@
 
 # TECH
 
-  <3 React <3
+  Next.js

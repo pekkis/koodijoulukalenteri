@@ -1,10 +1,6 @@
 import { createGlobalTheme } from "@vanilla-extract/css";
 
 const theme = createGlobalTheme(":root", {
-  fontFamilies: {
-    body: "Comic Sans Ms"
-  },
-
   fontSizes: {
     body: "18px"
   },
