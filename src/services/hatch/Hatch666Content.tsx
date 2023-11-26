@@ -10,6 +10,7 @@ const Hatch666Content: FC = () => {
   return (
     <p>
       <Button
+        block
         onClick={() => {
           addNaughtiness(-Infinity);
         }}

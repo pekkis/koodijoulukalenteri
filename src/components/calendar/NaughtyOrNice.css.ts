@@ -2,7 +2,8 @@ import {
   christmasyProgrammers,
   naughtyProgrammers,
   monsterProgrammers,
-  styrankiProgrammer
+  styrankiProgrammer,
+  antichristProgrammer
 } from "@/services/assets";
 import theme from "@/theme.css";
 import { style } from "@vanilla-extract/css";
@@ -28,6 +29,10 @@ export const monster = style({
 
 export const styranki = style({
   backgroundImage: `url(${styrankiProgrammer.src})`
+});
+
+export const antichrist = style({
+  backgroundImage: `url(${antichristProgrammer.src})`
 });
 
 export const naughtinessLevel = style({

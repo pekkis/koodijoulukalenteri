@@ -20,3 +20,8 @@ export const icon = style({
   verticalAlign: "middle",
   marginRight: theme.spacing.xs
 });
+
+export const block = style({
+  display: "block",
+  width: "100%"
+});

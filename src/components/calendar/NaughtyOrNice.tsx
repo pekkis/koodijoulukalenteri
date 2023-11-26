@@ -1,18 +1,18 @@
 "use client";
 
-import { FC, ReactNode } from "react";
-import * as styles from "./NaughtyOrNice.css";
-import cx from "clsx";
 import useNaughtiness from "@/hooks/useNaughtiness";
-import { NAUGHTINESS_MAX } from "@/services/naughtiness";
+import cx from "clsx";
+import { FC, ReactNode } from "react";
 import Progress from "../ui/Progress";
+import * as styles from "./NaughtyOrNice.css";
 
 type Props = {
   children: ReactNode;
 };
 
 const NaughtyOrNice: FC<Props> = ({ children }) => {
-  const { naughtinessLevel, naughtiness } = useNaughtiness();
+  const { naughtinessLevel, naughtiness, nextNaughtinessLevel } =
+    useNaughtiness();
   const classes = cx(styles.container, {
     [styles.christmasy]:
       naughtinessLevel.level === -1 ||
@@ -20,19 +20,32 @@ const NaughtyOrNice: FC<Props> = ({ children }) => {
       naughtinessLevel.level === 1,
     [styles.naughty]: naughtinessLevel.level === 2,
     [styles.monster]: naughtinessLevel.level === 3,
-    [styles.styranki]: naughtinessLevel.level === 4
+    [styles.antichrist]: naughtinessLevel.level === 4,
+    [styles.styranki]: naughtinessLevel.level === 5
   });
 
-  const naughtinessProgress = Math.max(NAUGHTINESS_MAX - (naughtiness || 0), 0);
+  const nextLevel =
+    nextNaughtinessLevel.requiredNaughtiness -
+    naughtinessLevel.requiredNaughtiness;
+
+  const myExp = (naughtiness || 0) - naughtinessLevel.requiredNaughtiness;
+
+  console.log("NEXT LEVEL", nextLevel, myExp);
 
   return (
     <div>
       <div className={styles.naughtinessLevel}>
         <div>
-          Kiltteystaso: <strong>{naughtinessLevel.name}</strong>
+          Tuhmuustaso: <strong>{naughtinessLevel.name}</strong>
         </div>
         <div>
-          <Progress max={NAUGHTINESS_MAX} value={naughtinessProgress} />
+          <Progress
+            max={
+              nextNaughtinessLevel.requiredNaughtiness -
+              naughtinessLevel.requiredNaughtiness
+            }
+            value={myExp}
+          />
         </div>
       </div>
       <div className={classes}>{children}</div>

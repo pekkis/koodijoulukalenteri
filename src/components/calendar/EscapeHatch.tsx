@@ -9,9 +9,12 @@ import Hatch from "../hatch/Hatch";
 import * as styles from "./EscapeHatch.css";
 
 import OuterLayer from "../hatch-renderer/OuterLayer";
+import useOpenHatches from "@/hooks/useOpenHatches";
 
 const EscapeHatch: FC = () => {
   const [pulse, setPulse] = useState(false);
+
+  const { openHatches } = useOpenHatches();
 
   useEffect(() => {
     const i = setInterval(() => {
@@ -25,7 +28,7 @@ const EscapeHatch: FC = () => {
 
   const { naughtinessLevel } = useNaughtiness();
 
-  if (naughtinessLevel.level < 3) {
+  if (naughtinessLevel.level < 4) {
     return null;
   }
 
@@ -39,7 +42,7 @@ const EscapeHatch: FC = () => {
       day={666}
       position={getPosition(26, 4, 5, 5)}
       className={classes}
-      naughtinessIncrease={1000}
+      naughtinessIncrease={1000 * openHatches.length}
       isDark
     >
       <OuterLayer day={666}>

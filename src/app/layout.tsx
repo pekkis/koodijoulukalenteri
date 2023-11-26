@@ -16,7 +16,7 @@ export default async function WelcomeLayout({ children }: Props) {
   return (
     <html lang="fi">
       <head>
-        <link rel="icon" type="image/png" href="/favicon.png" />
+        <link rel="icon" type="image/webp" href="/favicon.webp" />
         <link
           rel="stylesheet"
           href="https://use.typekit.net/tmc3dha.css"
@@ -31,7 +31,7 @@ export default async function WelcomeLayout({ children }: Props) {
           src="https://plausible.io/js/script.js"
         ></script>
       </head>
-      <body>
+      <body id="root">
         <Header />
         <Main>{children}</Main>
         <Footer />

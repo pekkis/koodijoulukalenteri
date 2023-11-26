@@ -1,7 +1,7 @@
 import { StaticImageData } from "next/image";
 
-import risuja from "@/assets/risuja-2.png";
-import demonicSanta from "./hatch/demonic-santa.png";
+import risuja from "@/assets/risuja-2.webp";
+import demonicSanta from "./hatch/demonic-santa.webp";
 
 import { HatchPosition } from "@/components/hatch/Hatch";
 import { isHatchOpenable } from "./calendar";
@@ -38,7 +38,10 @@ export type ContentBlockType =
 
 export type HatchData = {
   day: number;
-  image: StaticImageData;
+  image: {
+    src: StaticImageData;
+    alt: string;
+  };
   title: string;
   content: ContentBlockType[];
 };
@@ -47,20 +50,28 @@ type HatchesData = Record<number, Omit<HatchData, "day">>;
 
 const risujaData: Omit<HatchData, "day"> = {
   title: "Tuhmat saavat kiviä ja risuja",
-  image: risuja,
+  image: {
+    src: risuja,
+    alt: "Tuhma lapsi on saanut lahjaksi kiviä ja risuja. Hän itkee."
+  },
   content: [
     {
       type: "markdown",
-      text: "Luukkujen varhaisille aukaisijoille pukki antaa **risuja** ja **kiviä** ja Bacon.js:n."
+      text: `Nyt nimien kirjaan merkitään taas: tuhma vai kiltti, ajatelkaas! Joulupukki matkaan jo käy. Taas pienet tontut liikkuu ja muistiin merkitsee, niin joulupukki tietää saa, kuka lahjat ansaitsee.`
     }
   ]
 };
 
 const hatches: HatchesData = {
   666: {
-    title: "Pukki on sieluton, muttei vailla armoa",
-    image: demonicSanta,
+    title: "Pukki on ankara, muttei armoton",
+    image: { src: demonicSanta, alt: "Karmiva pahalaisjoulupukki" },
+
     content: [
+      {
+        type: "markdown",
+        text: `Katso, kuinka syvälle rappioon ja pohjattomiin kadotuksen syövereihin ennenaikainen kalenteriluukkujen avaaminen on johtanut sinut. Vieläkö olet pelastettavissa?`
+      },
       {
         type: "jsx",
         Component: Hatch666Content

@@ -16,7 +16,6 @@ const getTrack = (naughtinessLevel: number): string => {
     return "/horror-bells.mp3";
   }
 
-  // to horst wessel or not?
   return "/horst-wessel-lied.mp3";
 };
 

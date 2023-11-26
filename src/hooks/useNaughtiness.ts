@@ -1,7 +1,8 @@
 import {
   syncNaughtinessToStorage,
   getNaughtinessFromStorage,
-  getNaughtinessLevel
+  getNaughtinessLevel,
+  getNextNaughtinessLevel
 } from "@/services/naughtiness";
 import { useCallback, useEffect } from "react";
 import { atom, useAtom } from "jotai";
@@ -36,11 +37,13 @@ const useNaughtiness = () => {
   });
 
   const naughtinessLevel = getNaughtinessLevel(naughtiness);
+  const nextNaughtinessLevel = getNextNaughtinessLevel(naughtiness);
 
   return {
     naughtiness,
     addNaughtiness,
-    naughtinessLevel
+    naughtinessLevel,
+    nextNaughtinessLevel
   };
 };
 
