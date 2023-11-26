@@ -1,39 +1,46 @@
-import { syncNaughtiness, getNaughtiness } from "@/services/storage";
+import {
+  syncNaughtinessToStorage,
+  getNaughtinessFromStorage,
+  getNaughtinessLevel
+} from "@/services/naughtiness";
 import { useCallback, useEffect } from "react";
 import { atom, useAtom } from "jotai";
 
-const naughtinessAtom = atom(0);
+const naughtinessAtom = atom<number | undefined>(undefined);
+const isNaughtinessDefinedAtom = atom(false);
 
 const useNaughtiness = () => {
   const [naughtiness, setNaughtiness] = useAtom(naughtinessAtom);
+  const [isNaughtinessDefined, setIsNaughtinessDefined] = useAtom(
+    isNaughtinessDefinedAtom
+  );
 
   const addNaughtiness = useCallback(
     (amount: number) => {
-      setNaughtiness(getNaughtiness() + amount);
+      setIsNaughtinessDefined(true);
+      setNaughtiness(Math.max(0, getNaughtinessFromStorage() + amount));
     },
-    [setNaughtiness]
+    [setNaughtiness, setIsNaughtinessDefined]
   );
 
   useEffect(() => {
-    if (!naughtiness) {
+    if (!isNaughtinessDefined || naughtiness === undefined) {
       return;
     }
-    syncNaughtiness(naughtiness);
-  }, [naughtiness]);
+    syncNaughtinessToStorage(naughtiness);
+  }, [naughtiness, isNaughtinessDefined]);
 
   useEffect(() => {
-    const t = setTimeout(() => {
-      setNaughtiness(getNaughtiness());
-    }, 30000);
+    setNaughtiness(getNaughtinessFromStorage());
+    setIsNaughtinessDefined(true);
+  });
 
-    return () => {
-      clearTimeout(t);
-    };
-  }, [setNaughtiness]);
+  const naughtinessLevel = getNaughtinessLevel(naughtiness);
 
   return {
     naughtiness,
-    addNaughtiness
+    addNaughtiness,
+    naughtinessLevel
   };
 };
 

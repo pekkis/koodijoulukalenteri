@@ -7,10 +7,23 @@ import { FaPause, FaPlay } from "react-icons/fa";
 import Button from "@/components/ui/Button";
 import useNaughtiness from "@/hooks/useNaughtiness";
 
+const getTrack = (naughtinessLevel: number): string => {
+  if (naughtinessLevel < 3) {
+    return "/jingle-bells.mp3";
+  }
+
+  if (naughtinessLevel < 5) {
+    return "/horror-bells.mp3";
+  }
+
+  // to horst wessel or not?
+  return "/horst-wessel-lied.mp3";
+};
+
 const JingleBells: FC = () => {
   const [isPlaying, setIsPlaying] = useState(false);
 
-  const { naughtiness } = useNaughtiness();
+  const { naughtinessLevel } = useNaughtiness();
 
   const ref = useRef<HTMLAudioElement>(null);
 
@@ -19,7 +32,7 @@ const JingleBells: FC = () => {
     ? "Kilistele kulkusia"
     : "Lopeta kulkusten kilistely";
 
-  const track = naughtiness >= 2 ? "/horror-bells.mp3" : "/jingle-bells.mp3";
+  const track = getTrack(naughtinessLevel.level);
 
   useEffect(() => {
     if (!ref.current) {

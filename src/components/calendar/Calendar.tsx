@@ -7,6 +7,7 @@ import { getPosition } from "@/services/hatch";
 import { sortBy } from "ramda";
 import { FaSkull } from "react-icons/fa";
 import NaughtyOrNice from "./NaughtyOrNice";
+import EscapeHatch from "./EscapeHatch";
 
 type HatchConfig = {
   day: number;
@@ -154,6 +155,7 @@ const Calendar: FC = () => {
       </div>
       <NaughtyOrNice>
         <div className={styles.grid}>
+          <EscapeHatch />
           {sortedHatches.map((config) => {
             const { day, position } = config;
 

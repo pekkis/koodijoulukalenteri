@@ -17,11 +17,13 @@ export type HatchPosition = {
 };
 
 type Props = {
-  isOpenable: boolean;
+  isOpenable?: boolean;
   day: number;
   position: HatchPosition;
   className?: string;
   children: ReactNode;
+  naughtinessIncrease?: number;
+  isDark?: boolean;
 };
 
 const Hatch: FC<Props> = ({
@@ -29,14 +31,20 @@ const Hatch: FC<Props> = ({
   children,
   day,
   position,
-  isOpenable
+  isOpenable = false,
+  naughtinessIncrease,
+  isDark = false
 }) => {
   const { openHatches, toggleHatch } = useOpenHatches();
   const { addNaughtiness } = useNaughtiness();
 
+  const hatchSize = position.height * position.width;
+
   const isOpen = openHatches.includes(day);
 
   const classes = cx(styles.hatch, className);
+
+  const naughtinessIncreaseByAmount = naughtinessIncrease || hatchSize;
 
   return (
     <div
@@ -60,7 +68,7 @@ const Hatch: FC<Props> = ({
           tabIndex={day * 100}
           onClick={() => {
             if (!isOpenable && !isOpen) {
-              addNaughtiness(1);
+              addNaughtiness(naughtinessIncreaseByAmount);
             }
             toggleHatch(day);
           }}
@@ -72,7 +80,7 @@ const Hatch: FC<Props> = ({
             if (e.key === "Enter") {
               e.preventDefault();
               if (!isOpenable && !isOpen) {
-                addNaughtiness(1);
+                addNaughtiness(naughtinessIncreaseByAmount);
               }
               toggleHatch(day);
             }
@@ -83,6 +91,7 @@ const Hatch: FC<Props> = ({
         </div>
         <div
           className={clsx(styles.inside, {
+            [styles.darkInside]: isDark,
             [styles.insideOpen]: isOpen
           })}
         >

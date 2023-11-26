@@ -3,8 +3,6 @@ import { useCallback, useEffect } from "react";
 const useKeyPress = (key: string, callback: () => void) => {
   const listener = useCallback(
     (e: KeyboardEvent) => {
-      console.log("E", e.key);
-
       if (e.key !== key) {
         return;
       }

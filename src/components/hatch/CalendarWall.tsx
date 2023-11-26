@@ -9,6 +9,10 @@ type Props = {
 const CalendarWall: FC<Props> = async ({ day }) => {
   const data = await getHatchData(day);
 
+  if (!data) {
+    return null;
+  }
+
   return <HatchPeek data={data} />;
 };
 

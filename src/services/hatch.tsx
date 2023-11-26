@@ -1,7 +1,12 @@
 import { StaticImageData } from "next/image";
 
 import risuja from "@/assets/risuja-2.png";
+import demonicSanta from "./hatch/demonic-santa.png";
+
 import { HatchPosition } from "@/components/hatch/Hatch";
+import { isHatchOpenable } from "./calendar";
+import { FC } from "react";
+import Hatch666Content from "./hatch/Hatch666Content";
 
 export type MarkdownBlockType = {
   type: "markdown";
@@ -20,10 +25,16 @@ export type ImageBlockType = {
   url: string;
 };
 
+export type JsxBlockType = {
+  type: "jsx";
+  Component: FC;
+};
+
 export type ContentBlockType =
   | MarkdownBlockType
   | HeadingBlockType
-  | ImageBlockType;
+  | ImageBlockType
+  | JsxBlockType;
 
 export type HatchData = {
   day: number;
@@ -32,7 +43,7 @@ export type HatchData = {
   content: ContentBlockType[];
 };
 
-// type HatchesData = Record<number, HatchData>;
+type HatchesData = Record<number, Omit<HatchData, "day">>;
 
 const risujaData: Omit<HatchData, "day"> = {
   title: "Tuhmat saavat kiviä ja risuja",
@@ -45,10 +56,31 @@ const risujaData: Omit<HatchData, "day"> = {
   ]
 };
 
+const hatches: HatchesData = {
+  666: {
+    title: "Pukki on sieluton, muttei vailla armoa",
+    image: demonicSanta,
+    content: [
+      {
+        type: "jsx",
+        Component: Hatch666Content
+      }
+    ]
+  }
+};
+
 /* eslint-disable @typescript-eslint/no-unused-vars */
 
-export const getHatchData = async (day: number): Promise<HatchData> => {
-  return { ...risujaData, day };
+export const getHatchData = async (day: number): Promise<HatchData | null> => {
+  if (day !== 666 && !isHatchOpenable(day)) {
+    return { ...risujaData, day };
+  }
+
+  if (hatches[day]) {
+    return { ...hatches[day], day };
+  }
+
+  return null;
 };
 
 export const getPosition = (

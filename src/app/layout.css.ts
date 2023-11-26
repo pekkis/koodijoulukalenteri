@@ -14,6 +14,10 @@ globalStyle("html", {
   }
 });
 
+globalStyle("a, a:hover", {
+  color: theme.colors.secondary
+});
+
 globalStyle("body", {
   marginBlock: 0,
   marginInline: 0,
@@ -29,4 +33,8 @@ globalStyle("body", {
 
 globalStyle("*", {
   boxSizing: "border-box"
+});
+
+globalStyle("strong", {
+  fontVariationSettings: '"wght" 600'
 });

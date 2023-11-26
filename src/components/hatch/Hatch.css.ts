@@ -98,6 +98,10 @@ export const inside = style({
   justifyContent: "center"
 });
 
+export const darkInside = style({
+  backgroundColor: theme.colors.black
+});
+
 export const insideOpen = style({
   backgroundColor: theme.colors.white,
   borderWidth: "1px",
