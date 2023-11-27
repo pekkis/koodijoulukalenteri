@@ -6,6 +6,7 @@ import JsxBlock from "./blocks/JsxBlock";
 import * as styles from "./HatchRenderer.css";
 import MarkdownBlock from "./blocks/MarkdownBlock";
 import BackButton from "./BackButton";
+import YoutubeBlock from "./blocks/YoutubeBlock";
 
 type Props = {
   day: number;
@@ -14,30 +15,36 @@ type Props = {
 
 const HatchRenderer: FC<Props> = ({ data }) => {
   return (
-    <div>
-      <MainHeading>{data.title}</MainHeading>
-      <NextImg
-        src={data.image.src}
-        alt={data.image.alt}
-        width={640}
-        height={640}
-        className={styles.image}
-      />
+    <article>
+      <header className={styles.header}>
+        <MainHeading>{data.title}</MainHeading>
+        <NextImg
+          src={data.image.src}
+          alt={data.image.alt}
+          width={640}
+          height={640}
+          className={styles.image}
+        />
+      </header>
 
-      {data.content.map((block, i) => {
-        switch (block.type) {
-          case "markdown":
-            return <MarkdownBlock key={i} block={block} />;
-          case "jsx":
-            return <JsxBlock key={i} block={block} />;
+      <div>
+        {data.content.map((block, i) => {
+          switch (block.type) {
+            case "markdown":
+              return <MarkdownBlock key={i} block={block} />;
+            case "jsx":
+              return <JsxBlock key={i} block={block} />;
+            case "youtube":
+              return <YoutubeBlock key={i} block={block} />;
 
-          default:
-            return <Fragment key={i}>lus</Fragment>;
-        }
-      })}
+            default:
+              return <Fragment key={i}>lus</Fragment>;
+          }
+        })}
+      </div>
 
       <BackButton>Takaisin kalenteriin</BackButton>
-    </div>
+    </article>
   );
 };
 

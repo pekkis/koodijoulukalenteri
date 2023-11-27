@@ -50,7 +50,6 @@ export default async function WelcomeLayout({ children }: Props) {
         <link rel="preload" href={naughtyProgrammers.src} as="image" />
 
         <meta charSet="utf-8" />
-        <meta name="viewport" content="width=device-width" />
 
         <script
           defer

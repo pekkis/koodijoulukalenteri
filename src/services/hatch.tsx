@@ -1,12 +1,12 @@
 import { StaticImageData } from "next/image";
 
 import risuja from "@/assets/risuja-2.webp";
-import demonicSanta from "./hatch/demonic-santa.webp";
 
 import { HatchPosition } from "@/components/hatch/Hatch";
 import { isHatchOpenable } from "./calendar";
 import { FC } from "react";
-import Hatch666Content from "./hatch/Hatch666Content";
+import hatch666 from "./hatch/hatch666";
+import movies from "./hatch/movies";
 
 export type MarkdownBlockType = {
   type: "markdown";
@@ -25,6 +25,12 @@ export type ImageBlockType = {
   url: string;
 };
 
+export type YoutubeBlockType = {
+  type: "youtube";
+  id: string;
+  caption?: string;
+};
+
 export type JsxBlockType = {
   type: "jsx";
   Component: FC;
@@ -34,7 +40,8 @@ export type ContentBlockType =
   | MarkdownBlockType
   | HeadingBlockType
   | ImageBlockType
-  | JsxBlockType;
+  | JsxBlockType
+  | YoutubeBlockType;
 
 export type HatchData = {
   day: number;
@@ -45,6 +52,8 @@ export type HatchData = {
   title: string;
   content: ContentBlockType[];
 };
+
+export type HatchDataWithoutDay = Omit<HatchData, "day">;
 
 type HatchesData = Record<number, Omit<HatchData, "day">>;
 
@@ -63,21 +72,30 @@ const risujaData: Omit<HatchData, "day"> = {
 };
 
 const hatches: HatchesData = {
-  666: {
-    title: "Pukki on ankara, muttei armoton",
-    image: { src: demonicSanta, alt: "Karmiva pahalaisjoulupukki" },
-
-    content: [
-      {
-        type: "markdown",
-        text: `Katso, kuinka syvälle rappioon ja pohjattomiin kadotuksen syövereihin ennenaikainen kalenteriluukkujen avaaminen on johtanut sinut. Vieläkö olet pelastettavissa?`
-      },
-      {
-        type: "jsx",
-        Component: Hatch666Content
-      }
-    ]
-  }
+  1: movies,
+  2: risujaData,
+  3: risujaData,
+  4: risujaData,
+  5: risujaData,
+  6: risujaData,
+  7: risujaData,
+  8: risujaData,
+  9: risujaData,
+  10: risujaData,
+  11: risujaData,
+  12: risujaData,
+  13: risujaData,
+  14: risujaData,
+  15: risujaData,
+  16: risujaData,
+  17: risujaData,
+  18: risujaData,
+  19: risujaData,
+  20: risujaData,
+  21: risujaData,
+  22: risujaData,
+  23: risujaData,
+  666: hatch666
 };
 
 /* eslint-disable @typescript-eslint/no-unused-vars */
