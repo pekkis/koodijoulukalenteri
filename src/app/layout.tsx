@@ -14,9 +14,26 @@ import {
 } from "@/services/assets";
 
 import "@/services/assets";
+import { Metadata, Viewport } from "next";
+
+import santaClaus from "@/assets/santa-claus.webp";
 
 type Props = {
   children: ReactNode;
+};
+
+export const metadata: Metadata = {
+  title: "Pekkiksen koodijoulukalenteri 2023",
+  openGraph: {
+    type: "website",
+    title: "Pekkiksen koodijoulukalenteri 2023",
+    images: santaClaus.src
+  }
+};
+
+export const viewport: Viewport = {
+  themeColor: "rgb(255 0 0)",
+  width: "device-width"
 };
 
 export default async function WelcomeLayout({ children }: Props) {
