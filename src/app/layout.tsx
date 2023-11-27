@@ -16,8 +16,6 @@ import {
 import "@/services/assets";
 import { Metadata, Viewport } from "next";
 
-import santaClaus from "@/assets/santa-claus.webp";
-
 type Props = {
   children: ReactNode;
 };
@@ -27,7 +25,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     title: "Pekkiksen koodijoulukalenteri 2023",
-    images: santaClaus.src
+    images: "https://koodijoulukalenteri.pekkis.eu/santa-claus.webp"
   }
 };
 
