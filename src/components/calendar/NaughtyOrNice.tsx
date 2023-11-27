@@ -24,19 +24,18 @@ const NaughtyOrNice: FC<Props> = ({ children }) => {
     [styles.styranki]: naughtinessLevel.level === 5
   });
 
-  const nextLevel =
-    nextNaughtinessLevel.requiredNaughtiness -
-    naughtinessLevel.requiredNaughtiness;
-
   const myExp = (naughtiness || 0) - naughtinessLevel.requiredNaughtiness;
 
-  console.log("NEXT LEVEL", nextLevel, myExp);
+  const reverseExp =
+    nextNaughtinessLevel.requiredNaughtiness -
+    naughtinessLevel.requiredNaughtiness -
+    myExp;
 
   return (
     <div>
       <div className={styles.naughtinessLevel}>
         <div>
-          Tuhmuustaso: <strong>{naughtinessLevel.name}</strong>
+          Kiltteystaso: <strong>{naughtinessLevel.name}</strong>
         </div>
         <div>
           <Progress
@@ -44,7 +43,7 @@ const NaughtyOrNice: FC<Props> = ({ children }) => {
               nextNaughtinessLevel.requiredNaughtiness -
               naughtinessLevel.requiredNaughtiness
             }
-            value={myExp}
+            value={reverseExp}
           />
         </div>
       </div>

@@ -6,6 +6,13 @@ import Header from "./Header";
 import Main from "./Main";
 import Footer from "./Footer";
 
+import {
+  antichristProgrammer,
+  christmasyProgrammers,
+  monsterProgrammers,
+  naughtyProgrammers
+} from "@/services/assets";
+
 import "@/services/assets";
 
 type Props = {
@@ -21,6 +28,11 @@ export default async function WelcomeLayout({ children }: Props) {
           rel="stylesheet"
           href="https://use.typekit.net/tmc3dha.css"
         ></link>
+
+        <link rel="preload" href={christmasyProgrammers.src} as="image" />
+        <link rel="preload" href={antichristProgrammer.src} as="image" />
+        <link rel="preload" href={monsterProgrammers.src} as="image" />
+        <link rel="preload" href={naughtyProgrammers.src} as="image" />
 
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width" />
