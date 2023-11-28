@@ -95,7 +95,8 @@ export const inside = style({
   transition: "all 300ms",
   display: "flex",
   alignItems: "center",
-  justifyContent: "center"
+  justifyContent: "center",
+  overflow: "hidden"
 });
 
 export const darkInside = style({

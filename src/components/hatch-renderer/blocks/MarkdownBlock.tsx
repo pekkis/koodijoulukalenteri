@@ -9,7 +9,27 @@ type Props = {
 const MarkdownBlock: FC<Props> = ({ block }) => {
   return (
     <>
-      <ReactMarkdown>{block.text}</ReactMarkdown>
+      <ReactMarkdown
+        components={{
+          a: ({ children, href, ...rest }) => {
+            if (href?.startsWith("http")) {
+              return (
+                <a {...rest} href={href} target="_blank">
+                  {children}
+                </a>
+              );
+            }
+
+            return (
+              <a {...rest} href={href}>
+                {children}
+              </a>
+            );
+          }
+        }}
+      >
+        {block.text}
+      </ReactMarkdown>
     </>
   );
 };
