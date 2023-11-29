@@ -10,7 +10,7 @@ import movies from "./hatch/movies-1";
 import containerQueryHatch from "./hatch/container-queries/container-query-hatch";
 import valueForLifeHatch from "./hatch/value-for-life/value-for-life";
 import carjackHatch from "./hatch/carjack/carjackHatch";
-import baldursHatch from "./hatch/baldurs/baldursHatch";
+// import baldursHatch from "./hatch/baldurs/baldursHatch";
 import linusHatch from "./hatch/linus/linusHatch";
 import roadmapHatch from "./hatch/roadmap/roadmapHatch";
 
