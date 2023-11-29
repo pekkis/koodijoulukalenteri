@@ -149,8 +149,8 @@ const Calendar: FC = () => {
 
         <p>
           <FaSkull /> Varoitus: tontut huomaavat, jos kurkit luukkuihin
-          etukäteen. Joulun taika lataa sivun uusiksi joka aamu kello{" "}
-          <strong>05:00</strong>, kun päivän luukun saa avata!
+          etukäteen. Joulun taika päivittää kalenterin servulla joka aamu kello{" "}
+          <strong>05:00</strong>. Silloin kannattaa rynkyttää reload-nappia!
         </p>
       </div>
       <NaughtyOrNice>
