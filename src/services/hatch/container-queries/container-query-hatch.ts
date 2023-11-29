@@ -1,6 +1,6 @@
 import { HatchDataWithoutDay } from "@/services/hatch";
 
-import css from "@/assets/container-queries.webp";
+import css from "@/assets/ihmiskontti.jpeg";
 import Component from "./Component";
 
 const containerQueryHatch: HatchDataWithoutDay = {
@@ -20,7 +20,7 @@ Kylläpä paranee leiskoitus ja komponenttien dissain. Iso onnen kyynelhän täs
 * [konttikyselyin speksit](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_container_queries)
 * [joko saa käyttää?](https://caniuse.com/?search=container%20queries)
 
-Alla mahtava demo. Kalenteri käyttää gridautuksessa näitä myös, ja muutenkin olen harjoittelun nimissä koittanut niitä tässä pökäleessä viljellä kautta linjan!
+Alla mahtava demo ja video. Kalenteri käyttää etenkin gridautuksessa ja luukuissa tätä fiitsöä muutenkin.
 
 `
     },

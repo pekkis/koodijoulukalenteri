@@ -19,7 +19,8 @@ export const inside = style({
     "(width <= 15em)": {
       padding: theme.spacing.xs,
       borderRadius: theme.borderRadius.sharp,
-      fontSize: "smaller"
+      fontSize: "smaller",
+      backgroundColor: theme.colors.quaternary
     }
   }
 });

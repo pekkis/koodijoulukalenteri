@@ -1,6 +1,6 @@
 import { HatchDataWithoutDay } from "@/services/hatch";
 
-import trinity from "@/assets/trinity.webp";
+import trinity from "@/assets/matrix-tytsy.jpeg";
 
 const movies: HatchDataWithoutDay = {
   title: "Koodarileffat, 1990-luku",

@@ -5,7 +5,7 @@ const Component: FC = () => {
   return (
     <div className={styles.component}>
       <div className={styles.inside}>
-        Minä pienenen kun containerini tiivistyy!
+        Minä poika muutun kun äitielementtini muuttuu!
       </div>
     </div>
   );

@@ -8,6 +8,10 @@ import { FC } from "react";
 import hatch666 from "./hatch/hatch666";
 import movies from "./hatch/movies-1";
 import containerQueryHatch from "./hatch/container-queries/container-query-hatch";
+import valueForLifeHatch from "./hatch/value-for-life/value-for-life";
+import carjackHatch from "./hatch/carjack/carjackHatch";
+import baldursHatch from "./hatch/baldurs/baldursHatch";
+import linusHatch from "./hatch/linus/linusHatch";
 
 export type MarkdownBlockType = {
   type: "markdown";
@@ -75,10 +79,10 @@ const risujaData: Omit<HatchData, "day"> = {
 const hatches: HatchesData = {
   1: movies,
   2: containerQueryHatch,
-  3: risujaData,
-  4: risujaData,
-  5: risujaData,
-  6: risujaData,
+  3: valueForLifeHatch,
+  4: carjackHatch,
+  5: baldursHatch,
+  6: linusHatch,
   7: risujaData,
   8: risujaData,
   9: risujaData,
@@ -96,6 +100,7 @@ const hatches: HatchesData = {
   21: risujaData,
   22: risujaData,
   23: risujaData,
+  24: risujaData,
   666: hatch666
 };
 

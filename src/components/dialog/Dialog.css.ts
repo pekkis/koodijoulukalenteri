@@ -7,7 +7,7 @@ export const dialog = style({
   paddingInline: theme.spacing.s,
   paddingBlock: theme.spacing.s,
   borderRadius: theme.borderRadius.plump,
-  maxWidth: `min(90vw, 25rem)`,
+  width: `min(90vw, 25rem)`,
   backgroundColor: theme.colors.white,
   maxHeight: `min(90vh, 35rem)`,
   overflowY: "scroll"
