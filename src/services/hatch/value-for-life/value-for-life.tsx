@@ -1,11 +1,11 @@
 import { HatchDataWithoutDay } from "@/services/hatch";
 
-import tietoLogo from "@/assets/tieto-logo.svg";
+import valueForSociety from "@/assets/value-for-society.jpeg";
 
 const valueForLifeHatch: HatchDataWithoutDay = {
-  title: "Koodijoululaulut",
+  title: "Koodilaulut",
   image: {
-    src: tietoLogo,
+    src: valueForSociety,
     alt: "Tieto-yrityksen logo"
   },
   content: [

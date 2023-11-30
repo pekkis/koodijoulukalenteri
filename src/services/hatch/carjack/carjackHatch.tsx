@@ -11,7 +11,9 @@ const carjackHatch: HatchDataWithoutDay = {
   content: [
     {
       type: "markdown",
-      text: `Omalle parinkymmenen vuoden uralleni mahtuu kaikennäköisiä ja -kokoisia tunkkeja, joita on tullut tunkkailtua. Karmeimmat tunkit, tai ainakin ne viritykset joita tajuntani ei blokkaa kokonaan että saan nukuttua öisin, muistan kyllä aina ja ikuisesti.
+      text: `Tänäkin vuonna tiedotusvälineet ovat uutisoineet hienosti menneistä IT-hankkeista. Poliisin hienoa ja ainakin kuvauksen perusteella alusta asti tuhoon tuomittua [Vitja-järjestelmää raahattiin kivirekenä perässä 14 vuotta](https://www.iltalehti.fi/digiuutiset/a/b39990ec-db3b-42d4-a415-f6b393410f56), ennen kuin joku poikkeuksellisen suoraselkäinen valtion virkamies lopulta hennoi antaa hankeparalle armonlaukauksen virka-aseellaan.
+
+Omalle parinkymmenen vuoden uralleni mahtuu kaikennäköisiä ja -kokoisia hankkeita ja tunkkeja. Karmeimmat viritykset, tai ainakin ne viritykset, joita tajuntani ei blokkaa kokonaan jotta saan nukuttua öisin, muistan kyllä aina ja ikuisesti.
 
 [The Daily WTF](https://thedailywtf.com/) on paikka, jossa olen käynyt vuosikymmeniä säännöllisen epäsäännöllisesti lukemassa muiden tunkeista. Omista tunkkailuistani kirjoitan elämänkerrallisessa suurteoksessani "Hopeakettu muistelee", jonka viisi ensimmäistä osaa kattavat urani ensimmäiset vuodet.
 

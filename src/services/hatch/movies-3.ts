@@ -54,12 +54,6 @@ Tässä muutaman elokuvan vaatimaton pintaraapaisu. Parempi katsoa ne heti, ette
     },
     {
       type: "youtube",
-      id: "d4RiUy23e9s",
-      caption:
-        "Tron: Legacy on yksi kuvallisesti ja äänellisesti siisteimmistä koodarileffoista. Aliarvostettu. Tykkään kaikista Kosinskin leffoista, koska ne on vaan niin nättejä!"
-    },
-    {
-      type: "youtube",
       id: "piI9vJ9-UZ0",
       caption:
         "Hackers näyttää webbiscenen juuri sellaisena kuin se oli aivan alussa. Harmittaa, että itse missasin ihan alun huuman ja kiiman!"

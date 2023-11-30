@@ -2,17 +2,28 @@ import { StaticImageData } from "next/image";
 
 import risuja from "@/assets/risuja-2.webp";
 
+import risuja1 from "@/assets/pekonia-ja-spagettia-1.jpeg";
+import risuja2 from "@/assets/pekonia-ja-spagettia-2.jpeg";
+import risuja3 from "@/assets/pekonia-ja-spagettia-3.jpeg";
+import risuja4 from "@/assets/pekonia-ja-spagettia-4.jpeg";
+import risuja5 from "@/assets/risuja1.jpeg";
+import risuja6 from "@/assets/risuja2.jpeg";
+import risuja7 from "@/assets/risuja3.jpeg";
+
 import { HatchPosition } from "@/components/hatch/Hatch";
 import { isHatchOpenable } from "./calendar";
 import { FC } from "react";
 import hatch666 from "./hatch/hatch666";
-import movies from "./hatch/movies-1";
+import movies1Hatch from "./hatch/movies/movies-1";
 import containerQueryHatch from "./hatch/container-queries/container-query-hatch";
 import valueForLifeHatch from "./hatch/value-for-life/value-for-life";
 import carjackHatch from "./hatch/carjack/carjackHatch";
-// import baldursHatch from "./hatch/baldurs/baldursHatch";
 import linusHatch from "./hatch/linus/linusHatch";
 import roadmapHatch from "./hatch/roadmap/roadmapHatch";
+import domainHatch from "./hatch/fi-domain/fiDomainHatch";
+import movies2Hatch from "./hatch/movies/movies-2";
+import baldursHatch from "./hatch/baldurs/baldursHatch";
+import knittersHatch from "./hatch/knitters/knittersHatch";
 
 export type MarkdownBlockType = {
   type: "markdown";
@@ -64,10 +75,10 @@ export type HatchDataWithoutDay = Omit<HatchData, "day">;
 type HatchesData = Record<number, Omit<HatchData, "day">>;
 
 const risujaData: Omit<HatchData, "day"> = {
-  title: "Tuhmat saavat kiviä ja risuja",
+  title: "Tuhmille kiviä, risuja, pekonia ja spagettia",
   image: {
     src: risuja,
-    alt: "Tuhma lapsi on saanut lahjaksi kiviä ja risuja. Hän itkee."
+    alt: "Tuhma lapsi on saanut lahjaksi tyhmän lahjan. Hän itkee."
   },
   content: [
     {
@@ -78,18 +89,18 @@ const risujaData: Omit<HatchData, "day"> = {
 };
 
 const hatches: HatchesData = {
-  1: movies,
+  1: movies1Hatch,
   2: roadmapHatch,
   3: containerQueryHatch,
-  4: valueForLifeHatch,
+  4: domainHatch,
   5: carjackHatch,
   // 5: baldursHatch,
   6: linusHatch,
-  7: risujaData,
-  8: risujaData,
-  9: risujaData,
+  7: movies2Hatch,
+  8: valueForLifeHatch,
+  9: baldursHatch,
   10: risujaData,
-  11: risujaData,
+  11: knittersHatch,
   12: risujaData,
   13: risujaData,
   14: risujaData,
@@ -110,7 +121,47 @@ const hatches: HatchesData = {
 
 export const getHatchData = async (day: number): Promise<HatchData | null> => {
   if (day !== 666 && !isHatchOpenable(day)) {
-    return { ...risujaData, day };
+    return {
+      ...risujaData,
+      day,
+      image: {
+        ...risujaData.image,
+        get src() {
+          const risut = [
+            risuja1,
+            risuja2,
+            risuja3,
+            risuja4,
+            risuja5,
+            risuja6,
+            risuja7,
+            risuja1,
+            risuja2,
+            risuja3,
+            risuja4,
+            risuja5,
+            risuja6,
+            risuja7,
+            risuja1,
+            risuja2,
+            risuja3,
+            risuja4,
+            risuja5,
+            risuja6,
+            risuja7,
+            risuja1,
+            risuja2,
+            risuja3,
+            risuja4,
+            risuja5,
+            risuja6,
+            risuja7
+          ];
+
+          return risut[day - 1];
+        }
+      }
+    };
   }
 
   if (hatches[day]) {

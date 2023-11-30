@@ -24,12 +24,12 @@ En tietenkään ole aina samaa mieltä vaikkapa järjestyksestä tai jostain tie
 
 Tässä tiivistettyä viisauttani nuorelle tai alanvaihtaja-minulle.
 
-1) laita kahvipannu porisemaan
-1) keksi joku "oikea" ja / tai kiva harrasteprojekti jota on kiva viedä eteenpäin kuukausia tai vuosia
+1) laita kahvi- tai teepannu porisemaan tai päristele energiajuoma auki
+1) keksi "oikeita" ja / tai kivoja harrasteprojekteja, joita on kiva viedä eteenpäin kuukausia tai vuosia
 1) pidä tiekartta auki ja mielessä
 1) tunkkaa
 1) turhaudu isosti koska et osaa tai tiedä jotain
-1) ota selvää ja opettele se mitä et osaa tai tiedä, tunkkaa lisää
+1) ota selvää ja opettele se mitä et osaa tai tiedä, tunk some more
 
 Toista kohtia 4-6 seuraavat 25 vuotta. Muista pitää välissä taukoja ja huolehtia (lihas)kunnosta. Muuten alkaa niskaan ja selkään sattua.
 `

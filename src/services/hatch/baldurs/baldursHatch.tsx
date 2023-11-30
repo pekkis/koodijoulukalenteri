@@ -1,6 +1,6 @@
 import { HatchDataWithoutDay } from "@/services/hatch";
 
-import baldurs from "@/assets/bg3.jpg";
+import baldurs from "@/assets/balduran.jpeg";
 
 const baldursHatch: HatchDataWithoutDay = {
   title: "Baldur's Gate 3",
