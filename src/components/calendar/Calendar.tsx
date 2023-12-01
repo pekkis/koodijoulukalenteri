@@ -60,7 +60,7 @@ const hatches: HatchConfig[] = [
 
   {
     day: 10,
-    position: getPosition(-25, 22, 5, 5)
+    position: getPosition(-25, 22, 6, 6)
   },
 
   {

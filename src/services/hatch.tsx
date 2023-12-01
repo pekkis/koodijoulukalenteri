@@ -24,6 +24,8 @@ import domainHatch from "./hatch/fi-domain/fiDomainHatch";
 import movies2Hatch from "./hatch/movies/movies-2";
 import baldursHatch from "./hatch/baldurs/baldursHatch";
 import knittersHatch from "./hatch/knitters/knittersHatch";
+import adaHatch from "./hatch/ada/adaHatch";
+import stylingHatch from "./hatch/styling/stylingHatch";
 
 export type MarkdownBlockType = {
   type: "markdown";
@@ -96,12 +98,12 @@ const hatches: HatchesData = {
   5: carjackHatch,
   // 5: baldursHatch,
   6: linusHatch,
-  7: movies2Hatch,
-  8: valueForLifeHatch,
+  7: valueForLifeHatch,
+  8: movies2Hatch,
   9: baldursHatch,
-  10: risujaData,
+  10: adaHatch,
   11: knittersHatch,
-  12: risujaData,
+  12: stylingHatch,
   13: risujaData,
   14: risujaData,
   15: risujaData,

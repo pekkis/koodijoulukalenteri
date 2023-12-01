@@ -13,20 +13,18 @@ const roadmapHatch: HatchDataWithoutDay = {
       type: "markdown",
       text: `Koodijoulukalenterin luukkujen aukaisun välissä on melkein 24 tuntia tyhjää tilaa. Mikä olisikaan parempi tapa käyttää luppoaika kuin koodaamalla oma koodijoulukalenteri?
 
-Myöhemmissä luukuissa on asiaa kaltaisilleni vanhoille työjuhdille, jotka ovat nähneet liiankin monta joulua, mutta tänään lähdemme liikkeelle nollasta.
+Myöhemmissä luukuissa on asiaa kaltaisilleni työjuhdille, jotka ovat nähneet liian monta joulua, mutta tänään lähdemme liikkeelle nollasta.
 
-Webistä ja webbikoodauksesta kiinnostuneille kerron heti kärkeen mielestäni tärkeimmän salaisuuden: **koodaamaan oppii koodaamalla**. Harjoitus tekee mestarin, ja loppu on kiinni siitä, kuinka paljon harjoittelee.
+Webbikoodauksesta kiinnostuneille kerron heti kärkeen tärkeimmän salaisuuden: **koodaamaan oppii koodaamalla**. Harjoitus tekee mestarin, ja loppu on kiinni siitä, kuinka paljon harjoittelee.
 
-Netti on pullollaan matskua aiheesta kuin aiheesta, mutta *mitä hemmettiä* pitäisi opetella ja missä järjestyksessä?
+Tykkään opettaa ja saarnata ja luennoida koodin iloista. Keksin koska tahansa tuhat ja yksi opeteltavaa asiaa, mutta polun piirtäminen on hankalaa. Monet aluksi vaikeat asiat ovat muuttuneet jo itsestäänselvyyksiksi.
 
-Tykkään opettaa ja saarnata ja luennoida koodin iloista. Keksin koska tahansa tuhat ja yksi pointteria, mutta kokonaisuuden hahmottaminen on vaikeaa. Olen jo ehtinyt unohtaa puolet, ja monet aluksi vaikeat asiat tuntuvat neljännesvuosisata myöhemmin itsestäänselviltä.
-
-Olisipa kiva, jos olisi järkeväksi havaittu tiekartta, jonka avulla voisi konkreettisesti hahmotella polkua, jota suosittelee kuljettavaksi, ja jonka on itse aikanaan vähän eri muotoisena ja hapuillen kulkenut.
+Netti on täynnä oppimatskua, mutta olisi kiva, jos olisi järkeväksi havaittu tiekartta, jonka avulla voisi konkreettisesti hahmotella polkua, joka kunkin pitää kulkea.
 
 * [Devauksen tiekarttoja](https://roadmap.sh/)
 * [Fronttidevauksen tiekartta](https://roadmap.sh/frontend)
 
-En ole aina ihan samaa mieltä joistakin detaljitason jutuista, mutta kokonaisuutena arvostellen, fronttiin erikoistuneen täyden pinon tunkkaajan tontilta, näissä on mukana voimakas järjen ääni.
+En ole aina ihan samaa mieltä detaljitason jutuista, mutta kokonaisuutena arvostellen, frontti- / täyden pinon tunkkaajan tontilta, näissä on mukana voimakas järjen ääni.
 
 Tässä ranskalaisiin viivoihin tiivistettyä viisauttani nuorelle tai alanvaihtaja-minulle.
 
