@@ -15,7 +15,7 @@ const domainHatch: HatchDataWithoutDay = {
 
 Internetiä Suomessa ei kuitenkaan vielä ollut, joten sellainen piti käydä hakemassa veneellä Ruotsista. 64 kilobitin yhteys riitti koko Suomelle oikein hyvin.
 
-* [Ammattilehti: Fi-domain täyttää 30 vuotta](https://www.ammattilehti.fi/uutiset.html?76936)
+* [Ammattilehti: Fi-domainin mielenkiintoinen historia](https://www.ammattilehti.fi/uutiset.html?76936)
 * [Wikipedia: .fi](https://fi.wikipedia.org/wiki/.fi)
       `
     }

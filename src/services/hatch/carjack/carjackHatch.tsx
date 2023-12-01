@@ -11,11 +11,11 @@ const carjackHatch: HatchDataWithoutDay = {
   content: [
     {
       type: "markdown",
-      text: `Tänäkin vuonna tiedotusvälineet ovat uutisoineet hienosti menneistä IT-hankkeista. Poliisin hienoa ja ainakin kuvauksen perusteella alusta asti tuhoon tuomittua [Vitja-järjestelmää raahattiin kivirekenä perässä 14 vuotta](https://www.iltalehti.fi/digiuutiset/a/b39990ec-db3b-42d4-a415-f6b393410f56), ennen kuin joku poikkeuksellisen suoraselkäinen valtion virkamies lopulta hennoi antaa hankeparalle armonlaukauksen virka-aseellaan.
+      text: `Tänäkin vuonna tiedotusvälineet ovat uutisoineet hyvin menneistä ja lähes maaliin päässeistä IT-hankkeista. Poliisin hienoa ja kuvauksen perusteella alusta asti tuhoon tuomittua [Vitja-järjestelmää raahattiin kivirekenä perässä 14 vuotta](https://www.iltalehti.fi/digiuutiset/a/b39990ec-db3b-42d4-a415-f6b393410f56), ennen kuin joku suoraselkäinen poliisi lopulta hennoi antaa projektiparalle armonlaukauksen virka-aseellaan.
 
-Omalle parinkymmenen vuoden uralleni mahtuu kaikennäköisiä ja -kokoisia hankkeita ja tunkkeja. Karmeimmat viritykset, tai ainakin ne viritykset, joita tajuntani ei blokkaa kokonaan jotta saan nukuttua öisin, muistan kyllä aina ja ikuisesti.
+Omalle parinkymmenen vuoden uralleni mahtuu kaikennäköisiä ja -kokoisia hankkeita ynnä tunkkeja. Karmeimmat viritykset, tai ainakin ne kammotukset, joita tajuntani ei blokkaa kokonaan jotta saan nukuttua öisin, muistan aina ja ikuisesti.
 
-[The Daily WTF](https://thedailywtf.com/) on paikka, jossa olen käynyt vuosikymmeniä säännöllisen epäsäännöllisesti lukemassa muiden tunkeista. Omista tunkkailuistani kirjoitan elämänkerrallisessa suurteoksessani "Hopeakettu muistelee", jonka viisi ensimmäistä osaa kattavat urani ensimmäiset vuodet.
+[The Daily WTF](https://thedailywtf.com/) on paikka, jossa olen käynyt vuosikymmeniä säännöllisen epäsäännöllisesti lukemassa muiden tunkkailuista. Omista tunkkailustani kirjoitan elämänkerrallisessa suurteoksessani "Hopeakettu muistelee", jonka viisi ensimmäistä osaa kattavat urani jännittävät alkuvuodet.
 
 * [Osa 1: Laimea uhka](https://www.pekkis.eu/blogi/2017/04/10/hopeakettu-muistelee-osa-1-laimea-uhka)
 * [Osa 2: Koodarin yökkäys](https://www.pekkis.eu/blogi/2017/04/17/hopeakettu-muistelee-osa-2-koodarin-yokkays)

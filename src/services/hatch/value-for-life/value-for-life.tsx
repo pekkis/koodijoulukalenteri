@@ -11,7 +11,7 @@ const valueForLifeHatch: HatchDataWithoutDay = {
   content: [
     {
       type: "markdown",
-      text: `Koodilaulut kuuluvat erottamattomasti joulunviettoon. Ne tarjoavat mittaamattomasti arvoa yhteiskunnalle ja elämälle. Kaksinaisuus ei ole koodilauluissa millään tasolla optio!`
+      text: `Koodilaulut kuuluvat erottamattomasti joulunviettoon. Ne tarjoavat mittaamattomasti arvoa yhteiskunnalle ja elämälle. Minkään sortin kaksinaisuus ei ole koodilauluissa optio!`
     },
     {
       type: "youtube",
@@ -21,9 +21,9 @@ const valueForLifeHatch: HatchDataWithoutDay = {
 
     {
       type: "markdown",
-      text: `Tein Value for lifen "ilmestyessä" Intelligent Building-älytoimistoplattaa Tiedon piikkiin. Tunkkasin softaamme välittömästi pääsiäismunan, missä kaikki ruudut saa tuuttaamaan Value for Lifeä eetteriin, mutta muiden mielestä ei ollut hyvä idea mergettää bränchiä masteriin.
+      text: `Olin Value for Lifen "ilmestyessä" mukana tekemässä Intelligent Building - älytoimistoplattaa Tiedon piikkiin. Tunkkasin softaamme pääsiäismunan, missä kaikki ruudut saa tuuttaamaan Value for Lifeä eetteriin, mutta muiden tiimin jäsenten mielestä ei ollut hyvä idea mergettää tätä bränchiä masteriin.
 
-Hitusen myötähäpeää aiheuttava? Ehkäpä. Silti hieno ja jotain josta olla yrityksenä ylpeä? Taatusti! Corporate-laulut kunniaan!`
+Hitusen myötähäpeää aiheuttava laulu? Ehkäpä. Silti hieno hauska ja jotain josta olla yrityksenä ylpeä? Taatusti! Corporate-laulut kunniaan!`
     },
 
     {
@@ -36,7 +36,7 @@ Hitusen myötähäpeää aiheuttava? Ehkäpä. Silti hieno ja jotain josta olla 
       type: "youtube",
       id: "3Jym9rfQgec",
       caption:
-        "Jos ei ennen tätä biisiä ole tehnyt mieli Reaktorille duuniin, niin nyt kyllä tekee!"
+        "Jos ei ennen tätä biisiä ole tehnyt mieli Reaktorille duuniin, niin kohta kyllä tekee!"
     }
   ]
 };

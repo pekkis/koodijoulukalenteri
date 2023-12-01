@@ -11,19 +11,19 @@ const movies2Hatch: HatchDataWithoutDay = {
   content: [
     {
       type: "markdown",
-      text: `2000-luvullakin on tehty hyviä koodileffoja. Tässä joitakin omia suosikkejani suunnilleen ensimmäiseltä puolikkaalta tätä vuosituhatta!`
+      text: `2000-luvullakin on tehty paljon hyviä koodileffoja. Tässä joitakin omia suosikkejani suunnilleen ensimmäiseltä puolikkaalta tätä vuosituhatta!`
     },
     {
       type: "youtube",
       id: "lB95KLmpLR4",
       caption:
-        "The Social Network on liikuttava tarina reptiliaanista, joka oppii matkimaan ihmistä, koodaamaan PHP:llä, ja perustaa suht' menestyksekkään veppifirman!"
+        "The Social Network on liikuttava kasvutarina reptiliaanista, joka oppii matkimaan ihmistä, koodaamaan PHP:llä, ja perustaa menestyksekkään veppifirman!"
     },
     {
       type: "youtube",
       id: "lFwtY1bxlNc",
       caption:
-        "Swordfish tavoittaa elähdyttävällä tavalla 2000-luvun alun teknobuumin. Tältä tuntui olla töissä Riot-E:ssä tai jonottaa Saunalahden serverin osakkeita purevassa syysviimassa!"
+        "Swordfish tavoittaa elähdyttävällä tavalla 2000-luvun alun teknobuumin. Tältä tuntui olla töissä Riot-E:ssä tai ajaa keltainen Lamborghini täysillä kolera-altaaseen matkalla jonottamaan Saunalahden serverin osakkeita purevassa syysviimassa!"
     },
     {
       type: "youtube",

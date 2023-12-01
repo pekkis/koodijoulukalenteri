@@ -1,37 +1,43 @@
 import { HatchDataWithoutDay } from "@/services/hatch";
 
-import roadmap from "@/assets/roadmap.jpeg";
+import roadmap from "@/assets/diy-3.jpeg";
 
 const roadmapHatch: HatchDataWithoutDay = {
-  title: "Tiekartta meikäläiseen",
+  title: "Tee-se-itse koodijoulukalenteri",
   image: {
     src: roadmap,
-    alt: "Webbidevaajan alku katselee sekavaa tiekarttaa kohti senioriteettia"
+    alt: "Reippaat ja kiltit koodarit koodaavat ja suunnittelevat koodijoulukalenteria"
   },
   content: [
     {
       type: "markdown",
-      text: `Tykkään opettaa ja saarnata ja luennoida, ja kerron aina mielelläni kaikille webin ja koodauksen pariin hakeutuville omasta mielestäni tärkeimmän alan salaisuuden: **koodaamaan oppii koodaamalla**. Harjoitus tekee mestarin, tuhansia toistoja, valvottuja öitä, ja niin edespäin.
+      text: `Koodijoulukalenterin luukkujen aukaisun välissä on melkein 24 tuntia tyhjää tilaa. Mikä olisikaan parempi tapa käyttää luppoaika kuin koodaamalla oma koodijoulukalenteri?
 
-Internet on pullollaan matskua aiheesta kuin aiheesta, mutta *mitä hemmettiä* pitäisi osata ja opetella? Äkkiäkös itse keksin koska tahansa kertoa miljoonasta asiasta, unohtaen ainoastaan ne jutut mitkä ovat muuttuneet itselleni vuosia sitten itsestäänselviksi tai jotka eivät juuri sillä hetkellä tule mieleen.
+Myöhemmissä luukuissa on asiaa kaltaisilleni vanhoille työjuhdille, jotka ovat nähneet liiankin monta joulua, mutta tänään lähdemme liikkeelle nollasta.
 
-Olisipa harvinaisen kiva, että olisi joku järkeväksi havaittu tiekartta, jonka avulla hahmottaa polkua mitä suosittelee kuljettavaksi ja jonka on itse aikanaan kulkenut.
+Webistä ja webbikoodauksesta kiinnostuneille kerron heti kärkeen mielestäni tärkeimmän salaisuuden: **koodaamaan oppii koodaamalla**. Harjoitus tekee mestarin, ja loppu on kiinni siitä, kuinka paljon harjoittelee.
+
+Netti on pullollaan matskua aiheesta kuin aiheesta, mutta *mitä hemmettiä* pitäisi opetella ja missä järjestyksessä?
+
+Tykkään opettaa ja saarnata ja luennoida koodin iloista. Keksin koska tahansa tuhat ja yksi pointteria, mutta kokonaisuuden hahmottaminen on vaikeaa. Olen jo ehtinyt unohtaa puolet, ja monet aluksi vaikeat asiat tuntuvat neljännesvuosisata myöhemmin itsestäänselviltä.
+
+Olisipa kiva, jos olisi järkeväksi havaittu tiekartta, jonka avulla voisi konkreettisesti hahmotella polkua, jota suosittelee kuljettavaksi, ja jonka on itse aikanaan vähän eri muotoisena ja hapuillen kulkenut.
 
 * [Devauksen tiekarttoja](https://roadmap.sh/)
 * [Fronttidevauksen tiekartta](https://roadmap.sh/frontend)
 
-En tietenkään ole aina samaa mieltä vaikkapa järjestyksestä tai jostain tietyistä detaljitason jutuista, enkä ole lukenut jokikistä karttaa tarkasti, mutta oman fronttiin erikoistuneen täyden pinon tunkkaajan tontilta katsottuna näissä on kyllä mukana järjen ääni.
+En ole aina ihan samaa mieltä joistakin detaljitason jutuista, mutta kokonaisuutena arvostellen, fronttiin erikoistuneen täyden pinon tunkkaajan tontilta, näissä on mukana voimakas järjen ääni.
 
-Tässä tiivistettyä viisauttani nuorelle tai alanvaihtaja-minulle.
+Tässä ranskalaisiin viivoihin tiivistettyä viisauttani nuorelle tai alanvaihtaja-minulle.
 
 1) laita kahvi- tai teepannu porisemaan tai päristele energiajuoma auki
-1) keksi "oikeita" ja / tai kivoja harrasteprojekteja, joita on kiva viedä eteenpäin kuukausia tai vuosia
-1) pidä tiekartta auki ja mielessä
+1) keksi "oikeita" ja kivoja projekteja, joita on kiva viedä eteenpäin viikkoja, kuukausia tai vuosia
+1) pidä tiekartta koko ajan auki ja mielessä
 1) tunkkaa
 1) turhaudu isosti koska et osaa tai tiedä jotain
-1) ota selvää ja opettele se mitä et osaa tai tiedä, tunk some more
+1) ota selvää ja opettele se mitä et osaa tai tiedä
 
-Toista kohtia 4-6 seuraavat 25 vuotta. Muista pitää välissä taukoja ja huolehtia (lihas)kunnosta. Muuten alkaa niskaan ja selkään sattua.
+Luuppaa kohtia 4-6 seuraavat 25 vuotta. Muista pitää välissä taukoja ja huolehtia (lihas)kunnosta. Muuten alkaa niskaan ja selkään sattua.
 `
     }
   ]
