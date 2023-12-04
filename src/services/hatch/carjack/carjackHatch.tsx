@@ -11,11 +11,15 @@ const carjackHatch: HatchDataWithoutDay = {
   content: [
     {
       type: "markdown",
-      text: `Tänäkin vuonna tiedotusvälineet ovat uutisoineet hyvin menneistä ja lähes maaliin päässeistä IT-hankkeista. Poliisin hienoa ja kuvauksen perusteella alusta asti tuhoon tuomittua [Vitja-järjestelmää raahattiin kivirekenä perässä 14 vuotta](https://www.iltalehti.fi/digiuutiset/a/b39990ec-db3b-42d4-a415-f6b393410f56), ennen kuin joku suoraselkäinen poliisi lopulta hennoi antaa projektiparalle armonlaukauksen virka-aseellaan.
+      text: `Tänäkin vuonna tiedotusvälineet ovat uutisoineet hyvin menneistä ja lähes maaliin päässeistä IT-hankkeista!
 
-Omalle parinkymmenen vuoden uralleni mahtuu kaikennäköisiä ja -kokoisia hankkeita ynnä tunkkeja. Karmeimmat viritykset, tai ainakin ne kammotukset, joita tajuntani ei blokkaa kokonaan jotta saan nukuttua öisin, muistan aina ja ikuisesti.
+Poliisin hienoa ja kuvauksen perusteella alusta asti tuhoon tuomittua [Vitja-järjestelmää raahattiin kivirekenä perässä 14 vuotta](https://www.iltalehti.fi/digiuutiset/a/b39990ec-db3b-42d4-a415-f6b393410f56), ennen kuin joku suoraselkäinen sinivuokko lopulta antoi rammalle tunkille armonlaukauksen virka-aseellaan.
 
-[The Daily WTF](https://thedailywtf.com/) on paikka, jossa olen käynyt vuosikymmeniä säännöllisen epäsäännöllisesti lukemassa muiden tunkkailuista. Omista tunkkailustani kirjoitan elämänkerrallisessa suurteoksessani "Hopeakettu muistelee", jonka viisi ensimmäistä osaa kattavat urani jännittävät alkuvuodet.
+[Helsingin kaupunki kehitteli omaa Wilmaa](https://www.hs.fi/kaupunki/art-2000009917641.html) 32 miljoonalla kaupungin asukkaiden eurolla, kunnes huomattiin, että koko tunkki on paitsi huono idea, myös mennyt peruuttamattomasti perseelleen huonon johtamisen takia.
+
+Omaan parinkymmenen vuoden uraani mahtuu siihenkin monenlaisia tunkkeja. Karmeimmat viritykset, tai ainakin ne kammotukset, joita tajuntani ei blokkaa kokonaan jotta saan nukuttua öisin, muistan ikuisesti.
+
+[The Daily WTF](https://thedailywtf.com/) on paikka, jossa olen käynyt vuosikymmeniä säännöllisen epäsäännöllisesti lukemassa muiden tunkeista. Omista tunkkailustani kirjoitan elämänkerrallisessa suurteoksessani "Hopeakettu muistelee", jonka viisi ensimmäistä osaa kattavat urani jännittävät alkuvuodet.
 
 * [Osa 1: Laimea uhka](https://www.pekkis.eu/blogi/2017/04/10/hopeakettu-muistelee-osa-1-laimea-uhka)
 * [Osa 2: Koodarin yökkäys](https://www.pekkis.eu/blogi/2017/04/17/hopeakettu-muistelee-osa-2-koodarin-yokkays)
