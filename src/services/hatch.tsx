@@ -26,6 +26,15 @@ import baldursHatch from "./hatch/baldurs/baldursHatch";
 import knittersHatch from "./hatch/knitters/knittersHatch";
 import adaHatch from "./hatch/ada/adaHatch";
 import stylingHatch from "./hatch/styling/stylingHatch";
+import motherOfAllDemosHatch from "./hatch/mother-of-all-demos/motherOfAllDemosHatch";
+import movies3Hatch from "./hatch/movies/movies-3";
+import movies4Hatch from "./hatch/movies/movies-4";
+import metaHatch from "./hatch/metaframeworks/metaHatch";
+import strongHtmlHatch from "./hatch/strong-html/strongHtmlHatch";
+import temporalHatch from "./hatch/temporal/temporalHatch";
+import longestDayHatch from "./hatch/longest-day/longestDayHatch";
+import netscapeHatch from "./hatch/netscape/netscapeHatch";
+import nextHatch from "./hatch/next/nextHatch";
 
 export type MarkdownBlockType = {
   type: "markdown";
@@ -96,28 +105,33 @@ const hatches: HatchesData = {
   3: containerQueryHatch,
   4: domainHatch,
   5: carjackHatch,
-  // 5: baldursHatch,
   6: linusHatch,
   7: valueForLifeHatch,
-  8: movies2Hatch,
-  9: baldursHatch,
+  8: movies3Hatch,
+  9: motherOfAllDemosHatch,
   10: adaHatch,
   11: knittersHatch,
   12: stylingHatch,
-  13: risujaData,
-  14: risujaData,
-  15: risujaData,
+  13: baldursHatch,
+  14: movies2Hatch,
+  15: netscapeHatch,
   16: risujaData,
-  17: risujaData,
+  17: strongHtmlHatch,
   18: risujaData,
-  19: risujaData,
-  20: risujaData,
-  21: risujaData,
-  22: risujaData,
-  23: risujaData,
+  19: metaHatch,
+  20: nextHatch,
+  21: movies4Hatch,
+  22: longestDayHatch,
+  23: temporalHatch,
   24: risujaData,
   666: hatch666
 };
+
+// 15.12 netscape
+// 20.12 next + apple
+// ??? microsoft
+
+// Vuonna 1974 20. joulukuuta, Arthur C. Clarke, tiedemies ja tieteiskirjailija, lähetti ensimmäisen joulutervehdyksen avaruudesta. Hän käytti NASA:n ATS-5-satelliittia lähettämään morse-viestin, joka kuului: "Onnittelut joulukaudesta kaikille maan asukkaille täältä kaukaa, kuun toiselta puolelta!" Tämä oli aikanaan hauska ja inspiroiva tapa yhdistää tiede ja juhlakausi.
 
 /* eslint-disable @typescript-eslint/no-unused-vars */
 
