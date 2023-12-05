@@ -1,17 +1,22 @@
 import { HatchDataWithoutDay } from "@/services/hatch";
 
-import longest from "@/assets/pekonia-ja-spagettia-2.jpeg";
+import longest from "@/assets/longest-day.jpeg";
+import Ticker from "./Ticker";
 
 const longestDayHatch: HatchDataWithoutDay = {
-  title: "Päivän pisimmät sekunnit",
+  title: "Vuoden paras koodauspäivä",
   image: {
-    alt: "Päivän pisimmät",
+    alt: "On vuoden pimein ja lyhin päivä. Koodari on iloinen, koska valopallo ei häiritse tunkkailua.",
     src: longest
   },
   content: [
     {
       type: "markdown",
-      text: `Päivän pisimmät`
+      text: `Tänään valopallo häiritsee koodausta kaikkein vähiten. Verhoja ei kerrankin tarvitse vetää ikkunan eteen!`
+    },
+    {
+      type: "jsx",
+      Component: Ticker
     }
   ]
 };

@@ -13,7 +13,7 @@ import risuja7 from "@/assets/risuja3.jpeg";
 import { HatchPosition } from "@/components/hatch/Hatch";
 import { isHatchOpenable } from "./calendar";
 import { FC } from "react";
-import hatch666 from "./hatch/hatch666";
+import hatch666 from "./hatch/demonic/hatch666";
 import movies1Hatch from "./hatch/movies/movies-1";
 import containerQueryHatch from "./hatch/container-queries/container-query-hatch";
 import valueForLifeHatch from "./hatch/value-for-life/value-for-life";
@@ -35,6 +35,9 @@ import temporalHatch from "./hatch/temporal/temporalHatch";
 import longestDayHatch from "./hatch/longest-day/longestDayHatch";
 import netscapeHatch from "./hatch/netscape/netscapeHatch";
 import nextHatch from "./hatch/next/nextHatch";
+import trojanHorseHatch from "./hatch/microsoft/trojanHorseHatch";
+import edgeHatch from "./hatch/edge/edgeHatch";
+import christmasEveHatch from "./hatch/final/christmasEveHatch";
 
 export type MarkdownBlockType = {
   type: "markdown";
@@ -115,25 +118,17 @@ const hatches: HatchesData = {
   13: baldursHatch,
   14: movies2Hatch,
   15: netscapeHatch,
-  16: risujaData,
+  16: metaHatch,
   17: strongHtmlHatch,
-  18: risujaData,
-  19: metaHatch,
+  18: trojanHorseHatch,
+  19: edgeHatch,
   20: nextHatch,
   21: movies4Hatch,
   22: longestDayHatch,
   23: temporalHatch,
-  24: risujaData,
+  24: christmasEveHatch,
   666: hatch666
 };
-
-// 15.12 netscape
-// 20.12 next + apple
-// ??? microsoft
-
-// Vuonna 1974 20. joulukuuta, Arthur C. Clarke, tiedemies ja tieteiskirjailija, lähetti ensimmäisen joulutervehdyksen avaruudesta. Hän käytti NASA:n ATS-5-satelliittia lähettämään morse-viestin, joka kuului: "Onnittelut joulukaudesta kaikille maan asukkaille täältä kaukaa, kuun toiselta puolelta!" Tämä oli aikanaan hauska ja inspiroiva tapa yhdistää tiede ja juhlakausi.
-
-/* eslint-disable @typescript-eslint/no-unused-vars */
 
 export const getHatchData = async (day: number): Promise<HatchData | null> => {
   if (day !== 666 && !isHatchOpenable(day)) {

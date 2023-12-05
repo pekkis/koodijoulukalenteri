@@ -11,7 +11,7 @@ const adaHatch: HatchDataWithoutDay = {
   content: [
     {
       type: "markdown",
-      text: `Ada Lovelace kirjoitti [maailman ensimmäisen tietokoneohjelman](https://en.wikipedia.org/wiki/Computer_program#History) vuoden 1843 joulukuussa. Tietokoneohjelma piirsi pyynnöstäni äidistään romanttisen kuvan (yllä) ja kirjoitti hänestä romanttisen novellin (alla) joulukuussa 2023. Olen vilpittömästi ja perinpohjaisesti sanaton.
+      text: `Ada Lovelace kirjoitti [maailman ensimmäisen tietokoneohjelman](https://en.wikipedia.org/wiki/Computer_program#History) vuoden 1843 joulukuussa. Tietokoneohjelma piirsi pyynnöstäni äidistään romanttisen kuvan (yllä) ja kirjoitti hänestä romanttisen novellin (alla) joulukuussa 2023. Olen vaikuttunut ja liikuttunut.
 
 ## Ada Lovelacen Lumoava Sinfonia: Ensimmäinen Tietokoneohjelma
 

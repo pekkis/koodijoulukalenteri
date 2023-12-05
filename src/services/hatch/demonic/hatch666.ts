@@ -1,6 +1,6 @@
-import { HatchDataWithoutDay } from "../hatch";
-import Hatch666Content from "./Hatch666Content";
-import demonicSanta from "@/assets/demonic-santa.webp";
+import { HatchDataWithoutDay } from "../../hatch";
+import Hatch666Content from "../demonic/Hatch666Content";
+import demonicSanta from "@/assets/demon-santa.jpeg";
 
 const hatch666: HatchDataWithoutDay = {
   title: "Pukki on ankara, muttei armoton",

@@ -6,36 +6,36 @@ const movies3Hatch: HatchDataWithoutDay = {
   title: "1980-luvun koodileffoja",
   image: {
     src: coolHackers,
-    alt: "Elokuvajuliste, jossa coolit 1980-luvun juppinörtit ajelevat Ferrari Testarossillaan ja pistävät koodaten"
+    alt: "Elokuvajuliste, jossa coolit 1980-luvun juppinörtit ajelevat Ferrari Testarossalla ja pistävät koodaten"
   },
   content: [
     {
       type: "markdown",
-      text: `2000-luvullakin on tehty paljon hyviä koodileffoja. Tässä joitakin omia suosikkejani suunnilleen ensimmäiseltä puolikkaalta tätä vuosituhatta!`
+      text: `Jo 1980-luvulla Hollywoodin visionäärit näkivät viisaudessaan, mihin koodi on menossa. Kotimikrojen vuosikymmenellä tehtiin monia koodileffojen klassikkoja!`
     },
     {
       type: "youtube",
-      id: "lB95KLmpLR4",
+      id: "hMT8tRrEMC4",
       caption:
-        "The Social Network on liikuttava kasvutarina reptiliaanista, joka oppii matkimaan ihmistä, koodaamaan PHP:llä, ja perustaa menestyksekkään veppifirman!"
+        "Olin neljävuotias Tronin ilmestyessä, mutta muistan kyllä hämärästi, että sen erikoisefekteistä kohkattiin lapsuudessani. Elokuvaharrastuksen myöhemmin löytäneenä osaan hyvin kuvitella, millainen vaikutus leffalla on ollut aikalaiseen."
     },
     {
       type: "youtube",
-      id: "lFwtY1bxlNc",
+      id: "TQUsLAAZuhU",
       caption:
-        "Swordfish tavoittaa elähdyttävällä tavalla 2000-luvun alun teknobuumin. Tältä tuntui olla töissä Riot-E:ssä tai ajaa keltainen Lamborghini täysillä kolera-altaaseen matkalla jonottamaan Saunalahden serverin osakkeita purevassa syysviimassa!"
+        "Lapsuudestani puheen ollen, Wargames-elokuvassa pääsemme tietsikoiden ohella jänskättämään aikakauden suurinta mörköä: ydinsotaa. Ferriksen kannattaisi suosiolla vaan lintsata koulusta eikä hakkeroida sotilastietokoneita."
     },
     {
       type: "youtube",
-      id: "NkTrG-gpIzE",
+      id: "kIZH5TKnEeg",
       caption:
-        "Source Code on nimeään myöten todellinen koodarin koodarileffa, ja hyvä leffa onkin. Moonin ja tämän jälkeen odotin David Bowien pojalta hienoa uraa, mutta ei se oikein lähtenyt lentoon."
+        "Toisin kuin nykyään, kahdeksankymmentäluvulla nörtit osattiin kuvailla sopivan inhorealistisella tavalla. Nörttien kosto-komedia on kestänyt aikaa poikkeuksellisen hyvin, ja kuuluu jokaisen alalle haikailevan pakollisten katsottavien listalle."
     },
     {
       type: "youtube",
-      id: "d4RiUy23e9s",
+      id: "k64P4l2Wmeg",
       caption:
-        "Tron: Legacy on yksi kuvallisesti ja äänellisesti siisteimmistä koodarileffoista. Tykkään kaikista Kosinskin leffoista, koska ne ovat perin nättejä ja kivan kuuloisia!"
+        "Tuntematon b-leffojen ohjaaja James Cameron teki vuonna 1984 elokuvan Terminator. Tyylipuhdasta scifiä vai visionäärin varhainen varoitus tekoälyn vaaroista? Sano sinä. Tälle tehtiin ysärillä tymäkkä jatko-osa, jota en laittanut sen vuosikymmenen listalle ihan siksi, että kasarilista iskisi tykimmin."
     }
   ]
 };

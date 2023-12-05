@@ -1,6 +1,6 @@
 import { HatchDataWithoutDay } from "@/services/hatch";
 
-import netscape from "@/assets/pekonia-ja-spagettia-4.jpeg";
+import netscape from "@/assets/netscape-2.jpeg";
 
 const netscapeHatch: HatchDataWithoutDay = {
   title: "Netscape",

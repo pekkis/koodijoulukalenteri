@@ -15,7 +15,9 @@ const baldursHatch: HatchDataWithoutDay = {
     },
     {
       type: "markdown",
-      text: `Puolilapsi oli kysynyt äidiltään hämmentyneenä, voivatko Steamin peliaikatilastot pitää oikeasti paikkaansa? Voiko Pekkis olla pelannut kahden viikon aikana **160 tuntia**? Häpeillen tunnustan, että kyllä se paikkansa piti, mutta minun on sanottava puolustuksekseni, että kävin työhaastatteluissa, ja minulta meni siinä pari päivää hyvää peliaikaa sivu suun, ja että olisin muuten kyllä pelannut enemmän.`
+      text: `Puolilapsi oli kysynyt äidiltään hämmentyneenä, voivatko Steamin peliaikatilastot pitää oikeasti paikkaansa? Voiko Pekkis olla pelannut kahden viikon aikana **160 tuntia**?
+
+Häpeillen tunnustan, että kyllä tämä paikkansa piti, mutta minun on sanottava puolustuksekseni, että vaikka olinkin lomalla, kävin työhaastatteluissa, minulta meni pari päivää hyvää peliaikaa hukkaan, ja että olisin kyllä muuten pelannut enemmän!`
     },
     {
       type: "youtube",
