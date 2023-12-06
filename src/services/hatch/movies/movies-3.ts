@@ -1,6 +1,6 @@
 import { HatchDataWithoutDay } from "@/services/hatch";
 
-import coolHackers from "@/assets/cool-hackers.jpeg";
+import coolHackers from "@/assets/arska.jpeg";
 
 const movies3Hatch: HatchDataWithoutDay = {
   title: "1980-luvun koodileffoja",

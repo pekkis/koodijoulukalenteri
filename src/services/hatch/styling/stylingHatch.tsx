@@ -13,11 +13,16 @@ const stylingHatch: HatchDataWithoutDay = {
       type: "markdown",
       text: `Kirjoitin vuonna 2016 [blogipostauksen CSS:n historiasta ja tulevaisuudesta](https://www.pekkis.eu/blogi/2016/10/18/css-n-lyhyt-historia). Pohdiskelen plokautuksen lopussa sitä, miten CSS istuu Reactiin, ja kuuluuko tulevaisuus JavaScript- vai CSS-pohjaiselle CSS:lle.
 
-Viimeksi tänään pohdin ihan samaa kysymystä, enkä juuri ole päässyt sen kanssa eteenpäin. [Styled Components](https://styled-components.com/), [Emotion](https://emotion.sh/) ja muut ajonaikaiset kirjastot tuntuivat aluksi hyviltä, mutta nyt kun asiat siirtyvät takaisin serverille, ne olivatkin ansa.
+Viimeksi tänään pohdin ihan samaa kysymystä, enkä juuri ole seitsemässä vuodessa päässyt eteenpäin. [Styled Components](https://styled-components.com/), [Emotion](https://emotion.sh/) ja muut ajonaikaiset tyylikirjastot tuntuivat tavallaan hyviltä, mutta vain puoliksi, ja ne osoittautuivat ansaksi anti-hydraatio-liikkeen aikakaudella.
 
-Tyylittäminen pelkillä puhtailla CSS-moduleilla on paljon parempi vaihtoehto kuin vuonna 2016, koska CSS plattana on kehittynyt. [PostCSS:llä](https://postcss.org/) ja kumppaneilla on silti edelleen paikkansa. Ylipäätään tämä tapa tuntuu aina toimivan ilman säätöä ja lisätunkkausta, mutta sitten taas toisaalta, blergh.
+Tyylittäminen paljailla CSS-moduleilla on paljon parempi vaihtoehto kuin vuonna 2016, koska CSS alustana on kehittynyt niin paljo. [PostCSS:llä](https://postcss.org/) ja kumppaneilla on silti edelleen paikkansa. Ylipäätään CSS-lähtöinen tapa tuntuu aina toimivan ilman säätöä, mutta sitten toisaalta, tyyppiturvallisuus puuttuu.
 
-Joulukalenteri on tyylitelty [Vanilla Extract](https://vanilla-extract.style/)-kirjastolla, joka edustaa runtimettömiä CSS-in-JS-tunkkeja. Tämä maailma pyrkii yhdistämään CSS:n ja TypeScriptin parhaat puolet, ja vetoaa meikäläiseen ajatuksellisesti. Mutta sitten taas, ekstratunkkausta. Aargh!`
+[Tailwind](https://tailwindcss.com/) ei ole koskaan herättänyt itsessäni wau-efektiä, mutta pitäisi joskus sukeltaa siihen, että osaisin viisastella paremmin.
+
+Joulukalenteri on tyylitelty [Vanilla Extract](https://vanilla-extract.style/)-kirjastolla, joka edustaa runtimettömiä CSS-in-JS-tunkkeja. Tämä maailma pyrkii yhdistämään CSS:n ja TypeScriptin parhaat puolet, ja vetoaa meikäläiseen ajatuksellisesti. Lisätunkkaukselta ja buildiputkien säädöltä ei kyllä välty.
+
+Kalenteriluukkua ajatellen sopivasti Meta julkaisi juuri äsken samaa koulukuntaa edustavan [StyleX](https://stylexjs.com/)-kirjaston, jonka otan heti kokeiluun. Jos se riittää Facebookille ja Instagramille ja Whatsappille, se riittää minulle. [Panda CSS](https://pandacss.dev/) täydentäköön tämän pyhän kolminaisuuden.
+`
     }
   ]
 };
