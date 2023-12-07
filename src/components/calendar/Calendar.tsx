@@ -2,12 +2,13 @@ import { FC } from "react";
 import CalendarWall from "../hatch/CalendarWall";
 import Hatch, { HatchPosition } from "../hatch/Hatch";
 import * as styles from "./Calendar.css";
-import { isHatchOpenable } from "@/services/calendar";
+import { getTime, isHatchOpenable } from "@/services/calendar";
 import { getPosition } from "@/services/hatch";
 import { sortBy } from "ramda";
 import { FaSkull } from "react-icons/fa";
 import NaughtyOrNice from "./NaughtyOrNice";
 import EscapeHatch from "./EscapeHatch";
+import Refresher from "./Refresher";
 
 type HatchConfig = {
   day: number;
@@ -153,6 +154,8 @@ const Calendar: FC = () => {
           <strong>05:00</strong>. Silloin kannattaa rynkyttää selaimen
           reload-nappia!
         </p>
+
+        <Refresher serverTime={getTime().toISO() as string} />
       </div>
       <NaughtyOrNice>
         <div className={styles.grid}>

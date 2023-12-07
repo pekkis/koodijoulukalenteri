@@ -9,7 +9,17 @@ export const isHatchOpenable = (day: number): boolean => {
     zone: "Europe/Helsinki"
   });
 
-  const now = DateTime.utc();
+  const now = getTime();
 
   return now >= openableAt;
+};
+
+export const getTime = (): DateTime => {
+  if (!process.env.NEXT_PUBLIC_DEBUG_OFFSET) {
+    return DateTime.utc();
+  }
+
+  return DateTime.utc().plus({
+    minutes: parseInt(process.env.NEXT_PUBLIC_DEBUG_OFFSET)
+  });
 };
