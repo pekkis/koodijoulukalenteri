@@ -150,9 +150,9 @@ const Calendar: FC = () => {
 
         <p>
           <FaSkull /> Varoitus: tontut huomaavat, jos kurkit luukkuihin
-          etukäteen. Joulun taika päivittää kalenterin servulla joka aamu kello{" "}
-          <strong>05:00</strong>. Silloin kannattaa rynkyttää selaimen
-          reload-nappia!
+          etukäteen. Joulun taika päivittää kalenterin joka aamu kello{" "}
+          <strong>05:00:05</strong>, mutta voit varmuudeksi toki rynkytellä
+          reloadia!
         </p>
 
         <Refresher serverTime={getTime().toISO() as string} />

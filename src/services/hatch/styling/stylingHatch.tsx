@@ -21,7 +21,9 @@ Tyylittäminen paljailla CSS-moduleilla on paljon parempi vaihtoehto kuin vuonna
 
 Joulukalenteri on tyylitelty [Vanilla Extract](https://vanilla-extract.style/)-kirjastolla, joka edustaa runtimettömiä CSS-in-JS-tunkkeja. Tämä maailma pyrkii yhdistämään CSS:n ja TypeScriptin parhaat puolet, ja vetoaa meikäläiseen ajatuksellisesti. Lisätunkkaukselta ja buildiputkien säädöltä ei kyllä välty.
 
-Kalenteriluukkua ajatellen sopivasti Meta julkaisi juuri äsken samaa koulukuntaa edustavan [StyleX](https://stylexjs.com/)-kirjaston, jonka otan heti kokeiluun. Jos se riittää Facebookille ja Instagramille ja Whatsappille, se riittää minulle. [Panda CSS](https://pandacss.dev/) täydentäköön tämän pyhän kolminaisuuden.
+Kalenteriluukkua ajatellen sopivasti Meta julkaisi juuri äsken samaa koulukuntaa edustavan [StyleX](https://stylexjs.com/)-kirjaston, jonka otan heti kokeiluun. Jos se riittää Facebookille ja Instagramille ja Whatsappille, se varmaankin riittää minulle.
+
+Eksoottisempaa vaihtoehtoa kaipaaville julkaistiin ihan hetki sitten [CSS Hooks](https://css-hooks.com/), johon en siihenkään ole ehtinyt syventyä.
 `
     }
   ]

@@ -29,7 +29,7 @@ const movies3Hatch: HatchDataWithoutDay = {
       type: "youtube",
       id: "kIZH5TKnEeg",
       caption:
-        "Toisin kuin nykyään, kahdeksankymmentäluvulla nörtit osattiin kuvailla sopivan inhorealistisella tavalla. Nörttien kosto-komedia on kestänyt aikaa poikkeuksellisen hyvin, ja kuuluu jokaisen alalle haikailevan pakollisten katsottavien listalle."
+        "Toisin kuin nykyään, kahdeksankymmentäluvulla meidät nörtit osattiin kuvailla ihailtavan inhorealistisella tavalla. Nörttien kosto-komedian stereotyypit ovat kestäneet tosi hyvin aikaa, ja elokuva kuuluukin jokaisen alalle haikailevan pakollisten katsottavien listalle."
     },
     {
       type: "youtube",
