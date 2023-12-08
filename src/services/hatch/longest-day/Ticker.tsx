@@ -20,7 +20,7 @@ const Ticker: FC<Props> = ({ serverTime }) => {
     };
   });
 
-  const theMoment = DateTime.local(2023, 12, 6, 21, 52, {
+  const theMoment = DateTime.local(2023, 12, 22, 5, 28, {
     zone: "Europe/Helsinki"
   }).setLocale("fi");
 

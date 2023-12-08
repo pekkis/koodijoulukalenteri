@@ -1,6 +1,7 @@
 import { MarkdownBlockType } from "@/services/hatch";
 import { FC } from "react";
 import ReactMarkdown from "react-markdown";
+import remarkGfm from "remark-gfm";
 
 type Props = {
   block: MarkdownBlockType;
@@ -10,6 +11,7 @@ const MarkdownBlock: FC<Props> = ({ block }) => {
   return (
     <>
       <ReactMarkdown
+        remarkPlugins={[remarkGfm]}
         components={{
           a: ({ children, href, ...rest }) => {
             if (href?.startsWith("http")) {
