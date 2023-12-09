@@ -11,7 +11,10 @@ const nextHatch: HatchDataWithoutDay = {
   content: [
     {
       type: "markdown",
-      text: `Seuraava luukku`
+      text: `Joulukuun 20. päivänä vuonna 1996 Apple Computer ilmoitti aikovansa ostaa NeXTin.
+
+
+      On December 20, 1996, Apple Computer announced its intention to acquire NeXT`
     }
   ]
 };
