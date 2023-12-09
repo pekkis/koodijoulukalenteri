@@ -25,6 +25,7 @@ Tässä joitakin vaihtoehtoja tutkittavaksi.
 * [Solid.js + Solid Start](https://start.solidjs.com/)
 * [Svelte + SvelteKit](https://kit.svelte.dev/)
 * [Redwood](https://redwoodjs.com/)
+* [Preact + Fresh + Deno](https://fresh.deno.dev/)
 * [React + Remix](https://remix.run/)
 * [Vue + Nuxt](https://nuxtjs.org/)
 * [Qwik + QwikCity](https://qwik.builder.io/docs/qwikcity/)

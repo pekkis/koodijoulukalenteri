@@ -11,7 +11,9 @@ const adaHatch: HatchDataWithoutDay = {
   content: [
     {
       type: "markdown",
-      text: `Ada Lovelace kirjoitti [maailman ensimmäisen tietokoneohjelman](https://en.wikipedia.org/wiki/Computer_program#History) vuoden 1843 joulukuussa. Tietokoneohjelma piirsi pyynnöstäni äidistään romanttisen kuvan (yllä) ja kirjoitti hänestä romanttisen novellin (alla) joulukuussa 2023. Olen vaikuttunut ja liikuttunut.
+      text: `Ada Lovelace kirjoitti [maailman ensimmäisen tietokoneohjelman](https://en.wikipedia.org/wiki/Computer_program#History) vuoden 1843 joulukuussa. Tietokoneohjelma piirsi pyynnöstäni äidistään romanttisen kuvan (yllä) ja kirjoitti hänestä romanttisen novellin (alla) joulukuussa 2023. Olen liikuttunut.
+
+Koodijoulukalenterin grafiikat on tehnyt [DALL-E](https://openai.com/research/dall-e) (groteskit kuvat DALL-E kakkonen, hienot kuvat DALL-E 3 [Bing Creatorin](https://www.bing.com/images/create) kautta). [ChatGPT](https://chat.openai.com/) avusti minua kalenterin tutkimustyössä, ja [Github Copilot](https://github.com/features/copilot) parikoodasi kalenteria kanssani.
 
 ## Ada Lovelacen Lumoava Sinfonia: Ensimmäinen Tietokoneohjelma
 

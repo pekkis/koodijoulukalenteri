@@ -38,6 +38,8 @@ import nextHatch from "./hatch/next/nextHatch";
 import trojanHorseHatch from "./hatch/microsoft/trojanHorseHatch";
 import edgeHatch from "./hatch/edge/edgeHatch";
 import christmasEveHatch from "./hatch/final/christmasEveHatch";
+import runtimeHatch from "./hatch/runtime/runtimeHatch";
+import packageManagersHatch from "./hatch/package-manager/packageManagerHatch";
 
 export type MarkdownBlockType = {
   type: "markdown";
@@ -115,12 +117,12 @@ const hatches: HatchesData = {
   10: adaHatch,
   11: knittersHatch,
   12: stylingHatch,
-  13: baldursHatch,
+  13: runtimeHatch,
   14: movies2Hatch,
   15: netscapeHatch,
   16: metaHatch,
   17: strongHtmlHatch,
-  18: trojanHorseHatch,
+  18: packageManagersHatch,
   19: edgeHatch,
   20: nextHatch,
   21: movies4Hatch,

@@ -15,18 +15,6 @@ const movies4Hatch: HatchDataWithoutDay = {
     },
     {
       type: "youtube",
-      id: "vf4r5q8-aWo",
-      caption:
-        "Wreck-It Ralph (2012) on yksi suosikkipiirretyistäni kautta aikojen. Se on myös hyvä peli- ja siten myös koodileffa! Tälle tehtiin jatko-osakin, se on ihan OK muttei lainkaan niin muistettava kuin alkuperäinen."
-    },
-    {
-      type: "youtube",
-      id: "dJTU48_yghs",
-      caption:
-        "Her (2013) on herkkä ja kaunis ihmisen ja tekoälyn välinen rakkaustarina."
-    },
-    {
-      type: "youtube",
       id: "j2jRs4EAvWM",
       caption:
         "The Imitation Game (2014) on ammattitaitoisesti tehty draama Alan Turingista, joka hakkeroi natsien Enigma-masiinan ja auttaa liittoutuneita voittamaan sodan. Turingin tarina loppuu onnettomasti, mutta olkoon se meille ikuinen muistutus siitä, että ihmiskunnalla on vielä kehityttävää."
