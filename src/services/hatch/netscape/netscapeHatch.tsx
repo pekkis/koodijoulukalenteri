@@ -3,7 +3,7 @@ import { HatchDataWithoutDay } from "@/services/hatch";
 import netscape from "@/assets/netscape-2.jpeg";
 
 const netscapeHatch: HatchDataWithoutDay = {
-  title: "Netscape Navigator 1.0",
+  title: "Netscape Navigator",
   image: {
     alt: "Netscape",
     src: netscape

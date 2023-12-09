@@ -16,7 +16,7 @@ JavaScriptin paketinhallintascene eriytyi alunperin vuonna 2016, kun [Yarn](http
 
 NPM sai Yarnin ajan kanssa enempi vähempi kiinni, ja Yarnista julkaistiin sekä taaksepäin että virallisen asiakasohjelmiston konffien kanssa yhteensopimaton kakkosversio. Se ei ole saanut suurta suosiota, koska se ei ole kovin hyvä.
 
-[PNPM](https://pnpm.io/) sen sijaan *on* tosi, tosi hyvä ja yhteensopiva. Se säästää sekä hermoja, aikaa että levytilaa, ja olen käyttänyt sitä kaikissa omissa hankkeissani jo useamman vuoden ajan. Enterprise-työ-proggiksissakin olen sen moneen otteeseen hyväksi ja toimivaksi todennut, ja niin ovat tehneet tosi monet "isot pojatkin". Monorepojen kanssa se on ihan itsestäänselvä valinta.
+[PNPM](https://pnpm.io/) sen sijaan *on* tosi, tosi hyvä ja yhteensopiva. Se säästää sekä hermoja, aikaa että levytilaa, ja olen käyttänyt sitä kaikissa omissa hankkeissani (myös koodijoulukalenterissa) jo useamman vuoden ajan. Enterprise-työ-proggiksissakin olen sen moneen otteeseen hyväksi ja toimivaksi todennut, ja niin ovat tehneet tosi monet "isot pojatkin". Monorepojen kanssa se on ihan itsestäänselvä valinta.
 
 Migraatio deprekoidusta yarn ykkösestä edessä? Minne? Älä mieti kahdesti, ota PNPM. Sen ainoa huono puoli on, että sitä on lähes mahdotonta olla kirjoittamatta PMMP. Onneksi sille voi tehdä aliaksen.
 
