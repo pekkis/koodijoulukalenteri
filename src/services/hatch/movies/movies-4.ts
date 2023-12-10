@@ -11,7 +11,7 @@ const movies4Hatch: HatchDataWithoutDay = {
   content: [
     {
       type: "markdown",
-      text: `Yliaktiivinen (52-120+ leffaa vuodessa teattereissa) elokuvaharrastukseni alkoi vuonna 2012. Tässä joitakin katsomisen arvoisia koodileffoja vakavasti otettavan elokuvakulutukseni aikakaudelta.`
+      text: `Aktiivinen (52-120+ leffaa vuodessa teattereissa) elokuvaharrastukseni alkoi vuonna 2012. Tässä joitakin katsomisen arvoisia koodileffoja vakavasti otettavan elokuvakulutukseni aikakaudelta.`
     },
     {
       type: "youtube",
