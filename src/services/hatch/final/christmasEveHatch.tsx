@@ -1,11 +1,11 @@
 import { HatchDataWithoutDay } from "@/services/hatch";
 
-import christmasEve from "@/assets/santa-and-jebus.jpeg";
+import christmasEve from "@/assets/hou-hou.jpg";
 
 const christmasEveHatch: HatchDataWithoutDay = {
-  title: "Hyvää joulua ja koodaamisen riemua",
+  title: "Hyvää joulua ja tunkkaamisen iloa!",
   image: {
-    alt: "Joulupukki ja Jeesus, kumpikin ohjelmistokehittäjiä, juhlistavat joulua parikoodaamalla!",
+    alt: "Peksu ja Joulupukki, kumpikin ohjelmistokehittäjiä, juhlistavat joulua parikoodaamalla!",
     src: christmasEve
   },
   content: [
@@ -25,7 +25,7 @@ Luukkujen sisällöt, paitsi tekoälylle omistetun kymmenennen luukun novellin, 
 
 Huumorintajuni ei ole vuosien mittaan juuri parantunut, mutta minusta on tullut varovaisempi. Jos kiinnostaa nähdä, millaisen ultimaattisen tuhmuustason itsesensuroin etten tulisi canceloiduksi, sekin löytyy lähdekoodista.
 
-Opin paljon, minulla oli hauskaa, ja päätin että ryhdyn kasaamaan vuoden 2024 koodijoulukalenteria jo tammikuun alussa.`
+Opin paljon, minulla oli hauskaa, ja päätin että ryhdyn kasaamaan vuoden 2024 koodijoulukalenteria jo tammikuun alussa. Jos oikein villiinnyn, teen siitä CAAS (Calendar As A Service) -palvelun, jossa kuka tahansa voi luoda oman koodijoulukalenterinsa!`
     }
   ]
 };
