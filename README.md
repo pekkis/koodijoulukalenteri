@@ -12,4 +12,4 @@ my training course materials.
 - `pnpm i`
 - `pnpm dev`
 - `DEBUG=true pnpm dev` to resolve all hatches openable.
-- `NEXT_PUBLIC_DEBUG_OFFSET=387 pnpm dev` to control time offset as seconds from current date.
+- `NEXT_PUBLIC_DEBUG_OFFSET=387 pnpm dev` to control time offset as minutes from current time.

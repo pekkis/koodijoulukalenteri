@@ -15,6 +15,7 @@ import {
 
 import "@/services/assets";
 import { Metadata, Viewport } from "next";
+import Debug from "./Debug";
 
 type Props = {
   children: ReactNode;
@@ -59,7 +60,10 @@ export default async function WelcomeLayout({ children }: Props) {
       </head>
       <body id="root">
         <Header />
-        <Main>{children}</Main>
+        <Main>
+          {process.env.NODE_ENV === "development" && <Debug />}
+          {children}
+        </Main>
         <Footer />
       </body>
     </html>
