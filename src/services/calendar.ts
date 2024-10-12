@@ -10,6 +10,7 @@ export const isHatchOpenable = (day: number): boolean => {
   });
 
   const now = getTime();
+
   return now >= openableAt;
 };
 

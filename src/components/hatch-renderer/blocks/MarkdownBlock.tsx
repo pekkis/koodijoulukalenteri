@@ -16,7 +16,7 @@ const MarkdownBlock: FC<Props> = ({ block }) => {
           a: ({ children, href, ...rest }) => {
             if (href?.startsWith("http")) {
               return (
-                <a {...rest} href={href} target="_blank">
+                <a {...rest} rel="noreferrer" href={href} target="_blank">
                   {children}
                 </a>
               );

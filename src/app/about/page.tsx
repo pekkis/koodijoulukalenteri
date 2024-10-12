@@ -36,13 +36,18 @@ export default function AboutPage() {
 
       <ul>
         <li>
-          <a target="_blank" href="https://csschristmascalendar.com/">
+          <a
+            rel="noreferrer"
+            target="_blank"
+            href="https://csschristmascalendar.com/"
+          >
             Luukun aukaisun inspiraatio ja referenssi
           </a>
         </li>
 
         <li>
           <a
+            rel="noreferrer"
             target="_blank"
             href="https://en.wikipedia.org/wiki/File:Jingle_Bells_(90bpm)_(Kevin_MacLeod)_(ISRC_USUAN1100187).oga"
           >
@@ -50,7 +55,11 @@ export default function AboutPage() {
           </a>
         </li>
         <li>
-          <a target="_blank" href="https://www.youtube.com/watch?v=mP1Er3W6Zk8">
+          <a
+            rel="noreferrer"
+            target="_blank"
+            href="https://www.youtube.com/watch?v=mP1Er3W6Zk8"
+          >
             Kulkuset, kauhuversio
           </a>
         </li>
