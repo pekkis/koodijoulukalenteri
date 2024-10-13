@@ -1,43 +1,8 @@
 import { StaticImageData } from "next/image";
 
-import risuja from "@/assets/risuja-2.webp";
-
-import risuja1 from "@/assets/pekonia-ja-spagettia-1.jpeg";
-import risuja2 from "@/assets/pekonia-ja-spagettia-2.jpeg";
-import risuja3 from "@/assets/pekonia-ja-spagettia-3.jpeg";
-import risuja4 from "@/assets/pekonia-ja-spagettia-4.jpeg";
-import risuja5 from "@/assets/risuja1.jpeg";
-import risuja6 from "@/assets/risuja2.jpeg";
-import risuja7 from "@/assets/risuja3.jpeg";
-
 import { HatchPosition } from "@/components/hatch/Hatch";
-import { isHatchOpenable } from "./calendar";
 import { FC } from "react";
-import hatch666 from "./hatch/demonic/hatch666";
-import movies1Hatch from "./hatch/movies/movies-1";
-import containerQueryHatch from "./hatch/container-queries/container-query-hatch";
-import valueForLifeHatch from "./hatch/value-for-life/value-for-life";
-import carjackHatch from "./hatch/carjack/carjackHatch";
-import linusHatch from "./hatch/linus/linusHatch";
-import roadmapHatch from "./hatch/roadmap/roadmapHatch";
-import domainHatch from "./hatch/fi-domain/fiDomainHatch";
-import movies2Hatch from "./hatch/movies/movies-2";
-import knittersHatch from "./hatch/knitters/knittersHatch";
-import adaHatch from "./hatch/ada/adaHatch";
-import stylingHatch from "./hatch/styling/stylingHatch";
-import motherOfAllDemosHatch from "./hatch/mother-of-all-demos/motherOfAllDemosHatch";
-import movies3Hatch from "./hatch/movies/movies-3";
-import movies4Hatch from "./hatch/movies/movies-4";
-import metaHatch from "./hatch/metaframeworks/metaHatch";
-import strongHtmlHatch from "./hatch/strong-html/strongHtmlHatch";
-import temporalHatch from "./hatch/temporal/temporalHatch";
-import longestDayHatch from "./hatch/longest-day/longestDayHatch";
-import netscapeHatch from "./hatch/netscape/netscapeHatch";
-import nextHatch from "./hatch/next/nextHatch";
-import edgeHatch from "./hatch/edge/edgeHatch";
-import christmasEveHatch from "./hatch/final/christmasEveHatch";
-import runtimeHatch from "./hatch/runtime/runtimeHatch";
-import packageManagersHatch from "./hatch/package-manager/packageManagerHatch";
+import { ClientCalendarType } from "@/services/calendar";
 
 export type MarkdownBlockType = {
   type: "markdown";
@@ -64,7 +29,7 @@ export type YoutubeBlockType = {
 
 export type JsxBlockType = {
   type: "jsx";
-  Component: FC;
+  Component: FC<{ calendar: ClientCalendarType }>;
 };
 
 export type ContentBlockType =
@@ -86,101 +51,7 @@ export type HatchData = {
 
 export type HatchDataWithoutDay = Omit<HatchData, "day">;
 
-type HatchesData = Record<number, Omit<HatchData, "day">>;
-
-const risujaData: Omit<HatchData, "day"> = {
-  title: "Tuhmille kiviä, risuja, pekonia ja spagettia",
-  image: {
-    src: risuja,
-    alt: "Tuhma lapsi on saanut lahjaksi tyhmän lahjan. Hän itkee."
-  },
-  content: [
-    {
-      type: "markdown",
-      text: `Nyt nimien kirjaan merkitään taas: tuhma vai kiltti, ajatelkaas! Joulupukki matkaan jo käy. Taas pienet tontut liikkuu ja muistiin merkitsee, niin joulupukki tietää saa, kuka lahjat ansaitsee.`
-    }
-  ]
-};
-
-const hatches: HatchesData = {
-  1: movies1Hatch,
-  2: roadmapHatch,
-  3: containerQueryHatch,
-  4: domainHatch,
-  5: carjackHatch,
-  6: linusHatch,
-  7: valueForLifeHatch,
-  8: movies3Hatch,
-  9: motherOfAllDemosHatch,
-  10: adaHatch,
-  11: knittersHatch,
-  12: stylingHatch,
-  13: runtimeHatch,
-  14: movies2Hatch,
-  15: netscapeHatch,
-  16: metaHatch,
-  17: strongHtmlHatch,
-  18: packageManagersHatch,
-  19: edgeHatch,
-  20: nextHatch,
-  21: movies4Hatch,
-  22: longestDayHatch,
-  23: temporalHatch,
-  24: christmasEveHatch,
-  666: hatch666
-};
-
-export const getHatchData = async (day: number): Promise<HatchData | null> => {
-  if (day !== 666 && !isHatchOpenable(day)) {
-    return {
-      ...risujaData,
-      day,
-      image: {
-        ...risujaData.image,
-        get src() {
-          const risut = [
-            risuja1,
-            risuja5,
-            risuja2,
-            risuja6,
-            risuja3,
-            risuja7,
-            risuja4,
-            risuja1,
-            risuja5,
-            risuja2,
-            risuja6,
-            risuja3,
-            risuja7,
-            risuja4,
-            risuja1,
-            risuja5,
-            risuja2,
-            risuja6,
-            risuja3,
-            risuja7,
-            risuja4,
-            risuja1,
-            risuja5,
-            risuja2,
-            risuja6,
-            risuja3,
-            risuja7,
-            risuja4
-          ];
-
-          return risut[day - 1];
-        }
-      }
-    };
-  }
-
-  if (hatches[day]) {
-    return { ...hatches[day], day };
-  }
-
-  return null;
-};
+export type HatchesData = Record<number, Omit<HatchData, "day">>;
 
 export const getPosition = (
   x: number,

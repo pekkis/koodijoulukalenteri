@@ -6,6 +6,7 @@ import cx from "clsx";
 import clsx from "clsx";
 import useOpenHatches from "@/hooks/useOpenHatches";
 import useNaughtiness from "@/hooks/useNaughtiness";
+import { ClientCalendarType } from "@/services/calendar";
 
 /* eslint-disable jsx-a11y/label-has-associated-control */
 
@@ -16,7 +17,9 @@ export type HatchPosition = {
   height: number;
 };
 
-type Props = {
+export type HatchProps = {
+  calendar: ClientCalendarType;
+  isInteractive?: boolean;
   isOpenable?: boolean;
   day: number;
   position: HatchPosition;
@@ -26,7 +29,9 @@ type Props = {
   isDark?: boolean;
 };
 
-const Hatch: FC<Props> = ({
+const Hatch: FC<HatchProps> = ({
+  calendar,
+  isInteractive = false,
   className,
   children,
   day,
@@ -36,13 +41,15 @@ const Hatch: FC<Props> = ({
   isDark = false
 }) => {
   const { openHatches, toggleHatch } = useOpenHatches();
-  const { addNaughtiness } = useNaughtiness();
+  const { addNaughtiness } = useNaughtiness(calendar);
 
   const hatchSize = position.height * position.width;
 
-  const isOpen = openHatches.includes(day);
+  const isOpen = isInteractive && openHatches.includes(day);
 
-  const classes = cx(styles.hatch, className);
+  const classes = cx(styles.hatch, className, {
+    [styles.interactiveHatch]: isInteractive
+  });
 
   const naughtinessIncreaseByAmount = naughtinessIncrease || hatchSize;
 
@@ -67,14 +74,19 @@ const Hatch: FC<Props> = ({
           role="button"
           tabIndex={day * 100}
           onClick={() => {
+            if (!isInteractive) {
+              return;
+            }
+
             if (!isOpenable && !isOpen) {
               addNaughtiness(naughtinessIncreaseByAmount);
             }
             toggleHatch(day);
           }}
           className={clsx(styles.door, {
-            [styles.openableDoor]: isOpenable,
-            [styles.openDoor]: isOpen
+            [styles.openableDoor]: isInteractive && isOpenable,
+            [styles.openDoor]: isOpen,
+            [styles.inactiveDoor]: !isInteractive
           })}
           onKeyDown={(e) => {
             if (e.key === "Enter") {

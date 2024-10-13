@@ -7,12 +7,14 @@ import { useScrollLock, useOnClickOutside } from "usehooks-ts";
 import { useRouter } from "next/navigation";
 import useOpenHatches from "@/hooks/useOpenHatches";
 import useKeyPress from "@/hooks/useKeyPress";
+import { ClientCalendarType } from "@/services/calendar";
 
 type Props = {
   children: ReactNode;
+  calendar: ClientCalendarType;
 };
 
-const Dialog: FC<Props> = ({ children }) => {
+const Dialog: FC<Props> = ({ calendar, children }) => {
   const ref = useRef<HTMLDivElement>(null);
 
   const { searchParams } = useOpenHatches();
@@ -23,11 +25,15 @@ const Dialog: FC<Props> = ({ children }) => {
   });
 
   useOnClickOutside(ref, () => {
-    router.push(`/?${searchParams.toString()}`, { scroll: false });
+    router.push(`/c/${calendar.id}?${searchParams.toString()}`, {
+      scroll: false
+    });
   });
 
   useKeyPress("Escape", () => {
-    router.push(`/?${searchParams.toString()}`, { scroll: false });
+    router.push(`/c/${calendar.id}?${searchParams.toString()}`, {
+      scroll: false
+    });
   });
 
   return (

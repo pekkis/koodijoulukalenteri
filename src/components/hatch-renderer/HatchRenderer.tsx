@@ -7,13 +7,15 @@ import * as styles from "./HatchRenderer.css";
 import MarkdownBlock from "./blocks/MarkdownBlock";
 import BackButton from "./BackButton";
 import YoutubeBlock from "./blocks/YoutubeBlock";
+import { CalendarType } from "@/services/calendar";
 
 type Props = {
+  calendar: CalendarType;
   day: number;
   data: HatchData;
 };
 
-const HatchRenderer: FC<Props> = ({ data }) => {
+const HatchRenderer: FC<Props> = ({ calendar, data }) => {
   return (
     <article>
       <header className={styles.header}>
@@ -33,7 +35,7 @@ const HatchRenderer: FC<Props> = ({ data }) => {
             case "markdown":
               return <MarkdownBlock key={i} block={block} />;
             case "jsx":
-              return <JsxBlock key={i} block={block} />;
+              return <JsxBlock calendar={calendar} key={i} block={block} />;
             case "youtube":
               return <YoutubeBlock key={i} block={block} />;
 

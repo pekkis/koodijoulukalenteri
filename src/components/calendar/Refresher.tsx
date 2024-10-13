@@ -1,6 +1,6 @@
 "use client";
 
-import { getTime } from "@/services/calendar";
+import { getTime } from "@/services/time";
 import { DateTime } from "luxon";
 import { useRouter } from "next/navigation";
 import { FC, useEffect, useState } from "react";
@@ -42,7 +42,7 @@ const Refresher: FC<Props> = ({ serverTime }) => {
     }
   }, [now, lastRefresh, router]);
 
-  if (!process.env.NEXT_PUBLIC_DEBUG_OFFSET) {
+  if (!process.env.NEXT_PUBLIC_NOW) {
     return null;
   }
 

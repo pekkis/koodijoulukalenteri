@@ -9,7 +9,8 @@ my training course materials.
 
 ## develop
 
+- `corepack enable`
 - `pnpm i`
 - `pnpm dev`
 - `DEBUG=true pnpm dev` to resolve all hatches openable.
-- `NEXT_PUBLIC_DEBUG_OFFSET=387 pnpm dev` to control time offset as minutes from current time.
+- `NEXT_PUBLIC_NOW=2024-12-01T21:14:40.846+02:00 pnpm dev` to control time offset as minutes from current time.

@@ -1,8 +1,17 @@
 import { createGlobalTheme } from "@vanilla-extract/css";
 
 const theme = createGlobalTheme(":root", {
+  fontFamily: {
+    body: "logical-variable, sans-serif",
+    christmas: "p22-yule-heavy-snow, sans-serif"
+  },
+
   fontSizes: {
     body: "18px"
+  },
+
+  lineHeight: {
+    body: "1.75"
   },
 
   borderRadius: {
@@ -25,7 +34,6 @@ const theme = createGlobalTheme(":root", {
     quinary: "#00b300",
     black: "rgb(0, 0, 0)",
     white: "rgb(255, 255, 255)",
-
     hatchBorder: "rgb(100, 100, 100)"
   },
 
@@ -39,7 +47,7 @@ const theme = createGlobalTheme(":root", {
   },
 
   size: {
-    container: "800px"
+    container: "768px"
   }
 });
 

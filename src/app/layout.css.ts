@@ -2,12 +2,13 @@ import { globalStyle } from "@vanilla-extract/css";
 import theme from "@/theme.css";
 
 globalStyle("html", {
-  fontSize: "16px",
-  fontFamily: '"logical-variable", sans-serif',
+  fontSize: "18px",
+  fontFamily: theme.fontFamily.body,
   fontVariationSettings: '"wght" 400',
+  lineHeight: theme.lineHeight.body,
 
   "@media": {
-    "screen and (min-width: 800px)": {
+    "screen and (min-width: 768px)": {
       fontSize: "18px"
     }
   }
@@ -22,10 +23,9 @@ globalStyle("body", {
   marginInline: 0,
   backgroundColor: theme.colors.white,
   padding: theme.spacing.s,
-  lineHeight: 1.4,
 
   "@media": {
-    "screen and (min-width: 800px)": {
+    "screen and (min-width: 768px)": {
       padding: theme.spacing.m
     }
   }

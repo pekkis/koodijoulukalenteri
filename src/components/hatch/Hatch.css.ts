@@ -10,8 +10,10 @@ export const hatch = style({
   cursor: "pointer",
   borderRadius: theme.borderRadius.sharp,
   position: "relative",
-  containerType: "size",
+  containerType: "size"
+});
 
+export const interactiveHatch = style({
   ":hover": {
     backgroundColor: "rgb(255 255 255 / .33)"
   },
@@ -53,6 +55,10 @@ export const door = style({
 
 export const openableDoor = style({
   cursor: "pointer"
+});
+
+export const inactiveDoor = style({
+  cursor: "default"
 });
 
 export const openDoor = style({

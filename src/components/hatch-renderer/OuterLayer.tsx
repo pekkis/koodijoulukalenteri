@@ -4,16 +4,18 @@ import useOpenHatches from "@/hooks/useOpenHatches";
 import Link from "next/link";
 import { FC, ReactNode } from "react";
 import * as styles from "./OuterLayer.css";
+import { ClientCalendarType } from "@/services/calendar";
 
 type Props = {
+  calendar: ClientCalendarType;
   day: number;
   children: ReactNode;
 };
 
-const OuterLayer: FC<Props> = ({ day, children }) => {
+const OuterLayer: FC<Props> = ({ calendar, day, children }) => {
   const { searchParams } = useOpenHatches();
 
-  const url = `/hatch/${day}?${searchParams.toString()}`;
+  const url = `/c/${calendar.id}/hatch/${day}?${searchParams.toString()}`;
 
   return (
     <Link

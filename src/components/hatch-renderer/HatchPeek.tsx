@@ -3,14 +3,16 @@ import { FC } from "react";
 import NextImg from "@/components/NextImg";
 import OuterLayer from "./OuterLayer";
 import * as styles from "./HatchPeek.css";
+import { ClientCalendarType } from "@/services/calendar";
 
 type Props = {
+  calendar: ClientCalendarType;
   data: HatchData;
 };
 
-const HatchPeek: FC<Props> = ({ data }) => {
+const HatchPeek: FC<Props> = ({ calendar, data }) => {
   return (
-    <OuterLayer day={data.day}>
+    <OuterLayer calendar={calendar} day={data.day}>
       <NextImg
         alt={data.image.alt}
         src={data.image.src}

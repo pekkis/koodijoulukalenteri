@@ -1,19 +1,22 @@
 "use client";
 
 import useNaughtiness from "@/hooks/useNaughtiness";
-import { getPosition } from "@/services/hatch";
 import cx from "clsx";
 import { FC, useEffect, useState } from "react";
 import { PiPentagramBold } from "react-icons/pi";
-import Hatch from "../hatch/Hatch";
+import Hatch, { HatchProps } from "../hatch/Hatch";
 import * as styles from "./EscapeHatch.css";
 
 import OuterLayer from "../hatch-renderer/OuterLayer";
 import useOpenHatches from "@/hooks/useOpenHatches";
 
-const EscapeHatch: FC = () => {
+const InnerEscapeHatch: FC<{
+  position: HatchProps["position"];
+  calendar: HatchProps["calendar"];
+  day: HatchProps["day"];
+  isInteractive?: HatchProps["isInteractive"];
+}> = ({ position, calendar, day, isInteractive }) => {
   const [pulse, setPulse] = useState(false);
-
   const { openHatches } = useOpenHatches();
 
   useEffect(() => {
@@ -26,12 +29,6 @@ const EscapeHatch: FC = () => {
     };
   }, []);
 
-  const { naughtinessLevel } = useNaughtiness();
-
-  if (naughtinessLevel.level < 4) {
-    return null;
-  }
-
   const classes = cx(styles.escapeHatch, {
     [styles.pulse1]: !pulse,
     [styles.pulse2]: pulse
@@ -39,16 +36,41 @@ const EscapeHatch: FC = () => {
 
   return (
     <Hatch
-      day={666}
-      position={getPosition(26, 4, 5, 5)}
+      calendar={calendar}
+      isOpenable={false}
+      day={day}
+      position={position}
       className={classes}
       naughtinessIncrease={1000 * openHatches.length}
+      isInteractive={isInteractive}
       isDark
     >
-      <OuterLayer day={666}>
+      <OuterLayer calendar={calendar} day={666}>
         <PiPentagramBold className={styles.insides} />
       </OuterLayer>
     </Hatch>
+  );
+};
+
+const EscapeHatch: FC<HatchProps> = ({
+  position,
+  day,
+  calendar,
+  isInteractive
+}) => {
+  const { naughtinessLevel } = useNaughtiness(calendar);
+
+  if (naughtinessLevel.level < 4) {
+    return null;
+  }
+
+  return (
+    <InnerEscapeHatch
+      position={position}
+      day={day}
+      calendar={calendar}
+      isInteractive={isInteractive}
+    />
   );
 };
 

@@ -1,4 +1,4 @@
-import { getTime } from "@/services/calendar";
+import { getTime } from "@/services/time";
 
 export const dynamic = "force-dynamic";
 

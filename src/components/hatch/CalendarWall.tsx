@@ -1,19 +1,24 @@
 import { FC } from "react";
-import { getHatchData } from "@/services/hatch";
 import HatchPeek from "../hatch-renderer/HatchPeek";
+import {
+  CalendarType,
+  getClientCalendar,
+  HatchConfig
+} from "@/services/calendar";
 
 type Props = {
-  day: number;
+  calendar: CalendarType;
+  hatch: HatchConfig;
 };
 
-const CalendarWall: FC<Props> = async ({ day }) => {
-  const data = await getHatchData(day);
+const CalendarWall: FC<Props> = async ({ calendar, hatch }) => {
+  const data = await calendar.getHatchData(hatch);
 
   if (!data) {
     return null;
   }
 
-  return <HatchPeek data={data} />;
+  return <HatchPeek calendar={getClientCalendar(calendar)} data={data} />;
 };
 
 export default CalendarWall;

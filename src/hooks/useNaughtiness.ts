@@ -1,46 +1,54 @@
+import { ClientCalendarType } from "@/services/calendar";
 import {
-  syncNaughtinessToStorage,
-  getNaughtinessFromStorage,
   getNaughtinessLevel,
   getNextNaughtinessLevel
 } from "@/services/naughtiness";
-import { useCallback, useEffect } from "react";
+import { getTime } from "@/services/time";
 import { atom, useAtom } from "jotai";
+import { DateTime } from "luxon";
+import { useCallback, useEffect, useMemo } from "react";
+import { useLocalStorage } from "usehooks-ts";
 
-const naughtinessAtom = atom<number | undefined>(undefined);
-const isNaughtinessDefinedAtom = atom(false);
+const naughtinessAtom = atom<number>(0);
 
-const useNaughtiness = () => {
+const useNaughtiness = (calendar: ClientCalendarType) => {
+  const key = `naughtiness-${calendar.id}`;
+
+  const isInteractive = useMemo(() => {
+    const isOpenAt = DateTime.fromISO(calendar.openAt);
+    const now = getTime();
+
+    return now > isOpenAt;
+  }, [calendar.openAt]);
+
+  const [localStorageNaughtiness, setLocalStorageNaughtiness] =
+    useLocalStorage<number>(key, 0);
+
   const [naughtiness, setNaughtiness] = useAtom(naughtinessAtom);
-  const [isNaughtinessDefined, setIsNaughtinessDefined] = useAtom(
-    isNaughtinessDefinedAtom
-  );
+
+  const effectiveNaughtiness = !isInteractive ? 0 : naughtiness;
 
   const addNaughtiness = useCallback(
-    (amount: number) => {
-      setIsNaughtinessDefined(true);
-      setNaughtiness(Math.max(0, getNaughtinessFromStorage() + amount));
+    (add: number) => {
+      setLocalStorageNaughtiness((prev) => {
+        return prev + add;
+      });
     },
-    [setNaughtiness, setIsNaughtinessDefined]
+    [setLocalStorageNaughtiness]
   );
 
   useEffect(() => {
-    if (!isNaughtinessDefined || naughtiness === undefined) {
-      return;
-    }
-    syncNaughtinessToStorage(naughtiness);
-  }, [naughtiness, isNaughtinessDefined]);
+    setNaughtiness(localStorageNaughtiness);
+  }, [localStorageNaughtiness, setNaughtiness]);
 
-  useEffect(() => {
-    setNaughtiness(getNaughtinessFromStorage());
-    setIsNaughtinessDefined(true);
-  });
-
-  const naughtinessLevel = getNaughtinessLevel(naughtiness);
-  const nextNaughtinessLevel = getNextNaughtinessLevel(naughtiness);
+  const naughtinessLevel = getNaughtinessLevel(calendar, effectiveNaughtiness);
+  const nextNaughtinessLevel = getNextNaughtinessLevel(
+    calendar,
+    effectiveNaughtiness
+  );
 
   return {
-    naughtiness,
+    naughtiness: effectiveNaughtiness,
     addNaughtiness,
     naughtinessLevel,
     nextNaughtinessLevel

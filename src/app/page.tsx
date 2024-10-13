@@ -1,11 +1,64 @@
-import Calendar from "@/components/calendar/Calendar";
+import { getCalendars } from "@/services/calendar";
+import Link from "next/link";
+
+import * as styles from "./page.css";
+import { Calendar } from "@/components/calendar/Calendar";
+import { pipe, sortBy } from "remeda";
+import { Provider } from "jotai";
+import { Container } from "@/components/Container";
+import { Heading } from "@/components/ui/Heading";
+import { Paragraph } from "@/components/ui/Paragraph";
+import { Markdown } from "@/components/Markdown";
 
 export const metadata = {
-  title: "Pekkiksen koodijoulukalenteri 2023"
+  title: "Pekkiksen koodijoulukalenteri"
 };
 
 export const dynamic = "force-dynamic";
 
 export default async function IndexPage() {
-  return <Calendar />;
+  const calendars = await getCalendars();
+
+  const sortedCalendars = pipe(
+    calendars,
+    sortBy((calendar) => calendar.weight),
+    sortBy((calendar) => -calendar.year)
+  );
+
+  return (
+    <Container>
+      <Heading level={1}>Pekkiksen koodi&shy;joulu&shy;kalenteri</Heading>
+
+      <Paragraph>
+        Tervetuloa Pekkiksen koodijoulukalenteriin, perinteiseen digitaaliseen
+        jouluherkkuun jo vuodesta 2023!
+      </Paragraph>
+
+      <div className={styles.grid}>
+        {sortedCalendars.map((calendar) => {
+          return (
+            <div key={calendar.id} className={styles.calendar}>
+              <Provider>
+                <Calendar calendar={calendar} />
+
+                <h2 className={styles.heading}>
+                  <Link href={`/c/${calendar.id}`}>{calendar.title}</Link>
+                </h2>
+
+                <Markdown>{calendar.description}</Markdown>
+
+                <Paragraph>
+                  Luukut aktivoituvat{" "}
+                  <strong>
+                    {calendar.openAt.setLocale("fi").toLocaleString({})}
+                  </strong>
+                  .
+                </Paragraph>
+              </Provider>
+            </div>
+          );
+        })}
+      </div>
+    </Container>
+  );
 }
