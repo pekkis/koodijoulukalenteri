@@ -22,9 +22,10 @@ const getTrack = (naughtinessLevel: number): string => {
 
 type Props = {
   calendar: ClientCalendarType;
+  isInteractive?: boolean;
 };
 
-const JingleBells: FC<Props> = ({ calendar }) => {
+const JingleBells: FC<Props> = ({ calendar, isInteractive }) => {
   const [isPlaying, setIsPlaying] = useState(false);
 
   const { naughtinessLevel } = useNaughtiness(calendar);
@@ -52,6 +53,7 @@ const JingleBells: FC<Props> = ({ calendar }) => {
   return (
     <>
       <Button
+        disabled={!isInteractive}
         icon={<Icon />}
         onClick={() => {
           if (isPlaying) {

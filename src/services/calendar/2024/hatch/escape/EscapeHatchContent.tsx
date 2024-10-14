@@ -9,7 +9,7 @@ type Props = {
   calendar: ClientCalendarType;
 };
 
-const Hatch666Content: FC<Props> = ({ calendar }) => {
+export const EscapeHatchContent: FC<Props> = ({ calendar }) => {
   const { addNaughtiness } = useNaughtiness(calendar);
 
   return (
@@ -25,5 +25,3 @@ const Hatch666Content: FC<Props> = ({ calendar }) => {
     </p>
   );
 };
-
-export default Hatch666Content;

@@ -7,13 +7,14 @@ type Props = ComponentProps<"button"> & {
   block?: boolean;
 };
 
-const Button: FC<Props> = ({ children, icon, block, ...rest }) => {
+const Button: FC<Props> = ({ children, icon, block, disabled, ...rest }) => {
   const classes = clsx(styles.button, {
+    [styles.active]: !disabled,
     [styles.block]: block
   });
 
   return (
-    <button className={classes} {...rest}>
+    <button disabled={disabled} className={classes} {...rest}>
       {icon && <span className={styles.icon}>{icon}</span>}
       {children}
     </button>

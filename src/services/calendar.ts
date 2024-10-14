@@ -4,7 +4,7 @@ import { calendar as calendar2024 } from "./calendar/2024/calendar";
 import { calendar as calendar2023_redux } from "./calendar/2023-redux/calendar";
 import { HatchPosition, HatchProps } from "@/components/hatch/Hatch";
 import { DateTime } from "luxon";
-import { FC, ReactNode } from "react";
+import { FC } from "react";
 
 export type HatchConfig = {
   day: number;

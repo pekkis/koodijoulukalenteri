@@ -1,10 +1,10 @@
 import { HatchDataWithoutDay } from "@/services/hatch";
-import Hatch666Content from "../demonic/Hatch666Content";
-import demonicSanta from "@/assets/demon-santa.jpeg";
+import image from "./demon-santa.jpeg";
+import { EscapeHatchContent } from "./EscapeHatchContent";
 
-const hatch666: HatchDataWithoutDay = {
+export const escapeHatch: HatchDataWithoutDay = {
   title: "Pukki on ankara, muttei armoton",
-  image: { src: demonicSanta, alt: "Karmiva pahalaisjoulupukki" },
+  image: { src: image, alt: "Karmiva pahalaisjoulupukki" },
 
   content: [
     {
@@ -13,9 +13,7 @@ const hatch666: HatchDataWithoutDay = {
     },
     {
       type: "jsx",
-      Component: Hatch666Content
+      Component: EscapeHatchContent
     }
   ]
 };
-
-export default hatch666;

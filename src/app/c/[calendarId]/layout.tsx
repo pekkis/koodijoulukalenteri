@@ -2,13 +2,15 @@ import { ReactNode } from "react";
 
 import Header from "./Header";
 import Main from "./Main";
-import Footer from "./Footer";
 
 import "@/services/assets";
 import { Metadata, Viewport } from "next";
 import Debug from "./Debug";
 import { getCalendar, getClientCalendar } from "@/services/calendar";
 import { Providers } from "@/components/Providers";
+import Footer from "@/components/Footer";
+import Link from "next/link";
+import { getTime } from "@/services/time";
 
 type Props = {
   params: {
@@ -34,6 +36,9 @@ export const viewport: Viewport = {
 export default async function CalendarLayout({ params, children }: Props) {
   const calendar = await getCalendar(params.calendarId);
 
+  const now = getTime();
+  const isInteractive = now > calendar.openAt;
+
   const backgroundImages = new Set(
     calendar.naughtinessLevels.map((nl) => nl.backgroundImage)
   );
@@ -41,12 +46,15 @@ export default async function CalendarLayout({ params, children }: Props) {
   return (
     <>
       <Providers calendar={getClientCalendar(calendar)}>
-        <Header calendar={calendar} />
+        <Header calendar={calendar} isInteractive={isInteractive} />
         <Main>
-          {process.env.NODE_ENV === "development" && <Debug />}
+          {process.env.DEBUG && <Debug />}
           {children}
         </Main>
-        <Footer />
+        <Footer>
+          Copyright &copy; 2023 Mikko &quot;Pekkis&quot; Forsström |{" "}
+          <Link href="/">Etusivu</Link> | <Link href="/about">Lisätiedot</Link>
+        </Footer>
 
         {Array.from(backgroundImages).map((entry) => {
           return <link rel="preload" href={entry} as="image" key={entry} />;

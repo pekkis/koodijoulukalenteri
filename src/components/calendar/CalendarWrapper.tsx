@@ -6,6 +6,7 @@ import NaughtyOrNice from "./NaughtyOrNice";
 import Refresher from "./Refresher";
 import { CalendarType, getClientCalendar } from "@/services/calendar";
 import { Calendar } from "@/components/calendar/Calendar";
+import { Paragraph } from "@/components/ui/Paragraph";
 
 type Props = {
   calendar: CalendarType;
@@ -18,18 +19,18 @@ export const CalendarWrapper: FC<Props> = ({ calendar, isInteractive }) => {
   return (
     <>
       <div className={styles.instructions}>
-        <p>
+        <Paragraph>
           Hou, hou, ja vielä kerran hou, tervetuloa koodijoulukalenteriin.
           Huomaathan, että avattuasi luukun pääset klikkaamalla syvemmälle
           luukun syövereihin.
-        </p>
+        </Paragraph>
 
-        <p>
+        <Paragraph>
           <FaSkull /> Varoitus: tontut huomaavat, jos kurkit luukkuihin
           etukäteen. Joulun taika päivittää kalenterin joka aamu kello{" "}
           <strong>05:00:05</strong>, mutta voit varmuudeksi toki rynkytellä
           reloadia!
-        </p>
+        </Paragraph>
 
         <Refresher serverTime={getTime().toISO() as string} />
       </div>

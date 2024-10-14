@@ -1,69 +1,90 @@
+import { Container } from "@/components/Container";
+import Footer from "@/components/Footer";
+import { Heading } from "@/components/ui/Heading";
+import { Paragraph } from "@/components/ui/Paragraph";
+import Link from "next/link";
+
 export default function AboutPage() {
   return (
-    <div>
-      <h1>Pekkiksen koodijoulukalenteri</h1>
+    <Container>
+      <main>
+        <Heading level={1}>Pekkiksen koodijoulukalenteri</Heading>
 
-      <h2>Yhteydenotto</h2>
+        <Heading level={2}>Yhteydenotto</Heading>
 
-      <p>
-        <a href="mailto:pekkisx@gmail.com">pekkisx@gmail.com</a>
-      </p>
+        <Paragraph>
+          <a href="mailto:pekkisx@gmail.com">pekkisx@gmail.com</a>
+        </Paragraph>
 
-      <h2>Miksi?</h2>
+        <Heading level={2}>Miksi?</Heading>
 
-      <p>
-        Minua kiinnosti marraskuun lopussa 2023 kokeilla, osaanko tehdä luukun
-        aukaisun CSS:llä (ei, en ikinä olisi osannut tehdä, ellen olisi löytänyt
-        jotain, josta lähteä apinoimaan). Siitä se sitten lähti, kuten
-        harrasteprojekteilla usein tapana on, ja lopputuloksena syntyi jo
-        MVP-vaiheen osalta <em>massiivisesti yliengineerattu</em>{" "}
-        joulukalenteripökäle.
-      </p>
+        <Paragraph>
+          Minua kiinnosti marraskuun lopussa 2023 kokeilla, osaanko tehdä luukun
+          aukaisun CSS:llä. Siitä se sitten lähti, kuten harrasteprojekteilla
+          usein tapana on, ja lopputuloksena syntyi osin kiireellä alikoodattu
+          ja toisaalta <em>massiivisesti yliengineerattu</em>{" "}
+          joulukalenteripökäle.
+        </Paragraph>
 
-      <h2>Tekijänoikeudelliset kommervenkit</h2>
+        <Heading level={2}>Tekijänoikeudelliset kommervenkit</Heading>
 
-      <p>
-        Julkaisen kalenterin koodit Githubissa joulun jälkeen. Luukkujen sisältö
-        on toistaiseksi kovakoodattu repoon, joten en voi tehdä julkaisua ennen
-        kuin odotus on kokonaan ohi!
-      </p>
+        <Paragraph>
+          Kaikki matskut, jotka olen tehnyt omin kätösin, ovat julkaistut
+          MIT-lisenssillä. Kaikki muiden tekemät matskut ovat parhaan
+          käsitykseni mukaan lisenssivapaita.
+        </Paragraph>
 
-      <p>
-        Kaikki matskut, jotka olen tehnyt omin kätösin, julkaisen edellämainitun
-        aikataulun mukaisesti MIT-lisenssillä. Kaikki muiden tekemät matskut
-        ovat parhaan käsitykseni mukaan lisenssivapaita. Attribuutiot alhaalla.
-      </p>
+        <Heading level={3}>Linkit</Heading>
 
-      <ul>
-        <li>
-          <a
-            rel="noreferrer"
-            target="_blank"
-            href="https://csschristmascalendar.com/"
-          >
-            Luukun aukaisun inspiraatio ja referenssi
-          </a>
-        </li>
+        <ul>
+          <li>
+            <Link
+              target="_blank"
+              rel="noreferrer"
+              href="https://github.com/pekkis/koodijoulukalenteri"
+            >
+              Lähdekoodi
+            </Link>
+          </li>
+        </ul>
 
-        <li>
-          <a
-            rel="noreferrer"
-            target="_blank"
-            href="https://en.wikipedia.org/wiki/File:Jingle_Bells_(90bpm)_(Kevin_MacLeod)_(ISRC_USUAN1100187).oga"
-          >
-            Kulkuset, iloinen versio
-          </a>
-        </li>
-        <li>
-          <a
-            rel="noreferrer"
-            target="_blank"
-            href="https://www.youtube.com/watch?v=mP1Er3W6Zk8"
-          >
-            Kulkuset, kauhuversio
-          </a>
-        </li>
-      </ul>
-    </div>
+        <Heading level={3}>Attribuutiot</Heading>
+
+        <ul>
+          <li>
+            <a
+              rel="noreferrer"
+              target="_blank"
+              href="https://csschristmascalendar.com/"
+            >
+              Luukun aukaisun inspiraatio ja referenssi
+            </a>
+          </li>
+
+          <li>
+            <a
+              rel="noreferrer"
+              target="_blank"
+              href="https://en.wikipedia.org/wiki/File:Jingle_Bells_(90bpm)_(Kevin_MacLeod)_(ISRC_USUAN1100187).oga"
+            >
+              Kulkuset, iloinen versio
+            </a>
+          </li>
+          <li>
+            <a
+              rel="noreferrer"
+              target="_blank"
+              href="https://www.youtube.com/watch?v=mP1Er3W6Zk8"
+            >
+              Kulkuset, kauhuversio
+            </a>
+          </li>
+        </ul>
+      </main>
+      <Footer>
+        Copyright &copy; 2023 Mikko &quot;Pekkis&quot; Forsström |{" "}
+        <Link href="/">Etusivu</Link> | <Link href="/about">Lisätiedot</Link>
+      </Footer>
+    </Container>
   );
 }

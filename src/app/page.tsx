@@ -9,6 +9,8 @@ import { Container } from "@/components/Container";
 import { Heading } from "@/components/ui/Heading";
 import { Paragraph } from "@/components/ui/Paragraph";
 import { Markdown } from "@/components/Markdown";
+import { getTime } from "@/services/time";
+import Footer from "@/components/Footer";
 
 export const metadata = {
   title: "Pekkiksen koodijoulukalenteri"
@@ -19,6 +21,8 @@ export const dynamic = "force-dynamic";
 export default async function IndexPage() {
   const calendars = await getCalendars();
 
+  const now = getTime();
+
   const sortedCalendars = pipe(
     calendars,
     sortBy((calendar) => calendar.weight),
@@ -27,38 +31,48 @@ export default async function IndexPage() {
 
   return (
     <Container>
-      <Heading level={1}>Pekkiksen koodi&shy;joulu&shy;kalenteri</Heading>
+      <header>
+        <Heading level={1}>Pekkiksen koodi&shy;joulu&shy;kalenteri</Heading>
+      </header>
 
-      <Paragraph>
-        Tervetuloa Pekkiksen koodijoulukalenteriin, perinteiseen digitaaliseen
-        jouluherkkuun jo vuodesta 2023!
-      </Paragraph>
+      <main>
+        <Paragraph>
+          Tervetuloa Pekkiksen koodijoulukalenteriin, perinteiseen digitaaliseen
+          jouluherkkuun jo vuodesta 2023!
+        </Paragraph>
 
-      <div className={styles.grid}>
-        {sortedCalendars.map((calendar) => {
-          return (
-            <div key={calendar.id} className={styles.calendar}>
-              <Provider>
-                <Calendar calendar={calendar} />
+        <section className={styles.grid}>
+          {sortedCalendars.map((calendar) => {
+            return (
+              <div key={calendar.id} className={styles.calendar}>
+                <Provider>
+                  <Calendar calendar={calendar} />
 
-                <h2 className={styles.heading}>
-                  <Link href={`/c/${calendar.id}`}>{calendar.title}</Link>
-                </h2>
+                  <h2 className={styles.heading}>
+                    <Link href={`/c/${calendar.id}`}>{calendar.title}</Link>
+                  </h2>
 
-                <Markdown>{calendar.description}</Markdown>
+                  <Markdown>{calendar.description}</Markdown>
 
-                <Paragraph>
-                  Luukut aktivoituvat{" "}
-                  <strong>
-                    {calendar.openAt.setLocale("fi").toLocaleString({})}
-                  </strong>
-                  .
-                </Paragraph>
-              </Provider>
-            </div>
-          );
-        })}
-      </div>
+                  {now < calendar.openAt && (
+                    <Paragraph>
+                      Luukut aktivoituvat{" "}
+                      <strong>
+                        {calendar.openAt.setLocale("fi").toLocaleString({})}
+                      </strong>
+                      .
+                    </Paragraph>
+                  )}
+                </Provider>
+              </div>
+            );
+          })}
+        </section>
+      </main>
+      <Footer>
+        Copyright &copy; 2023 Mikko &quot;Pekkis&quot; Forsström |{" "}
+        <Link href="/">Etusivu</Link> | <Link href="/about">Lisätiedot</Link>
+      </Footer>
     </Container>
   );
 }

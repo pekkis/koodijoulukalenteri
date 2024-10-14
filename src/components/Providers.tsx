@@ -12,6 +12,7 @@ type Props = {
 export const Providers: FC<Props> = ({ calendar, children }) => {
   const store = useMemo(() => {
     return createStore();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [calendar.id]);
 
   return <Provider store={store}>{children}</Provider>;

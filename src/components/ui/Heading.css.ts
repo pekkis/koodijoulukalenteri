@@ -11,7 +11,9 @@ export const h1 = style({
 });
 
 export const h2 = style({
-  fontSize: "2rem"
+  fontSize: "2rem",
+  marginBlockStart: theme.spacing.m,
+  marginBlockEnd: theme.spacing.s
 });
 
 export const h3 = style({

@@ -6,7 +6,6 @@ import { isHatchOpenable } from "@/services/time";
 import { sortBy } from "remeda";
 import { CalendarType, getClientCalendar } from "@/services/calendar";
 import { CalendarBackground } from "@/components/calendar/CalendarBackground";
-import { calendarClass } from "@/calendar-theme.css";
 
 type Props = {
   calendar: CalendarType;

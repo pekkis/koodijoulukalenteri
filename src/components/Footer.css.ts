@@ -9,6 +9,6 @@ font-style: normal;
 
 export const footer = style({
   textAlign: "center",
-  marginBlockStart: theme.spacing.m,
-  marginBlockEnd: theme.spacing.l
+  marginBlockStart: theme.spacing.xl,
+  marginBlockEnd: theme.spacing.s
 });

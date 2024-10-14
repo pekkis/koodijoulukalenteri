@@ -44,7 +44,6 @@ import {
   christmasyProgrammers,
   naughtyProgrammers,
   monsterProgrammers,
-  styrankiProgrammer,
   antichristProgrammer
 } from "@/services/assets";
 

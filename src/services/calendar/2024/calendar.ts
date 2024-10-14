@@ -1,30 +1,5 @@
 import { CalendarType, HatchConfig } from "@/services/calendar";
 
-import hatch666 from "./hatch/demonic/hatch666";
-import movies1Hatch from "./hatch/movies/movies-1";
-import containerQueryHatch from "./hatch/container-queries/container-query-hatch";
-import valueForLifeHatch from "./hatch/value-for-life/value-for-life";
-import carjackHatch from "./hatch/carjack/carjackHatch";
-import linusHatch from "./hatch/linus/linusHatch";
-import roadmapHatch from "./hatch/roadmap/roadmapHatch";
-import domainHatch from "./hatch/fi-domain/fiDomainHatch";
-import movies2Hatch from "./hatch/movies/movies-2";
-import knittersHatch from "./hatch/knitters/knittersHatch";
-import adaHatch from "./hatch/ada/adaHatch";
-import stylingHatch from "./hatch/styling/stylingHatch";
-import motherOfAllDemosHatch from "./hatch/mother-of-all-demos/motherOfAllDemosHatch";
-import movies3Hatch from "./hatch/movies/movies-3";
-import movies4Hatch from "./hatch/movies/movies-4";
-import metaHatch from "./hatch/metaframeworks/metaHatch";
-import strongHtmlHatch from "./hatch/strong-html/strongHtmlHatch";
-import temporalHatch from "./hatch/temporal/temporalHatch";
-import longestDayHatch from "./hatch/longest-day/longestDayHatch";
-import netscapeHatch from "./hatch/netscape/netscapeHatch";
-import nextHatch from "./hatch/next/nextHatch";
-import edgeHatch from "./hatch/edge/edgeHatch";
-import christmasEveHatch from "./hatch/final/christmasEveHatch";
-import runtimeHatch from "./hatch/runtime/runtimeHatch";
-import packageManagersHatch from "./hatch/package-manager/packageManagerHatch";
 import { getPosition, HatchData, HatchesData } from "@/services/hatch";
 
 import risuja from "@/assets/risuja-2.webp";
@@ -45,6 +20,8 @@ import zombie from "./zombie.png";
 import evil from "./evil.png";
 import cursedSoul from "./cursed-soul.png";
 import hitler from "./hitler.png";
+import { placeholderHatch } from "@/services/calendar/2024/hatch/placeholder/placeholderHatch";
+import { escapeHatch } from "@/services/calendar/2024/hatch/escape/escapeHatch";
 
 const risujaData: Omit<HatchData, "day"> = {
   title: "Tuhmille kiviä, risuja, pekonia ja spagettia",
@@ -61,31 +38,31 @@ const risujaData: Omit<HatchData, "day"> = {
 };
 
 const hatches: HatchesData = {
-  1: movies1Hatch,
-  2: roadmapHatch,
-  3: containerQueryHatch,
-  4: domainHatch,
-  5: carjackHatch,
-  6: linusHatch,
-  7: valueForLifeHatch,
-  8: movies3Hatch,
-  9: motherOfAllDemosHatch,
-  10: adaHatch,
-  11: knittersHatch,
-  12: stylingHatch,
-  13: runtimeHatch,
-  14: movies2Hatch,
-  15: netscapeHatch,
-  16: metaHatch,
-  17: strongHtmlHatch,
-  18: packageManagersHatch,
-  19: edgeHatch,
-  20: nextHatch,
-  21: movies4Hatch,
-  22: longestDayHatch,
-  23: temporalHatch,
-  24: christmasEveHatch,
-  666: hatch666
+  1: placeholderHatch,
+  2: placeholderHatch,
+  3: placeholderHatch,
+  4: placeholderHatch,
+  5: placeholderHatch,
+  6: placeholderHatch,
+  7: placeholderHatch,
+  8: placeholderHatch,
+  9: placeholderHatch,
+  10: placeholderHatch,
+  11: placeholderHatch,
+  12: placeholderHatch,
+  13: placeholderHatch,
+  14: placeholderHatch,
+  15: placeholderHatch,
+  16: placeholderHatch,
+  17: placeholderHatch,
+  18: placeholderHatch,
+  19: placeholderHatch,
+  20: placeholderHatch,
+  21: placeholderHatch,
+  22: placeholderHatch,
+  23: placeholderHatch,
+  24: placeholderHatch,
+  666: escapeHatch
 };
 
 const description = `Vuoden 2024 koodijoulukalenteri, täynnä herkullisia koodiyllätyksiä. Äläkä yritä kurkkia luukkuja etukäteen! Tontut kyyläävät ikkunan takana.`;
@@ -107,15 +84,16 @@ export const calendar: CalendarType = {
   hatches: [
     {
       day: 1,
-      position: getPosition(13, -4, 7, 7),
+      position: getPosition(-16, 11, 8, 8),
 
       openableAt: DateTime.local(2024, 12, 1, 5, {
         zone: "Europe/Helsinki"
       })
     },
+
     {
       day: 2,
-      position: getPosition(3, 3, 5, 5),
+      position: getPosition(-26, -4, 6, 6),
       openableAt: DateTime.local(2024, 12, 2, 5, {
         zone: "Europe/Helsinki"
       })
@@ -123,7 +101,7 @@ export const calendar: CalendarType = {
 
     {
       day: 3,
-      position: getPosition(-3, 10, 5, 5),
+      position: getPosition(4, 2, 5, 5),
       openableAt: DateTime.local(2024, 12, 3, 5, {
         zone: "Europe/Helsinki"
       })
@@ -131,7 +109,7 @@ export const calendar: CalendarType = {
 
     {
       day: 4,
-      position: getPosition(12, 26, 6, 6),
+      position: getPosition(-12, -22, 5, 5),
       openableAt: DateTime.local(2024, 12, 4, 5, {
         zone: "Europe/Helsinki"
       })
@@ -139,7 +117,7 @@ export const calendar: CalendarType = {
 
     {
       day: 5,
-      position: getPosition(25, -5, 5, 5),
+      position: getPosition(3, 28, 6, 6),
       openableAt: DateTime.local(2024, 12, 5, 5, {
         zone: "Europe/Helsinki"
       })
@@ -147,14 +125,15 @@ export const calendar: CalendarType = {
 
     {
       day: 6,
-      position: getPosition(3, 20, 7, 10),
+      position: getPosition(-3, -4, 6, 6),
       openableAt: DateTime.local(2024, 12, 6, 5, {
         zone: "Europe/Helsinki"
       })
     },
+
     {
       day: 7,
-      position: getPosition(-4, 3, 5, 5),
+      position: getPosition(-4, 10, 5, 5),
       openableAt: DateTime.local(2024, 12, 7, 5, {
         zone: "Europe/Helsinki"
       })
@@ -162,7 +141,7 @@ export const calendar: CalendarType = {
 
     {
       day: 8,
-      position: getPosition(19, 2, 5, 5),
+      position: getPosition(27, 28, 6, 6),
       openableAt: DateTime.local(2024, 12, 8, 5, {
         zone: "Europe/Helsinki"
       })
@@ -170,7 +149,7 @@ export const calendar: CalendarType = {
 
     {
       day: 9,
-      position: getPosition(-3, 30, 5, 5),
+      position: getPosition(15, 33, 7, 7),
       openableAt: DateTime.local(2024, 12, 9, 5, {
         zone: "Europe/Helsinki"
       })
@@ -178,7 +157,7 @@ export const calendar: CalendarType = {
 
     {
       day: 10,
-      position: getPosition(-25, 22, 6, 6),
+      position: getPosition(4, -10, 6, 6),
       openableAt: DateTime.local(2024, 12, 10, 5, {
         zone: "Europe/Helsinki"
       })
@@ -186,7 +165,7 @@ export const calendar: CalendarType = {
 
     {
       day: 11,
-      position: getPosition(-12, -3, 6, 6),
+      position: getPosition(5, 9, 7, 5),
       openableAt: DateTime.local(2024, 12, 11, 5, {
         zone: "Europe/Helsinki"
       })
@@ -194,7 +173,7 @@ export const calendar: CalendarType = {
 
     {
       day: 12,
-      position: getPosition(14, 17, 5, 5),
+      position: getPosition(-13, -2, 7, 7),
       openableAt: DateTime.local(2024, 12, 12, 5, {
         zone: "Europe/Helsinki"
       })
@@ -202,7 +181,7 @@ export const calendar: CalendarType = {
 
     {
       day: 13,
-      position: getPosition(20, 31, 12, 6),
+      position: getPosition(-3, 25, 6, 6),
       openableAt: DateTime.local(2024, 12, 13, 5, {
         zone: "Europe/Helsinki"
       })
@@ -210,7 +189,7 @@ export const calendar: CalendarType = {
 
     {
       day: 14,
-      position: getPosition(4, 10, 6, 6),
+      position: getPosition(2, -2, 6, 6),
       openableAt: DateTime.local(2024, 12, 14, 5, {
         zone: "Europe/Helsinki"
       })
@@ -218,7 +197,7 @@ export const calendar: CalendarType = {
 
     {
       day: 15,
-      position: getPosition(-13, 6, 6, 6),
+      position: getPosition(2, 18, 6, 7),
       openableAt: DateTime.local(2024, 12, 15, 5, {
         zone: "Europe/Helsinki"
       })
@@ -226,7 +205,7 @@ export const calendar: CalendarType = {
 
     {
       day: 16,
-      position: getPosition(-12, 33, 6, 6),
+      position: getPosition(16, 5, 6, 7),
       openableAt: DateTime.local(2024, 12, 16, 5, {
         zone: "Europe/Helsinki"
       })
@@ -234,7 +213,7 @@ export const calendar: CalendarType = {
 
     {
       day: 17,
-      position: getPosition(4, -13, 6, 6),
+      position: getPosition(26, 20, 6, 6),
       openableAt: DateTime.local(2024, 12, 17, 5, {
         zone: "Europe/Helsinki"
       })
@@ -242,7 +221,7 @@ export const calendar: CalendarType = {
 
     {
       day: 18,
-      position: getPosition(-5, -10, 5, 5),
+      position: getPosition(-7, 17, 6, 6),
       openableAt: DateTime.local(2024, 12, 18, 5, {
         zone: "Europe/Helsinki"
       })
@@ -250,7 +229,7 @@ export const calendar: CalendarType = {
 
     {
       day: 19,
-      position: getPosition(-2, 20, 6, 6),
+      position: getPosition(-2, 2, 6, 6),
       openableAt: DateTime.local(2024, 12, 19, 5, {
         zone: "Europe/Helsinki"
       })
@@ -258,7 +237,7 @@ export const calendar: CalendarType = {
 
     {
       day: 20,
-      position: getPosition(3, -3, 6, 6),
+      position: getPosition(-22, 3, 6, 6),
       openableAt: DateTime.local(2024, 12, 20, 5, {
         zone: "Europe/Helsinki"
       })
@@ -266,7 +245,7 @@ export const calendar: CalendarType = {
 
     {
       day: 21,
-      position: getPosition(22, 11, 6, 6),
+      position: getPosition(11, -3, 6, 6),
       openableAt: DateTime.local(2024, 12, 21, 5, {
         zone: "Europe/Helsinki"
       })
@@ -274,7 +253,7 @@ export const calendar: CalendarType = {
 
     {
       day: 22,
-      position: getPosition(13, 9, 5, 5),
+      position: getPosition(-7, -13, 6, 6),
       openableAt: DateTime.local(2024, 12, 22, 5, {
         zone: "Europe/Helsinki"
       })
@@ -282,14 +261,15 @@ export const calendar: CalendarType = {
 
     {
       day: 23,
-      position: getPosition(-3, -3, 4, 4),
+      position: getPosition(-13, 4, 6, 6),
       openableAt: DateTime.local(2024, 12, 23, 5, {
         zone: "Europe/Helsinki"
       })
     },
+
     {
       day: 24,
-      position: getPosition(30, 16, 12, 12),
+      position: getPosition(10, 16, 14, 14),
       openableAt: DateTime.local(2024, 12, 24, 5, {
         zone: "Europe/Helsinki"
       })
@@ -297,7 +277,7 @@ export const calendar: CalendarType = {
 
     {
       day: 666,
-      position: getPosition(26, 4, 5, 5),
+      position: getPosition(29, -11, 5, 5),
       openableAt: DateTime.local(666, 6, 6, 6, {
         zone: "Europe/Helsinki"
       }),

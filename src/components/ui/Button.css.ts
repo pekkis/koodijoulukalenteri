@@ -7,9 +7,16 @@ export const button = style({
   borderRadius: theme.borderRadius.plump,
   padding: theme.spacing.s,
   borderWidth: 0,
-  cursor: "pointer",
   transition: "200ms ease-out all",
 
+  ":disabled": {
+    cursor: "not-allowed",
+    opacity: 0.5
+  }
+});
+
+export const active = style({
+  cursor: "pointer",
   ":hover": {
     backgroundColor: "rgb(230 0 0)"
   }
