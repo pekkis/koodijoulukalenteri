@@ -7,6 +7,7 @@ import Refresher from "./Refresher";
 import { CalendarType, getClientCalendar } from "@/services/calendar";
 import { Calendar } from "@/components/calendar/Calendar";
 import { Paragraph } from "@/components/ui/Paragraph";
+import JingleBells from "./JingleBells";
 
 type Props = {
   calendar: CalendarType;
@@ -34,6 +35,12 @@ export const CalendarWrapper: FC<Props> = ({ calendar, isInteractive }) => {
 
         <Refresher serverTime={getTime().toISO() as string} />
       </div>
+
+      <JingleBells
+        calendar={getClientCalendar(calendar)}
+        isInteractive={isInteractive}
+      />
+
       <NaughtyOrNice calendar={clientCalendar} />
       <Calendar calendar={calendar} isInteractive={isInteractive} />
     </>

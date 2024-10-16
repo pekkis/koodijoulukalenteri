@@ -2,6 +2,7 @@ import { Calendar } from "@/components/calendar/Calendar";
 import Dialog from "@/components/dialog/Dialog";
 import HatchRenderer from "@/components/hatch-renderer/HatchRenderer";
 import { getCalendar, getClientCalendar } from "@/services/calendar";
+import { getTime } from "@/services/time";
 import { notFound } from "next/navigation";
 
 type Props = {
@@ -13,6 +14,11 @@ type Props = {
 
 export default async function HatchPage({ params }: Props) {
   const calendar = await getCalendar(params.calendarId);
+
+  const now = getTime();
+  if (now < calendar.openAt) {
+    notFound();
+  }
 
   const hatch = calendar.hatches.find(
     (hatch) => hatch.day === parseInt(params.hatchId)

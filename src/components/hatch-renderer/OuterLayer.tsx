@@ -13,13 +13,15 @@ type Props = {
 };
 
 const OuterLayer: FC<Props> = ({ calendar, day, children }) => {
-  const { searchParams } = useOpenHatches();
+  const { openHatches, searchParams } = useOpenHatches();
 
   const url = `/c/${calendar.id}/hatch/${day}?${searchParams.toString()}`;
 
+  const amIOpen = openHatches.includes(day);
+
   return (
     <Link
-      tabIndex={day * 100 + 10}
+      tabIndex={amIOpen ? day * 100 + 10 : -1}
       href={url}
       scroll={false}
       className={styles.outerLayer}

@@ -72,7 +72,8 @@ const Hatch: FC<HatchProps> = ({
         />
         <div
           role="button"
-          tabIndex={day * 100}
+          aria-disabled={!isInteractive}
+          tabIndex={isInteractive ? day * 100 : -1}
           onClick={() => {
             if (!isInteractive) {
               return;
@@ -89,6 +90,10 @@ const Hatch: FC<HatchProps> = ({
             [styles.inactiveDoor]: !isInteractive
           })}
           onKeyDown={(e) => {
+            if (!isInteractive) {
+              return;
+            }
+
             if (e.key === "Enter") {
               e.preventDefault();
               if (!isOpenable && !isOpen) {

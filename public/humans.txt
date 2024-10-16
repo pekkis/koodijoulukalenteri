@@ -3,10 +3,14 @@
 
 # TEAM
 
-  Mikko Forsström (Pekkis) -- everything
+  Mikko Forsström (Pekkis) coded everything!
 
 # THANKS
 
+  Elsa-Maija Lehto helped with hatch content!
+
 # TECH
 
-  Next.js
+  - Next.js
+  - ChatGPT / Dall-E
+  - Fooocus

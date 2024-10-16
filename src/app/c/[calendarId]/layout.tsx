@@ -11,6 +11,7 @@ import { Providers } from "@/components/Providers";
 import Footer from "@/components/Footer";
 import Link from "next/link";
 import { getTime } from "@/services/time";
+import { Container } from "@/components/Container";
 
 type Props = {
   params: {
@@ -46,19 +47,27 @@ export default async function CalendarLayout({ params, children }: Props) {
   return (
     <>
       <Providers calendar={getClientCalendar(calendar)}>
-        <Header calendar={calendar} isInteractive={isInteractive} />
-        <Main>
-          {process.env.DEBUG && <Debug />}
-          {children}
-        </Main>
-        <Footer>
-          Copyright &copy; 2023 Mikko &quot;Pekkis&quot; Forsström |{" "}
-          <Link href="/">Etusivu</Link> | <Link href="/about">Lisätiedot</Link>
-        </Footer>
+        <Container wide>
+          <Header calendar={calendar} isInteractive={isInteractive} />
+          <Main>
+            {process.env.DEBUG && <Debug />}
+            {children}
+          </Main>
+          <Footer>
+            Copyright &copy; 2023 Mikko &quot;Pekkis&quot; Forsström |{" "}
+            <Link tabIndex={0} href="/">
+              Etusivu
+            </Link>{" "}
+            |{" "}
+            <Link tabIndex={0} href="/about">
+              Lisätiedot
+            </Link>
+          </Footer>
 
-        {Array.from(backgroundImages).map((entry) => {
-          return <link rel="preload" href={entry} as="image" key={entry} />;
-        })}
+          {Array.from(backgroundImages).map((entry) => {
+            return <link rel="preload" href={entry} as="image" key={entry} />;
+          })}
+        </Container>
       </Providers>
     </>
   );

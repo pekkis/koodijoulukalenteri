@@ -24,7 +24,3 @@ export const heading = style({
     }
   }
 });
-
-export const jingleBells = style({
-  marginBlock: theme.spacing.m
-});

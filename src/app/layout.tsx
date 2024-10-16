@@ -25,10 +25,15 @@ export const viewport: Viewport = {
   width: "device-width"
 };
 
-export default async function WelcomeLayout({ children }: Props) {
+export default async function RootLayout({ children }: Props) {
   return (
     <html lang="fi">
       <head>
+        <link
+          type="text/plain"
+          rel="author"
+          href="https://koodijoulukalenteri.pekkis.eu/humans.txt"
+        />
         <link rel="icon" type="image/webp" href="/favicon.webp" />
         <link
           rel="stylesheet"
