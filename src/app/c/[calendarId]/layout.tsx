@@ -12,6 +12,8 @@ import Footer from "@/components/Footer";
 import Link from "next/link";
 import { getTime } from "@/services/time";
 import { Container } from "@/components/Container";
+import JingleBells from "@/components/calendar/JingleBells";
+import CalendarWrapper from "@/components/calendar/CalendarWrapper";
 
 type Props = {
   params: {
@@ -50,11 +52,13 @@ export default async function CalendarLayout({ params, children }: Props) {
         <Container wide>
           <Header calendar={calendar} isInteractive={isInteractive} />
           <Main>
+            <CalendarWrapper calendar={calendar} isInteractive={isInteractive}>
+              {children}
+            </CalendarWrapper>
             {process.env.DEBUG && <Debug />}
-            {children}
           </Main>
           <Footer>
-            Copyright &copy; 2023 Mikko &quot;Pekkis&quot; Forsström |{" "}
+            Copyright &copy; Mikko &quot;Pekkis&quot; Forsström |{" "}
             <Link tabIndex={0} href="/">
               Etusivu
             </Link>{" "}

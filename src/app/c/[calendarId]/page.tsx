@@ -1,4 +1,4 @@
-import { CalendarWrapper } from "@/components/calendar/CalendarWrapper";
+import CalendarWrapper from "@/components/calendar/CalendarWrapper";
 import { getCalendar } from "@/services/calendar";
 import { getTime } from "@/services/time";
 
@@ -20,5 +20,5 @@ export default async function CalendarPage({ params }: Props) {
   const now = getTime();
   const isInteractive = now > calendar.openAt;
 
-  return <CalendarWrapper calendar={calendar} isInteractive={isInteractive} />;
+  return <></>;
 }

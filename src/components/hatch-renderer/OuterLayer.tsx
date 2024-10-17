@@ -15,7 +15,7 @@ type Props = {
 const OuterLayer: FC<Props> = ({ calendar, day, children }) => {
   const { openHatches, searchParams } = useOpenHatches();
 
-  const url = `/c/${calendar.id}/hatch/${day}?${searchParams.toString()}`;
+  const url = `/c/${calendar.id}/h/${day}?${searchParams.toString()}`;
 
   const amIOpen = openHatches.includes(day);
 

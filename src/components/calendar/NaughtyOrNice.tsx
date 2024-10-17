@@ -11,8 +11,6 @@ type Props = {
 };
 
 const NaughtyOrNice: FC<Props> = ({ calendar }) => {
-  console.log("Hehhe");
-
   const { naughtinessLevel, naughtiness, nextNaughtinessLevel } =
     useNaughtiness(calendar);
 

@@ -15,6 +15,14 @@ type Props = {
 };
 
 const JingleBells: FC<Props> = ({ calendar, isInteractive }) => {
+  useEffect(() => {
+    console.log("MOUNT MUSIG");
+
+    return () => {
+      console.log("UNMOUNT MUSIG");
+    };
+  }, []);
+
   const [isPlaying, setIsPlaying] = useState(false);
 
   const { naughtinessLevel } = useNaughtiness(calendar);

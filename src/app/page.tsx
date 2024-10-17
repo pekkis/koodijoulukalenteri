@@ -70,7 +70,7 @@ export default async function IndexPage() {
         </section>
       </main>
       <Footer>
-        Copyright &copy; 2023 Mikko &quot;Pekkis&quot; Forsström |{" "}
+        Copyright &copy; Mikko &quot;Pekkis&quot; Forsström |{" "}
         <Link href="/">Etusivu</Link> | <Link href="/about">Lisätiedot</Link>
       </Footer>
     </Container>

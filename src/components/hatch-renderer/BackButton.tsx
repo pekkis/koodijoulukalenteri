@@ -6,10 +6,11 @@ import useOpenHatches from "@/hooks/useOpenHatches";
 import { useRouter } from "next/navigation";
 
 type Props = {
+  calendarId: string;
   children: ReactNode;
 };
 
-const BackButton: FC<Props> = ({ children }) => {
+const BackButton: FC<Props> = ({ calendarId, children }) => {
   const { searchParams } = useOpenHatches();
   const router = useRouter();
 
@@ -17,7 +18,9 @@ const BackButton: FC<Props> = ({ children }) => {
     <Button
       block
       onClick={() => {
-        router.push(`/?${searchParams.toString()}`, { scroll: false });
+        router.push(`/c/${calendarId}?${searchParams.toString()}`, {
+          scroll: false
+        });
       }}
     >
       {children}

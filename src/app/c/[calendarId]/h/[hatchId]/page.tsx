@@ -1,4 +1,3 @@
-import { CalendarWrapper } from "@/components/calendar/CalendarWrapper";
 import Dialog from "@/components/dialog/Dialog";
 import HatchRenderer from "@/components/hatch-renderer/HatchRenderer";
 import { getCalendar, getClientCalendar } from "@/services/calendar";
@@ -16,6 +15,7 @@ export default async function HatchPage({ params }: Props) {
   const calendar = await getCalendar(params.calendarId);
 
   const now = getTime();
+
   if (now < calendar.openAt) {
     notFound();
   }
@@ -35,15 +35,12 @@ export default async function HatchPage({ params }: Props) {
   }
 
   return (
-    <>
-      <CalendarWrapper calendar={calendar} />
-      <Dialog calendar={getClientCalendar(calendar)}>
-        <HatchRenderer
-          calendar={calendar}
-          day={parseInt(params.hatchId)}
-          data={data}
-        />
-      </Dialog>
-    </>
+    <Dialog calendar={getClientCalendar(calendar)}>
+      <HatchRenderer
+        calendar={calendar}
+        day={parseInt(params.hatchId)}
+        data={data}
+      />
+    </Dialog>
   );
 }

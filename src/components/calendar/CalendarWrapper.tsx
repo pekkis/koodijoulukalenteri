@@ -2,16 +2,17 @@ import { Calendar } from "@/components/calendar/Calendar";
 import { ContentSlot } from "@/components/calendar/ContentSlot";
 import { CalendarType } from "@/services/calendar";
 import { getTime } from "@/services/time";
-import { FC } from "react";
+import { FC, memo, ReactNode } from "react";
 import * as styles from "./CalendarWrapper.css";
 import Refresher from "./Refresher";
 
 type Props = {
+  children: ReactNode;
   calendar: CalendarType;
   isInteractive?: boolean;
 };
 
-export const CalendarWrapper: FC<Props> = ({ calendar, isInteractive }) => {
+const CalendarWrapper: FC<Props> = ({ calendar, isInteractive, children }) => {
   return (
     <>
       <Refresher serverTime={getTime().toISO() as string} />
@@ -24,6 +25,9 @@ export const CalendarWrapper: FC<Props> = ({ calendar, isInteractive }) => {
       </div>
 
       <Calendar calendar={calendar} isInteractive={isInteractive} />
+      {children}
     </>
   );
 };
+
+export default memo(CalendarWrapper);

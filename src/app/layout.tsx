@@ -42,11 +42,11 @@ export default async function RootLayout({ children }: Props) {
 
         <meta charSet="utf-8" />
 
-        <script
+        {/* <script
           defer
           data-domain="koodijoulukalenteri.pekkis.eu"
           src="https://plausible.io/js/script.js"
-        ></script>
+        ></script>*/}
       </head>
       <body id="root">{children}</body>
     </html>

@@ -45,7 +45,7 @@ const HatchRenderer: FC<Props> = ({ calendar, data }) => {
         })}
       </div>
 
-      <BackButton>Takaisin kalenteriin</BackButton>
+      <BackButton calendarId={calendar.id}>Takaisin kalenteriin</BackButton>
     </article>
   );
 };

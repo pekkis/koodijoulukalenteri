@@ -26,6 +26,13 @@ export default function AboutPage() {
           joulukalenteripökäle.
         </Paragraph>
 
+        <Paragraph>
+          Vuodelle 2024 ohjelmassa on poistaa kovakoodaus ja toteuttaa tuki
+          useammalle kalenterille, ja vieläpä sangen erilaisille kalentereille,
+          niin että vuoden 2023 kalenteri näyttää edelleen samalta ja toimii
+          samalla tavalla.
+        </Paragraph>
+
         <Heading level={2}>Tekijänoikeudelliset kommervenkit</Heading>
 
         <Paragraph>
@@ -82,7 +89,7 @@ export default function AboutPage() {
         </ul>
       </main>
       <Footer>
-        Copyright &copy; 2023 Mikko &quot;Pekkis&quot; Forsström |{" "}
+        Copyright &copy; Mikko &quot;Pekkis&quot; Forsström |{" "}
         <Link href="/">Etusivu</Link> | <Link href="/about">Lisätiedot</Link>
       </Footer>
     </Container>
