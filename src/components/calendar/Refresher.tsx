@@ -42,7 +42,7 @@ const Refresher: FC<Props> = ({ serverTime }) => {
     }
   }, [now, lastRefresh, router]);
 
-  if (!process.env.NEXT_PUBLIC_NOW) {
+  if (!process.env.DEBUG) {
     return null;
   }
 

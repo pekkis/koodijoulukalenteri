@@ -374,5 +374,7 @@ export const calendar: CalendarType = {
       name: "styranki",
       backgroundImage: hitler.src
     }
-  ]
+  ],
+
+  getSlotComponent: () => () => null
 };

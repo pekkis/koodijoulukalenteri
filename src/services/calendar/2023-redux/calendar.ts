@@ -1,8 +1,8 @@
 import { CalendarType } from "@/services/calendar";
 import { calendar as ogCalendar } from "@/services/calendar/2023/calendar";
 
-const description = `Yleisön pyynnöstä painatimme uuden, rajoitetun erän vuoden 2003 koodijoulukalenteria. Se
-on pelattavavissa lähes alkuperäisessä muodossaan joulukuussa 2024.`;
+const description = `Yleisön pyynnöstä painatimme uuden, rajoitetun erän vuoden 2023 koodijoulukalenteria. Se
+on pelattavissa alkuperäistä mahdollisimman pitkälle matkivassa muodossa joulukuussa 2024.`;
 
 export const calendar = {
   ...ogCalendar,

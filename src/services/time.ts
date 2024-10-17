@@ -1,5 +1,5 @@
 import { HatchConfig } from "@/services/calendar";
-import { DateTime } from "luxon";
+import { DateTime, DurationLike } from "luxon";
 
 export const isHatchOpenable = (hatch: HatchConfig): boolean => {
   if (process.env.DEBUG) {
@@ -12,9 +12,17 @@ export const isHatchOpenable = (hatch: HatchConfig): boolean => {
 };
 
 export const getTime = (): DateTime => {
-  if (!process.env.NEXT_PUBLIC_NOW) {
-    return DateTime.utc();
+  const now = DateTime.utc();
+
+  if (!process.env.NEXT_PUBLIC_OFFSET) {
+    return now;
   }
 
-  return DateTime.fromISO(process.env.NEXT_PUBLIC_NOW);
+  try {
+    const offset = JSON.parse(process.env.NEXT_PUBLIC_OFFSET) as DurationLike;
+    return now.plus(offset);
+  } catch (e) {
+    console.log(e);
+    return now;
+  }
 };

@@ -56,7 +56,7 @@ export default async function IndexPage() {
 
                   {now < calendar.openAt && (
                     <Paragraph>
-                      Luukut aktivoituvat{" "}
+                      Kalenteri herää eloon{" "}
                       <strong>
                         {calendar.openAt.setLocale("fi").toLocaleString({})}
                       </strong>

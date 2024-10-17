@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import { HatchData } from "@/services/hatch";
 import { calendar as calendar2023 } from "./calendar/2023/calendar";
 import { calendar as calendar2024 } from "./calendar/2024/calendar";
@@ -18,7 +19,10 @@ export type NaughtinessLevel = {
   requiredNaughtiness: number;
   name: string;
   backgroundImage: string;
+  music: string;
 };
+
+export type ContentSlotName = "instructions" | "controls";
 
 export type CalendarType = {
   themeClassName: string;
@@ -31,11 +35,13 @@ export type CalendarType = {
   naughtinessLevels: NaughtinessLevel[];
   description: string;
   openAt: DateTime;
+
+  getSlotComponent: (slot: ContentSlotName) => FC<{ calendar: CalendarType }>;
 };
 
 export type ClientCalendarType = Omit<
   CalendarType,
-  "getHatchData" | "hatches" | "description" | "openAt"
+  "getHatchData" | "hatches" | "description" | "openAt" | "getSlotComponent"
 > & {
   openAt: string;
 };
@@ -54,9 +60,14 @@ export const getCalendars = async (): Promise<CalendarType[]> => {
 export const getClientCalendar = (
   calendar: CalendarType
 ): ClientCalendarType => {
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  const { getHatchData, hatches, openAt, description, ...clientCalendar } =
-    calendar;
+  const {
+    getHatchData,
+    hatches,
+    openAt,
+    description,
+    getSlotComponent,
+    ...clientCalendar
+  } = calendar;
   return {
     ...clientCalendar,
     openAt: openAt.toISO() as string

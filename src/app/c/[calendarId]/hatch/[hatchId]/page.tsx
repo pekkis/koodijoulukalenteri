@@ -1,4 +1,4 @@
-import { Calendar } from "@/components/calendar/Calendar";
+import { CalendarWrapper } from "@/components/calendar/CalendarWrapper";
 import Dialog from "@/components/dialog/Dialog";
 import HatchRenderer from "@/components/hatch-renderer/HatchRenderer";
 import { getCalendar, getClientCalendar } from "@/services/calendar";
@@ -36,7 +36,7 @@ export default async function HatchPage({ params }: Props) {
 
   return (
     <>
-      <Calendar calendar={calendar} />
+      <CalendarWrapper calendar={calendar} />
       <Dialog calendar={getClientCalendar(calendar)}>
         <HatchRenderer
           calendar={calendar}

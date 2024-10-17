@@ -40,12 +40,20 @@ import { DateTime } from "luxon";
 import EscapeHatch from "@/components/calendar/EscapeHatch";
 import { theme2023 } from "@/services/calendar/2023/theme-2023.css";
 
-import {
+import christmasyProgrammers from "@/assets/programmers.webp";
+import naughtyProgrammers from "@/assets/naughty-programmers.webp";
+import monsterProgrammers from "@/assets/hirvio.webp";
+import antichristProgrammer from "@/assets/antichrist.webp";
+
+import { InstructionsSlot } from "@/services/calendar/2023/slots/InstructionsSlot";
+import { ControlsSlot } from "@/services/calendar/2023/slots/ControlsSlot";
+
+export {
   christmasyProgrammers,
   naughtyProgrammers,
   monsterProgrammers,
   antichristProgrammer
-} from "@/services/assets";
+};
 
 const risujaData: Omit<HatchData, "day"> = {
   title: "Tuhmille kiviä, risuja, pekonia ja spagettia",
@@ -363,31 +371,49 @@ export const calendar: CalendarType = {
       level: 0,
       requiredNaughtiness: 0,
       name: "viaton",
-      backgroundImage: christmasyProgrammers.src
+      backgroundImage: christmasyProgrammers.src,
+      music: "/calendar/2023/jingle-bells.mp3"
     },
     {
       level: 1,
       requiredNaughtiness: 1,
       name: "kiltti",
-      backgroundImage: naughtyProgrammers.src
+      backgroundImage: christmasyProgrammers.src,
+      music: "/calendar/2023/jingle-bells.mp3"
     },
     {
       level: 2,
       requiredNaughtiness: 500,
       name: "paatunut",
-      backgroundImage: naughtyProgrammers.src
+      backgroundImage: naughtyProgrammers.src,
+      music: "/calendar/2023/jingle-bells.mp3"
     },
     {
       level: 3,
       requiredNaughtiness: 1500,
       name: "hirviö",
-      backgroundImage: monsterProgrammers.src
+      backgroundImage: monsterProgrammers.src,
+      music: "/calendar/2023/horror-bells.mp3"
     },
     {
       level: 4,
       requiredNaughtiness: 5000,
       name: "pelsepuupi",
-      backgroundImage: antichristProgrammer.src
+      backgroundImage: antichristProgrammer.src,
+      music: "/calendar/2023/horror-bells.mp3"
     }
-  ]
+  ],
+
+  getSlotComponent: (slot) => {
+    switch (slot) {
+      case "instructions":
+        return InstructionsSlot;
+
+      case "controls":
+        return ControlsSlot;
+
+      default:
+        return () => null;
+    }
+  }
 };

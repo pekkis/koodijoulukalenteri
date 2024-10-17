@@ -9,18 +9,6 @@ import useNaughtiness from "@/hooks/useNaughtiness";
 import { ClientCalendarType } from "@/services/calendar";
 import * as styles from "./JingleBells.css";
 
-const getTrack = (naughtinessLevel: number): string => {
-  if (naughtinessLevel < 3) {
-    return "/jingle-bells.mp3";
-  }
-
-  if (naughtinessLevel < 5) {
-    return "/horror-bells.mp3";
-  }
-
-  return "/horst-wessel-lied.mp3";
-};
-
 type Props = {
   calendar: ClientCalendarType;
   isInteractive?: boolean;
@@ -38,8 +26,6 @@ const JingleBells: FC<Props> = ({ calendar, isInteractive }) => {
     ? "Kilistele kulkusia"
     : "Lopeta kulkusten kilistely";
 
-  const track = getTrack(naughtinessLevel.level);
-
   useEffect(() => {
     if (!ref.current) {
       return;
@@ -49,7 +35,7 @@ const JingleBells: FC<Props> = ({ calendar, isInteractive }) => {
     if (isPlaying) {
       ref?.current.play();
     }
-  }, [track, isPlaying]);
+  }, [naughtinessLevel.music, isPlaying]);
 
   return (
     <div className={styles.jingleBells}>
@@ -68,7 +54,7 @@ const JingleBells: FC<Props> = ({ calendar, isInteractive }) => {
       <audio
         loop={true}
         ref={ref}
-        src={track}
+        src={naughtinessLevel.music}
         onPause={() => {
           setIsPlaying(false);
         }}

@@ -1,3 +1,4 @@
+import { getTime } from "@/services/time";
 import { DateTime } from "luxon";
 import { FC } from "react";
 
@@ -7,10 +8,12 @@ const Debug: FC = () => {
 
   const diff = then.diff(now, "minutes");
 
+  const time = getTime();
+
   return (
     <div>
       <div>seconds from beginning: {diff.minutes}</div>
-      <div>current date: {process.env.NEXT_PUBLIC_NOW}</div>
+      <div>time: {time.toLocaleString()}</div>
       {process.env.NODE_ENV}
     </div>
   );
