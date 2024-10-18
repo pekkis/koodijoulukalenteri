@@ -3,17 +3,16 @@ import { ReactNode } from "react";
 import Header from "./Header";
 import Main from "./Main";
 
-import "@/services/assets";
-import { Metadata, Viewport } from "next";
-import Debug from "./Debug";
-import { getCalendar, getClientCalendar } from "@/services/calendar";
-import { Providers } from "@/components/Providers";
-import Footer from "@/components/Footer";
-import Link from "next/link";
-import { getTime } from "@/services/time";
 import { Container } from "@/components/Container";
-import JingleBells from "@/components/calendar/JingleBells";
+import Footer from "@/components/Footer";
+import { Providers } from "@/components/Providers";
 import CalendarWrapper from "@/components/calendar/CalendarWrapper";
+import "@/services/assets";
+import { getCalendar, getClientCalendar } from "@/services/calendar";
+import { getTime } from "@/services/time";
+import { Metadata, Viewport } from "next";
+import Link from "next/link";
+import Debug from "./Debug";
 
 type Props = {
   params: {

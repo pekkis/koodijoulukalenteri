@@ -7,7 +7,7 @@ type Props = {
   calendar: CalendarType;
 };
 
-export const InstructionsSlot: FC<Props> = ({ calendar }) => {
+export const InstructionsSlot: FC<Props> = () => {
   return (
     <>
       <Paragraph>

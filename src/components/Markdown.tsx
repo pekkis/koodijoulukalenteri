@@ -12,7 +12,7 @@ export const Markdown: FC<Props> = ({ children }) => {
     <ReactMarkdown
       remarkPlugins={[remarkGfm]}
       components={{
-        p: ({ children, ...rest }) => {
+        p: ({ children }) => {
           return <Paragraph>{children}</Paragraph>;
         },
 

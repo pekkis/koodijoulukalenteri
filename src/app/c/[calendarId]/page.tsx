@@ -1,7 +1,3 @@
-import CalendarWrapper from "@/components/calendar/CalendarWrapper";
-import { getCalendar } from "@/services/calendar";
-import { getTime } from "@/services/time";
-
 export const metadata = {
   title: "Pekkiksen koodijoulukalenteri 2023"
 };
@@ -14,11 +10,7 @@ type Props = {
   };
 };
 
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 export default async function CalendarPage({ params }: Props) {
-  const calendar = await getCalendar(params.calendarId);
-
-  const now = getTime();
-  const isInteractive = now > calendar.openAt;
-
-  return <></>;
+  return null;
 }
