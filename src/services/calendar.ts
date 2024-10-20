@@ -36,6 +36,7 @@ export type CalendarType = {
   naughtinessLevels: NaughtinessLevel[];
   description: string;
   openAt: DateTime;
+  canonicalImage: string;
 
   getSlotComponent: (slot: ContentSlotName) => FC<{ calendar: CalendarType }>;
 };
@@ -52,7 +53,6 @@ const calendars = [
   calendar2023_redux,
   calendar2024XY,
   calendar2024XX
-  // { id: "2024-1", title: "Pekkiksen koodijoulukalenteri 2024" }
 ] satisfies CalendarType[];
 
 export const getCalendars = async (): Promise<CalendarType[]> => {

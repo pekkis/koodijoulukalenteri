@@ -9,7 +9,7 @@ import { Providers } from "@/components/Providers";
 import CalendarWrapper from "@/components/calendar/CalendarWrapper";
 import { getCalendar, getClientCalendar } from "@/services/calendar";
 import { getTime } from "@/services/time";
-import { Metadata, Viewport } from "next";
+import { Metadata } from "next";
 import Link from "next/link";
 import Debug from "./Debug";
 
@@ -27,13 +27,14 @@ export const generateMetadata = async ({
 
   const calendar = await getCalendar(calendarId);
   return {
-    title: calendar.title
+    title: calendar.title,
+    openGraph: {
+      type: "website",
+      description: calendar.description,
+      title: `${calendar.title} - Pekkiksen koodijoulukalenteri`,
+      images: calendar.canonicalImage
+    }
   };
-};
-
-export const viewport: Viewport = {
-  themeColor: "rgb(255 0 0)",
-  width: "device-width"
 };
 
 export default async function CalendarLayout({ params, children }: Props) {

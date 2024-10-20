@@ -10,18 +10,19 @@ type Props = {
   children: ReactNode;
 };
 
+export const viewport: Viewport = {
+  themeColor: "rgb(255 0 0)",
+  width: "device-width"
+};
+
 export const metadata: Metadata = {
   title: "Pekkiksen koodijoulukalenteri",
   openGraph: {
     type: "website",
     title: "Pekkiksen koodijoulukalenteri",
+    description: "Perinteinen digitaalinen jouluherkku jo vuodesta 2023",
     images: "https://koodijoulukalenteri.pekkis.eu/santa-claus.webp"
   }
-};
-
-export const viewport: Viewport = {
-  themeColor: "rgb(255 0 0)",
-  width: "device-width"
 };
 
 export default async function RootLayout({ children }: Props) {

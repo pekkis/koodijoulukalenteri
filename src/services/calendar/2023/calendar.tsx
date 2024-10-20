@@ -104,6 +104,7 @@ export const calendar: CalendarType = {
   year: 2023,
   weight: 1000,
   title: "koodijoulukalenteri 2023",
+  canonicalImage: christmasyProgrammers.src,
 
   openAt: DateTime.local(2023, 11, 25, 0, {
     zone: "Europe/Helsinki"

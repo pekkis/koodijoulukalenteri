@@ -8,7 +8,7 @@ import { DateTime } from "luxon";
 import EscapeHatch from "@/components/calendar/EscapeHatch";
 import { theme2024 } from "./theme-2024.css";
 
-import hipster from "./assets/hipster.png";
+import hipster from "./assets/xy/xy-nice-011.webp";
 import zombie from "./assets/zombie.png";
 import evil from "./assets/evil.png";
 import cursedSoul from "./assets/cursed-soul.png";
@@ -58,13 +58,17 @@ const hatches: HatchesData = {
   666: escapeHatch
 };
 
-const description = `Vuoden 2024 koodijoulukalenteri, täynnä herkullisia koodiyllätyksiä. Äläkä yritä kurkkia luukkuja etukäteen! Tontut kyyläävät ikkunan takana.`;
+const description = `Seksivau! Vuoden 2024 koodijoulukalenteri, täynnä kuumimpia koodiyllätyksiä.
+
+Älä yritä kurkkia luukkuja etukäteen tai hakkeroida koko roskaa. Tontut kyyläävät ikkunan takana, ja tuhmille on luvassa jotain tosi tuhmaa!`;
 
 export const calendar: CalendarType = {
   id: "2024-xy",
   year: 2024,
   weight: 500,
-  title: "koodijoulukalenteri 2024 (XY)",
+  title: "joulukalenteri 2024 (XY)",
+
+  canonicalImage: hipster.src,
 
   themeClassName: theme2024,
 
@@ -301,36 +305,42 @@ export const calendar: CalendarType = {
 
   naughtinessLevels: [
     {
+      music: "/calendar/2023/jingle-bells.mp3",
       level: 0,
       requiredNaughtiness: 0,
       name: "viaton",
       backgroundImage: hipster.src
     },
     {
+      music: "/calendar/2023/jingle-bells.mp3",
       level: 1,
       requiredNaughtiness: 1,
       name: "kiltti",
       backgroundImage: hipster.src
     },
     {
+      music: "/calendar/2023/jingle-bells.mp3",
       level: 2,
       requiredNaughtiness: 500,
       name: "paatunut",
       backgroundImage: zombie.src
     },
     {
+      music: "/calendar/2023/jingle-bells.mp3",
       level: 3,
       requiredNaughtiness: 1500,
       name: "suurtuhma",
       backgroundImage: evil.src
     },
     {
+      music: "/calendar/2023/jingle-bells.mp3",
       level: 4,
       requiredNaughtiness: 3000,
       name: "kadotettu sielu",
       backgroundImage: cursedSoul.src
     },
     {
+      music: "/calendar/2023/jingle-bells.mp3",
       level: 5,
       requiredNaughtiness: 5000,
       name: "styranki",

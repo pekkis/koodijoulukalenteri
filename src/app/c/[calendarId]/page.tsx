@@ -1,7 +1,3 @@
-export const metadata = {
-  title: "Pekkiksen koodijoulukalenteri 2023"
-};
-
 export const dynamic = "force-dynamic";
 
 type Props = {
