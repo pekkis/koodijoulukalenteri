@@ -1,56 +1,52 @@
-import { fixupConfigRules, fixupPluginRules } from "@eslint/compat";
-import typescriptEslint from "@typescript-eslint/eslint-plugin";
-import jsxA11Y from "eslint-plugin-jsx-a11y";
-import prettier from "eslint-plugin-prettier";
-import globals from "globals";
-import tsParser from "@typescript-eslint/parser";
-import path from "node:path";
-import { fileURLToPath } from "node:url";
-import js from "@eslint/js";
-import { FlatCompat } from "@eslint/eslintrc";
-
 import tseslint from "typescript-eslint";
-
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
-const compat = new FlatCompat({
-  baseDirectory: __dirname,
-  recommendedConfig: js.configs.recommended,
-  allConfig: js.configs.all
-});
+import jsxA11Y from "eslint-plugin-jsx-a11y";
+import js from "@eslint/js";
+import pluginReactHooks from "eslint-plugin-react-hooks";
+import reactPlugin from "eslint-plugin-react";
+import nextPlugin from "@next/eslint-plugin-next";
+import eslintPluginPrettierRecommended from "eslint-plugin-prettier/recommended";
 
 export default [
-  ...fixupConfigRules(
-    compat.extends(
-      "next/core-web-vitals",
-      "next/typescript",
-      "plugin:react/recommended",
-      "plugin:react-hooks/recommended",
-      "plugin:react/jsx-runtime",
-      "plugin:@typescript-eslint/eslint-recommended",
-      "plugin:@typescript-eslint/recommended",
-      "plugin:prettier/recommended",
-      "plugin:jsx-a11y/recommended"
-    )
-  ),
+  js.configs.recommended,
+  ...tseslint.configs.recommended,
+
+  jsxA11Y.flatConfigs.recommended,
+
   {
-    plugins: {
-      "@typescript-eslint": fixupPluginRules(typescriptEslint),
-      "jsx-a11y": fixupPluginRules(jsxA11Y),
-      prettier: fixupPluginRules(prettier)
-    },
-
+    files: ["**/*.{js,mjs,cjs,jsx,mjsx,ts,tsx,mtsx}"],
+    ...reactPlugin.configs.flat.recommended,
     languageOptions: {
-      globals: {
-        ...globals.browser,
-        ...globals.node
-      },
-
-      parser: tsParser
+      ...reactPlugin.configs.flat.recommended.languageOptions
     },
+    settings: {
+      react: {
+        version: "detect"
+      }
+    }
+  },
 
+  {
+    files: ["src/**/*.{js,ts,jsx,tsx}"],
+    ...reactPlugin.configs.flat.recommended,
+    plugins: {
+      "react-hooks": pluginReactHooks
+    },
     rules: {
+      ...pluginReactHooks.configs.recommended.rules,
+      "react/react-in-jsx-scope": "off",
       "react/prop-types": "off"
     }
-  }
+  },
+
+  {
+    plugins: {
+      "@next/next": nextPlugin
+    },
+    rules: {
+      ...nextPlugin.configs.recommended.rules,
+      ...nextPlugin.configs["core-web-vitals"].rules
+    }
+  },
+
+  eslintPluginPrettierRecommended
 ];
