@@ -4,7 +4,7 @@ import { produce } from "immer";
 
 import nice from "./assets/xx/xx-nice-009.webp";
 
-const description = `Seksivau! Vuoden 2024 koodijoulukalenterissa kuumimmat koodaritytöt jakavat vuoden 2024 mehevimmät ja irstaimmat koodivinkit.
+const description = `Seksivau! Vuoden 2024 koodijoulukalenterissa kuumimmat koodaritytöt jakavat vuoden 2024 mehevimmät ja kuumottavimmat koodivinkit.
 
 Älä yritä kurkkia luukkuja etukäteen tai hakkeroida. Tontut kyyläävät ikkunan takana!`;
 
