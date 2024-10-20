@@ -10,7 +10,7 @@ type Props = {
   children: ReactNode;
 };
 
-export const metadatta: Metadata = {
+export const metadata: Metadata = {
   title: "Pekkiksen koodijoulukalenteri",
   openGraph: {
     type: "website",
