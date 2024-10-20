@@ -58,7 +58,7 @@ const hatches: HatchesData = {
   666: escapeHatch
 };
 
-const description = `Seksivau! Vuoden 2024 koodijoulukalenterissa kuumimmat koodaripojat jakavat vuoden 2024 mehevimmät ja kuumottavimmat koodivinkit.
+const description = `Seksivau! Vuoden 2024 koodijoulukalenterissa salskeat koodaripojat paljastavat vuoden 2024 mehevimmät ja kuumottavimmat koodivinkit.
 
 Älä yritä kurkkia luukkuja etukäteen tai hakkeroida. Tontut kyyläävät ikkunan takana!`;
 
