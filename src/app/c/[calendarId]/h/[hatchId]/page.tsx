@@ -5,14 +5,16 @@ import { getTime } from "@/services/time";
 import { notFound } from "next/navigation";
 
 type Props = {
-  params: {
+  params: Promise<{
     calendarId: string;
     hatchId: string;
-  };
+  }>;
 };
 
 export default async function HatchPage({ params }: Props) {
-  const calendar = await getCalendar(params.calendarId);
+  const { calendarId, hatchId } = await params;
+
+  const calendar = await getCalendar(calendarId);
 
   const now = getTime();
 
@@ -21,7 +23,7 @@ export default async function HatchPage({ params }: Props) {
   }
 
   const hatch = calendar.hatches.find(
-    (hatch) => hatch.day === parseInt(params.hatchId)
+    (hatch) => hatch.day === parseInt(hatchId)
   );
 
   if (!hatch) {
@@ -36,11 +38,7 @@ export default async function HatchPage({ params }: Props) {
 
   return (
     <Dialog calendar={getClientCalendar(calendar)}>
-      <HatchRenderer
-        calendar={calendar}
-        day={parseInt(params.hatchId)}
-        data={data}
-      />
+      <HatchRenderer calendar={calendar} day={parseInt(hatchId)} data={data} />
     </Dialog>
   );
 }

@@ -8,8 +8,6 @@ import useOpenHatches from "@/hooks/useOpenHatches";
 import useNaughtiness from "@/hooks/useNaughtiness";
 import { ClientCalendarType } from "@/services/calendar";
 
-/* eslint-disable jsx-a11y/label-has-associated-control */
-
 export type HatchPosition = {
   top: number;
   left: number;

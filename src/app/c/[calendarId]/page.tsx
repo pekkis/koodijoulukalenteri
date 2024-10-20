@@ -5,9 +5,9 @@ export const metadata = {
 export const dynamic = "force-dynamic";
 
 type Props = {
-  params: {
+  params: Promise<{
     calendarId: string;
-  };
+  }>;
 };
 
 // eslint-disable-next-line @typescript-eslint/no-unused-vars

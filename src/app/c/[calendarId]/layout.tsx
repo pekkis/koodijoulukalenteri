@@ -7,7 +7,6 @@ import { Container } from "@/components/Container";
 import Footer from "@/components/Footer";
 import { Providers } from "@/components/Providers";
 import CalendarWrapper from "@/components/calendar/CalendarWrapper";
-import "@/services/assets";
 import { getCalendar, getClientCalendar } from "@/services/calendar";
 import { getTime } from "@/services/time";
 import { Metadata, Viewport } from "next";
@@ -15,16 +14,18 @@ import Link from "next/link";
 import Debug from "./Debug";
 
 type Props = {
-  params: {
+  params: Promise<{
     calendarId: string;
-  };
+  }>;
   children: ReactNode;
 };
 
 export const generateMetadata = async ({
   params
 }: Props): Promise<Metadata> => {
-  const calendar = await getCalendar(params.calendarId);
+  const { calendarId } = await params;
+
+  const calendar = await getCalendar(calendarId);
   return {
     title: calendar.title
   };
@@ -36,7 +37,9 @@ export const viewport: Viewport = {
 };
 
 export default async function CalendarLayout({ params, children }: Props) {
-  const calendar = await getCalendar(params.calendarId);
+  const { calendarId } = await params;
+
+  const calendar = await getCalendar(calendarId);
 
   const now = getTime();
   const isInteractive = now > calendar.openAt;

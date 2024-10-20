@@ -1,4 +1,3 @@
-import { DateTime } from "luxon";
 import Ticker from "./Ticker";
 import { getTime } from "@/services/time";
 
