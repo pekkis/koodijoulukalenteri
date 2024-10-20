@@ -26,6 +26,7 @@ export default async function IndexPage() {
   const sortedCalendars = pipe(
     calendars,
     sortBy((calendar) => calendar.weight),
+    sortBy((calendar) => -calendar.title),
     sortBy((calendar) => -calendar.year)
   );
 

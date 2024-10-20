@@ -61,10 +61,10 @@ const hatches: HatchesData = {
 const description = `Vuoden 2024 koodijoulukalenteri, täynnä herkullisia koodiyllätyksiä. Äläkä yritä kurkkia luukkuja etukäteen! Tontut kyyläävät ikkunan takana.`;
 
 export const calendar: CalendarType = {
-  id: "2024",
+  id: "2024-xy",
   year: 2024,
   weight: 500,
-  title: "koodijoulukalenteri 2024",
+  title: "koodijoulukalenteri 2024 (XY)",
 
   themeClassName: theme2024,
 

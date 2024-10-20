@@ -1,7 +1,8 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 import { HatchData } from "@/services/hatch";
 import { calendar as calendar2023 } from "./calendar/2023/calendar";
-import { calendar as calendar2024 } from "./calendar/2024/calendar";
+import { calendar as calendar2024XY } from "./calendar/2024/calendar-xy";
+import { calendar as calendar2024XX } from "./calendar/2024/calendar-xx";
 import { calendar as calendar2023_redux } from "./calendar/2023-redux/calendar";
 import { HatchPosition, HatchProps } from "@/components/hatch/Hatch";
 import { DateTime } from "luxon";
@@ -49,7 +50,8 @@ export type ClientCalendarType = Omit<
 const calendars = [
   calendar2023,
   calendar2023_redux,
-  calendar2024
+  calendar2024XY,
+  calendar2024XX
   // { id: "2024-1", title: "Pekkiksen koodijoulukalenteri 2024" }
 ] satisfies CalendarType[];
 
