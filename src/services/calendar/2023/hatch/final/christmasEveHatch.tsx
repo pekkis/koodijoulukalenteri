@@ -1,6 +1,6 @@
 import { HatchDataWithoutDay } from "@/services/hatch";
 
-import christmasEve from "@/assets/hou-hou.jpg";
+import christmasEve from "./hou-hou.jpg";
 
 const christmasEveHatch: HatchDataWithoutDay = {
   title: "Hyvää joulua ja tunkkaamisen iloa!",

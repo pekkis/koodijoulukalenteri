@@ -1,6 +1,6 @@
 import { HatchDataWithoutDay } from "@/services/hatch";
 
-import turing from "@/assets/turing.jpeg";
+import turing from "./turing.jpeg";
 
 const movies4Hatch: HatchDataWithoutDay = {
   title: "Viime vuosien koodileffat",

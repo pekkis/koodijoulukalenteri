@@ -1,4 +1,4 @@
-import packageManagers from "@/assets/package-managers.jpeg";
+import packageManagers from "./package-managers.jpeg";
 import { HatchDataWithoutDay } from "@/services/hatch";
 
 const packageManagersHatch: HatchDataWithoutDay = {

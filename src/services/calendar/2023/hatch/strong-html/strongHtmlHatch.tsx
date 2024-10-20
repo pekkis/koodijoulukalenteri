@@ -1,6 +1,6 @@
 import { HatchDataWithoutDay } from "@/services/hatch";
 
-import strongHtml from "@/assets/strong-html.jpeg";
+import strongHtml from "./strong-html.jpeg";
 
 const strongHtmlHatch: HatchDataWithoutDay = {
   title: "Vahva HTML",

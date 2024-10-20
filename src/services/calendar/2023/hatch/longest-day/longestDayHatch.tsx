@@ -1,6 +1,6 @@
 import { HatchDataWithoutDay } from "@/services/hatch";
 
-import longest from "@/assets/longest-day.jpeg";
+import longest from "./longest-day.jpeg";
 import TickerServer from "./TickerServer";
 
 const longestDayHatch: HatchDataWithoutDay = {

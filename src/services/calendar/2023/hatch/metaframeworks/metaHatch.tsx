@@ -1,6 +1,6 @@
 import { HatchDataWithoutDay } from "@/services/hatch";
 
-import metaframeworks from "@/assets/metaframeworks.jpeg";
+import metaframeworks from "./metaframeworks.jpeg";
 
 const metaHatch: HatchDataWithoutDay = {
   title: "Taistelevat metafreimarit",

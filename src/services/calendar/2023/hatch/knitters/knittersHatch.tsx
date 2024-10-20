@@ -1,6 +1,6 @@
 import { HatchDataWithoutDay } from "@/services/hatch";
 
-import knitters from "@/assets/knit-2.jpeg";
+import knitters from "./knit-2.jpeg";
 
 const knittersHatch: HatchDataWithoutDay = {
   title: "Kuumodulin kudotut muistit",

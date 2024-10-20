@@ -1,6 +1,6 @@
 import { HatchDataWithoutDay } from "@/services/hatch";
 
-import tunkki from "@/assets/tunkkaajat.jpeg";
+import tunkki from "./tunkkaajat.jpeg";
 
 const carjackHatch: HatchDataWithoutDay = {
   title: "Tunkki",

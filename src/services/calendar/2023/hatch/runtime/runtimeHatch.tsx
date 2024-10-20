@@ -1,6 +1,6 @@
 import { HatchDataWithoutDay } from "@/services/hatch";
 
-import runtime from "@/assets/runtime.jpeg";
+import runtime from "./runtime.jpeg";
 
 const runtimeHatch: HatchDataWithoutDay = {
   title: "Runtime",

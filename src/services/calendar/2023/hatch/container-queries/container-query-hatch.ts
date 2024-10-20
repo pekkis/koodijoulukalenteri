@@ -1,6 +1,6 @@
 import { HatchDataWithoutDay } from "@/services/hatch";
 
-import css from "@/assets/ihmiskontti.jpeg";
+import css from "./ihmiskontti.jpeg";
 import Component from "./Component";
 
 const containerQueryHatch: HatchDataWithoutDay = {

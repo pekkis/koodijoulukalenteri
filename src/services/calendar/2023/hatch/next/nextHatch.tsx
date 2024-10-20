@@ -1,6 +1,6 @@
 import { HatchDataWithoutDay } from "@/services/hatch";
 
-import next from "@/assets/apple-next.jpeg";
+import next from "./apple-next.jpeg";
 
 const nextHatch: HatchDataWithoutDay = {
   title: "NeXT ❤️ Apple",

@@ -1,6 +1,6 @@
 import { HatchDataWithoutDay } from "@/services/hatch";
 
-import styling from "@/assets/styling.jpeg";
+import styling from "./styling.jpeg";
 
 const stylingHatch: HatchDataWithoutDay = {
   title: "Tyylitys Reactissa",

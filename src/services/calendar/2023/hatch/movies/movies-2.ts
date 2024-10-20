@@ -1,6 +1,6 @@
 import { HatchDataWithoutDay } from "@/services/hatch";
 
-import reptilian from "@/assets/reptilian.jpeg";
+import reptilian from "./reptilian.jpeg";
 
 const movies2Hatch: HatchDataWithoutDay = {
   title: "2000-luvun alun koodileffoja",

@@ -1,6 +1,6 @@
 import { HatchDataWithoutDay } from "@/services/hatch";
 
-import temporal from "@/assets/temporal.jpeg";
+import temporal from "./temporal.jpeg";
 
 const temporalHatch: HatchDataWithoutDay = {
   title: "Aikamoisia aikakirjastoja",

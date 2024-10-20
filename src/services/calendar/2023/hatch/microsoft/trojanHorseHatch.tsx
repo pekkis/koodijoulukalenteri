@@ -1,6 +1,6 @@
 import { HatchDataWithoutDay } from "@/services/hatch";
 
-import trojanHorse from "@/assets/ms.jpeg";
+import trojanHorse from "./ms.jpeg";
 
 const trojanHorseHatch: HatchDataWithoutDay = {
   title: "Troijan koodihepo",

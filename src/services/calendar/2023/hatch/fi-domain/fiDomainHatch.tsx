@@ -1,6 +1,6 @@
 import { HatchDataWithoutDay } from "@/services/hatch";
 
-import internetRuotsista from "@/assets/internet-ruotsista.jpeg";
+import internetRuotsista from "./internet-ruotsista.jpeg";
 
 const domainHatch: HatchDataWithoutDay = {
   title: "Internetin haku Ruotsista",

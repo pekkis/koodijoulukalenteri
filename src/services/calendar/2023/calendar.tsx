@@ -27,23 +27,23 @@ import runtimeHatch from "./hatch/runtime/runtimeHatch";
 import packageManagersHatch from "./hatch/package-manager/packageManagerHatch";
 import { getPosition, HatchData, HatchesData } from "@/services/hatch";
 
-import risuja from "@/assets/risuja-2.webp";
-import risuja1 from "@/assets/pekonia-ja-spagettia-1.jpeg";
-import risuja2 from "@/assets/pekonia-ja-spagettia-2.jpeg";
-import risuja3 from "@/assets/pekonia-ja-spagettia-3.jpeg";
-import risuja4 from "@/assets/pekonia-ja-spagettia-4.jpeg";
-import risuja5 from "@/assets/risuja1.jpeg";
-import risuja6 from "@/assets/risuja2.jpeg";
-import risuja7 from "@/assets/risuja3.jpeg";
+import risuja from "./assets/risuja-2.webp";
+import risuja1 from "./assets/pekonia-ja-spagettia-1.jpeg";
+import risuja2 from "./assets/pekonia-ja-spagettia-2.jpeg";
+import risuja3 from "./assets/pekonia-ja-spagettia-3.jpeg";
+import risuja4 from "./assets/pekonia-ja-spagettia-4.jpeg";
+import risuja5 from "./assets/risuja1.jpeg";
+import risuja6 from "./assets/risuja2.jpeg";
+import risuja7 from "./assets/risuja3.jpeg";
 import { isHatchOpenable } from "@/services/time";
 import { DateTime } from "luxon";
 import EscapeHatch from "@/components/calendar/EscapeHatch";
 import { theme2023 } from "@/services/calendar/2023/theme-2023.css";
 
-import christmasyProgrammers from "@/assets/programmers.webp";
-import naughtyProgrammers from "@/assets/naughty-programmers.webp";
-import monsterProgrammers from "@/assets/hirvio.webp";
-import antichristProgrammer from "@/assets/antichrist.webp";
+import christmasyProgrammers from "./assets/programmers.webp";
+import naughtyProgrammers from "./assets/naughty-programmers.webp";
+import monsterProgrammers from "./assets/hirvio.webp";
+import antichristProgrammer from "./assets/antichrist.webp";
 
 import { InstructionsSlot } from "@/services/calendar/2023/slots/InstructionsSlot";
 import { ControlsSlot } from "@/services/calendar/2023/slots/ControlsSlot";

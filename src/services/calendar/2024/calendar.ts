@@ -2,26 +2,19 @@ import { CalendarType, HatchConfig } from "@/services/calendar";
 
 import { getPosition, HatchData, HatchesData } from "@/services/hatch";
 
-import risuja from "@/assets/risuja-2.webp";
-import risuja1 from "@/assets/pekonia-ja-spagettia-1.jpeg";
-import risuja2 from "@/assets/pekonia-ja-spagettia-2.jpeg";
-import risuja3 from "@/assets/pekonia-ja-spagettia-3.jpeg";
-import risuja4 from "@/assets/pekonia-ja-spagettia-4.jpeg";
-import risuja5 from "@/assets/risuja1.jpeg";
-import risuja6 from "@/assets/risuja2.jpeg";
-import risuja7 from "@/assets/risuja3.jpeg";
+import risuja from "./assets/risuja.webp";
 import { isHatchOpenable } from "@/services/time";
 import { DateTime } from "luxon";
 import EscapeHatch from "@/components/calendar/EscapeHatch";
-import { theme2024 } from "@/services/calendar/2024/theme-2024.css";
+import { theme2024 } from "./theme-2024.css";
 
-import hipster from "./hipster.png";
-import zombie from "./zombie.png";
-import evil from "./evil.png";
-import cursedSoul from "./cursed-soul.png";
-import hitler from "./hitler.png";
-import { placeholderHatch } from "@/services/calendar/2024/hatch/placeholder/placeholderHatch";
-import { escapeHatch } from "@/services/calendar/2024/hatch/escape/escapeHatch";
+import hipster from "./assets/hipster.png";
+import zombie from "./assets/zombie.png";
+import evil from "./assets/evil.png";
+import cursedSoul from "./assets/cursed-soul.png";
+import hitler from "./assets/hitler.png";
+import { placeholderHatch } from "./hatch/placeholder/placeholderHatch";
+import { escapeHatch } from "./hatch/escape/escapeHatch";
 
 const risujaData: Omit<HatchData, "day"> = {
   title: "Tuhmille kiviä, risuja, pekonia ja spagettia",
@@ -293,38 +286,7 @@ export const calendar: CalendarType = {
         image: {
           ...risujaData.image,
           get src() {
-            const risut = [
-              risuja1,
-              risuja5,
-              risuja2,
-              risuja6,
-              risuja3,
-              risuja7,
-              risuja4,
-              risuja1,
-              risuja5,
-              risuja2,
-              risuja6,
-              risuja3,
-              risuja7,
-              risuja4,
-              risuja1,
-              risuja5,
-              risuja2,
-              risuja6,
-              risuja3,
-              risuja7,
-              risuja4,
-              risuja1,
-              risuja5,
-              risuja2,
-              risuja6,
-              risuja3,
-              risuja7,
-              risuja4
-            ];
-
-            return risut[hatch.day - 1];
+            return risuja;
           }
         }
       };

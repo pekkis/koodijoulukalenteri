@@ -1,6 +1,6 @@
 import { HatchDataWithoutDay } from "@/services/hatch";
 
-import valueForSociety from "@/assets/value-for-society.jpeg";
+import valueForSociety from "./value-for-society.jpeg";
 
 const valueForLifeHatch: HatchDataWithoutDay = {
   title: "Koodilaulut",

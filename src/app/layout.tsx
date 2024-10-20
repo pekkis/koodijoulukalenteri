@@ -4,7 +4,6 @@ import "normalize.css";
 import "./layout.css";
 import "open-props/style";
 
-import "@/services/assets";
 import { Metadata, Viewport } from "next";
 
 type Props = {

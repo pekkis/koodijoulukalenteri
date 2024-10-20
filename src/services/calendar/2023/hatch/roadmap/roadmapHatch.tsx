@@ -1,6 +1,6 @@
 import { HatchDataWithoutDay } from "@/services/hatch";
 
-import roadmap from "@/assets/diy-3.jpeg";
+import roadmap from "./diy-3.jpeg";
 
 const roadmapHatch: HatchDataWithoutDay = {
   title: "Tee-se-itse koodijoulukalenteri",

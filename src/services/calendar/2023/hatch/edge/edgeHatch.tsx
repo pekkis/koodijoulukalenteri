@@ -1,6 +1,6 @@
 import { HatchDataWithoutDay } from "@/services/hatch";
 
-import edge from "@/assets/edge.jpeg";
+import edge from "./edge.jpeg";
 
 const edgeHatch: HatchDataWithoutDay = {
   title: "Reunalaskenta",

@@ -1,8 +1,9 @@
 import { DateTime } from "luxon";
 import Ticker from "./Ticker";
+import { getTime } from "@/services/time";
 
 const TickerServer = () => {
-  const serverTime = DateTime.utc().toISO() as string;
+  const serverTime = getTime().toISO() as string;
 
   return <Ticker serverTime={serverTime} />;
 };

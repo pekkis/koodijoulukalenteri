@@ -1,6 +1,6 @@
 import { HatchDataWithoutDay } from "@/services/hatch";
 
-import ada from "@/assets/ada-2.jpeg";
+import ada from "./ada-2.jpeg";
 
 const adaHatch: HatchDataWithoutDay = {
   title: "Ada Lovelace ja generatiivinen tekoäly",

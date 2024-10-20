@@ -1,6 +1,6 @@
 import { HatchDataWithoutDay } from "@/services/hatch";
 
-import tux from "@/assets/tux.jpeg";
+import tux from "./tux.jpeg";
 
 const linusHatch: HatchDataWithoutDay = {
   title: "Suomalainen koodi",

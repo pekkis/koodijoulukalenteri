@@ -1,6 +1,6 @@
 import { HatchDataWithoutDay } from "@/services/hatch";
 
-import motherOfAllDemos from "@/assets/mother-of-demos.jpeg";
+import motherOfAllDemos from "./mother-of-demos.jpeg";
 
 const motherOfAllDemosHatch: HatchDataWithoutDay = {
   title: "Kaikkien demojen äiti",
