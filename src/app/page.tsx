@@ -50,7 +50,10 @@ export default async function IndexPage() {
                   <Calendar calendar={calendar} />
 
                   <h2 className={styles.heading}>
-                    <Link href={`/c/${calendar.id}`}>{calendar.title}</Link>
+                    <Link
+                      href={`/c/${calendar.id}`}
+                      dangerouslySetInnerHTML={{ __html: calendar.title }}
+                    ></Link>
                   </h2>
 
                   <Markdown>{calendar.description}</Markdown>

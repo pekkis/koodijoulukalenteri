@@ -38,7 +38,7 @@ export default function AboutPage() {
         <Paragraph>
           Kaikki matskut, jotka olen tehnyt omin kätösin, ovat julkaistut
           MIT-lisenssillä. Kaikki muiden tekemät matskut ovat parhaan
-          käsitykseni mukaan lisenssivapaita.
+          käsitykseni mukaan julkaistu vapaalla lisenssillä.
         </Paragraph>
 
         <Heading level={3}>Linkit</Heading>
@@ -50,7 +50,7 @@ export default function AboutPage() {
               rel="noreferrer"
               href="https://github.com/pekkis/koodijoulukalenteri"
             >
-              Lähdekoodi
+              Lähdekoodi (spoiler alert: kurki vasta jouluaaton jälkeen)
             </Link>
           </li>
         </ul>

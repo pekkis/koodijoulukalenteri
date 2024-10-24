@@ -11,7 +11,10 @@ type Props = {
 const Header: FC<Props> = ({ calendar }) => {
   return (
     <header className={styles.header}>
-      <div className={styles.heading}>{calendar.title}</div>
+      <div
+        className={styles.heading}
+        dangerouslySetInnerHTML={{ __html: calendar.title }}
+      ></div>
     </header>
   );
 };

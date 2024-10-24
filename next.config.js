@@ -1,5 +1,6 @@
 import { createVanillaExtractPlugin } from "@vanilla-extract/next-plugin";
 const withVanillaExtract = createVanillaExtractPlugin();
+import process from "node:process";
 
 import { piped } from "remeda";
 

@@ -58,7 +58,7 @@ const hatches: HatchesData = {
   666: escapeHatch
 };
 
-const description = `Seksivau! Vuoden 2024 koodijoulukalenterissa salskeat koodaripojat paljastavat vuoden 2024 mehevimmät ja kuumottavimmat koodivinkit.
+const description = `Seksivau! Vuoden 2024 koodi&shy;joulu&shy;kalenterissa salskeat koodaripojat paljastavat vuoden 2024 mehevimmät ja kuumottavimmat koodivinkit.
 
 Älä yritä kurkkia luukkuja etukäteen tai hakkeroida. Tontut kyyläävät ikkunan takana!`;
 
@@ -66,7 +66,7 @@ export const calendar: CalendarType = {
   id: "2024-xy",
   year: 2024,
   weight: 500,
-  title: "Koodipoikajoulukalenteri 24",
+  title: "Koodi&shy;poika&shy;joulu&shy;kalenteri 24",
 
   canonicalImage: hipster.src,
 

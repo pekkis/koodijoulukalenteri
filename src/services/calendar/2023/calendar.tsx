@@ -97,13 +97,13 @@ const hatches: HatchesData = {
   666: hatch666
 };
 
-const description = `Aito ja alkuperäinen vuoden 2023 koodijoulukalenteri.`;
+const description = `Aito ja alkuperäinen vuoden 2023 koodi&shy;joulu&shy;kalenteri.`;
 
 export const calendar: CalendarType = {
   id: "2023",
   year: 2023,
   weight: 1000,
-  title: "koodijoulukalenteri 2023",
+  title: "koodi&shy;joulu&shy;kalenteri 2023",
   canonicalImage: christmasyProgrammers.src,
 
   openAt: DateTime.local(2023, 11, 25, 0, {
