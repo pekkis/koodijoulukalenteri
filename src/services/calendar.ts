@@ -50,9 +50,9 @@ export type ClientCalendarType = Omit<
 
 const calendars = [
   calendar2023,
-  calendar2023_redux,
-  calendar2024XY,
-  calendar2024XX
+  calendar2023_redux
+  // calendar2024XY,
+  // calendar2024XX
 ] satisfies CalendarType[];
 
 export const getCalendars = async (): Promise<CalendarType[]> => {
