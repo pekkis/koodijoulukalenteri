@@ -1,6 +1,6 @@
 "use client";
 
-import { FC, ReactNode, useRef } from "react";
+import { FC, ReactNode, RefObject, useRef } from "react";
 import Backdrop from "./Backdrop";
 import * as styles from "./Dialog.css";
 import { useScrollLock, useOnClickOutside } from "usehooks-ts";
@@ -24,7 +24,7 @@ const Dialog: FC<Props> = ({ calendar, children }) => {
     autoLock: true
   });
 
-  useOnClickOutside(ref, () => {
+  useOnClickOutside(ref as RefObject<HTMLDivElement>, () => {
     router.push(`/c/${calendar.id}?${searchParams.toString()}`, {
       scroll: false
     });
