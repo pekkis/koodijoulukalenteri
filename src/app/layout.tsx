@@ -1,10 +1,25 @@
 import { ReactNode } from "react";
+import { NuqsAdapter } from "nuqs/adapters/next/app";
 
 import "normalize.css";
 import "./layout.css";
 import "open-props/style";
 
 import { Metadata, Viewport } from "next";
+
+import { Nunito, Mountains_of_Christmas } from "next/font/google";
+import clsx from "clsx";
+
+const nunito = Nunito({
+  subsets: ["latin"],
+  variable: "--font-nunito"
+});
+
+const mountains = Mountains_of_Christmas({
+  subsets: ["latin"],
+  variable: "--font-mountains",
+  weight: ["700"]
+});
 
 type Props = {
   children: ReactNode;
@@ -27,7 +42,7 @@ export const metadata: Metadata = {
 
 export default async function RootLayout({ children }: Props) {
   return (
-    <html lang="fi">
+    <html lang="fi" className={clsx(nunito.variable, mountains.variable)}>
       <head>
         <link
           type="text/plain"
@@ -35,10 +50,6 @@ export default async function RootLayout({ children }: Props) {
           href="https://koodijoulukalenteri.pekkis.eu/humans.txt"
         />
         <link rel="icon" type="image/webp" href="/favicon.webp" />
-        <link
-          rel="stylesheet"
-          href="https://use.typekit.net/tmc3dha.css"
-        ></link>
 
         <meta charSet="utf-8" />
 
@@ -48,7 +59,9 @@ export default async function RootLayout({ children }: Props) {
           src="https://plausible.io/js/script.js"
         ></script>*/}
       </head>
-      <body id="root">{children}</body>
+      <body id="root">
+        <NuqsAdapter>{children}</NuqsAdapter>
+      </body>
     </html>
   );
 }

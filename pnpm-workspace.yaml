@@ -1,0 +1,9 @@
+disallowWorkspaceCycles: true
+
+#minimumReleaseAge: 4320
+#minimumReleaseAge: 10
+
+onlyBuiltDependencies:
+  - "@swc/core"
+  - sharp
+  - unrs-resolver

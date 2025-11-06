@@ -14,7 +14,6 @@ export const header = style({
 
 export const heading = style({
   fontFamily: theme.fontFamily.christmas,
-  fontWeight: 400,
   fontStyle: "normal",
   fontSize: "3rem",
 

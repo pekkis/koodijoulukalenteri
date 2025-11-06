@@ -38,14 +38,8 @@ export default async function IndexPage() {
 
       <main>
         <Paragraph>
-          Tervetuloa Pekkiksen koodijoulukalenteriin, perinteiseen digitaaliseen
-          jouluherkkuun jo vuodesta 2023. Pekkiksen <em>piti</em> tehdä vuodelle
-          2024 uusi hieno joulukalenteri, mutta hän priorisoi{" "}
-          <a rel="noreferrer" href="https://factorio.com/" target="_blank">
-            Factorio: Space Agen
-          </a>{" "}
-          pelaamisen koodaamisen yli, ja mitään ei tullut valmiiksi. Yritämme
-          ensi vuodelle uudelleen!
+          Tervetuloa Pekkiksen koodijoulukalenteriin, perinteiseen jokavuotiseen
+          tai jokatoisvuotiseen digitaaliseen jouluherkkuun jo vuodesta 2023!
         </Paragraph>
 
         <section className={styles.grid}>

@@ -2,8 +2,8 @@ import { createGlobalTheme } from "@vanilla-extract/css";
 
 const theme = createGlobalTheme(":root", {
   fontFamily: {
-    body: "logical-variable, sans-serif",
-    christmas: "p22-yule-heavy-snow, sans-serif"
+    body: "var(--font-nunito)",
+    christmas: "var(--font-mountains)"
   },
 
   fontSizes: {

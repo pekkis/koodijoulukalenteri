@@ -47,6 +47,9 @@ import antichristProgrammer from "./assets/antichrist.webp";
 
 import { InstructionsSlot } from "@/services/calendar/2023/slots/InstructionsSlot";
 import { ControlsSlot } from "@/services/calendar/2023/slots/ControlsSlot";
+import { FC } from "react";
+
+const NullSlot: FC = () => null;
 
 export {
   christmasyProgrammers,
@@ -414,7 +417,7 @@ export const calendar: CalendarType = {
         return ControlsSlot;
 
       default:
-        return () => null;
+        return NullSlot;
     }
   }
 };

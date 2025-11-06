@@ -1,5 +1,3 @@
-/* eslint-disable jsx-a11y/media-has-caption */
-
 "use client";
 
 import { FC, useEffect, useRef, useState } from "react";
@@ -15,14 +13,6 @@ type Props = {
 };
 
 const JingleBells: FC<Props> = ({ calendar, isInteractive }) => {
-  useEffect(() => {
-    console.log("MOUNT MUSIG");
-
-    return () => {
-      console.log("UNMOUNT MUSIG");
-    };
-  }, []);
-
   const [isPlaying, setIsPlaying] = useState(false);
 
   const { naughtinessLevel } = useNaughtiness(calendar);

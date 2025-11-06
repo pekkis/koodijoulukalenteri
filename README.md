@@ -9,8 +9,8 @@ my training course materials.
 
 ## develop
 
-- `corepack enable`
+- `npm -g i pnpm`
 - `pnpm i`
 - `pnpm dev`
 - `DEBUG=true pnpm dev` to resolve all hatches openable.
-- `NEXT_PUBLIC_OFFSET="{ years: 1, months: 1, days: 30, hours: 1, seconds: 1 }"` to control time offset as minutes from current time.
+- `NEXT_PUBLIC_OFFSET='{"months":1}'` to control time offset as minutes from current time.

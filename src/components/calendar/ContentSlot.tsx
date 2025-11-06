@@ -9,5 +9,6 @@ type Props = {
 export const ContentSlot: FC<Props> = ({ calendar, slot }) => {
   const Component = calendar.getSlotComponent(slot);
 
+  // eslint-disable-next-line react-hooks/static-components
   return <Component calendar={calendar} />;
 };

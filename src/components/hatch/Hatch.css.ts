@@ -78,7 +78,10 @@ export const content = style({
   display: "flex",
   alignItems: "center",
   justifyContent: "center",
-  fontSize: "min(20cqi, 20cqb)"
+  fontSize: "min(20cqi, 20cqb)",
+  fontVariationSettings: '"wght" 700',
+  color: theme.colors.black,
+  WebkitTextStroke: "min(.3cqi, .3cqb) rgb(255 255 255 / .33)"
 });
 
 export const back = style({

@@ -1,8 +1,4 @@
-import {
-  parseAsArrayOf,
-  parseAsInteger,
-  useQueryState
-} from "next-usequerystate";
+import { parseAsArrayOf, parseAsInteger, useQueryState } from "nuqs";
 import { useCallback, useMemo } from "react";
 
 const useOpenHatches = () => {
