@@ -27,10 +27,16 @@ export default function AboutPage() {
         </Paragraph>
 
         <Paragraph>
-          Vuodelle 2024 ohjelmassa on poistaa kovakoodaus ja toteuttaa tuki
+          Vuodelle 2024 ohjelmassa oli poistaa kovakoodauksia ja toteuttaa tuki
           useammalle kalenterille, ja vieläpä sangen erilaisille kalentereille,
           niin että vuoden 2023 kalenteri näyttää edelleen samalta ja toimii
           samalla tavalla.
+        </Paragraph>
+
+        <Paragraph>
+          Kalenteri jäi vuonna 2024 julkaisematta, koska Factorion lisäosa.
+          Muutokset periytyivät vuodelle 2025, jolloin kalenteri vuoden tauon
+          jälkeen ilmestyy taas!
         </Paragraph>
 
         <Heading level={2}>Tekijänoikeudelliset kommervenkit</Heading>

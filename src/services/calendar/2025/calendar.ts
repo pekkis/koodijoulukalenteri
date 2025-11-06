@@ -69,7 +69,7 @@ export const calendar: CalendarType = {
   id: "2025",
   year: 2025,
   weight: 500,
-  title: "Koodijoulukalenteri 2025",
+  title: "Koodi&shy;joulu&shy;kalenteri 2025",
 
   canonicalImage: bg1.src,
 
