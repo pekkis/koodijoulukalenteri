@@ -12,5 +12,6 @@
 # TECH
 
   - Next.js
-  - ChatGPT / Dall-E
-  - Fooocus
+  - Vanilla Extract
+  - ChatGPT / Dall-E / Suno
+

@@ -3,6 +3,10 @@
 import JingleBells from "@/components/calendar/JingleBells";
 import NaughtyOrNice from "@/components/calendar/NaughtyOrNice";
 import { ClientCalendarType } from "@/services/calendar";
+import {
+  flexxerClass,
+  itemClass
+} from "@/services/calendar/2025/slots/ControlsSlotContent.css";
 import { FC } from "react";
 
 type Props = {
@@ -15,10 +19,13 @@ export const ControlsSlotContent: FC<Props> = ({
   isOpen = false
 }) => {
   return (
-    <>
-      <JingleBells calendar={calendar} isInteractive={isOpen} />
-
-      <NaughtyOrNice calendar={calendar} />
-    </>
+    <div className={flexxerClass}>
+      <div className={itemClass}>
+        <JingleBells calendar={calendar} isInteractive={isOpen} />
+      </div>
+      <div className={itemClass}>
+        <NaughtyOrNice calendar={calendar} />
+      </div>
+    </div>
   );
 };

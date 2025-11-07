@@ -74,11 +74,11 @@ export const getClientCalendar = (
   };
 };
 
-export const getCalendar = async (id: string): Promise<CalendarType> => {
+export const getCalendar = async (id: string): Promise<CalendarType | null> => {
   const calendar = calendars.find((calendar) => calendar.id === id);
 
   if (!calendar) {
-    throw new Error(`Calendar ${id} not found`);
+    return null;
   }
 
   return calendar;

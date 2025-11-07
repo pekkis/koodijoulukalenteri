@@ -10,9 +10,16 @@ import * as styles from "./JingleBells.css";
 type Props = {
   calendar: ClientCalendarType;
   isInteractive?: boolean;
+  pausedTitle?: string;
+  playingTitle?: string;
 };
 
-const JingleBells: FC<Props> = ({ calendar, isInteractive }) => {
+const JingleBells: FC<Props> = ({
+  calendar,
+  isInteractive,
+  pausedTitle = "Kilistele kulkusia",
+  playingTitle = "Lopeta kulkusten kilistely"
+}) => {
   const [isPlaying, setIsPlaying] = useState(false);
 
   const { naughtinessLevel } = useNaughtiness(calendar);
@@ -20,9 +27,7 @@ const JingleBells: FC<Props> = ({ calendar, isInteractive }) => {
   const ref = useRef<HTMLAudioElement>(null);
 
   const Icon = isPlaying ? FaPause : FaPlay;
-  const title = !isPlaying
-    ? "Kilistele kulkusia"
-    : "Lopeta kulkusten kilistely";
+  const title = !isPlaying ? pausedTitle : playingTitle;
 
   useEffect(() => {
     if (!ref.current) {

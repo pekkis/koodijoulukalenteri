@@ -12,6 +12,7 @@ import { getTime } from "@/services/time";
 import { Metadata } from "next";
 import Link from "next/link";
 import Debug from "./Debug";
+import notFound from "@/app/not-found";
 
 type Props = {
   params: Promise<{
@@ -26,6 +27,12 @@ export const generateMetadata = async ({
   const { calendarId } = await params;
 
   const calendar = await getCalendar(calendarId);
+
+  if (!calendar) {
+    notFound();
+    return {};
+  }
+
   return {
     title: calendar.title,
     openGraph: {
@@ -41,6 +48,10 @@ export default async function CalendarLayout({ params, children }: Props) {
   const { calendarId } = await params;
 
   const calendar = await getCalendar(calendarId);
+
+  if (!calendar) {
+    return notFound();
+  }
 
   const now = getTime();
   const isInteractive = now > calendar.openAt;

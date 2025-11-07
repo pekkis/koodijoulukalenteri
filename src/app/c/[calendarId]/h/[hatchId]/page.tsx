@@ -16,6 +16,10 @@ export default async function HatchPage({ params }: Props) {
 
   const calendar = await getCalendar(calendarId);
 
+  if (!calendar) {
+    return notFound();
+  }
+
   const now = getTime();
 
   if (now < calendar.openAt) {

@@ -2,7 +2,13 @@ import { CalendarType, HatchConfig } from "@/services/calendar";
 
 import { getPosition, HatchData, HatchesData } from "@/services/hatch";
 
-import risuja from "./assets/risuja.webp";
+import risuja1 from "./assets/risuja-1.png";
+import risuja2 from "./assets/risuja-2.png";
+import risuja3 from "./assets/risuja-3.png";
+import risuja4 from "./assets/risuja-4.png";
+import risuja5 from "./assets/risuja-5.png";
+import risuja6 from "./assets/risuja-6.png";
+
 import { isHatchOpenable } from "@/services/time";
 import { DateTime } from "luxon";
 import EscapeHatch from "@/components/calendar/EscapeHatch";
@@ -20,9 +26,9 @@ import { InstructionsSlot } from "@/services/calendar/2025/slots/InstructionsSlo
 import { ControlsSlot } from "@/services/calendar/2025/slots/ControlsSlot";
 
 const risujaData: Omit<HatchData, "day"> = {
-  title: "Tuhmille kiviä, risuja, pekonia ja spagettia",
+  title: "Tuhmille tyhmiä lahjoja",
   image: {
-    src: risuja,
+    src: risuja1,
     alt: "Tuhma lapsi on saanut lahjaksi tyhmän lahjan. Hän itkee."
   },
   content: [
@@ -286,14 +292,33 @@ export const calendar: CalendarType = {
   ],
 
   getHatchData: async (hatch: HatchConfig) => {
+    // console.log("HATCHEROINEN", hatch);
+
     if (hatch.day !== 666 && !isHatchOpenable(hatch)) {
       return {
         ...risujaData,
         day: hatch.day,
         image: {
           ...risujaData.image,
+
           get src() {
-            return risuja;
+            console.log("HATCHEROINEN 222", hatch);
+
+            const risut = [
+              risuja1,
+              risuja2,
+              risuja3,
+              risuja4,
+              risuja5,
+              risuja6
+            ];
+
+            console.log({
+              day: hatch.day,
+              modulo: hatch.day % 6
+            });
+
+            return risut[hatch.day % 6];
           }
         }
       };
@@ -308,42 +333,42 @@ export const calendar: CalendarType = {
 
   naughtinessLevels: [
     {
-      music: "/calendar/2023/jingle-bells.mp3",
+      music: "/calendar/2025/kiltin-koodarin-joulu.mp3",
       level: 0,
       requiredNaughtiness: 0,
       name: "viaton",
       backgroundImage: bg1.src
     },
     {
-      music: "/calendar/2023/jingle-bells.mp3",
+      music: "/calendar/2025/kiltin-koodarin-joulu.mp3",
       level: 1,
       requiredNaughtiness: 1,
       name: "kiltti",
       backgroundImage: bg1.src
     },
     {
-      music: "/calendar/2023/jingle-bells.mp3",
+      music: "/calendar/2025/kiltin-koodarin-joulu.mp3",
       level: 2,
       requiredNaughtiness: 500,
       name: "paatunut",
       backgroundImage: bg2.src
     },
     {
-      music: "/calendar/2023/jingle-bells.mp3",
+      music: "/calendar/2025/kiltin-koodarin-joulu.mp3",
       level: 3,
       requiredNaughtiness: 1500,
       name: "suurtuhmuli",
       backgroundImage: bg3.src
     },
     {
-      music: "/calendar/2023/jingle-bells.mp3",
+      music: "/calendar/2025/tuhmien-koodarien-jouluhelvetti.mp3",
       level: 4,
       requiredNaughtiness: 3000,
       name: "kadotettu sielu",
       backgroundImage: bg4.src
     },
     {
-      music: "/calendar/2023/jingle-bells.mp3",
+      music: "/calendar/2025/tuhmien-koodarien-jouluhelvetti.mp3",
       level: 5,
       requiredNaughtiness: 5000,
       name: "SAFe-inkrementtisuunnittelija",
