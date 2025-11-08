@@ -8,7 +8,7 @@ export default function AboutPage() {
   return (
     <Container>
       <main>
-        <Heading level={1}>Pekkiksen koodijoulukalenteri</Heading>
+        <Heading level={1}>Koodijoulukalenteri</Heading>
 
         <Heading level={2}>Yhteydenotto</Heading>
 

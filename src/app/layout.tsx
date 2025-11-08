@@ -31,10 +31,10 @@ export const viewport: Viewport = {
 };
 
 export const metadata: Metadata = {
-  title: "Pekkiksen koodijoulukalenteri",
+  title: "Koodijoulukalenteri",
   openGraph: {
     type: "website",
-    title: "Pekkiksen koodijoulukalenteri",
+    title: "Koodijoulukalenteri",
     description: "Perinteinen digitaalinen jouluherkku jo vuodesta 2023",
     images: "https://koodijoulukalenteri.pekkis.eu/santa-claus.webp"
   }
@@ -50,8 +50,6 @@ export default async function RootLayout({ children }: Props) {
           href="https://koodijoulukalenteri.pekkis.eu/humans.txt"
         />
         <link rel="icon" type="image/webp" href="/favicon.webp" />
-
-        <meta charSet="utf-8" />
 
         {/* <script
           defer

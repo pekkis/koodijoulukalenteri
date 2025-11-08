@@ -34,6 +34,7 @@ export type CalendarType = {
   hatches: HatchConfig[];
   naughtinessLevels: NaughtinessLevel[];
   description: string;
+  metaDescription?: string;
   openAt: DateTime;
   canonicalImage: string;
 

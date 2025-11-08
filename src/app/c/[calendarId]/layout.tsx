@@ -21,30 +21,6 @@ type Props = {
   children: ReactNode;
 };
 
-export const generateMetadata = async ({
-  params
-}: Props): Promise<Metadata> => {
-  const { calendarId } = await params;
-
-  const calendar = await getCalendar(calendarId);
-
-  if (!calendar) {
-    notFound();
-    return {};
-  }
-
-  return {
-    title: calendar.title,
-    description: calendar.description,
-    openGraph: {
-      type: "website",
-      description: calendar.description,
-      title: `${calendar.title} - Pekkiksen koodijoulukalenteri`,
-      images: calendar.canonicalImage
-    }
-  };
-};
-
 export default async function CalendarLayout({ params, children }: Props) {
   const { calendarId } = await params;
 

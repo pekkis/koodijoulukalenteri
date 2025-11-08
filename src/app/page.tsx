@@ -13,7 +13,7 @@ import { getTime } from "@/services/time";
 import Footer from "@/components/Footer";
 
 export const metadata = {
-  title: "Pekkiksen koodijoulukalenteri"
+  title: "Koodijoulukalenteri"
 };
 
 export const dynamic = "force-dynamic";
@@ -33,13 +33,13 @@ export default async function IndexPage() {
   return (
     <Container>
       <header>
-        <Heading level={1}>Pekkiksen koodijoulukalenteri</Heading>
+        <Heading level={1}>Koodijoulukalenteri</Heading>
       </header>
 
       <main>
         <Paragraph>
-          Tervetuloa Pekkiksen koodijoulukalenteriin, perinteiseen jokavuotiseen
-          tai jokatoisvuotiseen digitaaliseen jouluherkkuun jo vuodesta 2023!
+          Tervetuloa Pekkiksen koodijoulukalenteriin, perinteiseen joka- tai
+          jokatoisvuotiseen digitaaliseen jouluherkkuun jo vuodesta 2023!
         </Paragraph>
 
         <section className={styles.grid}>
