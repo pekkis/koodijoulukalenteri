@@ -1,6 +1,11 @@
 import theme from "@/theme.css";
 import { style } from "@vanilla-extract/css";
 
+export const heading = style({
+  hyphens: "auto",
+  textWrap: "pretty"
+});
+
 export const h1 = style({
   fontFamily: theme.fontFamily.christmas,
   fontVariationSettings: '"wght" 400',

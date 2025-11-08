@@ -33,7 +33,7 @@ export default async function IndexPage() {
   return (
     <Container>
       <header>
-        <Heading level={1}>Pekkiksen koodi&shy;joulu&shy;kalenteri</Heading>
+        <Heading level={1}>Pekkiksen koodijoulukalenteri</Heading>
       </header>
 
       <main>

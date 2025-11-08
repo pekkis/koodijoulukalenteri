@@ -32,4 +32,10 @@
 - suno
 - vercel-korvikkeet
 - scheman validointi
+- vibe-koodaus
 -
+
+for file in \*.webp
+do
+cwebp -q 80 "$file" -o "${file%.webp}.webp"
+done

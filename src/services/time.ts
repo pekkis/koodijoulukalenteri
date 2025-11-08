@@ -19,12 +19,9 @@ export const getTime = (): DateTime => {
   }
 
   try {
-    console.log("OFFSET", process.env.NEXT_PUBLIC_OFFSET);
-
     const offset = JSON.parse(process.env.NEXT_PUBLIC_OFFSET) as DurationLike;
     return now.plus(offset);
   } catch (e) {
-    console.log(e);
     return now;
   }
 };

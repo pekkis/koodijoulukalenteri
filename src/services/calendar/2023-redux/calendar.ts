@@ -6,7 +6,7 @@ on pelattavissa alkuperäistä mahdollisimman pitkälle matkivassa muodossa joul
 
 export const calendar = {
   ...ogCalendar,
-  title: "koodi&shy;joulu&shy;kalenteri 2023, 2. painos",
+  title: "koodijoulukalenteri 2023, 2. painos",
   year: 2024,
   id: "2023-redux",
 

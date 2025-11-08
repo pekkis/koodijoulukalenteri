@@ -2,23 +2,23 @@ import { CalendarType, HatchConfig } from "@/services/calendar";
 
 import { getPosition, HatchData, HatchesData } from "@/services/hatch";
 
-import risuja1 from "./assets/risuja-1.png";
-import risuja2 from "./assets/risuja-2.png";
-import risuja3 from "./assets/risuja-3.png";
-import risuja4 from "./assets/risuja-4.png";
-import risuja5 from "./assets/risuja-5.png";
-import risuja6 from "./assets/risuja-6.png";
+import risuja1 from "./assets/risuja-1.webp";
+import risuja2 from "./assets/risuja-2.webp";
+import risuja3 from "./assets/risuja-3.webp";
+import risuja4 from "./assets/risuja-4.webp";
+import risuja5 from "./assets/risuja-5.webp";
+import risuja6 from "./assets/risuja-6.webp";
 
 import { isHatchOpenable } from "@/services/time";
 import { DateTime } from "luxon";
 import EscapeHatch from "@/components/calendar/EscapeHatch";
 import { theme2025 } from "./theme-2025.css";
 
-import bg1 from "./assets/bg-1.png";
-import bg2 from "./assets/bg-2.png";
-import bg3 from "./assets/bg-3.png";
-import bg4 from "./assets/bg-4.png";
-import bg5 from "./assets/bg-5.png";
+import bg1 from "./assets/bg-1.webp";
+import bg2 from "./assets/bg-2.webp";
+import bg3 from "./assets/bg-3.webp";
+import bg4 from "./assets/bg-4.webp";
+import bg5 from "./assets/bg-5.webp";
 
 import { placeholderHatch } from "./hatch/placeholder/placeholderHatch";
 import { escapeHatch } from "./hatch/escape/escapeHatch";
@@ -67,7 +67,7 @@ const hatches: HatchesData = {
   666: escapeHatch
 };
 
-const description = `Vuoden 2025 koodi&shy;joulu&shy;kalenterista löydät vuosien 2024 ja 2025 mehevimmät koodipöräytykset.
+const description = `Vuoden 2025 koodijoulukalenterista löydät vuosien 2024 ja 2025 mehevimmät koodipöräytykset.
 
 Älä yritä kurkkia luukkuja etukäteen tai tee tuhmuuksia. Tontut, ne pienet perkeleet, kyyläävät ikkunan takana 24/7!`;
 
@@ -75,7 +75,7 @@ export const calendar: CalendarType = {
   id: "2025",
   year: 2025,
   weight: 500,
-  title: "Koodi&shy;joulu&shy;kalenteri 2025",
+  title: "Koodijoulukalenteri 2025",
 
   canonicalImage: bg1.src,
 
@@ -292,8 +292,6 @@ export const calendar: CalendarType = {
   ],
 
   getHatchData: async (hatch: HatchConfig) => {
-    // console.log("HATCHEROINEN", hatch);
-
     if (hatch.day !== 666 && !isHatchOpenable(hatch)) {
       return {
         ...risujaData,
@@ -302,8 +300,6 @@ export const calendar: CalendarType = {
           ...risujaData.image,
 
           get src() {
-            console.log("HATCHEROINEN 222", hatch);
-
             const risut = [
               risuja1,
               risuja2,
@@ -312,11 +308,6 @@ export const calendar: CalendarType = {
               risuja5,
               risuja6
             ];
-
-            console.log({
-              day: hatch.day,
-              modulo: hatch.day % 6
-            });
 
             return risut[hatch.day % 6];
           }

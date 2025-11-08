@@ -9,5 +9,5 @@ type Props = {
 export const Heading = ({ level, children }: Props) => {
   const Tag = `h${level}` as const;
 
-  return <Tag className={styles[Tag]}>{children}</Tag>;
+  return <Tag className={(styles.heading, styles[Tag])}>{children}</Tag>;
 };

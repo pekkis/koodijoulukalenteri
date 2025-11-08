@@ -16,6 +16,8 @@ export const heading = style({
   fontFamily: theme.fontFamily.christmas,
   fontStyle: "normal",
   fontSize: "3rem",
+  hyphens: "auto",
+  textWrap: "pretty",
 
   "@media": {
     "screen and (min-width: 800px)": {
