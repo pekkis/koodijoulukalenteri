@@ -35,6 +35,7 @@ export const generateMetadata = async ({
 
   return {
     title: calendar.title,
+    description: calendar.description,
     openGraph: {
       type: "website",
       description: calendar.description,
