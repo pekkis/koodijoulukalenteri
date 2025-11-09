@@ -2,12 +2,10 @@
 
 import useNaughtiness from "@/hooks/useNaughtiness";
 import cx from "clsx";
-import { FC, useEffect, useState } from "react";
-import { PiPentagramBold } from "react-icons/pi";
-import Hatch, { HatchProps } from "../hatch/Hatch";
+import { FC, ReactNode, useEffect, useState } from "react";
+import Hatch, { HatchProps } from "@/components/hatch/Hatch";
 import * as styles from "./EscapeHatch.css";
 
-import OuterLayer from "../hatch-renderer/OuterLayer";
 import useOpenHatches from "@/hooks/useOpenHatches";
 
 const InnerEscapeHatch: FC<{
@@ -15,7 +13,8 @@ const InnerEscapeHatch: FC<{
   calendar: HatchProps["calendar"];
   day: HatchProps["day"];
   isInteractive?: HatchProps["isInteractive"];
-}> = ({ position, calendar, day, isInteractive }) => {
+  children: ReactNode;
+}> = ({ position, calendar, day, isInteractive, children }) => {
   const [pulse, setPulse] = useState(false);
   const { openHatches } = useOpenHatches();
 
@@ -45,9 +44,7 @@ const InnerEscapeHatch: FC<{
       isInteractive={isInteractive}
       isDark
     >
-      <OuterLayer calendar={calendar} day={666}>
-        <PiPentagramBold className={styles.insides} />
-      </OuterLayer>
+      {children}
     </Hatch>
   );
 };
@@ -56,11 +53,12 @@ const EscapeHatch: FC<HatchProps> = ({
   position,
   day,
   calendar,
-  isInteractive
+  isInteractive,
+  children
 }) => {
   const { naughtinessLevel } = useNaughtiness(calendar);
 
-  if (naughtinessLevel.level < 4) {
+  if (naughtinessLevel.level < 5) {
     return null;
   }
 
@@ -70,7 +68,9 @@ const EscapeHatch: FC<HatchProps> = ({
       day={day}
       calendar={calendar}
       isInteractive={isInteractive}
-    />
+    >
+      {children}
+    </InnerEscapeHatch>
   );
 };
 

@@ -1,15 +1,17 @@
 import { HatchDataWithoutDay } from "@/services/hatch";
-import image from "./demon-santa.jpeg";
+import image from "./kontrahti.webp";
 import { EscapeHatchContent } from "./EscapeHatchContent";
 
 export const escapeHatch: HatchDataWithoutDay = {
   title: "Pukki on ankara, muttei armoton",
-  image: { src: image, alt: "Karmiva pahalaisjoulupukki" },
+  image: { src: image, alt: "Sopimus paholaisen kanssa pelastaa tuhmurin'" },
 
   content: [
     {
       type: "markdown",
-      text: `Katso, kuinka syvälle rappioon ja pohjattomiin kadotuksen syövereihin ennenaikainen kalenteriluukkujen avaaminen on johtanut sinut. Vieläkö olet pelastettavissa?`
+      text: `Tuhmuutesi on saavuttanut mittaluokan, josta ei ole paluuta. Jos sinulle oli joskus tarjolla armoa, nyt on auttamatta liian myöhäistä.
+
+Sielusi on musta, musta kuin... musta aukko. Voit yhtä hyvin myydä sen, mikä on peruuttamattomasti menetetty. Ehkä pelastuksesi on löydettävissä pohjattomasta pahuudesta.`
     },
     {
       type: "jsx",

@@ -3,7 +3,11 @@ import { HatchData } from "@/services/hatch";
 import { calendar as calendar2023 } from "./calendar/2023/calendar";
 import { calendar as calendar2025 } from "./calendar/2025/calendar";
 import { calendar as calendar2023_redux } from "./calendar/2023-redux/calendar";
-import { HatchPosition, HatchProps } from "@/components/hatch/Hatch";
+import {
+  HatchPosition,
+  HatchProps,
+  InnerHatchProps
+} from "@/components/hatch/Hatch";
 import { DateTime } from "luxon";
 import { FC } from "react";
 
@@ -12,6 +16,7 @@ export type HatchConfig = {
   position: HatchPosition;
   openableAt: DateTime;
   hatchComponent?: FC<HatchProps>;
+  innerHatchComponent?: FC<InnerHatchProps>;
 };
 
 export type NaughtinessLevel = {
@@ -25,6 +30,9 @@ export type NaughtinessLevel = {
 export type ContentSlotName = "instructions" | "controls";
 
 export type CalendarType = {
+  defaultHatchComponent?: FC<HatchProps>;
+  defaultInnerHatchComponent?: FC<InnerHatchProps>;
+
   themeClassName: string;
   year: number;
   weight: number;
@@ -43,7 +51,13 @@ export type CalendarType = {
 
 export type ClientCalendarType = Omit<
   CalendarType,
-  "getHatchData" | "hatches" | "description" | "openAt" | "getSlotComponent"
+  | "getHatchData"
+  | "hatches"
+  | "description"
+  | "openAt"
+  | "getSlotComponent"
+  | "defaultHatchComponent"
+  | "defaultInnerHatchComponent"
 > & {
   openAt: string;
 };
@@ -67,6 +81,8 @@ export const getClientCalendar = (
     openAt,
     description,
     getSlotComponent,
+    defaultHatchComponent,
+    defaultInnerHatchComponent,
     ...clientCalendar
   } = calendar;
   return {

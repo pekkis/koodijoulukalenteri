@@ -6,7 +6,11 @@ import cx from "clsx";
 import clsx from "clsx";
 import useOpenHatches from "@/hooks/useOpenHatches";
 import useNaughtiness from "@/hooks/useNaughtiness";
-import { ClientCalendarType } from "@/services/calendar";
+import {
+  CalendarType,
+  ClientCalendarType,
+  HatchConfig
+} from "@/services/calendar";
 
 export type HatchPosition = {
   top: number;
@@ -25,6 +29,11 @@ export type HatchProps = {
   children: ReactNode;
   naughtinessIncrease?: number;
   isDark?: boolean;
+};
+
+export type InnerHatchProps = {
+  calendar: CalendarType;
+  hatch: HatchConfig;
 };
 
 const Hatch: FC<HatchProps> = ({

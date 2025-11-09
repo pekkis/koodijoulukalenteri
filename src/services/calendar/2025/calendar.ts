@@ -11,7 +11,6 @@ import risuja6 from "./assets/risuja-6.webp";
 
 import { isHatchOpenable } from "@/services/time";
 import { DateTime } from "luxon";
-import EscapeHatch from "@/components/calendar/EscapeHatch";
 import { theme2025 } from "./theme-2025.css";
 
 import bg1 from "./assets/bg-1.webp";
@@ -24,6 +23,8 @@ import { placeholderHatch } from "./hatch/placeholder/placeholderHatch";
 import { escapeHatch } from "./hatch/escape/escapeHatch";
 import { InstructionsSlot } from "@/services/calendar/2025/slots/InstructionsSlot";
 import { ControlsSlot } from "@/services/calendar/2025/slots/ControlsSlot";
+import EscapeHatch from "@/services/calendar/2025/components/EscapeHatch";
+import { CalendarWall2025 } from "@/services/calendar/2025/components/CalendarWall2025";
 
 const risujaData: Omit<HatchData, "day"> = {
   title: "Tuhmille tyhmiä lahjoja",
@@ -72,6 +73,8 @@ const description = `Vuoden 2025 koodijoulukalenterista löydät vuosien 2024 ja
 Älä yritä kurkkia luukkuja etukäteen tai tee tuhmuuksia. Tontut, ne pienet perkeleet, kyyläävät ikkunan takana 24/7!`;
 
 export const calendar: CalendarType = {
+  defaultInnerHatchComponent: CalendarWall2025,
+
   id: "2025",
   year: 2025,
   weight: 500,
@@ -286,8 +289,8 @@ export const calendar: CalendarType = {
 
     {
       day: 666,
-      position: getPosition(29, -11, 5, 5),
-      openableAt: DateTime.local(666, 6, 6, 6, {
+      position: getPosition(28, -10, 7, 7),
+      openableAt: DateTime.local(1978, 3, 21, {
         zone: "Europe/Helsinki"
       }),
       hatchComponent: EscapeHatch
@@ -351,7 +354,7 @@ export const calendar: CalendarType = {
       music: "/calendar/2025/kiltin-koodarin-joulu.mp3",
       level: 3,
       requiredNaughtiness: 1500,
-      name: "suurtuhmuli",
+      name: "tuhmuli",
       backgroundImage: bg3.src
     },
     {
@@ -365,7 +368,7 @@ export const calendar: CalendarType = {
       music: "/calendar/2025/tuhmien-koodarien-jouluhelvetti.mp3",
       level: 5,
       requiredNaughtiness: 5000,
-      name: "SAFe-inkrementtisuunnittelija",
+      name: "SAFe-orjapiiskuri",
       backgroundImage: bg5.src
     }
   ],

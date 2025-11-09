@@ -20,7 +20,7 @@ export const EscapeHatchContent: FC<Props> = ({ calendar }) => {
           addNaughtiness(-Infinity);
         }}
       >
-        Nöyrry ja ano anteeksiantoa
+        Myy sielusi
       </Button>
     </p>
   );

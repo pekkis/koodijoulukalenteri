@@ -33,7 +33,7 @@
 - vercel-korvikkeet
 - scheman validointi
 - vibe-koodaus
--
+- modal / popover
 
 for file in \*.webp
 do

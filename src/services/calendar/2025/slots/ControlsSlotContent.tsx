@@ -14,14 +14,16 @@ type Props = {
   isOpen?: boolean;
 };
 
-export const ControlsSlotContent: FC<Props> = ({
-  calendar,
-  isOpen = false
-}) => {
+export const ControlsSlotContent: FC<Props> = ({ calendar }) => {
   return (
     <div className={flexxerClass}>
       <div className={itemClass}>
-        <JingleBells calendar={calendar} isInteractive={isOpen} />
+        <JingleBells
+          calendar={calendar}
+          isInteractive
+          pausedTitle="Pimpeli pompeli"
+          playingTitle="Pysäytä pompeli"
+        />
       </div>
       <div className={itemClass}>
         <NaughtyOrNice calendar={calendar} />

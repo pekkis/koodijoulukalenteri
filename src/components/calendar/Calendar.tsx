@@ -26,7 +26,12 @@ export const Calendar: FC<Props> = ({ calendar, isInteractive = false }) => {
           {sortedHatches.map((config) => {
             const { day, position } = config;
 
-            const HatchComponent = config.hatchComponent ?? Hatch;
+            const HatchComponent =
+              config.hatchComponent || calendar.defaultHatchComponent || Hatch;
+            const InnerHatchComponent =
+              config.innerHatchComponent ||
+              calendar.defaultInnerHatchComponent ||
+              CalendarWall;
 
             return (
               <HatchComponent
@@ -37,7 +42,7 @@ export const Calendar: FC<Props> = ({ calendar, isInteractive = false }) => {
                 day={day}
                 position={position}
               >
-                <CalendarWall calendar={calendar} hatch={config} />
+                <InnerHatchComponent calendar={calendar} hatch={config} />
               </HatchComponent>
             );
           })}
