@@ -34,13 +34,14 @@
 - skeeman validointi
 - vibe-koodaus
 - dialog / popover
-- view transition
+- view transition (DONE)
 - svg
 - effect
-- muodokkaat reunat
+- muodokkaat reunat (DONE)
 - https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Values/color_value/oklch
 - mantine hooks
 - remove scroll
+- vuosien 2024 ja 2025 koodilehvat
 
 for file in \*.webp
 do
