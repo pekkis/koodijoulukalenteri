@@ -25,6 +25,8 @@ import { InstructionsSlot } from "@/services/calendar/2025/slots/InstructionsSlo
 import { ControlsSlot } from "@/services/calendar/2025/slots/ControlsSlot";
 import EscapeHatch from "@/services/calendar/2025/components/EscapeHatch";
 import { CalendarWall2025 } from "@/services/calendar/2025/components/CalendarWall2025";
+import { viewTransitionHatch } from "@/services/calendar/2025/hatch/view-transition/viewTransitionHatch";
+import { cornerCaseHatch } from "@/services/calendar/2025/hatch/corner-case/cornerCaseHatch";
 
 const risujaData: Omit<HatchData, "day"> = {
   title: "Tuhmille tyhmiä lahjoja",
@@ -41,8 +43,9 @@ const risujaData: Omit<HatchData, "day"> = {
 };
 
 const hatches: HatchesData = {
-  1: placeholderHatch,
-  2: placeholderHatch,
+  1: cornerCaseHatch,
+  2: viewTransitionHatch,
+
   3: placeholderHatch,
   4: placeholderHatch,
   5: placeholderHatch,

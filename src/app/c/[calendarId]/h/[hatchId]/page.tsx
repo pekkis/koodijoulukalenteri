@@ -4,6 +4,7 @@ import { getCalendar, getClientCalendar } from "@/services/calendar";
 import { getTime } from "@/services/time";
 import { Metadata } from "next";
 import { notFound } from "next/navigation";
+import { ViewTransition } from "react";
 
 type Props = {
   params: Promise<{

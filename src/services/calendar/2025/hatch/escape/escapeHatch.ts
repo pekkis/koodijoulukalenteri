@@ -3,8 +3,11 @@ import image from "./kontrahti.webp";
 import { EscapeHatchContent } from "./EscapeHatchContent";
 
 export const escapeHatch: HatchDataWithoutDay = {
-  title: "Pukki on ankara, muttei armoton",
-  image: { src: image, alt: "Sopimus paholaisen kanssa pelastaa tuhmurin'" },
+  title: "Kaikki toivo on mennyttä",
+  image: {
+    src: image,
+    alt: "Vain sopimus paholaisen kanssa pelastaa tuhmurin'"
+  },
 
   content: [
     {

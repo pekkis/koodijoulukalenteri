@@ -18,6 +18,8 @@ const theme = createGlobalTheme(":root", {
     sharp: "3px",
     soft: "6px",
     plump: "9px",
+    plumper: "20px",
+    plumpest: "40px",
     megaPlump: "100px"
   },
 

@@ -11,8 +11,11 @@ export const dialog = style({
   maxHeight: `min(90vh, 35rem)`,
   overflowY: "scroll",
 
-  "::backdrop": {
-    backgroundColor: "rgb(0 0 0 / .66)"
+  "@supports": {
+    "(corner-shape: squircle)": {
+      borderRadius: theme.borderRadius.plumpest,
+      cornerShape: "squircle"
+    }
   }
 });
 

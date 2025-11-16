@@ -4,12 +4,9 @@ import {
   getNextNaughtinessLevel
 } from "@/services/naughtiness";
 import { getTime } from "@/services/time";
-import { atom, useAtom } from "jotai";
 import { DateTime } from "luxon";
-import { useCallback, useEffect, useMemo } from "react";
-import { useLocalStorage } from "usehooks-ts";
-
-const naughtinessAtom = atom<number>(0);
+import { useCallback, useMemo } from "react";
+import { useLocalStorage } from "@mantine/hooks";
 
 const useNaughtiness = (calendar: ClientCalendarType) => {
   const key = `naughtiness-${calendar.id}`;
@@ -22,11 +19,12 @@ const useNaughtiness = (calendar: ClientCalendarType) => {
   }, [calendar.openAt]);
 
   const [localStorageNaughtiness, setLocalStorageNaughtiness] =
-    useLocalStorage<number>(key, 0);
+    useLocalStorage<number>({
+      key,
+      defaultValue: 0
+    });
 
-  const [naughtiness, setNaughtiness] = useAtom(naughtinessAtom);
-
-  const effectiveNaughtiness = !isInteractive ? 0 : naughtiness;
+  const effectiveNaughtiness = !isInteractive ? 0 : localStorageNaughtiness;
 
   const addNaughtiness = useCallback(
     (add: number) => {
@@ -37,22 +35,20 @@ const useNaughtiness = (calendar: ClientCalendarType) => {
     [setLocalStorageNaughtiness]
   );
 
-  useEffect(() => {
-    setNaughtiness(localStorageNaughtiness);
-  }, [localStorageNaughtiness, setNaughtiness]);
-
   const naughtinessLevel = getNaughtinessLevel(calendar, effectiveNaughtiness);
   const nextNaughtinessLevel = getNextNaughtinessLevel(
     calendar,
     effectiveNaughtiness
   );
 
-  return {
+  const ret = {
     naughtiness: effectiveNaughtiness,
     addNaughtiness,
     naughtinessLevel,
     nextNaughtinessLevel
   };
+
+  return ret;
 };
 
 export default useNaughtiness;

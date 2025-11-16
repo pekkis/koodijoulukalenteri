@@ -16,6 +16,9 @@ const nextConfig = {
   reactCompiler: true,
   output: "standalone",
   reactStrictMode: true,
+  experimental: {
+    viewTransition: true
+  },
   typescript: {
     ignoreBuildErrors: false
   }

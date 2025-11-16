@@ -31,9 +31,16 @@
 - react 19
 - suno
 - vercel-korvikkeet
-- scheman validointi
+- skeeman validointi
 - vibe-koodaus
-- modal / popover
+- dialog / popover
+- view transition
+- svg
+- effect
+- muodokkaat reunat
+- https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Values/color_value/oklch
+- mantine hooks
+- remove scroll
 
 for file in \*.webp
 do

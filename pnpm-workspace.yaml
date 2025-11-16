@@ -1,9 +1,9 @@
 disallowWorkspaceCycles: true
 
-#minimumReleaseAge: 4320
-#minimumReleaseAge: 10
+minimumReleaseAge: 4320
 
 onlyBuiltDependencies:
-  - "@swc/core"
+  - '@swc/core'
+  - esbuild
   - sharp
   - unrs-resolver

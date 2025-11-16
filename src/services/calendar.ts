@@ -1,4 +1,7 @@
+import "server-only";
+
 /* eslint-disable @typescript-eslint/no-unused-vars */
+
 import { HatchData } from "@/services/hatch";
 import { calendar as calendar2023 } from "./calendar/2023/calendar";
 import { calendar as calendar2025 } from "./calendar/2025/calendar";

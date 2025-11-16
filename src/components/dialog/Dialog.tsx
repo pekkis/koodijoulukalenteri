@@ -1,11 +1,14 @@
 "use client";
 
-import { FC, ReactNode, useEffect, useRef } from "react";
+import { FC, ReactNode, ViewTransition } from "react";
+import Backdrop from "./Backdrop";
 import * as styles from "./Dialog.css";
-import { useScrollLock } from "usehooks-ts";
+import { useClickOutside } from "@mantine/hooks";
 import { useRouter } from "next/navigation";
 import useOpenHatches from "@/hooks/useOpenHatches";
+import useKeyPress from "@/hooks/useKeyPress";
 import { ClientCalendarType } from "@/services/calendar";
+import { RemoveScroll } from "react-remove-scroll";
 
 type Props = {
   children: ReactNode;
@@ -13,32 +16,31 @@ type Props = {
 };
 
 const Dialog: FC<Props> = ({ calendar, children }) => {
-  const ref = useRef<HTMLDialogElement>(null);
-
-  useEffect(() => {
-    ref?.current?.showModal();
-  }, []);
-
-  const { searchParams } = useOpenHatches();
   const router = useRouter();
+  const { searchParams } = useOpenHatches();
 
-  useScrollLock({
-    autoLock: true
+  const ref = useClickOutside<HTMLDivElement>(() => {
+    router.push(`/c/${calendar.id}?${searchParams.toString()}`, {
+      scroll: false
+    });
+  });
+
+  useKeyPress("Escape", () => {
+    router.push(`/c/${calendar.id}?${searchParams.toString()}`, {
+      scroll: false
+    });
   });
 
   return (
-    <dialog
-      ref={ref}
-      className={styles.dialog}
-      closedby="any"
-      onClose={() => {
-        router.push(`/c/${calendar.id}?${searchParams.toString()}`, {
-          scroll: false
-        });
-      }}
-    >
-      <div className={styles.dialogInsides}>{children}</div>
-    </dialog>
+    <ViewTransition>
+      <Backdrop>
+        <RemoveScroll>
+          <div ref={ref} className={styles.dialog}>
+            <div className={styles.dialogInsides}>{children}</div>
+          </div>
+        </RemoveScroll>
+      </Backdrop>
+    </ViewTransition>
   );
 };
 

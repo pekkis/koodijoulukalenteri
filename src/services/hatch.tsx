@@ -40,6 +40,7 @@ export type ContentBlockType =
   | YoutubeBlockType;
 
 export type HatchData = {
+  supports?: string[];
   day: number;
   image: {
     src: StaticImageData;
