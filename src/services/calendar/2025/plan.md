@@ -28,7 +28,7 @@
 # 2025
 
 - vite+ (vite-ekosysteemi)
-- react 19
+- react 19, React Compiler, next.js 16
 - suno
 - vercel-korvikkeet
 - skeeman validointi
@@ -41,7 +41,19 @@
 - https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Values/color_value/oklch
 - mantine hooks
 - remove scroll
-- vuosien 2024 ja 2025 koodilehvat
+- vuosien 2024 ja 2025 koodilehvat (DONE)
+- Steven kuuluisa demo (DONE)
+- toon
+- ehtml
+- https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Anchor_positioning
+- https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/At-rules/@scope
+- https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Colors/Using_relative_colors
+- https://developer.mozilla.org/en-US/blog/html-details-exclusive-accordions/
+- scrollbar-gutter ja scrollbar-color
+- ensimmäiset webbisaitit
+-
+
+- 25 ja 26, bonusluukut kilteille!
 
 for file in \*.webp
 do

@@ -28,6 +28,7 @@ import { CalendarWall2025 } from "@/services/calendar/2025/components/CalendarWa
 import { viewTransitionHatch } from "@/services/calendar/2025/hatch/view-transition/viewTransitionHatch";
 import { cornerCaseHatch } from "@/services/calendar/2025/hatch/corner-case/cornerCaseHatch";
 import { moviesHatch } from "@/services/calendar/2025/hatch/movies/moviesHatch";
+import { steveHatch } from "@/services/calendar/2025/hatch/steve/steveHatch";
 
 const risujaData: Omit<HatchData, "day"> = {
   title: "Tuhmille tyhmiä lahjoja",
@@ -53,7 +54,7 @@ const hatches: HatchesData = {
   6: placeholderHatch,
   7: placeholderHatch,
   8: placeholderHatch,
-  9: placeholderHatch,
+  9: steveHatch,
   10: placeholderHatch,
   11: placeholderHatch,
   12: placeholderHatch,
