@@ -29,6 +29,8 @@ import { viewTransitionHatch } from "@/services/calendar/2025/hatch/view-transit
 import { cornerCaseHatch } from "@/services/calendar/2025/hatch/corner-case/cornerCaseHatch";
 import { moviesHatch } from "@/services/calendar/2025/hatch/movies/moviesHatch";
 import { steveHatch } from "@/services/calendar/2025/hatch/steve/steveHatch";
+import { lookWhosTalkingHatch } from "@/services/calendar/2025/hatch/look-whos-talking/lookWhosTalkingHatch";
+import { tightDataHatch } from "@/services/calendar/2025/hatch/tight-data/tightDataHatch";
 
 const risujaData: Omit<HatchData, "day"> = {
   title: "Tuhmille tyhmiä lahjoja",
@@ -52,7 +54,7 @@ const hatches: HatchesData = {
   4: placeholderHatch,
   5: placeholderHatch,
   6: placeholderHatch,
-  7: placeholderHatch,
+  7: tightDataHatch,
   8: placeholderHatch,
   9: steveHatch,
   10: placeholderHatch,
@@ -63,7 +65,7 @@ const hatches: HatchesData = {
   15: placeholderHatch,
   16: placeholderHatch,
   17: placeholderHatch,
-  18: placeholderHatch,
+  18: lookWhosTalkingHatch,
   19: placeholderHatch,
   20: placeholderHatch,
   21: placeholderHatch,

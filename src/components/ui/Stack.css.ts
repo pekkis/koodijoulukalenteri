@@ -6,3 +6,11 @@ export const stackClass = style({
   flexDirection: "column",
   gap: theme.spacing.s
 });
+
+export const rowClass = style({
+  flexDirection: "row"
+});
+
+export const svelteClass = style({
+  gap: theme.spacing.xxs
+});

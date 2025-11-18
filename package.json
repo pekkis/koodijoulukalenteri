@@ -41,9 +41,11 @@
     "react-icons": "^5.5.0",
     "react-markdown": "^10.1.0",
     "react-remove-scroll": "^2.7.1",
+    "react-speech-recognition": "^4.0.1",
     "remark-gfm": "^4.0.1",
     "remeda": "^2.32.0",
     "sharp": "^0.34.5",
+    "superjson": "^2.2.5",
     "zustand": "^5.0.8"
   },
   "devDependencies": {
@@ -52,6 +54,7 @@
     "@types/node": "^24.10.1",
     "@types/react": "^19.2.4",
     "@types/react-dom": "^19.2.3",
+    "@types/react-speech-recognition": "^3.9.6",
     "@vanilla-extract/next-plugin": "^2.4.14",
     "babel-plugin-react-compiler": "^1.0.0",
     "eslint": "^9.39.1",

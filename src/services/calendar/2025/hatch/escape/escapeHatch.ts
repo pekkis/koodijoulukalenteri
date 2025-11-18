@@ -6,7 +6,7 @@ export const escapeHatch: HatchDataWithoutDay = {
   title: "Kaikki toivo on mennyttä",
   image: {
     src: image,
-    alt: "Vain sopimus paholaisen kanssa pelastaa tuhmurin'"
+    alt: "Vain sopimus paholaisen kanssa voi pelastaa näin tuhman!"
   },
 
   content: [

@@ -51,7 +51,11 @@
 - https://developer.mozilla.org/en-US/blog/html-details-exclusive-accordions/
 - scrollbar-gutter ja scrollbar-color
 - ensimmäiset webbisaitit
--
+- symbolics.com, eka webbisaitti ikinä (15.3.1985)
+- tsdown
+- rolldown
+- https://adonisjs.com/ + https://inertiajs.com
+- hei, kuka puhuu
 
 - 25 ja 26, bonusluukut kilteille!
 

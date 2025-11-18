@@ -16,13 +16,13 @@ export const h1 = style({
 });
 
 export const h2 = style({
-  fontSize: "2rem",
-  marginBlockStart: theme.spacing.m,
+  fontSize: "1.5rem",
+  marginBlockStart: theme.spacing.s,
   marginBlockEnd: theme.spacing.s
 });
 
 export const h3 = style({
-  fontSize: "1.5rem"
+  fontSize: "1.25rem"
 });
 
 export const h4 = style({});

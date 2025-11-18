@@ -15,6 +15,15 @@ export const button = style({
   }
 });
 
+export const relative = style({
+  padding: theme.relativeSpacing.s
+});
+
+export const svelte = style({
+  padding: theme.spacing.xxs,
+  borderRadius: theme.borderRadius.sharp
+});
+
 export const active = style({
   cursor: "pointer",
   ":hover": {

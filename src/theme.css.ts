@@ -41,11 +41,22 @@ const theme = createGlobalTheme(":root", {
 
   spacing: {
     none: "0",
+    xxs: "0.33rem",
     xs: "0.5rem",
     s: "1rem",
     m: "2rem",
     l: "4rem",
     xl: "8rem"
+  },
+
+  relativeSpacing: {
+    none: "0",
+    xxs: "0.25em",
+    xs: "0.5em",
+    s: "1em",
+    m: "2em",
+    l: "4em",
+    xl: "8em"
   },
 
   size: {
