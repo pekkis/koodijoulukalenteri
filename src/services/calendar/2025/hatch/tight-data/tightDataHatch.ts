@@ -7,7 +7,7 @@ export const tightDataHatch: HatchDataWithoutDay = {
   title: "Tiukkaa dataa",
   image: {
     src: image,
-    alt: "Placeholder-kuva"
+    alt: "Antropomorfiset uudet tiedonsiirtoformaatit nauravat vanhalle ja väsyneelle JSON-hahmolle."
   },
   content: [
     {

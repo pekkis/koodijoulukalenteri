@@ -27,6 +27,14 @@
 
 # 2025
 
+- tiukat datatyypit: toon (DONE) ja superjson
+- vuosien 2024 ja 2025 koodilehvat (DONE)
+- Steven kuuluisa demo (DONE)
+- view transition (DONE)
+- muodokkaat reunat (DONE)
+- hei kuka puhuu (DONE)
+- symbolics.com, eka domain ikinä (15.3.1985) (DONE)
+
 - vite+ (vite-ekosysteemi)
 - react 19, React Compiler, next.js 16
 - suno
@@ -34,16 +42,13 @@
 - skeeman validointi
 - vibe-koodaus
 - dialog / popover
-- view transition (DONE)
+
 - svg
 - effect
-- muodokkaat reunat (DONE)
 - https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Values/color_value/oklch
 - mantine hooks
 - remove scroll
-- vuosien 2024 ja 2025 koodilehvat (DONE)
-- Steven kuuluisa demo (DONE)
-- toon
+
 - ehtml
 - https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Anchor_positioning
 - https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/At-rules/@scope
@@ -51,7 +56,7 @@
 - https://developer.mozilla.org/en-US/blog/html-details-exclusive-accordions/
 - scrollbar-gutter ja scrollbar-color
 - ensimmäiset webbisaitit
-- symbolics.com, eka webbisaitti ikinä (15.3.1985)
+
 - tsdown
 - rolldown
 - https://adonisjs.com/ + https://inertiajs.com
