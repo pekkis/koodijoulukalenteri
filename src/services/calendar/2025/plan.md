@@ -40,15 +40,15 @@
   - relative colors
   - https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Colors/Using_relative_colors
 - vercel-korvikkeet
+- popover ja dialog ja ankkurinappi (DONE)
+  - dialog / popover
+  - https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Anchor_positioning
 
 - vite+ (vite-ekosysteemi)
 - react 19, React Compiler, next.js 16
 - suno
-
 - skeeman validointi
 - vibe-koodaus
-- dialog / popover
-
 - kolmedee
   - threejs, fiber
   - https://vercel.com/blog/building-an-interactive-3d-event-badge-with-react-three-fiber
@@ -60,7 +60,6 @@
 - remove scroll
 
 - ehtml
-- https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Anchor_positioning
 - https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/At-rules/@scope
 - https://developer.mozilla.org/en-US/blog/html-details-exclusive-accordions/
 - scrollbar-gutter ja scrollbar-color
