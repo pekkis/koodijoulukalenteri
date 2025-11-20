@@ -5,5 +5,7 @@ export const mainHeading = style({
   marginBlockStart: 0,
   marginBlockEnd: theme.spacing.m,
   textAlign: "center",
-  lineHeight: 1.4
+  lineHeight: 1.4,
+  hyphens: "auto",
+  textWrap: "pretty"
 });

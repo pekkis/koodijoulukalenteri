@@ -22,8 +22,6 @@ export const SpeechApiExample: FC = () => {
 
   const [utteranceTxt, setUtteranceTxt] = useState<string>("");
 
-  const [voices, setVoices] = useState<SpeechSynthesisVoice[]>([]);
-
   const synth = useMemo(() => {
     if (typeof window === "undefined") {
       return null;
@@ -33,6 +31,12 @@ export const SpeechApiExample: FC = () => {
 
     return synth;
   }, []);
+
+  const [voices, setVoices] = useState<SpeechSynthesisVoice[]>(
+    synth?.getVoices().filter((voice) => {
+      return voice.lang.startsWith("fi");
+    }) || []
+  );
 
   useEffect(() => {
     synth?.addEventListener("voiceschanged", (e) => {

@@ -7,6 +7,9 @@ type Props = ComponentProps<"button"> & {
   relative?: boolean;
   block?: boolean;
   svelte?: boolean;
+  extraRed?: boolean;
+  relativelyGreener?: boolean;
+  mixWithUgliest?: boolean;
 };
 
 const Button: FC<Props> = ({
@@ -16,13 +19,19 @@ const Button: FC<Props> = ({
   relative = false,
   svelte = false,
   disabled,
+  extraRed = false,
+  relativelyGreener = false,
+  mixWithUgliest = false,
   ...rest
 }) => {
   const classes = clsx(styles.button, {
     [styles.relative]: relative,
     [styles.svelte]: svelte,
     [styles.active]: !disabled,
-    [styles.block]: block
+    [styles.block]: block,
+    [styles.extraRed]: extraRed,
+    [styles.relativelyGreenerRed]: relativelyGreener,
+    [styles.mixWithUgliest]: mixWithUgliest
   });
 
   return (

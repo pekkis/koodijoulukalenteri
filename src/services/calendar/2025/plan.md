@@ -34,25 +34,34 @@
 - muodokkaat reunat (DONE)
 - hei kuka puhuu (DONE)
 - symbolics.com, eka domain ikinä (15.3.1985) (DONE)
+- joulun värivalot (DONE)
+  - https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Values/color_value/oklch
+  - color.js
+  - relative colors
+  - https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Colors/Using_relative_colors
+- vercel-korvikkeet
 
 - vite+ (vite-ekosysteemi)
 - react 19, React Compiler, next.js 16
 - suno
-- vercel-korvikkeet
+
 - skeeman validointi
 - vibe-koodaus
 - dialog / popover
 
+- kolmedee
+  - threejs, fiber
+  - https://vercel.com/blog/building-an-interactive-3d-event-badge-with-react-three-fiber
+  - https://www.youtube.com/watch?v=oF2bDrRZuF4
+
 - svg
 - effect
-- https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Values/color_value/oklch
 - mantine hooks
 - remove scroll
 
 - ehtml
 - https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Anchor_positioning
 - https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/At-rules/@scope
-- https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Colors/Using_relative_colors
 - https://developer.mozilla.org/en-US/blog/html-details-exclusive-accordions/
 - scrollbar-gutter ja scrollbar-color
 - ensimmäiset webbisaitit
@@ -60,7 +69,6 @@
 - tsdown
 - rolldown
 - https://adonisjs.com/ + https://inertiajs.com
-- hei, kuka puhuu
 
 - 25 ja 26, bonusluukut kilteille!
 

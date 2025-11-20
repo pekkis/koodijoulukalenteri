@@ -33,6 +33,8 @@ import { lookWhosTalkingHatch } from "@/services/calendar/2025/hatch/look-whos-t
 import { tightDataHatch } from "@/services/calendar/2025/hatch/tight-data/tightDataHatch";
 import { symbolicsHatch } from "@/services/calendar/2025/hatch/symbolics/symbolicsHatch";
 import { selfHostHatch } from "@/services/calendar/2025/hatch/self-host/selfHostHatch";
+import { colorsHatch } from "@/services/calendar/2025/hatch/colors/colorsHatch";
+import { popoverHatch } from "@/services/calendar/2025/hatch/popover/popoverHatch";
 
 const risujaData: Omit<HatchData, "day"> = {
   title: "Tuhmille tyhmiä lahjoja",
@@ -53,8 +55,8 @@ const hatches: HatchesData = {
   2: moviesHatch,
   3: viewTransitionHatch,
   4: selfHostHatch,
-  5: placeholderHatch,
-  6: placeholderHatch,
+  5: colorsHatch,
+  6: popoverHatch,
   7: tightDataHatch,
   8: placeholderHatch,
   9: steveHatch,

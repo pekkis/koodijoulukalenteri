@@ -41,3 +41,19 @@ export const block = style({
   display: "block",
   width: "100%"
 });
+
+export const extraRed = style({
+  "@supports": {
+    "(background-color: color(display-p3 1 0 0))": {
+      backgroundColor: "color(display-p3 1 0 0)"
+    }
+  }
+});
+
+export const relativelyGreenerRed = style({
+  backgroundColor: `rgb(from ${theme.colors.primary} r 100 b)`
+});
+
+export const mixWithUgliest = style({
+  backgroundColor: `color-mix(in srgb, ${theme.colors.primary} 20%, rgb(74 65 42))`
+});
