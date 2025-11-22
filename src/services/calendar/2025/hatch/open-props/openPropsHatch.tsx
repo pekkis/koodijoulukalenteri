@@ -2,8 +2,8 @@ import { HatchDataWithoutDay } from "@/services/hatch";
 
 import image from "@/services/calendar/2025/hatch/placeholder/placeholder.webp";
 
-export const placeholderHatch: HatchDataWithoutDay = {
-  title: "Placeholder",
+export const openPropsHatch: HatchDataWithoutDay = {
+  title: "Open Props",
   image: {
     src: image,
     alt: "Placeholder-kuva"

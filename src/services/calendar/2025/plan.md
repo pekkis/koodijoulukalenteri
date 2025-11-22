@@ -43,31 +43,69 @@
 - popover ja dialog ja ankkurinappi (DONE)
   - dialog / popover
   - https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Anchor_positioning
-
-- vite+ (vite-ekosysteemi)
-- react 19, React Compiler, next.js 16
-- suno
-- skeeman validointi
-- vibe-koodaus
-- kolmedee
-  - threejs, fiber
+- modernit git-käskyt (done)
+- tilakoneet (done)
+  - https://zagjs.com/
+  - https://xstate.js.org/
+- threejs, fiber (done)
   - https://vercel.com/blog/building-an-interactive-3d-event-badge-with-react-three-fiber
   - https://www.youtube.com/watch?v=oF2bDrRZuF4
 
+- vite+ (vite-ekosysteemi)
+  - tsdown
+  - rolldown
+  - vitest
+  -
+
+- Lupaus paremmasta
+  - Promise.withResolvers()
+
+- react 19
+  - historia
+  - https://www.joshwcomeau.com/react/css-in-rsc/
+  - React Compiler
+  - next.js 16 (canary, view transitiot)
+  - Turbopack-kehitys Nextissä
+
+- Vibe-koodailu!
+  - suno
+  - chatgpt
+  - nano banana
+
 - svg
+  - https://www.joshwcomeau.com/svg/friendly-introduction-to-svg/
+
 - effect
+  - https://effect.website/
+
+- scrollbar-gutter ja scrollbar-color
+  - remove scroll
+
+- ensimmäiset webbisaitit
+
+- https://gregros.dev/web/iframes-and-when-javascript-worlds-collide?fbclid=IwY2xjawOLEkVleHRuA2FlbQIxMQBzcnRjBmFwcF9pZAEwAAEeQ1_lHlCMFIpb-QGEBz72i3t8CIl0BXQbms8MQJvJBxdo55wmAeEqIBUK3rA_aem_3KK_zqahpWCFMmT-2dThAg
+
+## ehkä...
+
+- https://inertiajs.com
+
+- kaunista kielenkäyttöä
+  - https://justfuckingusehtml.com/
+  - https://justfuckingusereact.com/
+  - https://motherfuckingwebsite.com/
+  - programming motherfucker
+
+## ei näitä ellei pakko
+
 - mantine hooks
-- remove scroll
 
 - ehtml
 - https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/At-rules/@scope
 - https://developer.mozilla.org/en-US/blog/html-details-exclusive-accordions/
-- scrollbar-gutter ja scrollbar-color
-- ensimmäiset webbisaitit
 
-- tsdown
-- rolldown
-- https://adonisjs.com/ + https://inertiajs.com
+- skeeman validointi
+
+- https://adonisjs.com/ +
 
 - 25 ja 26, bonusluukut kilteille!
 
@@ -75,3 +113,35 @@ for file in \*.webp
 do
 cwebp -q 80 "$file" -o "${file%.webp}.webp"
 done
+
+- lightningcss
+  - https://lightningcss.dev/
+- https://javascript.info/
+
+- RCS stuff?
+
+- https://www.totaltypescript.com/how-to-strongly-type-process-env
+
+- https://www.eslint-config-sheriff.dev/docs/introduction
+
+-https://skiplabs.io/
+
+- https://hono.dev/
+
+- https://lynxjs.org/blog/lynx-unlock-native-for-more
+
+- https://github.com/nanostores/nanostores
+
+- https://animejs.com/
+
+- https://shoelace.style/
+
+- https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/meter
+
+View transitiot
+
+- https://www.jonoalderson.com/conjecture/its-time-for-modern-css-to-kill-the-spa/
+- https://developer.mozilla.org/en-US/docs/Web/API/Speculation_Rules_API
+- https://developer.mozilla.org/en-US/docs/Web/Performance/Guides/Speculative_loading
+
+https://bradfrost.com/blog/post/the-design-system-ecosystem/

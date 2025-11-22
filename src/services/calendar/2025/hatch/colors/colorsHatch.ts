@@ -21,7 +21,8 @@ Jos uskaltautuu kaivamaan, löytää kaikkea hienoa. Nykyään voi käyttää es
 
 Eikä saa unohtaa [\`light-dark()\`](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Values/color_value/light-dark)-funktiota, jonka ansiosta dark moden tekeminen on "vähän" helpompaa.
 
-Tässäpä tiedonpalasia, joita jokaisen meistä pitäisi lisätä palettiinsa. Alta voit ihailla, mitä sain pikaisesti kokeilemalla aikaan.
+Alta voit ihailla omia mahti-esimerkkejäni. Siltä varalta, että pelkkä CSS ei riitä värittämään oman sielusi mustuutta, [color.js](https://colorjs.io/) auttaa varmasti!
+
 `
     },
     {

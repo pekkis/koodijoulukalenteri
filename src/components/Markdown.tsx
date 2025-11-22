@@ -5,15 +5,16 @@ import remarkGfm from "remark-gfm";
 
 type Props = {
   children: string;
+  justify?: boolean;
 };
 
-export const Markdown: FC<Props> = ({ children }) => {
+export const Markdown: FC<Props> = ({ justify = false, children }) => {
   return (
     <ReactMarkdown
       remarkPlugins={[remarkGfm]}
       components={{
         p: ({ children }) => {
-          return <Paragraph>{children}</Paragraph>;
+          return <Paragraph justify={justify}>{children}</Paragraph>;
         },
 
         a: ({ children, href, ...rest }) => {

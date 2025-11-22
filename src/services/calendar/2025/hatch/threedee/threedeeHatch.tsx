@@ -14,7 +14,7 @@ export const threedeeHatch: HatchDataWithoutDay = {
       type: "markdown",
       text: `Hämmästyn aina, kun näen jotain tosi hienoa kolmedeetä selaimessa. Mitään Paulin (tämä luukku on omistettu hänelle!) koodaamaa on mahdoton ylittää, mutta vähempikin riittää vaikutuksen tekemiseen, jos on 3D:n kanssa yhtä avuton kuin minä!
 
-Viime vuonna ihailin Vercelin hienoa kolmiuloitteista, interaktiivista, fysiikkamoottorilla kuorrutettua konffalippua. Erityisen ihanaksi jutun teki se, että he [kirjoittivat sen tekemisestä kattavan blogipostauksen](https://vercel.com/blog/building-an-interactive-3d-event-badge-with-react-three-fiber), joka säilyy jälkipolville.
+Viime vuonna ihailin Vercelin hienoa kolmiuloitteista, interaktiivista, fysiikkamoottorilla kuorrutettua konffalippua. Erityisen ihanaksi jutun teki se, että tekijät [kirjoittivat aiheesta kattavan blogipostauksen](https://vercel.com/blog/building-an-interactive-3d-event-badge-with-react-three-fiber), joka säilyy jälkipolville.
 `
     },
     {
