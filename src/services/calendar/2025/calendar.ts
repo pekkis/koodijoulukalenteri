@@ -35,6 +35,7 @@ import { symbolicsHatch } from "@/services/calendar/2025/hatch/symbolics/symboli
 import { selfHostHatch } from "@/services/calendar/2025/hatch/self-host/selfHostHatch";
 import { colorsHatch } from "@/services/calendar/2025/hatch/colors/colorsHatch";
 import { popoverHatch } from "@/services/calendar/2025/hatch/popover/popoverHatch";
+import { threedeeHatch } from "@/services/calendar/2025/hatch/threedee/threedeeHatch";
 
 const risujaData: Omit<HatchData, "day"> = {
   title: "Tuhmille tyhmiä lahjoja",
@@ -58,7 +59,7 @@ const hatches: HatchesData = {
   5: colorsHatch,
   6: popoverHatch,
   7: tightDataHatch,
-  8: placeholderHatch,
+  8: threedeeHatch,
   9: steveHatch,
   10: placeholderHatch,
   11: placeholderHatch,

@@ -25,6 +25,8 @@
   "dependencies": {
     "@mantine/hooks": "^8.3.7",
     "@next/third-parties": "16.0.3",
+    "@react-three/fiber": "^9.4.0",
+    "@types/three": "^0.181.0",
     "@vanilla-extract/css": "^1.17.4",
     "@vanilla-extract/sprinkles": "^1.6.5",
     "clsx": "^2.1.1",
@@ -46,6 +48,7 @@
     "remeda": "^2.32.0",
     "sharp": "^0.34.5",
     "superjson": "^2.2.5",
+    "three": "^0.181.2",
     "zustand": "^5.0.8"
   },
   "devDependencies": {

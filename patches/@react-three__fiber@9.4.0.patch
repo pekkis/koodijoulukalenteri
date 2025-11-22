@@ -1,0 +1,132 @@
+diff --git a/dist/events-3afec6fc.cjs.prod.js b/dist/events-3afec6fc.cjs.prod.js
+index 55bcede293fdcd7decb4eba8b228ea0699d206fe..0dc38a0080d7d257bd5b71d56299685699ba0a23 100644
+--- a/dist/events-3afec6fc.cjs.prod.js
++++ b/dist/events-3afec6fc.cjs.prod.js
+@@ -866,12 +866,12 @@ function createEvents(store) {
+         const handlers = instance.handlers;
+ 
+         /*
+-        MAYBE TODO, DELETE IF NOT: 
++        MAYBE TODO, DELETE IF NOT:
+           Check if the object is captured, captured events should not have intersects running in parallel
+           But wouldn't it be better to just replace capturedMap with a single entry?
+           Also, are we OK with straight up making picking up multiple objects impossible?
+-          
+-        const pointerId = (data as ThreeEvent<PointerEvent>).pointerId        
++
++        const pointerId = (data as ThreeEvent<PointerEvent>).pointerId
+         if (pointerId !== undefined) {
+           const capturedMeshSet = internal.capturedMap.get(pointerId)
+           if (capturedMeshSet) {
+@@ -1285,11 +1285,7 @@ useLoader.clear = function (loader, input) {
+ 
+ function createReconciler(config) {
+   const reconciler = Reconciler__default["default"](config);
+-  reconciler.injectIntoDevTools({
+-    bundleType: typeof process !== 'undefined' &&         "production" !== 'production' ? 1 : 0,
+-    rendererPackageName: '@react-three/fiber',
+-    version: React__namespace.version
+-  });
++  reconciler.injectIntoDevTools();
+   return reconciler;
+ }
+ const NoEventPriority = 0;
+@@ -1711,7 +1707,9 @@ const reconciler = /* @__PURE__ */createReconciler({
+         return constants.DefaultEventPriority;
+     }
+   },
+-  resetFormInstance() {}
++  resetFormInstance() {},
++  rendererPackageName: '@react-three/fiber',
++  rendererVersion: '9.4.0'
+ });
+ 
+ const _roots = new Map();
+diff --git a/dist/events-6ab58ae5.cjs.dev.js b/dist/events-6ab58ae5.cjs.dev.js
+index 308f355c4efd0416b959fb3fc474e29932713143..0dc38a0080d7d257bd5b71d56299685699ba0a23 100644
+--- a/dist/events-6ab58ae5.cjs.dev.js
++++ b/dist/events-6ab58ae5.cjs.dev.js
+@@ -866,12 +866,12 @@ function createEvents(store) {
+         const handlers = instance.handlers;
+ 
+         /*
+-        MAYBE TODO, DELETE IF NOT: 
++        MAYBE TODO, DELETE IF NOT:
+           Check if the object is captured, captured events should not have intersects running in parallel
+           But wouldn't it be better to just replace capturedMap with a single entry?
+           Also, are we OK with straight up making picking up multiple objects impossible?
+-          
+-        const pointerId = (data as ThreeEvent<PointerEvent>).pointerId        
++
++        const pointerId = (data as ThreeEvent<PointerEvent>).pointerId
+         if (pointerId !== undefined) {
+           const capturedMeshSet = internal.capturedMap.get(pointerId)
+           if (capturedMeshSet) {
+@@ -1285,11 +1285,7 @@ useLoader.clear = function (loader, input) {
+ 
+ function createReconciler(config) {
+   const reconciler = Reconciler__default["default"](config);
+-  reconciler.injectIntoDevTools({
+-    bundleType: typeof process !== 'undefined' && process.env.NODE_ENV !== 'production' ? 1 : 0,
+-    rendererPackageName: '@react-three/fiber',
+-    version: React__namespace.version
+-  });
++  reconciler.injectIntoDevTools();
+   return reconciler;
+ }
+ const NoEventPriority = 0;
+@@ -1711,7 +1707,9 @@ const reconciler = /* @__PURE__ */createReconciler({
+         return constants.DefaultEventPriority;
+     }
+   },
+-  resetFormInstance() {}
++  resetFormInstance() {},
++  rendererPackageName: '@react-three/fiber',
++  rendererVersion: '9.4.0'
+ });
+ 
+ const _roots = new Map();
+diff --git a/dist/events-f8cd670d.esm.js b/dist/events-f8cd670d.esm.js
+index a98880bb1202d59f0308817ece59daced7c0ba74..3188cbf7b5349dc73d563a4e7582d9663b781de5 100644
+--- a/dist/events-f8cd670d.esm.js
++++ b/dist/events-f8cd670d.esm.js
+@@ -840,12 +840,12 @@ function createEvents(store) {
+         const handlers = instance.handlers;
+ 
+         /*
+-        MAYBE TODO, DELETE IF NOT: 
++        MAYBE TODO, DELETE IF NOT:
+           Check if the object is captured, captured events should not have intersects running in parallel
+           But wouldn't it be better to just replace capturedMap with a single entry?
+           Also, are we OK with straight up making picking up multiple objects impossible?
+-          
+-        const pointerId = (data as ThreeEvent<PointerEvent>).pointerId        
++
++        const pointerId = (data as ThreeEvent<PointerEvent>).pointerId
+         if (pointerId !== undefined) {
+           const capturedMeshSet = internal.capturedMap.get(pointerId)
+           if (capturedMeshSet) {
+@@ -1259,11 +1259,7 @@ useLoader.clear = function (loader, input) {
+ 
+ function createReconciler(config) {
+   const reconciler = Reconciler(config);
+-  reconciler.injectIntoDevTools({
+-    bundleType: typeof process !== 'undefined' && process.env.NODE_ENV !== 'production' ? 1 : 0,
+-    rendererPackageName: '@react-three/fiber',
+-    version: React.version
+-  });
++  reconciler.injectIntoDevTools();
+   return reconciler;
+ }
+ const NoEventPriority = 0;
+@@ -1685,7 +1681,9 @@ const reconciler = /* @__PURE__ */createReconciler({
+         return DefaultEventPriority;
+     }
+   },
+-  resetFormInstance() {}
++  resetFormInstance() {},
++  rendererPackageName: '@react-three/fiber',
++  rendererVersion: '9.4.0'
+ });
+ 
+ const _roots = new Map();
