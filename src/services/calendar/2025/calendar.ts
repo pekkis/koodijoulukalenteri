@@ -44,6 +44,7 @@ import { scrollbarsHatch } from "@/services/calendar/2025/hatch/scrollbars/scrol
 import { chromeHatch } from "@/services/calendar/2025/hatch/chrome/chromeHatch";
 import { react19Hatch } from "@/services/calendar/2025/hatch/react19/react19Hatch";
 import { viteHatch } from "@/services/calendar/2025/hatch/vite/viteHatch";
+import { inertiaHatch } from "@/services/calendar/2025/hatch/inertia/inertiaHatch";
 
 const risujaData: Omit<HatchData, "day"> = {
   title: "Tuhmille tyhmiä lahjoja",
@@ -76,7 +77,7 @@ const hatches: HatchesData = {
   14: fsmHatch,
   15: symbolicsHatch,
   16: viteHatch,
-  17: placeholderHatch,
+  17: inertiaHatch,
   18: lookWhosTalkingHatch,
   19: react19Hatch,
   20: placeholderHatch,
