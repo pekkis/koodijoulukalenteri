@@ -1,5 +1,6 @@
 import { ClientCalendarType } from "@/services/calendar";
 import {
+  getMaxNaughtiness,
   getNaughtinessLevel,
   getNextNaughtinessLevel
 } from "@/services/naughtiness";
@@ -45,7 +46,8 @@ const useNaughtiness = (calendar: ClientCalendarType) => {
     naughtiness: effectiveNaughtiness,
     addNaughtiness,
     naughtinessLevel,
-    nextNaughtinessLevel
+    nextNaughtinessLevel,
+    maxNaughtiness: getMaxNaughtiness(calendar)
   };
 
   return ret;

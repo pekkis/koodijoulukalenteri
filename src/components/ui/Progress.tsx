@@ -1,10 +1,10 @@
 import { ComponentProps, FC } from "react";
 import * as styles from "./Progress.css";
 
-type Props = ComponentProps<"progress">;
+type Props = ComponentProps<"meter">;
 
 const Progress: FC<Props> = ({ ...rest }) => {
-  return <progress {...rest} className={styles.progress} />;
+  return <meter {...rest} className={styles.progress} />;
 };
 
 export default Progress;

@@ -50,7 +50,16 @@
 - threejs, fiber (done)
   - https://vercel.com/blog/building-an-interactive-3d-event-badge-with-react-three-fiber
   - https://www.youtube.com/watch?v=oF2bDrRZuF4
-
+- ensimmäiset webbisaitit (dome9)
+- bonusluukku 33 (done)
+- scrollbar-gutter ja scrollbar-color (done)
+- chrome 1.0 (done)
+- react 19 (done)
+  - historia
+  - https://www.joshwcomeau.com/react/css-in-rsc/
+  - React Compiler
+  - next.js 16 (canary, view transitiot)
+  - Turbopack-kehitys Nextissä
 - vite+ (vite-ekosysteemi)
   - tsdown
   - rolldown
@@ -59,13 +68,7 @@
 
 - Lupaus paremmasta
   - Promise.withResolvers()
-
-- react 19
-  - historia
-  - https://www.joshwcomeau.com/react/css-in-rsc/
-  - React Compiler
-  - next.js 16 (canary, view transitiot)
-  - Turbopack-kehitys Nextissä
+  - Promise.try()
 
 - Vibe-koodailu!
   - suno
@@ -78,12 +81,12 @@
 - effect
   - https://effect.website/
 
-- scrollbar-gutter ja scrollbar-color
   - remove scroll
 
-- ensimmäiset webbisaitit
-
 - https://gregros.dev/web/iframes-and-when-javascript-worlds-collide?fbclid=IwY2xjawOLEkVleHRuA2FlbQIxMQBzcnRjBmFwcF9pZAEwAAEeQ1_lHlCMFIpb-QGEBz72i3t8CIl0BXQbms8MQJvJBxdo55wmAeEqIBUK3rA_aem_3KK_zqahpWCFMmT-2dThAg
+
+17. CSS1 julkistettiin W3C-suositukseksi 17.12.1996 — tyylien aikakausi alkaa.
+    Wikipedia
 
 ## ehkä...
 
@@ -94,6 +97,26 @@
   - https://justfuckingusereact.com/
   - https://motherfuckingwebsite.com/
   - programming motherfucker
+
+- https://blog.vjeux.com/2025/javascript/birth-of-prettier.html
+
+- https://github.com/gvergnaud/ts-pattern
+
+- https://es-toolkit.dev/
+- https://orval.dev/
+
+- https://docs.convex.dev/home
+
+- https://rybbit.com/
+
+- https://github.com/composify-js/composify
+- https://github.com/qforge-dev/torque
+
+- https://www.rob.directory/blog/react-from-scratch
+
+- https://onestack.dev/
+
+text-wrap
 
 ## ei näitä ellei pakko
 

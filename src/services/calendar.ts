@@ -75,6 +75,16 @@ export const getCalendars = async (): Promise<CalendarType[]> => {
   return calendars;
 };
 
+export const doesCalendarExist = async (id: string) => {
+  const calendar = calendars.find((calendar) => calendar.id === id);
+
+  if (!calendar) {
+    return false;
+  }
+
+  return true;
+};
+
 export const getClientCalendar = (
   calendar: CalendarType
 ): ClientCalendarType => {

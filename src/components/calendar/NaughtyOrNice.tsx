@@ -2,24 +2,19 @@
 
 import useNaughtiness from "@/hooks/useNaughtiness";
 import { FC } from "react";
-import Progress from "../ui/Progress";
 import * as styles from "./NaughtyOrNice.css";
 import { ClientCalendarType } from "@/services/calendar";
+import Progress from "@/components/ui/Progress";
 
 type Props = {
   calendar: ClientCalendarType;
 };
 
 const NaughtyOrNice: FC<Props> = ({ calendar }) => {
-  const { naughtinessLevel, naughtiness, nextNaughtinessLevel } =
+  const { naughtinessLevel, naughtiness, maxNaughtiness } =
     useNaughtiness(calendar);
 
-  const myExp = (naughtiness || 0) - naughtinessLevel.requiredNaughtiness;
-
-  const reverseExp =
-    nextNaughtinessLevel.requiredNaughtiness -
-    naughtinessLevel.requiredNaughtiness -
-    myExp;
+  const myNaughtiness = naughtiness || 0;
 
   return (
     <div className={styles.naughtinessLevel}>
@@ -28,11 +23,8 @@ const NaughtyOrNice: FC<Props> = ({ calendar }) => {
       </div>
       <div>
         <Progress
-          max={
-            nextNaughtinessLevel.requiredNaughtiness -
-            naughtinessLevel.requiredNaughtiness
-          }
-          value={reverseExp}
+          max={maxNaughtiness}
+          value={Math.max(0, maxNaughtiness - myNaughtiness)}
         />
       </div>
     </div>

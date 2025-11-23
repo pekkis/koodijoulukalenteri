@@ -32,7 +32,7 @@ const Dialog: FC<Props> = ({ calendar, children }) => {
   });
 
   return (
-    <ViewTransition >
+    <ViewTransition>
       <Backdrop>
         <RemoveScroll>
           <div ref={ref} className={styles.dialog}>

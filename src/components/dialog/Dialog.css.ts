@@ -10,11 +10,29 @@ export const dialog = style({
   backgroundColor: theme.colors.white,
   maxHeight: `min(90vh, 35rem)`,
   overflowY: "scroll",
+  scrollbarColor: `${theme.colors.primary} rgb(200 200 200 / .5)`,
 
   "@supports": {
     "(corner-shape: squircle)": {
       borderRadius: theme.borderRadius.plumpest,
       cornerShape: "squircle"
+    }
+  },
+
+  selectors: {
+    '&:has([data-scrollbars="thin"])': {
+      scrollbarWidth: "thin",
+      scrollbarColor: `hotpink rebeccapurple`
+    },
+
+    '&:has([data-scrollbars="brown"])': {
+      scrollbarColor: `rgb(74, 65, 42) rgb(52, 46, 29)`,
+      scrollbarGutter: "stable both-edges",
+      overflowY: "unset",
+      overflow: "scroll"
+    },
+    '&:has([data-scrollbars="hide"])': {
+      scrollbarWidth: "none"
     }
   }
 });

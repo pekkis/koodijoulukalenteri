@@ -13,7 +13,8 @@ export const Margins: FC<Props> = ({
   block = 0,
   inline = 0,
   as = "div",
-  children
+  children,
+  ...rest
 }) => {
   const Component = as;
 
@@ -21,5 +22,9 @@ export const Margins: FC<Props> = ({
     [blockS]: block === "s"
   });
 
-  return <Component className={classes}>{children}</Component>;
+  return (
+    <Component className={classes} {...rest}>
+      {children}
+    </Component>
+  );
 };

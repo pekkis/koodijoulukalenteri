@@ -32,7 +32,8 @@ globalStyle("body", {
 });
 
 globalStyle("*", {
-  boxSizing: "border-box"
+  boxSizing: "border-box",
+  scrollbarColor: theme.colors.primary
 });
 
 globalStyle("strong", {

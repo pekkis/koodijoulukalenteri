@@ -2,6 +2,7 @@ import theme from "@/theme.css";
 import { style } from "@vanilla-extract/css";
 
 export const progress = style({
-  blockSize: theme.spacing.m,
-  inlineSize: "13em"
+  width: "10em",
+  height: theme.spacing.m,
+  transition: "1s all"
 });

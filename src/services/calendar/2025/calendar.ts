@@ -40,6 +40,10 @@ import { modernGitCommandsHatch } from "@/services/calendar/2025/hatch/modern-gi
 import { fsmHatch } from "@/services/calendar/2025/hatch/fsm/fsmHatch";
 import { firstWebpageHatch } from "@/services/calendar/2025/hatch/first-webpage/firstWebpageHatch";
 import { expeditionHatch } from "@/services/calendar/2025/hatch/expedition/expeditionHatch";
+import { scrollbarsHatch } from "@/services/calendar/2025/hatch/scrollbars/scrollbarsHatch";
+import { chromeHatch } from "@/services/calendar/2025/hatch/chrome/chromeHatch";
+import { react19Hatch } from "@/services/calendar/2025/hatch/react19/react19Hatch";
+import { viteHatch } from "@/services/calendar/2025/hatch/vite/viteHatch";
 
 const risujaData: Omit<HatchData, "day"> = {
   title: "Tuhmille tyhmiä lahjoja",
@@ -66,15 +70,15 @@ const hatches: HatchesData = {
   8: threedeeHatch,
   9: steveHatch,
   10: modernGitCommandsHatch,
-  11: fsmHatch,
-  12: placeholderHatch,
+  11: chromeHatch,
+  12: scrollbarsHatch,
   13: tightDataHatch,
-  14: placeholderHatch,
+  14: fsmHatch,
   15: symbolicsHatch,
-  16: placeholderHatch,
+  16: viteHatch,
   17: placeholderHatch,
   18: lookWhosTalkingHatch,
-  19: placeholderHatch,
+  19: react19Hatch,
   20: placeholderHatch,
   21: placeholderHatch,
   22: placeholderHatch,

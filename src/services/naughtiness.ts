@@ -1,6 +1,16 @@
 import { ClientCalendarType, NaughtinessLevel } from "@/services/calendar";
+import { takeLast } from "remeda";
 
 export const NAUGHTINESS_MAX = 5000;
+
+export const getMaxNaughtiness = (calendar: ClientCalendarType): number => {
+  const last = takeLast(calendar.naughtinessLevels, 1);
+
+  if (last.length !== 1) {
+    throw new Error("Something really bad happen!");
+  }
+  return last[0].requiredNaughtiness;
+};
 
 export const getNaughtinessLevel = (
   calendar: ClientCalendarType,
