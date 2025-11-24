@@ -1,4 +1,4 @@
-import { ClientCalendarType } from "@/services/calendar";
+import { ClientCalendarType, NaughtinessLevel } from "@/services/calendar";
 import {
   getMaxNaughtiness,
   getNaughtinessLevel,
@@ -25,16 +25,16 @@ const useNaughtiness = (calendar: ClientCalendarType) => {
       defaultValue: 0
     });
 
-  const effectiveNaughtiness = !isInteractive ? 0 : localStorageNaughtiness;
-
   const addNaughtiness = useCallback(
     (add: number) => {
       setLocalStorageNaughtiness((prev) => {
-        return prev + add;
+        return Math.max(0, prev + add);
       });
     },
     [setLocalStorageNaughtiness]
   );
+
+  const effectiveNaughtiness = !isInteractive ? 0 : localStorageNaughtiness;
 
   const naughtinessLevel = getNaughtinessLevel(calendar, effectiveNaughtiness);
   const nextNaughtinessLevel = getNextNaughtinessLevel(
@@ -42,12 +42,23 @@ const useNaughtiness = (calendar: ClientCalendarType) => {
     effectiveNaughtiness
   );
 
+  const firstMediumLevel = calendar.naughtinessLevels.find(
+    (level) => level.range === "medium"
+  ) as NaughtinessLevel;
+  const firstLowLevel = calendar.naughtinessLevels.find(
+    (level) => level.range === "low"
+  ) as NaughtinessLevel;
+
   const ret = {
     naughtiness: effectiveNaughtiness,
     addNaughtiness,
     naughtinessLevel,
     nextNaughtinessLevel,
-    maxNaughtiness: getMaxNaughtiness(calendar)
+    maxNaughtiness: getMaxNaughtiness(calendar),
+    range: {
+      high: firstMediumLevel?.requiredNaughtiness - 1,
+      low: firstLowLevel.requiredNaughtiness
+    }
   };
 
   return ret;

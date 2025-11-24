@@ -60,11 +60,12 @@
   - React Compiler
   - next.js 16 (canary, view transitiot)
   - Turbopack-kehitys Nextissä
-- vite+ (vite-ekosysteemi)
+- vite+ (vite-ekosysteemi) (done)
   - tsdown
   - rolldown
   - vitest
-  -
+- https://inertiajs.com (done)
+  - https://adonisjs.com/
 
 - Lupaus paremmasta
   - Promise.withResolvers()
@@ -85,12 +86,25 @@
 
 - https://gregros.dev/web/iframes-and-when-javascript-worlds-collide?fbclid=IwY2xjawOLEkVleHRuA2FlbQIxMQBzcnRjBmFwcF9pZAEwAAEeQ1_lHlCMFIpb-QGEBz72i3t8CIl0BXQbms8MQJvJBxdo55wmAeEqIBUK3rA_aem_3KK_zqahpWCFMmT-2dThAg
 
-17. CSS1 julkistettiin W3C-suositukseksi 17.12.1996 — tyylien aikakausi alkaa.
+1.  CSS1 julkistettiin W3C-suositukseksi 17.12.1996 — tyylien aikakausi alkaa.
     Wikipedia
 
 ## ehkä...
 
-- https://inertiajs.com
+https://effector.dev/
+https://effector.dev/en/api/effector-react/
+
+https://web.dev/articles/5-css-snippets-every-front-end-developer-should-know-in-2024?utm_source=chatgpt.com#nest_the_css_way
+
+https://web.dev/articles/5-css-snippets-every-front-end-developer-should-know-in-2024?utm_source=chatgpt.com#nest_the_css_way
+
+https://japa.dev/docs/introduction
+
+https://github.com/selfrefactor/rambda
+
+https://radashi.js.org/
+
+remeda
 
 - kaunista kielenkäyttöä
   - https://justfuckingusehtml.com/
@@ -127,8 +141,6 @@ text-wrap
 - https://developer.mozilla.org/en-US/blog/html-details-exclusive-accordions/
 
 - skeeman validointi
-
-- https://adonisjs.com/ +
 
 - 25 ja 26, bonusluukut kilteille!
 
@@ -168,3 +180,46 @@ View transitiot
 - https://developer.mozilla.org/en-US/docs/Web/Performance/Guides/Speculative_loading
 
 https://bradfrost.com/blog/post/the-design-system-ecosystem/
+
+Which React or web development podcasts do you listen to?
+Check all that apply.
+
+Syntax
+
+React Native Show
+
+RocketShip
+
+JavaScript Jabber
+
+The Changelog
+
+Full Stack Radio
+
+React Podcast
+
+Ladybug Podcast
+
+Shop Talk Show
+
+Front End Happy Hour
+
+JavaScript Jam
+
+Frontend First
+
+Front-End Fire
+
+PodRocket
+
+JAMStack Radio
+
+HTTP 203
+
+This Month in React
+
+JS Party
+
+React Native Radio
+
+Other…

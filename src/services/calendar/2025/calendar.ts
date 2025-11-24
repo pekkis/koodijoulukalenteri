@@ -45,6 +45,8 @@ import { chromeHatch } from "@/services/calendar/2025/hatch/chrome/chromeHatch";
 import { react19Hatch } from "@/services/calendar/2025/hatch/react19/react19Hatch";
 import { viteHatch } from "@/services/calendar/2025/hatch/vite/viteHatch";
 import { inertiaHatch } from "@/services/calendar/2025/hatch/inertia/inertiaHatch";
+import { promiseHatch } from "@/services/calendar/2025/hatch/promise/promiseHatch";
+import { svgHatch } from "@/services/calendar/2025/hatch/svg/svgHatch";
 
 const risujaData: Omit<HatchData, "day"> = {
   title: "Tuhmille tyhmiä lahjoja",
@@ -80,8 +82,8 @@ const hatches: HatchesData = {
   17: inertiaHatch,
   18: lookWhosTalkingHatch,
   19: react19Hatch,
-  20: placeholderHatch,
-  21: placeholderHatch,
+  20: promiseHatch,
+  21: svgHatch,
   22: placeholderHatch,
   23: placeholderHatch,
   24: placeholderHatch,
@@ -363,42 +365,48 @@ export const calendar: CalendarType = {
       level: 0,
       requiredNaughtiness: 0,
       name: "viaton",
-      backgroundImage: bg1.src
+      backgroundImage: bg1.src,
+      range: "high"
     },
     {
       music: "/calendar/2025/kiltin-koodarin-joulu.mp3",
       level: 1,
       requiredNaughtiness: 1,
       name: "kiltti",
-      backgroundImage: bg1.src
+      backgroundImage: bg1.src,
+      range: "high"
     },
     {
       music: "/calendar/2025/kiltin-koodarin-joulu.mp3",
       level: 2,
       requiredNaughtiness: 500,
       name: "paatunut",
-      backgroundImage: bg2.src
+      backgroundImage: bg2.src,
+      range: "medium"
     },
     {
       music: "/calendar/2025/kiltin-koodarin-joulu.mp3",
       level: 3,
       requiredNaughtiness: 1500,
       name: "tuhmuli",
-      backgroundImage: bg3.src
+      backgroundImage: bg3.src,
+      range: "medium"
     },
     {
       music: "/calendar/2025/tuhmien-koodarien-jouluhelvetti.mp3",
       level: 4,
       requiredNaughtiness: 3000,
       name: "kadotettu sielu",
-      backgroundImage: bg4.src
+      backgroundImage: bg4.src,
+      range: "low"
     },
     {
       music: "/calendar/2025/tuhmien-koodarien-jouluhelvetti.mp3",
       level: 5,
       requiredNaughtiness: 5000,
       name: "SAFe-orjapiiskuri",
-      backgroundImage: bg5.src
+      backgroundImage: bg5.src,
+      range: "low"
     }
   ],
 

@@ -28,6 +28,7 @@ export type NaughtinessLevel = {
   name: string;
   backgroundImage: string;
   music: string;
+  range: "low" | "medium" | "high";
 };
 
 export type ContentSlotName = "instructions" | "controls";

@@ -11,7 +11,7 @@ type Props = {
 };
 
 const NaughtyOrNice: FC<Props> = ({ calendar }) => {
-  const { naughtinessLevel, naughtiness, maxNaughtiness } =
+  const { naughtinessLevel, naughtiness, maxNaughtiness, range } =
     useNaughtiness(calendar);
 
   const myNaughtiness = naughtiness || 0;
@@ -24,6 +24,9 @@ const NaughtyOrNice: FC<Props> = ({ calendar }) => {
       <div>
         <Progress
           max={maxNaughtiness}
+          optimum={maxNaughtiness}
+          high={maxNaughtiness - range.high}
+          low={maxNaughtiness - range.low}
           value={Math.max(0, maxNaughtiness - myNaughtiness)}
         />
       </div>
