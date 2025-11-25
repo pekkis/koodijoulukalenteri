@@ -48,6 +48,7 @@ import { inertiaHatch } from "@/services/calendar/2025/hatch/inertia/inertiaHatc
 import { promiseHatch } from "@/services/calendar/2025/hatch/promise/promiseHatch";
 import { svgHatch } from "@/services/calendar/2025/hatch/svg/svgHatch";
 import { cssHatch } from "@/services/calendar/2025/hatch/css/cssHatch";
+import { emailHatch } from "@/services/calendar/2025/hatch/email/emailHatch";
 
 const risujaData: Omit<HatchData, "day"> = {
   title: "Tuhmille tyhmiä lahjoja",
@@ -66,8 +67,8 @@ const risujaData: Omit<HatchData, "day"> = {
 const hatches: HatchesData = {
   1: cornerCaseHatch,
   2: moviesHatch,
-  3: viewTransitionHatch,
-  4: selfHostHatch,
+  3: emailHatch,
+  4: viewTransitionHatch,
   5: colorsHatch,
   6: firstWebpageHatch,
   7: popoverHatch,
@@ -87,7 +88,7 @@ const hatches: HatchesData = {
   21: svgHatch,
   22: inertiaHatch,
   23: placeholderHatch,
-  24: placeholderHatch,
+  24: selfHostHatch,
   33: expeditionHatch,
   666: escapeHatch
 };
