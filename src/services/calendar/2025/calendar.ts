@@ -49,6 +49,7 @@ import { promiseHatch } from "@/services/calendar/2025/hatch/promise/promiseHatc
 import { svgHatch } from "@/services/calendar/2025/hatch/svg/svgHatch";
 import { cssHatch } from "@/services/calendar/2025/hatch/css/cssHatch";
 import { emailHatch } from "@/services/calendar/2025/hatch/email/emailHatch";
+import { aiHatch } from "@/services/calendar/2025/hatch/ai/aiHatch";
 
 const risujaData: Omit<HatchData, "day"> = {
   title: "Tuhmille tyhmiä lahjoja",
@@ -87,8 +88,8 @@ const hatches: HatchesData = {
   20: promiseHatch,
   21: svgHatch,
   22: inertiaHatch,
-  23: placeholderHatch,
-  24: selfHostHatch,
+  23: selfHostHatch,
+  24: aiHatch,
   33: expeditionHatch,
   666: escapeHatch
 };

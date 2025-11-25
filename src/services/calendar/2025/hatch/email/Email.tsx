@@ -20,8 +20,9 @@ export const Email: FC = () => {
       <form action={send}>
         <Stack row>
           <TextField
-            defaultValue={"pekkisx@gmail.com"}
+            name="email"
             type="email"
+            defaultValue={"pekkisx@gmail.com"}
             placeholder="uhrin sähköposti"
           />
           <Button svelte disabled={pending} type="submit">
@@ -29,7 +30,9 @@ export const Email: FC = () => {
           </Button>
         </Stack>
 
-        {state === "sent" && <Paragraph>Sinne meni!</Paragraph>}
+        {state === "sent" && <Paragraph>Sinne meni! ❤️</Paragraph>}
+
+        {state === "fail" && <Paragraph>Pieleen meni! 😞</Paragraph>}
       </form>
     </Margins>
   );

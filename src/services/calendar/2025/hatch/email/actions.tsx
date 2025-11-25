@@ -1,49 +1,45 @@
 "use server";
 
-import { FC } from "react";
 import { Resend } from "resend";
-import { Html, Button, Tailwind, Img } from "@react-email/components";
 
-import image from "./email.webp";
+import Email from "@/emails/ad";
 
-const Email: FC = () => {
-  return (
-    <Html lang="en" dir="ltr">
-      <Tailwind>
-        <Button href="https://example.com" style={{ color: "#61dafb" }}>
-          Click me
-        </Button>
+import * as z from "zod";
 
-        <Img
-          alt="Koodijoulukalenteri"
-          className="rounded-[12px] my-0 mx-auto"
-          width={250}
-          height={250}
-          src={image.src}
-        />
-      </Tailwind>
-    </Html>
-  );
-};
+const schema = z.object({
+  email: z.email()
+});
 
-export async function sendMail(
-  status: string,
-  data: FormData
-): Promise<string> {
+export async function sendMail(_: string, data: FormData): Promise<string> {
   const { promise, resolve } = Promise.withResolvers<string>();
 
-  const resend = new Resend(process.env.RESEND_APIKEY);
+  const obj = {
+    email: data.get("email")
+  };
 
-  resend.emails
-    .send({
-      from: "Joulupukki <joulupukki@koodijoulukalenteri.pekkis.eu>",
-      to: "pekkisx@gmail.com",
-      subject: "Haluaisitko kuulla koodijoulukalenterista",
-      react: <Email />
-    })
-    .then(() => {
-      resolve("sent");
-    });
+  try {
+    const validated = schema.parse(obj);
 
-  return promise;
+    const resend = new Resend(process.env.RESEND_APIKEY);
+
+    resend.emails
+      .send(
+        {
+          from: "Joulupukki <joulupukki@koodijoulukalenteri.pekkis.eu>",
+          to: validated.email,
+          subject: "Haluaisitko kuulla koodijoulukalenterista?",
+          react: <Email />
+        },
+        {
+          idempotencyKey: `spam-${validated.email}`
+        }
+      )
+      .then(() => {
+        resolve("sent");
+      });
+
+    return promise;
+  } catch {
+    return "fail";
+  }
 }
