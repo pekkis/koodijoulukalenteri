@@ -309,42 +309,48 @@ export const calendar: CalendarType = {
       level: 0,
       requiredNaughtiness: 0,
       name: "viaton",
-      backgroundImage: hipster.src
+      backgroundImage: hipster.src,
+      range: "high"
     },
     {
       music: "/calendar/2023/jingle-bells.mp3",
       level: 1,
       requiredNaughtiness: 1,
       name: "kiltti",
-      backgroundImage: hipster.src
+      backgroundImage: hipster.src,
+      range: "high"
     },
     {
       music: "/calendar/2023/jingle-bells.mp3",
       level: 2,
       requiredNaughtiness: 500,
       name: "paatunut",
-      backgroundImage: zombie.src
+      backgroundImage: zombie.src,
+      range: "medium"
     },
     {
       music: "/calendar/2023/jingle-bells.mp3",
       level: 3,
       requiredNaughtiness: 1500,
       name: "suurtuhma",
-      backgroundImage: evil.src
+      backgroundImage: evil.src,
+      range: "medium"
     },
     {
       music: "/calendar/2023/jingle-bells.mp3",
       level: 4,
       requiredNaughtiness: 3000,
       name: "kadotettu sielu",
-      backgroundImage: cursedSoul.src
+      backgroundImage: cursedSoul.src,
+      range: "low"
     },
     {
       music: "/calendar/2023/jingle-bells.mp3",
       level: 5,
       requiredNaughtiness: 5000,
       name: "styranki",
-      backgroundImage: hitler.src
+      backgroundImage: hitler.src,
+      range: "low"
     }
   ],
 
