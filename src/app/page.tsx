@@ -11,6 +11,7 @@ import { Paragraph } from "@/components/ui/Paragraph";
 import { Markdown } from "@/components/Markdown";
 import { getTime } from "@/services/time";
 import Footer from "@/components/Footer";
+import { connection } from "next/server";
 
 export const metadata = {
   title: "Koodijoulukalenteri"
@@ -19,6 +20,8 @@ export const metadata = {
 export const revalidate = 60;
 
 export default async function IndexPage() {
+  await connection();
+
   const calendars = await getCalendars();
 
   const now = getTime();

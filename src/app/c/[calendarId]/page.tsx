@@ -1,6 +1,7 @@
 import { getCalendar } from "@/services/calendar";
 import { Metadata } from "next";
 import { notFound } from "next/navigation";
+import { connection } from "next/server";
 
 export const revalidate = 60;
 
@@ -35,6 +36,7 @@ export const generateMetadata = async ({
 };
 
 export default async function CalendarPage({ params }: Props) {
+  await connection();
   const { calendarId } = await params;
   const calendar = await getCalendar(calendarId);
 

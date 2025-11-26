@@ -4,6 +4,7 @@ import { getCalendar, getClientCalendar } from "@/services/calendar";
 import { getTime } from "@/services/time";
 import { Metadata } from "next";
 import { notFound } from "next/navigation";
+import { connection } from "next/server";
 import { ViewTransition } from "react";
 
 type Props = {
@@ -46,6 +47,7 @@ export const generateMetadata = async ({
 };
 
 export default async function HatchPage({ params }: Props) {
+  await connection();
   const { calendarId, hatchId } = await params;
 
   const calendar = await getCalendar(calendarId);
