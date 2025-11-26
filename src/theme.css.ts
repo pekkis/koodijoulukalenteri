@@ -29,8 +29,12 @@ const theme = createGlobalTheme(":root", {
   },
 
   colors: {
+    foreground: "light-dark(rgb(0 0 0), rgb(255 255 255))",
+    background: "light-dark(rgb(255 255 255), rgb(33 33 33))",
+    backgroundLight: "light-dark(rgb(255 255 255), rgb(44 44 44))",
+
     primary: "#ff0000",
-    secondary: "#b30000",
+    secondary: "light-dark(#b30000, #cc9999)",
     tertiary: "#ffbfbf",
     quaternary: "#00ff00",
     quinary: "#00b300",

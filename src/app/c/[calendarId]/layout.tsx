@@ -46,7 +46,7 @@ export default async function CalendarLayout({ params, children }: Props) {
             <CalendarWrapper calendar={calendar} isInteractive={isInteractive}>
               {children}
             </CalendarWrapper>
-            {process.env.DEBUG && <Debug />}
+            {process.env.NEXT_PUBLIC_DEBUG && <Debug calendar={calendar} />}
           </Main>
           <Footer>
             Copyright &copy; Mikko &quot;Pekkis&quot; Forsström |{" "}

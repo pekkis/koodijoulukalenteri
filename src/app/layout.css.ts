@@ -4,6 +4,7 @@ import theme from "@/theme.css";
 globalStyle("html", {
   fontSize: "18px",
   fontFamily: theme.fontFamily.body,
+  color: theme.colors.foreground,
   fontVariationSettings: '"wght" 400',
   lineHeight: theme.lineHeight.body,
 
@@ -21,7 +22,7 @@ globalStyle("a, a:hover", {
 globalStyle("body", {
   marginBlock: 0,
   marginInline: 0,
-  backgroundColor: theme.colors.white,
+  backgroundColor: theme.colors.background,
   padding: 0,
 
   "@media": {

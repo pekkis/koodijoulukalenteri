@@ -36,6 +36,7 @@
     "jotai": "^2.15.1",
     "luxon": "^3.7.2",
     "next": "16.0.3",
+    "next-themes": "^0.4.6",
     "normalize.css": "^8.0.1",
     "nuqs": "^2.7.3",
     "open-props": "^1.7.16",

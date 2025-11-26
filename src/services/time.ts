@@ -2,12 +2,7 @@ import { HatchConfig } from "@/services/calendar";
 import { DateTime, DurationLike } from "luxon";
 
 export const isHatchOpenable = (hatch: HatchConfig): boolean => {
-  if (process.env.DEBUG) {
-    return true;
-  }
-
   const now = getTime();
-
   return now >= hatch.openableAt;
 };
 

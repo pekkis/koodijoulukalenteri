@@ -23,7 +23,8 @@ export const InstructionsSlot: FC<Props> = ({ calendar }) => {
       <Paragraph justify>
         <FaSkull /> Varoituksen sana: kooditontut huomaavat, jos kurkit
         luukkuihin etukäteen. Nukkumatin unihiekka päivittää kalenterin joka
-        aamu kello viisi, mutta voit varmuudeksi rynkytellä reloadia!
+        aamu huomaamattasi suunnilleen kello viisi, mutta voit varmuudeksi
+        rynkytellä reloadia!
       </Paragraph>
 
       {now < calendar.openAt && (

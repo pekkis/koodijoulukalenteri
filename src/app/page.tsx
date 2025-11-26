@@ -16,7 +16,7 @@ export const metadata = {
   title: "Koodijoulukalenteri"
 };
 
-export const dynamic = "force-dynamic";
+export const revalidate = 60;
 
 export default async function IndexPage() {
   const calendars = await getCalendars();

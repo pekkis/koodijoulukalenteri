@@ -97,7 +97,7 @@ export const inside = style({
   borderWidth: "1px",
   borderStyle: "dashed",
   borderColor: theme.colors.hatchBorder,
-  backgroundColor: theme.colors.white,
+  backgroundColor: theme.colors.backgroundLight,
   opacity: 0,
   position: "absolute",
   inset: 0,
@@ -113,7 +113,7 @@ export const darkInside = style({
 });
 
 export const insideOpen = style({
-  backgroundColor: theme.colors.white,
+  backgroundColor: theme.colors.backgroundLight,
   borderWidth: "1px",
   borderStyle: "dashed",
   borderColor: theme.colors.hatchBorder,

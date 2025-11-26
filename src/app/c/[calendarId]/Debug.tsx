@@ -1,10 +1,16 @@
+import { CalendarType } from "@/services/calendar";
 import { getTime } from "@/services/time";
 import { DateTime } from "luxon";
 import { FC } from "react";
 
-const Debug: FC = () => {
-  const then = DateTime.utc(2023, 12, 1);
-  const now = DateTime.utc();
+type Props = {
+  calendar: CalendarType;
+};
+
+const Debug: FC<Props> = ({ calendar }) => {
+  const then = calendar.openAt;
+
+  const now = getTime();
 
   const diff = then.diff(now, "minutes");
 
@@ -12,8 +18,8 @@ const Debug: FC = () => {
 
   return (
     <div>
-      <div>seconds from beginning: {diff.minutes}</div>
-      <div>time: {time.toLocaleString()}</div>
+      <div>minutes from beginning: {diff.minutes}</div>
+      <div>time: {time.toLocaleString(DateTime.DATETIME_MED_WITH_SECONDS)}</div>
       {process.env.NODE_ENV}
     </div>
   );

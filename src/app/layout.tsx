@@ -1,5 +1,6 @@
 import { ReactNode } from "react";
 import { NuqsAdapter } from "nuqs/adapters/next/app";
+import { ThemeProvider } from "next-themes";
 
 import "normalize.css";
 import "./layout.css";
@@ -42,7 +43,11 @@ export const metadata: Metadata = {
 
 export default async function RootLayout({ children }: Props) {
   return (
-    <html lang="fi" className={clsx(nunito.variable, mountains.variable)}>
+    <html
+      lang="fi"
+      className={clsx(nunito.variable, mountains.variable)}
+      suppressHydrationWarning
+    >
       <head>
         <link
           type="text/plain"
@@ -58,7 +63,9 @@ export default async function RootLayout({ children }: Props) {
         ></script>*/}
       </head>
       <body id="root">
-        <NuqsAdapter>{children}</NuqsAdapter>
+        <ThemeProvider>
+          <NuqsAdapter>{children}</NuqsAdapter>
+        </ThemeProvider>
       </body>
     </html>
   );
