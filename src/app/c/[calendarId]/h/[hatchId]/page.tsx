@@ -35,6 +35,7 @@ export const generateMetadata = async ({
   }
 
   return {
+    metadataBase: new URL("https://koodijoulukalenteri.pekkis.eu"),
     title: `Luukku ${hatchId} - ${calendar.title}`,
     description: calendar.metaDescription || calendar.description,
     openGraph: {
