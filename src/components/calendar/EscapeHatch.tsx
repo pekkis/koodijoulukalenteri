@@ -4,11 +4,12 @@ import useNaughtiness from "@/hooks/useNaughtiness";
 import cx from "clsx";
 import { FC, useEffect, useState } from "react";
 import { PiPentagramBold } from "react-icons/pi";
-import Hatch, { HatchProps } from "../hatch/Hatch";
+import Hatch from "../hatch/Hatch";
 import * as styles from "./EscapeHatch.css";
 
 import OuterLayer from "../hatch-renderer/OuterLayer";
 import useOpenHatches from "@/hooks/useOpenHatches";
+import { HatchProps } from "@/components/hatch/hatch-types";
 
 const InnerEscapeHatch: FC<{
   position: HatchProps["position"];

@@ -1,8 +1,8 @@
-import { StaticImageData } from "next/image";
+import type { StaticImageData } from "next/image";
 
-import { HatchPosition } from "@/components/hatch/Hatch";
-import { FC } from "react";
-import { ClientCalendarType } from "@/services/calendar";
+import type { FC } from "react";
+import type { ClientCalendarType } from "@/services/calendar";
+import { HatchPosition } from "@/components/hatch/hatch-types";
 
 export type MarkdownBlockType = {
   type: "markdown";

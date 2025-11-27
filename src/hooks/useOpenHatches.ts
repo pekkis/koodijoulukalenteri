@@ -14,8 +14,8 @@ const useOpenHatches = () => {
       if (isOpen) {
         setOpenHatches(openHatches.filter((oh) => oh !== day));
       } else {
-        window.plausible?.("Open Hatch", {
-          props: { day: day }
+        window.rybbit?.event?.("Open Hatch", {
+          day
         });
         setOpenHatches([...openHatches, day]);
       }

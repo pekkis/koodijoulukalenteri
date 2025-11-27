@@ -10,6 +10,7 @@ import { Metadata, Viewport } from "next";
 
 import { Nunito, Mountains_of_Christmas } from "next/font/google";
 import clsx from "clsx";
+import Script from "next/script";
 
 const nunito = Nunito({
   subsets: ["latin"],
@@ -67,6 +68,11 @@ export default async function RootLayout({ children }: Props) {
           <NuqsAdapter>{children}</NuqsAdapter>
         </ThemeProvider>
       </body>
+      <Script
+        src="https://app.rybbit.io/api/script.js"
+        data-site-id="YOUR_SITE_ID"
+        strategy="afterInteractive"
+      />
     </html>
   );
 }

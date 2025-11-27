@@ -12,6 +12,7 @@ type Props = {
 const NextImg: FC<Props> = ({ src, className, alt, width, height }) => {
   return (
     <Image
+      loading="lazy"
       alt={alt}
       src={src.src}
       width={width}

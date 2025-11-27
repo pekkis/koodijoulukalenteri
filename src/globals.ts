@@ -2,6 +2,6 @@ export {};
 
 declare global {
   interface Window {
-    plausible?: (event: string, props: unknown) => void;
+    rybbit?: { event: (event: string, props: unknown) => void };
   }
 }

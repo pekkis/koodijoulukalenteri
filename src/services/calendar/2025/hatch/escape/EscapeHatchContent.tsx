@@ -20,7 +20,7 @@ export const EscapeHatchContent: FC<Props> = ({ calendar }) => {
           addNaughtiness(-Infinity);
         }}
       >
-        Myy sielusi
+        Myy sielu
       </Button>
     </p>
   );

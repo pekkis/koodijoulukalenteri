@@ -37,7 +37,7 @@ import risuja6 from "./assets/risuja2.jpeg";
 import risuja7 from "./assets/risuja3.jpeg";
 import { isHatchOpenable } from "@/services/time";
 import { DateTime } from "luxon";
-import EscapeHatch from "@/components/calendar/EscapeHatch";
+
 import { theme2023 } from "@/services/calendar/2023/theme-2023.css";
 
 import christmasyProgrammers from "./assets/programmers.webp";
@@ -314,7 +314,10 @@ export const calendar: CalendarType = {
       openableAt: DateTime.local(666, 6, 6, 6, {
         zone: "Europe/Helsinki"
       }),
-      hatchComponent: EscapeHatch
+      hatchComponent: async () => {
+        const EscapeHatch = await import("@/components/calendar/EscapeHatch");
+        return EscapeHatch.default;
+      }
     }
   ],
 

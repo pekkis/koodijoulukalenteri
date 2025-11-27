@@ -3,10 +3,11 @@
 import useNaughtiness from "@/hooks/useNaughtiness";
 import cx from "clsx";
 import { FC, ReactNode, useEffect, useState } from "react";
-import Hatch, { HatchProps } from "@/components/hatch/Hatch";
+import Hatch from "@/components/hatch/Hatch";
 import * as styles from "./EscapeHatch.css";
 
 import useOpenHatches from "@/hooks/useOpenHatches";
+import { HatchProps } from "@/components/hatch/hatch-types";
 
 const InnerEscapeHatch: FC<{
   position: HatchProps["position"];

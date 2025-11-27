@@ -1,7 +1,7 @@
 import { FC } from "react";
 import HatchPeek from "@/components/hatch-renderer/HatchPeek";
 import { getClientCalendar } from "@/services/calendar";
-import { InnerHatchProps } from "@/components/hatch/Hatch";
+import { InnerHatchProps } from "@/components/hatch/hatch-types";
 
 export const CalendarWall2025: FC<InnerHatchProps> = async ({
   calendar,

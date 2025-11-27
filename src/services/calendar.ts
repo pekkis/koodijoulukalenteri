@@ -2,15 +2,12 @@ import "server-only";
 
 /* eslint-disable @typescript-eslint/no-unused-vars */
 
-import { HatchData } from "@/services/hatch";
-import { calendar as calendar2023 } from "./calendar/2023/calendar";
-import { calendar as calendar2025 } from "./calendar/2025/calendar";
-import { calendar as calendar2023_redux } from "./calendar/2023-redux/calendar";
-import {
+import type { HatchData } from "@/services/hatch";
+import type {
   HatchPosition,
   HatchProps,
   InnerHatchProps
-} from "@/components/hatch/Hatch";
+} from "@/components/hatch/hatch-types";
 import { DateTime } from "luxon";
 import { FC } from "react";
 
@@ -18,8 +15,8 @@ export type HatchConfig = {
   day: number;
   position: HatchPosition;
   openableAt: DateTime;
-  hatchComponent?: FC<HatchProps>;
-  innerHatchComponent?: FC<InnerHatchProps>;
+  hatchComponent?: () => Promise<FC<HatchProps>>;
+  innerHatchComponent?: () => Promise<FC<InnerHatchProps>>;
 };
 
 export type NaughtinessLevel = {
@@ -34,8 +31,8 @@ export type NaughtinessLevel = {
 export type ContentSlotName = "instructions" | "controls";
 
 export type CalendarType = {
-  defaultHatchComponent?: FC<HatchProps>;
-  defaultInnerHatchComponent?: FC<InnerHatchProps>;
+  defaultHatchComponent?: () => Promise<FC<HatchProps>>;
+  defaultInnerHatchComponent?: () => Promise<FC<InnerHatchProps>>;
 
   themeClassName: string;
   year: number;
@@ -45,6 +42,14 @@ export type CalendarType = {
   getHatchData: (hatch: HatchConfig) => Promise<HatchData | null>;
   hatches: HatchConfig[];
   naughtinessLevels: NaughtinessLevel[];
+
+  /*
+  getNaughtinessIncrement?: (
+    calendar: ClientCalendarType,
+    openHatches: number[]
+  ) => number;
+   */
+
   description: string;
   metaDescription?: string;
   openAt: DateTime;
@@ -66,18 +71,31 @@ export type ClientCalendarType = Omit<
   openAt: string;
 };
 
-const calendars = [
-  calendar2023,
-  calendar2023_redux,
-  calendar2025
-] satisfies CalendarType[];
+const calendars: Record<string, () => Promise<CalendarType>> = {
+  2023: async () => {
+    const { calendar } = await import("./calendar/2023/calendar");
+    return calendar;
+  },
+  "2023-redux": async () => {
+    const { calendar } = await import("./calendar/2023-redux/calendar");
+    return calendar;
+  },
+  2025: async () => {
+    const { calendar } = await import("./calendar/2025/calendar");
+    return calendar;
+  }
+};
 
 export const getCalendars = async (): Promise<CalendarType[]> => {
-  return calendars;
+  return Promise.all(
+    Object.values(calendars).map((obu) => {
+      return obu();
+    })
+  );
 };
 
 export const doesCalendarExist = async (id: string) => {
-  const calendar = calendars.find((calendar) => calendar.id === id);
+  const calendar = calendars[id];
 
   if (!calendar) {
     return false;
@@ -106,11 +124,11 @@ export const getClientCalendar = (
 };
 
 export const getCalendar = async (id: string): Promise<CalendarType | null> => {
-  const calendar = calendars.find((calendar) => calendar.id === id);
+  const calendar = calendars[id];
 
   if (!calendar) {
     return null;
   }
 
-  return calendar;
+  return calendar();
 };

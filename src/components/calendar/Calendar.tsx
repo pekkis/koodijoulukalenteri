@@ -1,19 +1,21 @@
-import { FC, useMemo } from "react";
-import CalendarWall from "../hatch/CalendarWall";
-import Hatch from "../hatch/Hatch";
+import { FC } from "react";
 import * as styles from "./Calendar.css";
-import { isHatchOpenable } from "@/services/time";
+
 import { sortBy } from "remeda";
 import { CalendarType, getClientCalendar } from "@/services/calendar";
 import { CalendarBackground } from "@/components/calendar/CalendarBackground";
+import { CalendarHatch } from "@/components/calendar/CalendarHatch";
 
 type Props = {
   calendar: CalendarType;
   isInteractive?: boolean;
 };
 
-export const Calendar: FC<Props> = ({ calendar, isInteractive = false }) => {
-  const clientCalendar = useMemo(() => getClientCalendar(calendar), [calendar]);
+export const Calendar: FC<Props> = async ({
+  calendar,
+  isInteractive = false
+}) => {
+  const clientCalendar = getClientCalendar(calendar);
 
   const sortedHatches = sortBy(calendar.hatches, (hatch) => {
     return hatch.position.left;
@@ -24,26 +26,13 @@ export const Calendar: FC<Props> = ({ calendar, isInteractive = false }) => {
       <CalendarBackground calendar={clientCalendar}>
         <div className={styles.grid}>
           {sortedHatches.map((config) => {
-            const { day, position } = config;
-
-            const HatchComponent =
-              config.hatchComponent || calendar.defaultHatchComponent || Hatch;
-            const InnerHatchComponent =
-              config.innerHatchComponent ||
-              calendar.defaultInnerHatchComponent ||
-              CalendarWall;
-
             return (
-              <HatchComponent
-                isInteractive={isInteractive}
-                calendar={clientCalendar}
+              <CalendarHatch
                 key={config.day}
-                isOpenable={isHatchOpenable(config)}
-                day={day}
-                position={position}
-              >
-                <InnerHatchComponent calendar={calendar} hatch={config} />
-              </HatchComponent>
+                isInteractive={isInteractive}
+                calendar={calendar}
+                config={config}
+              />
             );
           })}
         </div>

@@ -9,9 +9,7 @@ export const EvilAi: FC = () => {
   const { toggleHatch } = useOpenHatches();
 
   const evilToggler = () => {
-    console.log("HEH HEI");
     const random = randomInteger(1, 24);
-
     toggleHatch(random);
   };
 

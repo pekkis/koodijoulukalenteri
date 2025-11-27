@@ -1,40 +1,12 @@
 "use client";
 
-import { FC, ReactNode } from "react";
+import { Activity, FC } from "react";
 import * as styles from "./Hatch.css";
 import cx from "clsx";
 import clsx from "clsx";
 import useOpenHatches from "@/hooks/useOpenHatches";
 import useNaughtiness from "@/hooks/useNaughtiness";
-import {
-  CalendarType,
-  ClientCalendarType,
-  HatchConfig
-} from "@/services/calendar";
-
-export type HatchPosition = {
-  top: number;
-  left: number;
-  width: number;
-  height: number;
-};
-
-export type HatchProps = {
-  calendar: ClientCalendarType;
-  isInteractive?: boolean;
-  isOpenable?: boolean;
-  day: number;
-  position: HatchPosition;
-  className?: string;
-  children: ReactNode;
-  naughtinessIncrease?: number;
-  isDark?: boolean;
-};
-
-export type InnerHatchProps = {
-  calendar: CalendarType;
-  hatch: HatchConfig;
-};
+import { HatchProps } from "@/components/hatch/hatch-types";
 
 const Hatch: FC<HatchProps> = ({
   calendar,
@@ -119,7 +91,7 @@ const Hatch: FC<HatchProps> = ({
             [styles.insideOpen]: isOpen
           })}
         >
-          {children}
+          <Activity mode={isOpen ? "visible" : "hidden"}>{children}</Activity>
         </div>
       </label>
     </div>

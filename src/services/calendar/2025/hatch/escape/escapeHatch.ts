@@ -1,5 +1,5 @@
 import { HatchDataWithoutDay } from "@/services/hatch";
-import image from "./kontrahti.webp";
+import image from "./ellison.webp";
 import { EscapeHatchContent } from "./EscapeHatchContent";
 
 export const escapeHatch: HatchDataWithoutDay = {
@@ -12,9 +12,9 @@ export const escapeHatch: HatchDataWithoutDay = {
   content: [
     {
       type: "markdown",
-      text: `Tuhmuutesi on saavuttanut mittaluokan, josta ei ole paluuta. Jos sinulle oli joskus tarjolla armoa, nyt on auttamatta liian myöhäistä.
+      text: `Tuhmuutesi on saavuttanut mittaluokan, josta ei ole paluuta. Jos sinulle olikin joskus tarjolla armoa, nyt on liian myöhäistä.
 
-Sielusi on musta, musta kuin... musta aukko. Voit yhtä hyvin myydä sen, mikä on peruuttamattomasti menetetty. Ehkä pelastuksesi on löydettävissä pohjattomasta pahuudesta.`
+Omatuntosi on musta, musta kuin... musta aukko. Voit yhtä hyvin myydä paholaiselle sen kuivan korpun, joka joskus oli sielusi.`
     },
     {
       type: "jsx",

@@ -1,6 +1,6 @@
 import { CalendarType, HatchConfig } from "@/services/calendar";
 
-import { getPosition, HatchData, HatchesData } from "@/services/hatch";
+import { getPosition, HatchData } from "@/services/hatch";
 
 import risuja1 from "./assets/risuja-1.webp";
 import risuja2 from "./assets/risuja-2.webp";
@@ -8,6 +8,10 @@ import risuja3 from "./assets/risuja-3.webp";
 import risuja4 from "./assets/risuja-4.webp";
 import risuja5 from "./assets/risuja-5.webp";
 import risuja6 from "./assets/risuja-6.webp";
+import risuja7 from "./assets/risuja-7.webp";
+import risuja8 from "./assets/risuja-8.webp";
+import risuja9 from "./assets/risuja-9.webp";
+import risuja10 from "./assets/risuja-10.webp";
 
 import { isHatchOpenable } from "@/services/time";
 import { DateTime } from "luxon";
@@ -19,37 +23,8 @@ import bg3 from "./assets/bg-3.webp";
 import bg4 from "./assets/bg-4.webp";
 import bg5 from "./assets/bg-5.webp";
 
-import { placeholderHatch } from "./hatch/placeholder/placeholderHatch";
-import { escapeHatch } from "./hatch/escape/escapeHatch";
 import { InstructionsSlot } from "@/services/calendar/2025/slots/InstructionsSlot";
 import { ControlsSlot } from "@/services/calendar/2025/slots/ControlsSlot";
-import EscapeHatch from "@/services/calendar/2025/components/EscapeHatch";
-import { CalendarWall2025 } from "@/services/calendar/2025/components/CalendarWall2025";
-import { viewTransitionHatch } from "@/services/calendar/2025/hatch/view-transition/viewTransitionHatch";
-import { cornerCaseHatch } from "@/services/calendar/2025/hatch/corner-case/cornerCaseHatch";
-import { moviesHatch } from "@/services/calendar/2025/hatch/movies/moviesHatch";
-import { steveHatch } from "@/services/calendar/2025/hatch/steve/steveHatch";
-import { lookWhosTalkingHatch } from "@/services/calendar/2025/hatch/look-whos-talking/lookWhosTalkingHatch";
-import { tightDataHatch } from "@/services/calendar/2025/hatch/tight-data/tightDataHatch";
-import { symbolicsHatch } from "@/services/calendar/2025/hatch/symbolics/symbolicsHatch";
-import { selfHostHatch } from "@/services/calendar/2025/hatch/self-host/selfHostHatch";
-import { colorsHatch } from "@/services/calendar/2025/hatch/colors/colorsHatch";
-import { popoverHatch } from "@/services/calendar/2025/hatch/popover/popoverHatch";
-import { threedeeHatch } from "@/services/calendar/2025/hatch/threedee/threedeeHatch";
-import { modernGitCommandsHatch } from "@/services/calendar/2025/hatch/modern-git-commands/modernGitCommandsHatch";
-import { fsmHatch } from "@/services/calendar/2025/hatch/fsm/fsmHatch";
-import { firstWebpageHatch } from "@/services/calendar/2025/hatch/first-webpage/firstWebpageHatch";
-import { expeditionHatch } from "@/services/calendar/2025/hatch/expedition/expeditionHatch";
-import { scrollbarsHatch } from "@/services/calendar/2025/hatch/scrollbars/scrollbarsHatch";
-import { chromeHatch } from "@/services/calendar/2025/hatch/chrome/chromeHatch";
-import { react19Hatch } from "@/services/calendar/2025/hatch/react19/react19Hatch";
-import { viteHatch } from "@/services/calendar/2025/hatch/vite/viteHatch";
-import { inertiaHatch } from "@/services/calendar/2025/hatch/inertia/inertiaHatch";
-import { promiseHatch } from "@/services/calendar/2025/hatch/promise/promiseHatch";
-import { svgHatch } from "@/services/calendar/2025/hatch/svg/svgHatch";
-import { cssHatch } from "@/services/calendar/2025/hatch/css/cssHatch";
-import { emailHatch } from "@/services/calendar/2025/hatch/email/emailHatch";
-import { aiHatch } from "@/services/calendar/2025/hatch/ai/aiHatch";
 
 const risujaData: Omit<HatchData, "day"> = {
   title: "Tuhmille tyhmiä lahjoja",
@@ -65,41 +40,17 @@ const risujaData: Omit<HatchData, "day"> = {
   ]
 };
 
-const hatches: HatchesData = {
-  1: cornerCaseHatch,
-  2: moviesHatch,
-  3: emailHatch,
-  4: viewTransitionHatch,
-  5: colorsHatch,
-  6: firstWebpageHatch,
-  7: popoverHatch,
-  8: threedeeHatch,
-  9: steveHatch,
-  10: modernGitCommandsHatch,
-  11: chromeHatch,
-  12: scrollbarsHatch,
-  13: tightDataHatch,
-  14: fsmHatch,
-  15: symbolicsHatch,
-  16: viteHatch,
-  17: cssHatch,
-  18: lookWhosTalkingHatch,
-  19: react19Hatch,
-  20: promiseHatch,
-  21: svgHatch,
-  22: inertiaHatch,
-  23: selfHostHatch,
-  24: aiHatch,
-  33: expeditionHatch,
-  666: escapeHatch
-};
-
 const description = `Vuoden 2025 koodijoulukalenterista löydät vuosien 2024 ja 2025 mehevimmät koodipöräytykset.
 
 Älä yritä kurkkia luukkuja etukäteen tai tee tuhmuuksia. Tontut, ne pienet perkeleet, kyyläävät ikkunan takana 24/7!`;
 
 export const calendar: CalendarType = {
-  defaultInnerHatchComponent: CalendarWall2025,
+  defaultInnerHatchComponent: async () => {
+    const { CalendarWall2025 } = await import(
+      "@/services/calendar/2025/components/CalendarWall2025"
+    );
+    return CalendarWall2025;
+  },
 
   id: "2025",
   year: 2025,
@@ -220,7 +171,7 @@ export const calendar: CalendarType = {
     {
       day: 33,
       position: getPosition(-21, -3, 4, 4),
-      openableAt: DateTime.local(2025, 1, 1, 5, {
+      openableAt: DateTime.local(2025, 12, 1, 5, {
         zone: "Europe/Helsinki"
       })
     },
@@ -327,7 +278,12 @@ export const calendar: CalendarType = {
       openableAt: DateTime.local(1978, 3, 21, {
         zone: "Europe/Helsinki"
       }),
-      hatchComponent: EscapeHatch
+      hatchComponent: async () => {
+        const EscapeHatch = await import(
+          "@/services/calendar/2025/components/EscapeHatch"
+        );
+        return EscapeHatch.default;
+      }
     }
   ],
 
@@ -346,14 +302,20 @@ export const calendar: CalendarType = {
               risuja3,
               risuja4,
               risuja5,
-              risuja6
+              risuja6,
+              risuja7,
+              risuja8,
+              risuja9,
+              risuja10
             ];
 
-            return risut[hatch.day % 6];
+            return risut[hatch.day % 10];
           }
         }
       };
     }
+
+    const { hatches } = await import("./hatches");
 
     if (hatches[hatch.day]) {
       return { ...hatches[hatch.day], day: hatch.day };
@@ -390,7 +352,7 @@ export const calendar: CalendarType = {
     {
       music: "/calendar/2025/kiltin-koodarin-joulu.mp3",
       level: 3,
-      requiredNaughtiness: 1500,
+      requiredNaughtiness: 2000,
       name: "tuhmuli",
       backgroundImage: bg3.src,
       range: "medium"
@@ -398,7 +360,7 @@ export const calendar: CalendarType = {
     {
       music: "/calendar/2025/tuhmien-koodarien-jouluhelvetti.mp3",
       level: 4,
-      requiredNaughtiness: 3000,
+      requiredNaughtiness: 4000,
       name: "kadotettu sielu",
       backgroundImage: bg4.src,
       range: "low"
@@ -406,7 +368,7 @@ export const calendar: CalendarType = {
     {
       music: "/calendar/2025/tuhmien-koodarien-jouluhelvetti.mp3",
       level: 5,
-      requiredNaughtiness: 5000,
+      requiredNaughtiness: 10000,
       name: "SAFe-orjapiiskuri",
       backgroundImage: bg5.src,
       range: "low"
