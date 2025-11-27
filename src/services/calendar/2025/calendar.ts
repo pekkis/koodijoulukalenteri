@@ -66,7 +66,7 @@ export const calendar: CalendarType = {
   metaDescription:
     "Vuoden 2025 koodijoulukalenterista löydät vuosien 2024 ja 2025 mehevimmät koodipöräytykset",
 
-  openAt: DateTime.local(2025, 11, 28, 13, 30, {
+  openAt: DateTime.local(2025, 11, 28, 13, 0, {
     zone: "Europe/Helsinki"
   }),
 
