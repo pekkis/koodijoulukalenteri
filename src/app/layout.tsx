@@ -70,7 +70,7 @@ export default async function RootLayout({ children }: Props) {
       </body>
       <Script
         src="https://app.rybbit.io/api/script.js"
-        data-site-id="YOUR_SITE_ID"
+        data-site-id="6e4c12acc350"
         strategy="afterInteractive"
       />
     </html>
