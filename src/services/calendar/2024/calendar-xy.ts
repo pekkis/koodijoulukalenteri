@@ -5,7 +5,7 @@ import { getPosition, HatchData, HatchesData } from "@/services/hatch";
 import risuja from "./assets/risuja.webp";
 import { isHatchOpenable } from "@/services/time";
 import { DateTime } from "luxon";
-import EscapeHatch from "@/components/calendar/EscapeHatch";
+
 import { theme2024 } from "./theme-2024.css";
 
 import hipster from "./assets/xy/xy-nice-011.webp";
@@ -278,7 +278,11 @@ export const calendar: CalendarType = {
       openableAt: DateTime.local(666, 6, 6, 6, {
         zone: "Europe/Helsinki"
       }),
-      hatchComponent: EscapeHatch
+      hatchComponent: async () => {
+        const EscapeHatch = await import("@/components/calendar/EscapeHatch");
+
+        return EscapeHatch.default;
+      }
     }
   ],
 
