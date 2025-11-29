@@ -21,6 +21,17 @@ export const dialog = style({
   },
 
   selectors: {
+    "&:has([data-epic-corners])": {
+      "@supports": {
+        "(corner-shape: squircle)": {
+          cornerShape: "squircle",
+          cornerTopRightShape: "bevel",
+          cornerTopLeftShape: "scoop",
+          borderTopLeftRadius: theme.borderRadius.plumper
+        }
+      }
+    },
+
     '&:has([data-scrollbars="thin"])': {
       scrollbarWidth: "thin",
       scrollbarColor: `hotpink rebeccapurple`

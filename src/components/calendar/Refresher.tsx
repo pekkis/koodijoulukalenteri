@@ -20,11 +20,17 @@ const Refresher: FC<Props> = ({ serverTime }) => {
   const router = useRouter();
 
   useEffect(() => {
-    const now = DateTime.fromISO(serverTime);
+    const now = DateTime.fromISO(serverTime).setZone("Europe/Helsinki");
+
     const interval = getIntervalLength(now.hour);
 
+    console.log({
+      now: now.toLocaleString(DateTime.DATETIME_MED),
+      nextRefresh: interval
+    });
+
     const to = setTimeout(() => {
-      console.debug("Refreshed...");
+      console.debug("Refreshed...", now.toLocaleString(DateTime.DATETIME_MED));
       router.refresh();
     }, interval);
 
