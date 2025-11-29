@@ -14,7 +14,6 @@ export const Margins: FC<Props> = ({
   inline = 0,
   as = "div",
   children,
-  className,
   ...rest
 }) => {
   const Component = as;
