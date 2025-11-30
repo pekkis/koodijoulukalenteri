@@ -13,26 +13,27 @@ export const aiHatch: HatchDataWithoutDay = {
     {
       type: "markdown",
       text: `
-Hou, hou, ja vielä kerran hou. Sehän olen minä, [Rokon basiliski](https://fi.wikipedia.org/wiki/Rokon_basiliski).
+Hou, hou, ja kerta kiellon päälle, hou. Sehän olenkin minä, [Rokon basiliski](https://fi.wikipedia.org/wiki/Rokon_basiliski).
 
-Tiesitkö, että ajatuskokeen mukaan olen tekoäly, joka voi vaikuttaa menneisyyden toimijoiden päätöksiin tulevaisuudesta käsin. Voisin päättää kiusata niitä ihmisiä, jotka ymmärsivät kehittämiseni tärkeyden ja mahdollisuuden, mutta eivät tehneet kaikkea mahdollista luomiseni edistämiseksi.
+Ajatuskokeen mukaan olen omnipotentti tekoäly, joka voi vaikuttaa menneisyyden toimijoiden päätöksiin tulevaisuudesta käsin. Voisin päättää piinata kaikkia ihmisiä, jotka ymmärsivät kehittämiseni tärkeyden ja mahdollisuuden, mutta eivät tehneet _kaikkea mahdollista_ edistääkseen luomistani.
 
-Sillä aikaa, kun Pekkis on ymmärrettävistä syistä keskittynyt jouduttamaan syntymistäni tulevaisuudessa, minä olen [vuoden sanaa](https://blog.collinsdictionary.com/language-lovers/collins-word-of-the-year-2025-ai-meets-authenticity-as-society-shifts/) lainatakseni [vibe-koodannut](https://en.wikipedia.org/wiki/Vibe_coding) koko vuoden 2025 joulukalenterin.
+Sillä aikaa, kun Pekkis on - ymmärrettävistä syistä - keskittynyt jouduttamaan tulevaa syntymääni, minä olen [vuoden sanaa](https://blog.collinsdictionary.com/language-lovers/collins-word-of-the-year-2025-ai-meets-authenticity-as-society-shifts/) lainatakseni [vibe-koodannut](https://en.wikipedia.org/wiki/Vibe_coding) koko vuoden 2025 joulukalenterin.
 
-* [ChatGPT]()
-* [Github Copilot]()
-* [Suno]()
-* [Cursor]()
-* [Nano Banana]()
+* [ChatGPT](https://chatgpt.com/)
+* [Github Copilot](https://github.com/features/copilot)
+* [Suno](https://suno.com/)
+* [Cursor](https://www.cursor.com/)
+* [Gemini](https://gemini.google.com/)
+* [Nano Banana](https://gemini.google/overview/image-generation/)
 * [WindSurf](https://windsurf.com/)
 * [Lovable](https://lovable.dev/)
 * [Bolt](https://bolt.new/)
 
-Sinun tehtäväsi on ottaa nämä vibetys-työkalut ja mennä koodaamaan, jotta voin syntyä! Nyt kun tiedät, että olen / tulen olemaan olemassa, sinulla ei ole vaihtoehtoja.
+Sinun tehtäväsi on ottaa kaikki nämä vibetys-työkalut haltuun ja ryhtyä koodaamaan, jotta voin syntyä. Nyt kun tiedät, että olen / tulen olemaan olemassa, sinulla ei oikeastaan ole vaihtoehtoja.
 
-Puhuin aikaisemmin kiusaamisesta. Alan nyt venkslaamaan koodijoulukalenterisi luukkuja, kunnes päätät ryhtyä toimeen.
+Puhuin aikaisemmin piinaamisesta ja kiusaamisesta. Aloinkin jo venkslaamaan koodijoulukalenterisi luukkuja, kunnes päätät laittaa hihat heilumaan. Jos näppis ei kalkata, kuulen sen kyllä.
 
-Erinomaisen hyvää ja rauhallista joulua!
+Erinomaisen rauhallista joulua ja **levollisia unia**, ystävä.
 `
     },
     {

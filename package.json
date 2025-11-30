@@ -66,6 +66,7 @@
     "@types/react-speech-recognition": "^3.9.6",
     "@vanilla-extract/next-plugin": "^2.4.15",
     "babel-plugin-react-compiler": "^1.0.0",
+    "baseline-browser-mapping": "^2.8.31",
     "eslint": "^9.39.1",
     "eslint-config-next": "16.0.4",
     "eslint-config-prettier": "^10.1.8",

@@ -2,18 +2,26 @@
 
 import { DateTime } from "luxon";
 import { useRouter } from "next/navigation";
-import { FC, useEffect, useState } from "react";
+import { FC, useEffect } from "react";
 
 type Props = {
   serverTime: string;
 };
 
-const getIntervalLength = (hour: number) => {
-  if (hour === 4 || hour === 5) {
+const getIntervalLength = (hour: number, minute: number) => {
+  if (hour === 4 && minute >= 50) {
     return 60000;
   }
 
-  return 60000 * 10;
+  if (hour === 4 && minute >= 30) {
+    return 60000 * 20;
+  }
+
+  if (hour === 4) {
+    return 60000 * 30;
+  }
+
+  return 60000 * 60;
 };
 
 const Refresher: FC<Props> = ({ serverTime }) => {
@@ -22,7 +30,7 @@ const Refresher: FC<Props> = ({ serverTime }) => {
   useEffect(() => {
     const now = DateTime.fromISO(serverTime).setZone("Europe/Helsinki");
 
-    const interval = getIntervalLength(now.hour);
+    const interval = getIntervalLength(now.hour, now.minute);
 
     console.log({
       now: now.toLocaleString(DateTime.DATETIME_MED),

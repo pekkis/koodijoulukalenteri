@@ -12,13 +12,13 @@ export const expeditionHatch: HatchDataWithoutDay = {
     {
       type: "markdown",
       text: `
-Haa! Löysit salaisen bonusluukun! Sen sisältä löydät pelaamista joulunpyhiksi.
+Hou hou! Löysit salaisen bonusluukun! Sen sisältä löydät pelaamista joulunpyhiksi.
 
-Tänä vuonna olimme kerta kaikkiaan siunattuja. [Sandfall Interactive](https://www.sandfallinteractive.com/) julkaisi häkellyttävän, tajunnanräjäyttävän, ainutkertaisen debyyttimestariteoksensa [Clair Obscur: Expedition 33](https://clairobscur.com/). Pelaa se gamepassissa tai osta omaksi. Muista myös soundtrack.
+Tänä vuonna olimme siunattuja. [Sandfall Interactive](https://www.sandfallinteractive.com/) julkaisi häkellyttävän, tajunnanräjäyttävän, ainutkertaisen debyyttimestariteoksensa [Clair Obscur: Expedition 33](https://clairobscur.com/). Pelaa se gamepassissa tai osta omaksi. Muista myös soundtrack!
 
-Pelin syntytarina on lähes ihmeellisempi kuin tarina itse pelissä. Olen uskomattoman onnekas eläessäni ainoassa rinnakkaisuniversumissa, jossa sekä Peter Jacksonin LOTR-trilogia että Expedition 33 ovat olemassa sellaisena kuin ne ovat.
+Pelin syntytarina on lähes ihmeellisempi kuin itse pelin stoori. Uskon eläväni ainoassa rinnakkaisuniversumissa, jossa sekä Peter Jacksonin LOTR että Expedition 33 toteutuivat sellaisena kuin ne ovat.
 
-Bonuksena nappaa pukinkonttiin myös kahden edellisen vuoden parhaat pelit, joista kumpikin on kaikkien aikojen top kympissäni. Viime vuoden kalenteri jäi tekemättä [Factorio: Space Agen](https://www.factorio.com/) vuoksi, ja toissa vuoden kesällä pelasin [Baldur's Gate 3:sta](https://baldursgate3.game/) yöt ja päivät läpeensä.
+Nappaa pukinkonttiin myös [Factorio](https://www.factorio.com) ja sen lisäosa Space Age, jonka ansiosta viime vuoden kalenteri jäi kokonaan tekemättä. Etenkin koodareille ja muille "alan" tyypeille Factorio tuntuu olevan parasta huumetta. Itse olen pelannut 1500 tuntia, ja harkitsen juuri luukusta inspiroituneena uuden maailman aloittamista!
 `
     },
     {
@@ -28,25 +28,30 @@ Bonuksena nappaa pukinkonttiin myös kahden edellisen vuoden parhaat pelit, jois
     },
     {
       type: "youtube",
+      id: "mXLOLgC2V2Q",
+      caption:
+        "The impossible true stories behind the making of Clair Obscur: Expedition 33"
+    },
+
+    {
+      type: "youtube",
       id: "LpNVf8sczqU",
       caption: "Lumière Official Music Video"
     },
     {
       type: "youtube",
-      id: "mXLOLgC2V2Q",
-      caption:
-        "The impossible true stories behind the making of Clair Obscur: Expedition 33"
+      id: "J8SBp4SyvLc",
+      caption: "Factorion traileri"
     },
     {
       type: "youtube",
-      id: "gwAL9RG5YK8",
-      caption: "We Lost"
+      id: "OiczN-8QKDA",
+      caption: "Factorio: Space Agen traileri"
     },
     {
       type: "youtube",
-      id: "9wYHLgLYQlU",
-      caption:
-        "Flying Waters - Rain from the Ground (biisi pelastettiin roskiksesta)"
+      id: "dilLv1RELM4",
+      caption: "Mehustelua Factorion spriteistä"
     }
   ]
 };

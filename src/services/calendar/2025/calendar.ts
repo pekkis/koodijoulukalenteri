@@ -173,7 +173,14 @@ export const calendar: CalendarType = {
       position: getPosition(-21, -3, 4, 4),
       openableAt: DateTime.local(2025, 12, 1, 5, {
         zone: "Europe/Helsinki"
-      })
+      }),
+      hatchComponent: async () => {
+        const { ExpeditionHatchComponent } = await import(
+          "./hatch/expedition/ExpeditionHatchComponent"
+        );
+
+        return ExpeditionHatchComponent;
+      }
     },
 
     {

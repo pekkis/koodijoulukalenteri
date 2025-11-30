@@ -27,7 +27,7 @@ export const dialog = style({
           cornerShape: "squircle",
           cornerTopRightShape: "bevel",
           cornerTopLeftShape: "scoop",
-          borderTopLeftRadius: theme.borderRadius.plumper
+          borderTopLeftRadius: theme.borderRadius.plumpest
         }
       }
     },
