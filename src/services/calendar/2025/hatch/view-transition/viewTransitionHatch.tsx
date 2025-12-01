@@ -13,13 +13,13 @@ export const viewTransitionHatch: HatchDataWithoutDay = {
     {
       type: "markdown",
       text: `
-Tunnustan mitä rehellisimmin ja täysin avoimesti, että *animaatiot* eivät ole vahvinta osaamisaluettani. En ole kovin visuaalinen ihminen, ja animaatioiden ymmärtäminen alkaen ihan perustasolta, konseptina, mekanismina, on minulle vähän haastavaa.
+Tunnustan rehellisesti ja avoimesti, että *animaatiot* eivät ole vahvinta osaamisaluettani. En ole kovin visuaalinen, ja animaatioiden ymmärtäminen alkaen perustasolta, konseptina tai mekanismina, on minulle haastavaa.
 
-Otan mielelläni vastaan kaiken, joka tekee animaatioiden ajattelusta ja tekemisestä helpompaa. [View Transition-rajapinta](https://developer.mozilla.org/en-US/docs/Web/API/View_Transition_API) lupaa tehdä juuri sen, ja se on (puoliksi) [juuri saavuttanut baseline-statuksen](https://web.dev/blog/same-document-view-transitions-are-now-baseline-newly-available), joten kaunein kiitos siitä, oi rajapinta!
+Otan mielelläni vastaan kaiken, joka tekee animaatioiden ajattelusta ja toteuttamisesta helpompaa. [View Transition-rajapinta](https://developer.mozilla.org/en-US/docs/Web/API/View_Transition_API) lupaa tehdä juuri näin, ja se on [juuri puoliksi saavuttanut baseline-statuksen](https://web.dev/blog/same-document-view-transitions-are-now-baseline-newly-available). Kaunein kiitos, oi rajapinta!
 
-View transitiot mahdollistavat tilojen välisen animoinnin yhden dokumentin sisällä (SPA), ja - mikä on tähän asti ollut täysin mahdotonta - kahden "oikean" sivulatauksen (MPA) välillä.
+View transitiot mahdollistavat tilojen välisen animoinnin joko yhden dokumentin sisällä (SPA), tai - mahdotonta tähän asti - kahden "oikean" sivulatauksen välillä. Ihan tavalliset webbisivut voivat pian käyttäytyä kuin custom-appikset.
 
-Hämmästyttävää! Häkellyttävää! Tällaista taikuutta ei vuoden 2005 Pekkis olisi koskaan uskonut näkevänsä. Katso alhaalta (ja löydä joulukalenterista!), kuinka jopa minä sain aikaan animaatioita tekemättä juuri mitään tai ymmärtämättä mitään.
+Tällaista taikuutta ei nuori Pekkis olisi koskaan uskonut näkevänsä. Katso alhaalta (ja joulukalenterin luukkusivun dialogin animoinnista), kuinka jopa minä sain Reactin canary-version [<ViewTransition>](https://react.dev/reference/react/ViewTransition)-komponentin ystävällisellä avustuksella aikaan animaatioita tekemättä tai ymmärtämättä liikaa.
 
 ## Demo
 `
@@ -33,6 +33,9 @@ Hämmästyttävää! Häkellyttävää! Tällaista taikuutta ei vuoden 2005 Pekk
 * [Toe Dipping Into View Transitions](https://css-tricks.com/toe-dipping-into-view-transitions/)
 * [View transitions for single page applications](https://web.dev/learn/css/view-transitions-spas)
 * [View Transitions Feature Explorer](https://codepen.io/web-dot-dev/full/EaPbbgx)
+* [I can has use?: View Transitions](https://caniuse.com/?search=view+transition)
+* [<ViewTransition>](https://react.dev/reference/react/ViewTransition)
+* [Astro: View transitions](https://docs.astro.build/en/guides/view-transitions/)
 `
     },
     {

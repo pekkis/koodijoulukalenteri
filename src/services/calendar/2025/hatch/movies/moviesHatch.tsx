@@ -6,20 +6,20 @@ export const moviesHatch: HatchDataWithoutDay = {
   title: "Koodileffoja, 2024-2025",
   image: {
     src: image,
-    alt: "Beekeeper, companion-botti ja tappajarobotti nirhaavat scammereita"
+    alt: "Beekeeper, seuralais-botti ja tappajarobotti nirhaavat scammereita"
   },
   content: [
     {
       type: "markdown",
       text: `
-Tekoäly ja androidit ovat toistuva kaava viimeisen parin vuoden koodileffoissa. Jännää. Onkohan tässä joku itselleni tuntematon muoti-ilmiö tai hypetys takana?
+Koodielokuvissa yhdistyy kaksi rakkainta harrastustani. Tekoäly ja androidit ovat toistuva kaava viimeisen parin vuoden leffoissa. Jännää. Onkohan tässä joku itselleni tuntematon muoti-ilmiö takana?
 `
     },
     {
       type: "youtube",
       id: "Si4RBWqX1wE",
       caption:
-        "The Beekeeper (2024) on yksi viime aikojen hassuimmista ja hauskimmista Statham-kostoleffoista. Ja mikä hulvattominta, leffan pahikset ovat inhottavia tietojenkalastelu-scammereita!"
+        "The Beekeeper (2024) on yksi viime aikojen hassuimmista ja hauskimmista Statham-kostoleffoista. Leffan pahikset ovat inhottavia tietojenkalastelu-scammereita, jotka saavat kerrankin sen mitä ansaitsevat!"
     },
 
     {
@@ -32,13 +32,13 @@ Tekoäly ja androidit ovat toistuva kaava viimeisen parin vuoden koodileffoissa.
       type: "youtube",
       id: "Qr_kX0D3DNA",
       caption:
-        "Companion (2025) on vähän pidempi, ja hitusen brutaalimpi, elokuva seuralaisbotista. Tämä leffa on omaan makuuni oikein sopiva!"
+        "Companion (2025) on vähän pidempi, ja hitusen brutaalimpi, elokuva seuralaisbotista. Tämä leffa on omaan makuuni oikein sopiva, hupaisa ja virkistävän väkivaltainen!"
     },
     {
       type: "youtube",
       id: "fsQgc9pCyDU",
       caption:
-        "Mission Impossible: Final Reckoning (2025) on pönöttävä ja ummettava kenties viimeinen osa Tom Cruisen action-saagaan. Päävihu on tekoäly, mutta se jää tosi pieneen rooliin."
+        "Mission Impossible: Final Reckoning (2025) on pönöttävä ja ummettava (ja kenties viimeinen) osa Tom Cruisen action-saagaan. Päävihu on tekoäly, mutta se jää tosi pieneen rooliin."
     },
     {
       type: "youtube",
@@ -50,14 +50,14 @@ Tekoäly ja androidit ovat toistuva kaava viimeisen parin vuoden koodileffoissa.
       type: "youtube",
       id: "DCWcK4c-F8Q",
       caption:
-        "The Amateur (2025). Nörtti kostaa vaimonsa murhaajille käyttäen nörttejä keinoja. Ihan ok, mutta en kyllä tätä enää vuoden parin päästä muista."
+        "The Amateur (2025). Nörtti kostaa vaimonsa murhaajille käyttäen nörtehköjä keinoja. Ihan ok leffa, mutta en kyllä tätä enää vuoden parin päästä muista."
     },
 
     {
       type: "youtube",
       id: "YShVEXb7-ic",
       caption:
-        "Tron: Ares (2025). Vai kenties Tron: Arse? Kivat visut, hienot mutta kakofoniset musiikit ja näyttävät efektit. Harvinaisen mäntti juoni, oksu Jared, kökkö leffa."
+        "Tron: Ares (2025), vai kenties Tron: Arse? Kivat visut, hienot mutta kakofoniset musiikit ja näyttävät efektit. Harvinaisen mäntti juoni, oksu Jared, kökkö leffa."
     },
     {
       type: "markdown",

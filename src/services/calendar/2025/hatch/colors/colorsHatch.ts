@@ -13,13 +13,13 @@ export const colorsHatch: HatchDataWithoutDay = {
     {
       type: "markdown",
       text: `
-Minusta tuntuu, että suuri osa maailmasta - minä mukaanluettuna - on pysyvästi jämähtänyt [CSS-väreissä](https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Colors) 1990-luvulle. \`#ff0000\` pitäisi riittää kaikille.
+Minusta tuntuu, että suuri osa maailmasta - minä mukaanluettuna - on pysyvästi jämähtänyt [CSS-väreissä](https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Colors) 1990-luvulle. Tämän teorian mukaan \`#ff0000\` pitäisi riittää kaikille.
 
-Hyvä on, väitteeni on karrikoitu. [\`rgb(255 0 0 / .5)\`](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Values/color_value/rgb) on oman mukavuusalueeni vihon viimeinen rajajoki, ja ken siitä yli käy, saa kaiken toivon heittää.
+Hyvä on! Tulen vastaan! [\`rgb(255 0 0 / .5)\`](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Values/color_value/rgb) on oman mukavuusalueeni vihon viimeinen rajajoki. Ken siitä yli käy, saa kaiken toivon heittää.
 
-Jos uskaltautuu kaivamaan, löytää kaikkea hienoa. Nykyään voi käyttää esimerkiksi HDR-värejä ja erilaisia väriavaruuksia (joista ymmärrän liian vähän), [väri](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Values/color_value/color)- ja [värinsekoitusfunktioita](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Values/color_value/color-mix) (likimain hebreaa minulle!), ja vaikkapa [suhteellisia värejä](https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Colors/Using_relative_colors) suoraan CSS:stä.
+Jos uskaltautuu yli käymään, voi löytää kaikkea hienoa. Nykyään voi käyttää esimerkiksi HDR-värejä ja erilaisia väriavaruuksia (joista ymmärrän liian vähän), [väri](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Values/color_value/color)- ja [värinsekoitusfunktioita](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Values/color_value/color-mix) (likimain hebreaa minulle!), ja vaikkapa [suhteellisia värejä](https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Colors/Using_relative_colors) suoraan CSS:llä.
 
-Eikä saa unohtaa [\`light-dark()\`](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Values/color_value/light-dark)-funktiota, jonka ansiosta dark moden tekeminen on "vähän" helpompaa.
+Eikä saa unohtaa [\`light-dark()\`](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Values/color_value/light-dark)-funktiota, jonka ansiosta synkän moodin tekeminen on "vähän" helpompaa.
 
 Alta voit ihailla omia mahti-esimerkkejäni. Siltä varalta, että pelkkä CSS ei riitä värittämään oman sielusi mustuutta, [color.js](https://colorjs.io/) auttaa varmasti!
 

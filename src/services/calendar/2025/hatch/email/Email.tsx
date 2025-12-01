@@ -21,12 +21,12 @@ export const Email: FC = () => {
         <Stack row>
           <TextField
             name="email"
-            type="email"
-            defaultValue={"pekkisx@gmail.com"}
+            type="text"
+            defaultValue={""}
             placeholder="uhrin sähköposti"
           />
           <Button svelte disabled={pending} type="submit">
-            submit {pending && <Spinner />}
+            Lähetä {pending && <Spinner />}
           </Button>
         </Stack>
 

@@ -6,11 +6,5 @@ export const praatsClass = style({
   flexDirection: "column",
   gap: theme.spacing.xs,
 
-  cornerShape: "loo",
-
-  selectors: {
-    "&:nth-child(2n)": {
-      background: "#fafafa"
-    }
-  }
+  cornerShape: "loo"
 });
