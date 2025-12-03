@@ -6,5 +6,5 @@ export const praatsClass = style({
   flexDirection: "column",
   gap: theme.spacing.xs,
 
-  cornerShape: "loo"
+  zIndex: 1000000
 });

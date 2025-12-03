@@ -13,13 +13,13 @@ export const viewTransitionHatch: HatchDataWithoutDay = {
     {
       type: "markdown",
       text: `
-Tunnustan rehellisesti ja avoimesti, että *animaatiot* eivät ole vahvinta osaamisaluettani. En ole kovin visuaalinen, ja animaatioiden ymmärtäminen alkaen perustasolta, konseptina tai mekanismina, on minulle haastavaa.
+Tunnustan rehellisesti ja avoimesti, että *animaatiot* eivät ole vahvinta osaamisaluettani. En ole kovin visuaalinen, ja animaatioiden ymmärtäminen on minulle haastavaa.
 
-Otan mielelläni vastaan kaiken, joka tekee animaatioiden ajattelusta ja toteuttamisesta helpompaa. [View Transition-rajapinta](https://developer.mozilla.org/en-US/docs/Web/API/View_Transition_API) lupaa tehdä juuri näin, ja se on [juuri puoliksi saavuttanut baseline-statuksen](https://web.dev/blog/same-document-view-transitions-are-now-baseline-newly-available). Kaunein kiitos, oi rajapinta!
+Otan mielelläni vastaan kaiken, joka tekee animaatioiden ajattelusta ja toteuttamisesta helpompaa. [View Transition-rajapinta](https://developer.mozilla.org/en-US/docs/Web/API/View_Transition_API) lupaa tehdä juurikin näin, ja se on äskettäin [saavuttanut puolittaisen baseline-statuksen](https://web.dev/blog/same-document-view-transitions-are-now-baseline-newly-available). Kaunein kiitos, rajapinta!
 
-View transitiot mahdollistavat tilojen välisen animoinnin joko yhden dokumentin sisällä (SPA), tai - mahdotonta tähän asti - kahden "oikean" sivulatauksen välillä. Ihan tavalliset webbisivut voivat pian käyttäytyä kuin custom-appikset.
+View transitiot mahdollistavat tilojen välisten siirtymien animoinnin joko yhden dokumentin sisällä (SPA), tai - täysin mahdotonta tähän asti - kahden "oikean" sivulatauksen välillä (MPA). Ihan tavalliset webbisivut voivat vastedes käyttäytyä kuin appikset.
 
-Tällaista taikuutta ei nuori Pekkis olisi koskaan uskonut näkevänsä. Katso alhaalta (ja joulukalenterin luukkusivun dialogin animoinnista), kuinka jopa minä sain Reactin canary-version [<ViewTransition>](https://react.dev/reference/react/ViewTransition)-komponentin ystävällisellä avustuksella aikaan animaatioita tekemättä tai ymmärtämättä liikaa.
+Tällaista ei nuori Pekkis olisi koskaan uskonut näkevänsä. Katso alhaalta (ja joulukalenterin luukkusivun dialogin animoinnista!), kuinka jopa minä sain Reactin canary-version [<ViewTransition>](https://react.dev/reference/react/ViewTransition)-komponentin ystävällisellä avustuksella jotakin aikaan lähes itsestään ja liikoja ymmärtämättä.
 
 ## Demo
 `

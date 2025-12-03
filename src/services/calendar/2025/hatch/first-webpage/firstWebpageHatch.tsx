@@ -12,9 +12,9 @@ export const firstWebpageHatch: HatchDataWithoutDay = {
     {
       type: "markdown",
       text: `
-**Kuudentena** päivänä elokuuta, vuonna 1991, [Tim Berners-Lee](https://en.wikipedia.org/wiki/Tim_Berners-Lee) julkaisi [ensimmäisen webbisivun](https://info.cern.ch/). Rellu meni hyvin, saitti ei kaatunut.
+**Kuudentena** päivänä elokuuta, vuonna 1991, [Tim Berners-Lee](https://en.wikipedia.org/wiki/Tim_Berners-Lee) julkaisi [ensimmäisen webbisivun](https://info.cern.ch/). Livetys meni hyvin, saitti ei kaatunut.
 
-Ennen livetystä Berners-Lee oli keksinyt [HTTP-protollan](https://en.wikipedia.org/wiki/HTTP), [URLin](https://en.wikipedia.org/wiki/URL) ja [HTML:n](https://en.wikipedia.org/wiki/HTML) sekä tietysti koodannut [HTTP-serverin](https://en.wikipedia.org/wiki/CERN_httpd) ja [webbiselaimen](https://en.wikipedia.org/wiki/WorldWideWeb). Sanalla sanoen, sir Tim oli _ensimmäinen webbikehittäjä!_
+Ennen rellua Berners-Lee oli keksinyt [HTTP-protollan](https://en.wikipedia.org/wiki/HTTP), [URLin](https://en.wikipedia.org/wiki/URL) ja [HTML:n](https://en.wikipedia.org/wiki/HTML) sekä tietysti koodannut ensimmäisen [HTTP-serverin](https://en.wikipedia.org/wiki/CERN_httpd) ja [webbiselaimen](https://en.wikipedia.org/wiki/WorldWideWeb). Sanalla sanoen, sir Tim on _OG webbikehittäjä!_
 
 [CERN](https://home.cern/), joka Berners-Leen toiveesta [luovutti webin public domainiin](https://cds.cern.ch/record/1164399/) koko ihmiskunnan hyväksi vuonna 1993, on museoinut webin historian todella hienosti ja kunnioittavasti. Kannattaa käydä ihailemassa!
 

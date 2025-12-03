@@ -17,22 +17,24 @@ type Props = {
 
 export const Praat: FC<Props> = ({ praat, remove }) => {
   return (
-    <div
-      className={praatClass}
-      style={{
-        backgroundColor: praat.color
-      }}
-    >
-      <div className={pruutClass}>{praat.pruut}</div>
-      <div className={xClass}>
-        <button
-          onClick={() => {
-            remove(praat.pruut);
-          }}
-        >
-          x
-        </button>
+    <ViewTransition>
+      <div
+        className={praatClass}
+        style={{
+          backgroundColor: praat.color
+        }}
+      >
+        <div className={pruutClass}>{praat.pruut}</div>
+        <div className={xClass}>
+          <button
+            onClick={() => {
+              remove(praat.pruut);
+            }}
+          >
+            x
+          </button>
+        </div>
       </div>
-    </div>
+    </ViewTransition>
   );
 };

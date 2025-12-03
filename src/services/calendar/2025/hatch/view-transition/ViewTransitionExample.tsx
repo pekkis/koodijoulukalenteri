@@ -39,10 +39,8 @@ export const ViewTransitionExample: FC = () => {
   };
 
   const reorder = () => {
-    startTransition(() => {
-      setPraats((prev) => {
-        return [...prev.sort(() => Math.random() - 0.5)];
-      });
+    setPraats((prev) => {
+      return [...prev.sort(() => Math.random() - 0.5)];
     });
   };
 
@@ -52,7 +50,9 @@ export const ViewTransitionExample: FC = () => {
         <div>
           <button
             onClick={() => {
-              reorder();
+              startTransition(() => {
+                reorder();
+              });
             }}
           >
             järjestele
@@ -61,11 +61,7 @@ export const ViewTransitionExample: FC = () => {
 
         <div className={praatsClass}>
           {praats.map((praat) => {
-            return (
-              <ViewTransition key={praat.pruut}>
-                <Praat praat={praat} remove={remove} />
-              </ViewTransition>
-            );
+            return <Praat key={praat.pruut} praat={praat} remove={remove} />;
           })}
         </div>
       </Stack>

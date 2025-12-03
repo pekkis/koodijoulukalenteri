@@ -55,5 +55,5 @@ export const relativelyGreenerRed = style({
 });
 
 export const mixWithUgliest = style({
-  backgroundColor: `color-mix(in srgb, ${theme.colors.primary} 20%, rgb(74 65 42))`
+  backgroundColor: `color-mix(in srgb, ${theme.colors.primary} 10%, rgb(74 65 42))`
 });
