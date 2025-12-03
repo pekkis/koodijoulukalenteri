@@ -24,7 +24,7 @@
   "license": "MIT",
   "dependencies": {
     "@mantine/hooks": "^8.3.9",
-    "@next/third-parties": "16.0.4",
+    "@next/third-parties": "16.0.7",
     "@react-email/components": "^1.0.1",
     "@react-three/fiber": "^9.4.0",
     "@types/three": "^0.181.0",
@@ -35,7 +35,7 @@
     "immer": "^11.0.0",
     "jotai": "^2.15.1",
     "luxon": "^3.7.2",
-    "next": "16.0.4",
+    "next": "16.0.7",
     "next-themes": "^0.4.6",
     "normalize.css": "^8.0.1",
     "nuqs": "^2.8.1",
@@ -57,7 +57,7 @@
     "zustand": "^5.0.8"
   },
   "devDependencies": {
-    "@next/bundle-analyzer": "^16.0.4",
+    "@next/bundle-analyzer": "^16.0.7",
     "@react-email/preview-server": "5.0.5",
     "@types/luxon": "^3.7.1",
     "@types/node": "^24.10.1",
@@ -68,7 +68,7 @@
     "babel-plugin-react-compiler": "^1.0.0",
     "baseline-browser-mapping": "^2.8.31",
     "eslint": "^9.39.1",
-    "eslint-config-next": "16.0.4",
+    "eslint-config-next": "16.0.7",
     "eslint-config-prettier": "^10.1.8",
     "eslint-plugin-prettier": "^5.5.4",
     "eslint-plugin-react": "^7.37.5",

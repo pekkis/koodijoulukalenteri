@@ -17,7 +17,15 @@ const nextConfig = {
   output: "standalone",
   reactStrictMode: true,
   experimental: {
-    viewTransition: true
+    viewTransition: true,
+
+    serverActions: {
+      allowedOrigins: [
+        "localhost:3100",
+        "localhost",
+        "koodijoulukalenteri.pekkis.eu"
+      ]
+    }
   },
   typescript: {
     ignoreBuildErrors: false

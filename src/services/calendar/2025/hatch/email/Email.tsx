@@ -21,7 +21,7 @@ export const Email: FC = () => {
         <Stack row>
           <TextField
             name="email"
-            type="text"
+            type="email"
             defaultValue={""}
             placeholder="uhrin sähköposti"
           />
