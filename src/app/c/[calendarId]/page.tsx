@@ -2,6 +2,8 @@ import { getCalendar } from "@/services/calendar";
 import { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { connection } from "next/server";
+import { getTime } from "@/services/time";
+import Refresher from "@/components/calendar/Refresher";
 
 export const revalidate = 60;
 
@@ -45,5 +47,5 @@ export default async function CalendarPage({ params }: Props) {
     return notFound();
   }
 
-  return null;
+  return <Refresher serverTime={getTime().toISO() as string} />;
 }
