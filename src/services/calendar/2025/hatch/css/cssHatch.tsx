@@ -11,9 +11,9 @@ export const cssHatch: HatchDataWithoutDay = {
   content: [
     {
       type: "markdown",
-      text: `[W3C](https://www.w3.org/) julkaisi [CSS taso ykkösen]() suosituksenaan seitsemäntenätoista joulukuuta 1996. Päätös oli karvas pala [Netscapelle](), joka oli panostanut voimakkaasti omaan vaihtoehtoiseen [JavaScript Style Sheets (JSSS)]()-teknologiaansa.
+      text: `[W3C](https://www.w3.org/) julkaisi [CSS taso ykkösen](https://www.w3.org/TR/CSS1/) suosituksenaan seitsemäntenätoista joulukuuta 1996. Päätös oli karvas pala [Netscapelle](https://en.wikipedia.org/wiki/Netscape), joka oli panostanut voimakkaasti omaan vaihtoehtoiseen [JavaScript Style Sheets (JSSS)](https://en.wikipedia.org/wiki/JavaScript_Style_Sheets)-teknologiaansa.
 
-[Netscape Navigatorista]() vastaavien koodariparkojen ei auttanut kuin paskofiksata kasaan tunkki, joka käänsi CSS-säännöt lennossa JSSS:ksi. Tässä on syy siihen, miksi [CSS ei koskaan toiminut Netscapessa](https://jkorpela.fi/www/nncss.html), jos JavaScriptin käänsi pois päältä.
+[Netscape Navigatorista](https://en.wikipedia.org/wiki/Netscape_Navigator) vastaavien koodariparkojen ei auttanut kuin paskofiksata kasaan tunkki, joka käänsi CSS-säännöt lennossa JSSS:ksi. Tässä on syy siihen, miksi [CSS ei koskaan toiminut Netscapessa](https://jkorpela.fi/www/nncss.html), jos JavaScriptin käänsi pois päältä.
 
 Netscapen purkkaratkaisu oli sekä huono että epävakaa. Muistan hauskuuttaneeni itseäni opiskeluaikana yksinkertaisella CSS-rimpsulla, joka kaatoi koko moskan. Huono CSS-tuki oli vahva vaikutin siinä, että Netscape kärsi murskatappion ensimmäisessä selainsodassa.
 

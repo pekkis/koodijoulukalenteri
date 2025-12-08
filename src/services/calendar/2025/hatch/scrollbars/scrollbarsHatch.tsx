@@ -15,9 +15,9 @@ export const scrollbarsHatch: HatchDataWithoutDay = {
       text: `
 Muistan elävästi, kuinka onnellinen olin vuosituhannen alussa, kun pystyin [säätämään vierityspalkin väriä Internet Explorer 5.5:sen ilmestyttyä](https://www.quirksmode.org/css/scrollbars.html).
 
-Nyt hyvät ajat ovat palanneet! Eivät ihan yhtä hyvinä kuin ennen, mutta vihdoin ja viimein [scrollbareja saa taas tyyliteltyä "paremmiksi"]() standardinmukaisin keinoin, enempi vähempi tuettuna!
+Nyt hyvät ajat ovat palanneet! Eivät ihan yhtä hyvinä kuin ennen, mutta vihdoin ja viimein [scrollbareja saa taas tyyliteltyä "paremmiksi"](https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Scrollbars_styling) standardinmukaisin keinoin, enempi vähempi tuettuna!
 
-Tyhmät Mac-koneet käyttävät vakiona tylsiä overlay-palkkeja, joiden kanssa säätäminen ole lainkaan yhtä ~~kamalaa~~ hauskaa kuin windows-palkkien kera, joten kehotan käymään systeemiasetuksissa laittamassa wanhan liiton scrollbarit takaisin päälle!`
+Tyhmät Mac-koneet käyttävät vakiona tylsiä overlay-palkkeja, joiden kanssa säätäminen ole lainkaan yhtä ~~kamalaa~~ hauskaa kuin "windows-palkkien" tunaaminen, joten ennen alempana olevien asetusten napsuttelua kehotan käymään systeemiasetuksissa laittamassa wanhan liiton scrollbarit takaisin päälle!`
     },
     {
       type: "jsx",
@@ -27,6 +27,7 @@ Tyhmät Mac-koneet käyttävät vakiona tylsiä overlay-palkkeja, joiden kanssa 
       type: "markdown",
       text: `
 * [MDN: Scrollbars styling](https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Scrollbars_styling)
+* [MDN: Scrollbar gutter](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/scrollbar-gutter)
 `
     }
   ]
