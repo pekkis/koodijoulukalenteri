@@ -22,7 +22,7 @@ Luettuani blogautuksen olen yrittänyt parantaa tapojani. Yritä sinäkin. Pikai
 
 * [OG blogautus: Modern Git Commands and Features You Should Be Using](https://martinheinz.dev/blog/109)
 * [Reddit-keskustelu kyseisestä blogipostauksesta](https://www.reddit.com/r/programming/comments/1bafh54/modern_git_commands_and_features_you_should_be/)
-* [Git made simpler: Some modern alternatives to classic commands]()
+* [Git made simpler: Some modern alternatives to classic commands](https://dev.to/dimeloper/git-made-simpler-some-modern-alternatives-to-classic-commands-5g5j)
 * [10 new Git commands you should start using today](https://appwrite.io/blog/post/10-git-commands-you-should-start-using)
 `
     }
