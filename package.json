@@ -40,8 +40,6 @@
     "normalize.css": "^8.0.1",
     "nuqs": "^2.8.5",
     "open-props": "^1.7.17",
-    "react": "19.2.1",
-    "react-dom": "^19.2.3",
     "react-email": "^5.0.7",
     "react-icons": "^5.5.0",
     "react-markdown": "^10.1.0",
@@ -74,5 +72,5 @@
     "prettier": "^3.7.4",
     "typescript": "~5.9.3"
   },
-  "packageManager": "pnpm@10.20.0"
+  "packageManager": "pnpm@10.25.0"
 }
