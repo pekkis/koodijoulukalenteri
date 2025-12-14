@@ -1,25 +1,30 @@
 import { HatchDataWithoutDay } from "@/services/hatch";
 
-import image from "./react19.webp";
+import image from "./react-19-haxed.webp";
 
 export const react19Hatch: HatchDataWithoutDay = {
   title: "React 19",
   image: {
     src: image,
-    alt: "Tosi iso antropomorfinen React juhlii version 19 julkaisua. Muut antropomorfiset kirjastot (Svelte, Astro, Angular, Solid.js ja Vue) ovat vaarassa tulla tallotuksi massiivisen Reactin jalkojen alle."
+    alt: "Tosi iso antropomorfinen React juhlii version 19 julkaisua. React on tosi reikäinen. Muut antropomorfiset kirjastot (Svelte, Astro, Angular, Solid.js ja Vue) ilkkuvat Reactia sen jalkojen alta."
   },
   content: [
     {
       type: "markdown",
-      text: `React 19 julkaistiin vuonna 2024, ja [React 19.2](https://react.dev/blog/2025/10/01/react-19-2) lokakuun alussa 2025. Samaan syssyyn [React Compiler](https://react.dev/blog/2025/10/07/react-compiler-1) julkaistiin vakaana versiona, ja suosituimmasta metafreimarista Next.js:stä [tuli ulos versio 16](https://nextjs.org/blog/next-16).
+      text: `
+Vuodet vierivät, mutta React sen kun vain porskuttaa. Se on kasvanut niin isoksi ja ollut huipulla niin pitkään, että välissä on kasvanut yksi jos ei useampikin koodarisukupolvi, joka ei ole välttämättä tuntenut mitään muuta.
 
-Vuodet vierivät, mutta React sen kun vain porskuttaa. Se on kasvanut niin isoksi ja ollut huipulla niin pitkään, että välissä on kasvanut yksi jos ei jo useampi uusi koodarisukupolvi, johon kuuluvat eivät omakohtaisesti muista, miten tähän on tultu.
+React 19 julkaistiin vuonna 2024, ja [React 19.2](https://react.dev/blog/2025/10/01/react-19-2) lokakuun alussa 2025. Samaan syssyyn [React Compiler](https://react.dev/blog/2025/10/07/react-compiler-1) julkaistiin vakaana versiona, ja suosituimmasta metafreimarista Next.js:stä [tuli ulos versio 16](https://nextjs.org/blog/next-16).
 
-Teknisten ansioiden sijaan [React voittaa nykyisin olemalla vakioratkaisu](https://www.lorenstew.art/blog/react-won-by-default/), väittävät kriitikot. Ehkä siinä on vinha perä. Itse olen sitä mieltä, että mikä tahansa hypoteettinen siirtymä fronttifreimarista toiseen on parhaimmassa tapauksessa _sivuttainen_, ei jättiloikka, jonka React teki disruptoidessaan scenen alkaen 2013. Siksi Reactia on tosi hankala syrjäyttää, vaikkei siitä (enää) tykkäisikään. Itse tykkään.
+Kolmantena päivänä joulukuuta React julkaisi massiivisen, vakavuusasteen 10/10 tietoturva-aukon [CVE-2025-55182](https://react.dev/blog/2025/12/03/critical-security-vulnerability-in-react-server-components). Next.js [julkaisi oman aukkonsa samasta aiheesta](https://nextjs.org/blog/CVE-2025-66478). Muutaman päivän päästä aukkoja [julkaistiin vielä lisää](https://react.dev/blog/2025/12/11/denial-of-service-and-source-code-exposure-in-react-server-components).
 
-Hupaisaa kyllä, Reactin alkuperäinen historiallinen julkaisu vuonna 2013 meni lähestulkoon niin pieleen kuin rellu voi mennä. React naurettiin ulos lavalta, ja tiimi joutui uudelleenajattelemaan viestintätapansa.
+Joidenkin mielestä [React voittaa olemalla vakioratkaisu](https://www.lorenstew.art/blog/react-won-by-default/), ja se tukehduttaa innovaation. Tässä on vinha perä, mutta niin kauan kuin siirtymä kirjastosta toiseen on _sivuttainen_, eikä jättiloikka, jonka React teki disruptoidessaan koko scenen alkaen 2013, Reactia on tosi vaikeaa syrjäyttää.
 
-Parin vuoden takainen React-dokkari on aivan ihana. Kaksi ensimmäistä React-presistä, pieleen mennyt ja paremmin mennyt, ovat edelleen katsomisen arvoiset. Pitkät kuluneet vuodet antavat ihanasti lisäkontekstia!
+Jos jokin voi **aikuisten oikeasti** auttaa Reactia kahmaisemaan tappion voiton suusta, se on huono maine, joka syntyy karmivista tietoturva-aukoista (minutkin hakkeroitiin kun unohdin päivittää yhdet _staattiset sivut_) Reactin uusissa, jo valmiiksi vähän kyseenalaisissa serveripatterneissa.
+
+Saas nähdä. Reactin alkuperäinen historiallinen julkaisu vuonna 2013 meni lähestulkoon yhtä vihkoon kuin vuoden 2025 joulukuu. React naurettiin ulos lavalta, ja tiimi joutui uudelleenajattelemaan viestintätapansa.
+
+Parin vuoden takainen React-dokkari on aika ihana. Kaksi ensimmäistä React-presistä, pieleen mennyt ja paremmin mennyt, ovat edelleen katsomisen arvoiset. Pitkät kuluneet vuodet antavat niihin kivaa lisäkontekstia!
 `
     },
     {
