@@ -9,6 +9,8 @@ minimumReleaseAgeExclude:
   - "eslint-config-next"
   - "@next/eslint-plugin-next"
   - "@next/env"
+  - "react"
+  - "react-dom"
 
 onlyBuiltDependencies:
   - "@swc/core"
