@@ -12,7 +12,7 @@ export const fsmHatch: HatchDataWithoutDay = {
     {
       type: "markdown",
       text: `
-Onko KICS (Keep It Complex, Stupid) aiheuttanut tykytyksiä? Oletko jo siivonnut [Bacon.js:n]() ja muun reaktiivisen ryönän enterprise-hankkeistasi? [Rimmelöinti](https://rimmel.js.org/) tai [harmajointi](https://github.com/raimohanska/harmaja) ei kiinnostele? Ovatko paskasti tehdyt [Redux-saaga-himmelit](https://redux-saga.js.org/) jo nähty ja koettu? Olet jo puhdistanut [pitkät ja puhtaat funktioputket](https://ramdajs.com/) perusteellisesti koodipohjistasi?
+Onko KICS (Keep It Complex, Stupid) aiheuttanut tykytyksiä? Oletko jo siivonnut [Bacon.js:n](https://baconjs.github.io/) ja muun reaktiivisen ryönän enterprise-hankkeistasi? [Rimmelöinti](https://rimmel.js.org/) tai [harmajointi](https://github.com/raimohanska/harmaja) ei kiinnostele? Ovatko paskasti tehdyt [Redux-saaga-himmelit](https://redux-saga.js.org/) jo nähty ja koettu? Olet jo puhdistanut [pitkät ja puhtaat funktioputket](https://ramdajs.com/) perusteellisesti koodipohjistasi?
 
 Kyllä? Hyvä kuulla. Kaipaat siis _seuraavaa_ traumaperäistä stressihäiriötä teoriassa eleganteista, mutta käytännössä tuhoon johtavista niche-käytännöistä. Oi kuinka ihana kuulla, sallithan minun ojentaa auttavan käden!
 
