@@ -22,7 +22,7 @@ Vasta kun olin pystyttänyt settini wanhan liiton konsteilla ja kiroillut, kuink
 
 Ja kas kummaa, pökälettähän on tarjolla. [Dokploy](https://dokploy.com/) ja [Coolify](https://coolify.io/) herättivät heti kiinnostukseni. [Dokku](https://dokku.com/) ja [CapRover](https://caprover.com/) ovat myös olemassa. [EasyPanel](https://easypanel.io/), mikäseon, mitä hittoa. Miksi näitä on niin paljon, ja _miksi ymmärrän kaikesta niin vähän?!?_.
 
-Tieto lisää tuskaa. Kiitos siitä. Vuoden 2026 itsehostattu infra, täältä tullaan, syteen tai saveen.
+Tieto lisää tuskaa. Kiitos, [Tieto](https://www.tieto.com/). Vuoden 2026 itsehostattu infra, täältä tullaan, syteen tai saveen.
 `
     }
   ]
