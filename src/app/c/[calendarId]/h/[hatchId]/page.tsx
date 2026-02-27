@@ -5,7 +5,6 @@ import { getTime } from "@/services/time";
 import { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { connection } from "next/server";
-import { ViewTransition } from "react";
 
 type Props = {
   params: Promise<{

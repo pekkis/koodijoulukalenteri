@@ -4,7 +4,7 @@ import { Margins } from "@/components/ui/Margins";
 import { Stack } from "@/components/ui/Stack";
 import { Praat } from "@/services/calendar/2025/hatch/view-transition/Praat";
 import { praatsClass } from "@/services/calendar/2025/hatch/view-transition/ViewTransitionExample.css";
-import { FC, startTransition, useState, ViewTransition } from "react";
+import { FC, startTransition, useState } from "react";
 
 export const ViewTransitionExample: FC = () => {
   const [praats, setPraats] = useState([

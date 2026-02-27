@@ -46,9 +46,8 @@ const description = `Vuoden 2025 koodijoulukalenterista löydät vuosien 2024 ja
 
 export const calendar: CalendarType = {
   defaultInnerHatchComponent: async () => {
-    const { CalendarWall2025 } = await import(
-      "@/services/calendar/2025/components/CalendarWall2025"
-    );
+    const { CalendarWall2025 } =
+      await import("@/services/calendar/2025/components/CalendarWall2025");
     return CalendarWall2025;
   },
 
@@ -175,9 +174,8 @@ export const calendar: CalendarType = {
         zone: "Europe/Helsinki"
       }),
       hatchComponent: async () => {
-        const { ExpeditionHatchComponent } = await import(
-          "./hatch/expedition/ExpeditionHatchComponent"
-        );
+        const { ExpeditionHatchComponent } =
+          await import("./hatch/expedition/ExpeditionHatchComponent");
 
         return ExpeditionHatchComponent;
       }
@@ -286,9 +284,8 @@ export const calendar: CalendarType = {
         zone: "Europe/Helsinki"
       }),
       hatchComponent: async () => {
-        const EscapeHatch = await import(
-          "@/services/calendar/2025/components/EscapeHatch"
-        );
+        const EscapeHatch =
+          await import("@/services/calendar/2025/components/EscapeHatch");
         return EscapeHatch.default;
       }
     }

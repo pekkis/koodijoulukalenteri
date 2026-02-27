@@ -1,5 +1,3 @@
-import { Properties } from "csstype";
-
 declare module "csstype" {
   interface Properties {
     cornerShape?: string;

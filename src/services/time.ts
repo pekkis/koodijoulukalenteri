@@ -16,7 +16,7 @@ export const getTime = (): DateTime => {
   try {
     const offset = JSON.parse(process.env.NEXT_PUBLIC_OFFSET) as DurationLike;
     return now.plus(offset);
-  } catch (e) {
+  } catch {
     return now;
   }
 };

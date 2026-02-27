@@ -39,7 +39,7 @@ export const SpeechApiExample: FC = () => {
   );
 
   useEffect(() => {
-    synth?.addEventListener("voiceschanged", (e) => {
+    synth?.addEventListener("voiceschanged", () => {
       const finnishVoices = synth.getVoices().filter((voice) => {
         return voice.lang.startsWith("fi");
       });

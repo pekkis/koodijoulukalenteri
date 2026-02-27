@@ -6,7 +6,6 @@ import {
   startTransition,
   useEffect,
   useState,
-  useTransition,
   ViewTransition
 } from "react";
 

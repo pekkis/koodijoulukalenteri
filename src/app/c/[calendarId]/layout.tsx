@@ -9,7 +9,6 @@ import { Providers } from "@/components/Providers";
 import CalendarWrapper from "@/components/calendar/CalendarWrapper";
 import { getCalendar, getClientCalendar } from "@/services/calendar";
 import { getTime } from "@/services/time";
-import { Metadata } from "next";
 import Link from "next/link";
 import Debug from "./Debug";
 import notFound from "@/app/not-found";

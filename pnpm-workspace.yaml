@@ -3,6 +3,7 @@ disallowWorkspaceCycles: true
 minimumReleaseAge: 4320
 
 minimumReleaseAgeExclude:
+  - "@next/swc*"
   - "@next/third-parties"
   - "next"
   - "@next/bundle-analyzer"
