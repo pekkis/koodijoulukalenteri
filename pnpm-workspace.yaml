@@ -12,7 +12,7 @@ minimumReleaseAgeExclude:
   - "@next/env"
   - "react"
   - "react-dom"
-
+  - "@next/swc-*"
 onlyBuiltDependencies:
   - "@swc/core"
   - esbuild
