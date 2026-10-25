@@ -1,5 +1,12 @@
 import { createVanillaExtractPlugin } from "@vanilla-extract/next-plugin";
-const withVanillaExtract = createVanillaExtractPlugin();
+const withVanillaExtract = createVanillaExtractPlugin({
+  // Turbopack support is experimental and off by default.
+  // "auto" enables it only on Next >= 16; the webpack config is still
+  // emitted alongside, so `next build --webpack` keeps working.
+  unstable_turbopack: {
+    mode: "auto"
+  }
+});
 import process from "node:process";
 
 import { piped } from "remeda";
@@ -17,8 +24,6 @@ const nextConfig = {
   output: "standalone",
   reactStrictMode: true,
   experimental: {
-    viewTransition: true,
-
     serverActions: {
       allowedOrigins: [
         "localhost:3100",
