@@ -2,10 +2,18 @@ services:
   next:
     build:
       dockerfile: docker/next/Dockerfile
+    # Back up by itself after a reboot.
+    restart: unless-stopped
+    # Runtime settings (RESEND_APIKEY for the email hatch); optional, so the site runs without it.
+    env_file:
+      - path: .env
+        required: false
     networks:
       - web
     ports:
-      - 3100:3000
+      # Localhost only: Caddy publishes the site. Docker bypasses ufw, so "3100:3000"
+      # alone would put the port on the internet.
+      - "127.0.0.1:3100:3000"
 networks:
   web:
     driver: bridge

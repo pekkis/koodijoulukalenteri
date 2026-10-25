@@ -2,3 +2,9 @@ git/
 .git*
 node_modules
 /docker
+# Tests are not part of the production image (and e2e/ needs @playwright/test, a dev tool).
+e2e
+# Secrets are passed at runtime (env_file in compose.yml), never baked into the image.
+.env
+.env.*
+!.env.example

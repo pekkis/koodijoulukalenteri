@@ -1,7 +1,9 @@
 # syntax=docker.io/docker/dockerfile:1
 
-FROM node:24-alpine AS base
-RUN npm -g i pnpm
+# Pinned by version and digest: an update is a deliberate change (keep .nvmrc in step).
+FROM node:24.22.1-alpine3.24@sha256:06d7adf3e0ef61a13f1d28682726366f97a15aa1888c934d3ecec86c33918b53 AS base
+# The same pnpm as packageManager in package.json, not whatever is newest at build time.
+RUN npm -g i pnpm@12.15.0
 
 # Install dependencies only when needed
 FROM base AS deps
@@ -24,7 +26,7 @@ COPY . .
 # Next.js collects completely anonymous telemetry data about general usage.
 # Learn more here: https://nextjs.org/telemetry
 # Uncomment the following line in case you want to disable telemetry during the build.
-# ENV NEXT_TELEMETRY_DISABLED=1
+ENV NEXT_TELEMETRY_DISABLED=1
 
 RUN pnpm run build
 
@@ -33,8 +35,7 @@ FROM base AS runner
 WORKDIR /app
 
 ENV NODE_ENV=production
-# Uncomment the following line in case you want to disable telemetry during runtime.
-# ENV NEXT_TELEMETRY_DISABLED=1
+ENV NEXT_TELEMETRY_DISABLED=1
 
 RUN addgroup --system --gid 1001 nodejs
 RUN adduser --system --uid 1001 nextjs
